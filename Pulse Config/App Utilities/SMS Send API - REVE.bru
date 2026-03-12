@@ -1,0 +1,61 @@
+meta {
+  name: SMS Send API - REVE
+  type: http
+  seq: 1
+}
+
+get {
+  url: http://smpp.revesms.com:7788/sendtext?apikey=c1da7c7ed50ed989&secretkey=98125cf9&callerID=8809617613348&toUser=01888818803&messageContent=test from reve
+  body: none
+  auth: inherit
+}
+
+params:query {
+  apikey: c1da7c7ed50ed989
+  secretkey: 98125cf9
+  callerID: 8809617613348
+  toUser: 01888818803
+  messageContent: test from reve
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Success
+  
+  request: {
+    url: http://smpp.revesms.com:7788/sendtext?apikey=c1da7c7ed50ed989&secretkey=98125cf9&callerID=8809617613348&toUser=01888818801&messageContent=test from reve
+    method: GET
+    mode: none
+    params:query: {
+      apikey: c1da7c7ed50ed989
+      secretkey: 98125cf9
+      callerID: 8809617613348
+      toUser: 01888818801
+      messageContent: test from reve
+    }
+  }
+  
+  response: {
+    headers: {
+      Date: Sun, 25 Aug 2024 08:31:04 GMT
+      Content-Length: 57
+      Server: Jetty(9.4.25.v20191220)
+    }
+  
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: text
+      content: '''
+        {"Status":"0","Text":"ACCEPTD","Message_ID":"353592933"}
+        
+      '''
+    }
+  }
+}

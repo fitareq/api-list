@@ -1,0 +1,71 @@
+meta {
+  name: DoctorTransferRequest
+  type: http
+  seq: 9
+}
+
+post {
+  url: {{pulse_api}}/Doctor/DoctorTransferRequest
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "UserId": "17801",
+      "DoctorId": "",
+      "SubMarketId": "27E22490-52C6-453A-ACCC-575EF70D4B60",
+      "Remarks":"Reason for transfer",
+      "Lat": "23.7464815",
+      "Lon": "23.7464815"
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: DoctorTransferRequest_Example
+  
+  request: {
+    url: {{pulse_api}}/Doctor/DoctorTransferRequest
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "UserId": "17801",
+          "DoctorId": "",
+          "SubMarketId": "27E22490-52C6-453A-ACCC-575EF70D4B60",
+          "Remarks":"Reason for transfer",
+          "Lat": "23.7464815",
+          "Lon": "23.7464815"
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Transfer-Encoding: chunked
+      Content-Type: application/json; charset=utf-8
+      Server: Microsoft-IIS/10.0
+      X-Powered-By: ASP.NET
+      Date: Tue, 16 Jul 2024 04:24:36 GMT
+    }
+  
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "statusCode": 404,
+            "statusMessage": "User ID,Doctor ID, SubMarket ID required, please try again"
+        }
+      '''
+    }
+  }
+}

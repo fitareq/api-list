@@ -1,0 +1,24 @@
+info:
+  name: Delete Regional Notice
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{pulse_api}}/Notice/DeleteRegionalNotice"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"Id\": \"test\",\r
+
+      \    \"Reason\": \"test\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

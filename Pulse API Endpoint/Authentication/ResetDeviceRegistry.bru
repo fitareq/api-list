@@ -1,0 +1,61 @@
+meta {
+  name: ResetDeviceRegistry
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{pulse_api}}/login/ResetDeviceRegistry
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "Username": "17803"
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: ResetDeviceRegistry_Example
+  
+  request: {
+    url: {{pulse_api}}/login/ResetDeviceRegistry
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "Username": "17803"
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Transfer-Encoding: chunked
+      Content-Type: application/json; charset=utf-8
+      Server: Microsoft-IIS/10.0
+      X-Powered-By: ASP.NET
+      Date: Tue, 16 Jul 2024 03:39:09 GMT
+    }
+  
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "statusCode": 200,
+            "statusMessage": "Previous Device Information cleared successfully."
+        }
+      '''
+    }
+  }
+}

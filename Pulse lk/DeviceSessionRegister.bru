@@ -1,0 +1,36 @@
+meta {
+  name: DeviceSessionRegister
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{base_url}}/PulseLK/api/login/DeviceSessionRegister
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyTmFtZSI6IkguTC5TVVJBTkdBIFNBTUFSQVNJTkdIQSIsIkVtcGxveWVlQ29kZSI6IjA4OTUiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJNYXJrZXQgUmVwcmVzZW50aXRpdmUiLCJEZXBhcnRtZW50Q29kZSI6IkdFTkVSQUwiLCJUZWFtQ29kZSI6IkdFTkVSQUwiLCJUeXBlIjoib2ZmaWNlciIsImV4cCI6MTc2NTI4MDA5MSwiaXNzIjoiU2FsZXNQdWxzZUFQSSIsImF1ZCI6IkhQTC1NSVMifQ.kuT2x-NWfqsVhpPIgvhTUG3IXqqjs1PHtQ7dxyayjKc
+}
+
+body:json {
+  {
+      "AppVersion": "1.0.0-anik",
+      "BearerToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyTmFtZSI6IkguTC5TVVJBTkdBIFNBTUFSQVNJTkdIQSIsIkVtcGxveWVlQ29kZSI6IjA4OTUiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJNYXJrZXQgUmVwcmVzZW50aXRpdmUiLCJEZXBhcnRtZW50Q29kZSI6IkdFTkVSQUwiLCJUZWFtQ29kZSI6IkdFTkVSQUwiLCJUeXBlIjoib2ZmaWNlciIsImV4cCI6MTc2NTI4MDA5MSwiaXNzIjoiU2FsZXNQdWxzZUFQSSIsImF1ZCI6IkhQTC1NSVMifQ.kuT2x-NWfqsVhpPIgvhTUG3IXqqjs1PHtQ7dxyayjKc",
+      "DeviceFCMToken": "eVb1H8EXSBGzzuLZ18sQp8:APA91bEaWeZrU1UjXcWDl9PGGArP9SKDqZQWN3V8Lu88hqIQSYm5O9pb3nziTCQpvAGXZLqAX4jwq0mEBWq1NlxaX0-xDSd5iZdzLpb9DN9Yy7B2CbxiSbk",
+      "DeviceId": "a7f4ca72ef3df24f",
+      "DeviceInfo": "a12s | samsung | SM-A127F",
+      "DeviceLocation": "",
+      "DeviceType": "Android",
+      "SessionRemarks": "Login Session",
+      "SessionTime": "2025-09-10 17:34:53",
+      "SessionType": "Login",
+      "UserId": "0895"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

@@ -1,0 +1,93 @@
+meta {
+  name: SendChemist
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{pulse_api}}/Chemist/SendChemistList
+  body: multipartForm
+  auth: inherit
+}
+
+body:multipart-form {
+  chemistDataList[0].Id: 
+  chemistDataList[0].ImageUri: @file(postman-cloud:///1ef31d41-27ac-4c00-a245-81438d4dd9cf)
+  chemistDataList[0].Name: Dada Medical Hall
+  chemistDataList[0].DepotCode: 04
+  chemistDataList[0].CreatedBy: 31422
+  chemistDataList[0].creationDate: 2024-09-05 10:25:25
+  chemistDataList[0].DepotId: df19b90c-fb39-4682-831e-5a14a9f79b25
+  chemistDataList[0].SubMarketId: 6368c082-68b5-4880-ae5e-a239f77e536d
+  chemistDataList[0].ThanaCode: 219
+  chemistDataList[0].DistrictCode: 26
+  chemistDataList[0].Lat: 23.746496
+  chemistDataList[0].Lon: 90.39216
+  chemistDataList[0].Mobile: 01780228535
+  chemistDataList[0].Email: 
+  chemistDataList[0].Address: Bypass road, Laksham
+  chemistDataList[0].DrugLicenceNumber: 
+  chemistDataList[0].ChemistStatus: 0
+  ~chemistDataList[0].DivisionCode: 10
+  ~chemistDataList[0].Remarks: test
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: SendChemist_Example
+  
+  request: {
+    url: {{pulse_api}}/Chemist/SendChemistList
+    method: POST
+    mode: multipartForm
+    body:multipart-form: {
+      chemistDataList[0].Id: 
+      chemistDataList[0].ImageUri: @file(postman-cloud:///1ef31d41-27ac-4c00-a245-81438d4dd9cf)
+      chemistDataList[0].Name: 23 June test
+      chemistDataList[0].DepotCode: 22
+      chemistDataList[0].CreatedBy: 17802
+      chemistDataList[0].creationDate: 23/06/2024
+      chemistDataList[0].DepotId: 12345
+      chemistDataList[0].SubMarketId: 2031ee3b-c9f5-4d05-9643-4be568b5ece1
+      chemistDataList[0].ThanaCode: 56
+      chemistDataList[0].DistrictCode: 46
+      chemistDataList[0].DivisionCode: 10
+      chemistDataList[0].Lat: 10
+      chemistDataList[0].Lon: 20
+      chemistDataList[0].Remarks: test
+      chemistDataList[0].Mobile: 012
+      chemistDataList[0].Email: niloy
+      chemistDataList[0].Address: test
+      chemistDataList[0].DrugLicenceNumber: 12345
+      chemistDataList[0].ChemistStatus: 0
+    }
+  }
+  
+  response: {
+    headers: {
+      Transfer-Encoding: chunked
+      Content-Type: application/json; charset=utf-8
+      Server: Microsoft-IIS/10.0
+      X-Powered-By: ASP.NET
+      Date: Tue, 16 Jul 2024 03:52:23 GMT
+    }
+  
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "statusCode": 404,
+            "statusMessage": "Unrecognized Guid format.System.Private.CoreLib   at System.Guid.GuidResult.SetFailure(ParseFailure failureKind)\r\n   at System.Guid.TryParseGuid(ReadOnlySpan`1 guidString, GuidResult& result)\r\n   at System.Guid.Parse(ReadOnlySpan`1 input)\r\n   at SalesPulse.API.Controllers.ChemistController.SendChemistList(List`1 chemistDataList) in D:\\HPL-GIT\\Sales Pulse Project Work-2024\\SalesPulse_API\\SalesPulse\\SalesPulse.API\\Controllers\\ChemistController.cs:line 226"
+        }
+      '''
+    }
+  }
+}

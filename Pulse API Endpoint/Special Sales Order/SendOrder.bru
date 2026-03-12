@@ -1,0 +1,81 @@
+meta {
+  name: SendOrder
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{pulse_api}}/SpecialSales/SendOrder
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyTmFtZSI6Ik1kLiBLYW1ydXp6YW1hbiIsIkVtcGxveWVlQ29kZSI6IjMxMjkzIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiUEEiLCJEZXBhcnRtZW50Q29kZSI6IlNQU0FMRVMiLCJUZWFtQ29kZSI6Ik5FUFRVTkUiLCJUeXBlIjoib2ZmaWNlciIsImV4cCI6MTc1NzkzNjYyOSwiaXNzIjoiU2FsZXNQdWxzZUFQSSIsImF1ZCI6IkhQTC1NSVMifQ.UpmG325mEjHK93T2giwx9_O8esM3aBG3WzMbZXWjfZc
+}
+
+body:json {
+  [
+      {
+          "chemistCode": "0510249419",
+          "chemistId": "8202fbac-a0de-4e44-b06d-acfa3acc2a37",
+          "chemistName": "Medicase Pharma",
+          "comment": "",
+          "contactNumber": "",
+          "contactPersonName": "",
+          "deliveryAddress": "",
+          "deliveryDate": "2025-06-18",
+          "deliveryShift": "Morning",
+          "depotId": "bedab429-42c8-4939-91d9-a8dc1e551d6c",
+          "depotName": "Dhaka",
+          "discountAmount": "0",
+          "doctorCode": "",
+          "doctorId": "",
+          "doctorName": "",
+          "id": 0,
+          "localStatus": "synced",
+          "localStatusTime": 1750161515003,
+          "location": "23.7463367,90.3921764",
+          "netTotal": "12144.83",
+          "orderEntryBy": "10f7f70c-0e57-4555-9f00-d9b5b2b7d578",
+          "orderEntryDate": "2025-06-17",
+          "orderNumber": "",
+          "orderStatus": "synced",
+          "patientAddress": "",
+          "patientName": "",
+          "paymentMode": "Cash",
+          "productList": [
+              {
+                  "ItemDiscountAmount": "0",
+                  "ProductCode": "80138",
+                  "ProductId": "8e8f5c90-3173-45bf-a9ea-1459422e6f18",
+                  "ProductName": "Ketoalfa Tablet 600 mg",
+                  "Quantity": "2",
+                  "totalPrice": "3598.20",
+                  "tradePrice": "1799.10",
+                  "vat": "313.04"
+              },
+              {
+                  "ItemDiscountAmount": "0",
+                  "ProductCode": "80297",
+                  "ProductId": "62674eff-3a3f-4f3d-878e-bf4168929bc8",
+                  "ProductName": "Roxatat Tablet 100mg",
+                  "Quantity": "5",
+                  "totalPrice": "6746.65",
+                  "tradePrice": "1349.33",
+                  "vat": "234.78"
+              }
+          ],
+          "subMarketCode": "M4270101",
+          "subMarketId": "2551964b-8627-43b6-8132-d2a3fc0858da",
+          "subMarketName": "Nephro-BSMMU-2",
+          "totalQty": "7",
+          "tpTotal": "10344.85",
+          "vatTotal": "1799.98"
+      }
+  ]
+}
+
+settings {
+  encodeUrl: true
+}

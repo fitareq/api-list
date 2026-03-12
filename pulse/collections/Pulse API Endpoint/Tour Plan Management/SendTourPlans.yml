@@ -1,0 +1,183 @@
+info:
+  name: SendTourPlans
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{pulse_api}}/TourPlan/SendTourPlan"
+  body:
+    type: json
+    data: "[\r
+
+      \    {\r
+
+      \        \"ID\": \"\",\r
+
+      \        \"localId\": 0,\r
+
+      \        \"planDay\": \"24\",\r
+
+      \        \"planEntryBy\": \"03111\",\r
+
+      \        \"planEntryByCode\": \"03111\",\r
+
+      \        \"planEntryByName\": \"\",\r
+
+      \        \"planEntryDate\": \"2026-02-24\",\r
+
+      \        \"planEntryLocation\": \"23.7463893,90.3921049\",\r
+
+      \        \"planLocation\": \"Head Quarter\",\r
+
+      \        \"planModificationDateTime\": \"2026-02-24\",\r
+
+      \        \"planMonth\": \"3\",\r
+
+      \        \"planNote\": \"\",\r
+
+      \        \"planSession\": \"Afternoon\",\r
+
+      \        \"planStatus\": 0,\r
+
+      \        \"planYear\": \"2026\",\r
+
+      \        \"reason\": \"\",\r
+
+      \        \"subMarketList\": [\r
+
+      \            {\r
+
+      \                \"geoFenceId\": \"9b29df76-1e95-47bc-b8c4-a6449bee1d70\",\r
+
+      \                \"headType\": \"PairMarket\",\r
+
+      \                \"subMarketCode\": \"M3780101\",\r
+
+      \                \"subMarketId\": \"bbe863e8-d0f7-43ed-9571-baefb149b808\",\r
+
+      \                \"subMarketName\": \"BIHS Surgery-A\"\r
+
+      \            },\r
+
+      \            {\r
+
+      \                \"geoFenceId\": \"36363dde-0c22-40e0-8822-89a2296cd36d\",\r
+
+      \                \"headType\": \"PairMarket\",\r
+
+      \                \"subMarketCode\": \"M3780102\",\r
+
+      \                \"subMarketId\": \"d804a780-070c-4505-8f95-bc4bafa2247e\",\r
+
+      \                \"subMarketName\": \"MEDINET-A\"\r
+
+      \            }\r
+
+      \        ]\r
+
+      \    }\r
+
+      ]"
+  auth:
+    type: bearer
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyTmFtZSI6Ik1kLiBTaGFmaXF1bCBJc2xhbSIsIkVtcGxveWVlQ29kZSI6IjAzMTExIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiU01JTyIsIkRlcGFydG1lbnRDb2RlIjoiUlgiLCJUZWFtQ29kZSI6IlZFTlRVUkUiLCJUeXBlIjoib2ZmaWNlciIsImV4cCI6MTc3OTU5NDQ2NSwiaXNzIjoiU2FsZXNQdWxzZUFQSSIsImF1ZCI6IkhQTC1NSVMifQ.5KSk_G4zomdM0eG5eHhGKlSfUuXQ1uTNq7loe6H-UWc
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: SendTourPlans_Example
+    request:
+      url: "{{pulse_api}}/TourPlan/SendTourPlan"
+      method: POST
+      body:
+        type: json
+        data: "[\r
+
+          \    {\r
+
+          \        \"ID\": \"\", // ID empty means new entry\r
+
+          \        \"planEntryBy\": \"17801\",\r
+
+          \        \"planEntryDate\": \"2024-07-14\",\r
+
+          \        \"planModificationDateTime\": \"\", // emptry for first time entry\r
+
+          \        \"planYear\": \"2024\",\r
+
+          \        \"planMonth\": \"7\",\r
+
+          \        \"planDay\": \"14\",\r
+
+          \        \"planLocation\": \"Head-Quarter\",\r
+
+          \        \"planSession\": \"Morning\",\r
+
+          \        \"planNote\": \"Note\",\r
+
+          \        \"planEntryLocation\": \"\",\r
+
+          \        \"planStatus\": 0, // 0 for new entry, 2 for edit request\r
+
+          \        \"subMarketList\": [\r
+
+          \            {\r
+
+          \                \"subMarketId\": \"id1\",\r
+
+          \                \"headType\": \"Own\",\r
+
+          \                \"geoFenceId\": \"id1\"\r
+
+          \            },\r
+
+          \            {\r
+
+          \                \"subMarketId\": \"id2\",\r
+
+          \                \"headType\": \"Own\",\r
+
+          \                \"geoFenceId\": \"id1\"\r
+
+          \            },\r
+
+          \            {\r
+
+          \                \"subMarketId\": \"id3\",\r
+
+          \                \"headType\": \"Pair\",\r
+
+          \                \"geoFenceId\": \"id1\"\r
+
+          \            }\r
+
+          \        ]\r
+
+          \    }\r
+
+          ]"
+    response:
+      statusText: "200"
+      headers:
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Server
+          value: Microsoft-IIS/10.0
+        - name: X-Powered-By
+          value: ASP.NET
+        - name: Date
+          value: Wed, 17 Jul 2024 13:07:05 GMT
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 404,
+              "statusMessage": "An unexpected error occured while Tour plan entry"
+          }

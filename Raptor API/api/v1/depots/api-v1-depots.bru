@@ -1,0 +1,72 @@
+meta {
+  name: /api/v1/depots
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/api/v1/depots
+  body: none
+  auth: inherit
+}
+
+headers {
+  Accept: text/plain
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: OK
+  
+  request: {
+    url: {{baseUrl}}/api/v1/depots
+    method: GET
+    mode: none
+    headers: {
+      Accept: text/plain
+      Authorization: Bearer <token>
+    }
+  }
+  
+  response: {
+    headers: {
+      Content-Type: application/json
+    }
+  
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+          "data": [
+            {
+              "id": "4f72da74-157e-2adf-6fed-f69f0953f268",
+              "legacyCode": "string",
+              "sapCode": "string",
+              "name": "string",
+              "address": "string",
+              "contactNumber": 6651
+            },
+            {
+              "id": "ded16a75-63c7-a372-d82e-153d6629748d",
+              "legacyCode": "string",
+              "sapCode": "string",
+              "name": "string",
+              "address": "string",
+              "contactNumber": 7493
+            }
+          ],
+          "statusCode": 3471,
+          "statusMessage": "string"
+        }
+      '''
+    }
+  }
+}

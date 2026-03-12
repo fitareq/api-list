@@ -1,0 +1,26 @@
+meta {
+  name: Get Chemist Slab data from SAP
+  type: http
+  seq: 8
+}
+
+post {
+  url: http://hs4ciprd.hpl.com.bd:8000/zapidemo/webapidemo?POST_TYPE=PULSESLAB&YEARMON=202411&MIO=60002567
+  body: none
+  auth: basic
+}
+
+params:query {
+  POST_TYPE: PULSESLAB
+  YEARMON: 202411
+  MIO: 60002567
+}
+
+auth:basic {
+  username: HPLHRIS
+  password: qwer@1234
+}
+
+settings {
+  encodeUrl: true
+}

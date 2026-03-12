@@ -1,0 +1,69 @@
+meta {
+  name: DcrApproval
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{pulse_api}}/DCR/DcrApproval
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "UserId": "17801",
+      "CallId": "",
+      "Flag": "approve",
+      //  //approve, reject
+      "Comment": ""
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: DcrApproval_Example
+  
+  request: {
+    url: {{pulse_api}}/DCR/DcrApproval
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "UserId": "17801",
+          "CallId": "",
+          "Flag": "approve",
+          //  //approve, reject
+          "Comment": ""
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Transfer-Encoding: chunked
+      Content-Type: application/json; charset=utf-8
+      Server: Microsoft-IIS/10.0
+      X-Powered-By: ASP.NET
+      Date: Tue, 16 Jul 2024 05:05:31 GMT
+    }
+  
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "statusCode": 404,
+            "statusMessage": "User ID,Call ID, Flag required, please try again"
+        }
+      '''
+    }
+  }
+}

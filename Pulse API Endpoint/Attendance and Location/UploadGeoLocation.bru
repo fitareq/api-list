@@ -1,0 +1,139 @@
+meta {
+  name: UploadGeoLocation
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{pulse_api}}/GeoLocation/UploadGeoLocation
+  body: json
+  auth: inherit
+}
+
+body:json {
+  [
+      {
+          "UserCode": "your_user_code_here",
+          "DeviceId": "your_device_id_here",
+          "Source": "your_source_here",
+          "Provider": "your_provider_here",
+          "Lat": "your_latitude_here",
+          "Lon": "your_longitude_here",
+          "GeoAddress": "your_geo_address_here",
+          "TrackingTime": "your_tracking_time_here"
+      }
+  ]
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: UploadGeoLocation_Example
+  
+  request: {
+    url: {{pulse_api}}/GeoLocation/UploadGeoLocation
+    method: POST
+    mode: json
+    body:json: {
+      [
+          {
+              "UserCode": "your_user_code_here",
+              "DeviceId": "your_device_id_here",
+              "Source": "your_source_here",
+              "Provider": "your_provider_here",
+              "Lat": "your_latitude_here",
+              "Lon": "your_longitude_here",
+              "GeoAddress": "your_geo_address_here",
+              "TrackingTime": "your_tracking_time_here"
+          }
+      ]
+    }
+  }
+  
+  response: {
+    headers: {
+      Transfer-Encoding: chunked
+      Content-Type: application/json; charset=utf-8
+      Server: Microsoft-IIS/10.0
+      X-Powered-By: ASP.NET
+      Date: Tue, 16 Jul 2024 05:12:39 GMT
+    }
+  
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "statusCode": 404,
+            "statusMessage": "An unexpected error occured while uploading geo location data, please try again"
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: UploadGeoLocation
+  
+  request: {
+    url: {{pulse_api}}/GeoLocation/UploadGeoLocation
+    method: POST
+    mode: json
+    body:json: {
+      [
+          {
+              "DeviceId": "0a573289ddfb0088",
+              "GeoAddress": "299/A, Kathal Bagan, Bangla motor, Dhaka 1205, Kathal Bagan Sonargaon Road, 1205, Bangladesh,, 1205",
+              "id": 1,
+              "Lat": 23.7465194,
+              "Lon": 90.3921344,
+              "Provider": "Fused location provider",
+              "Source": "Android",
+              "TrackingTime": "2024-08-13 12:18:39",
+              "UserCode": "17801"
+          }
+      ]
+    }
+  }
+  
+  response: {
+    headers: {
+      Transfer-Encoding: chunked
+      Content-Type: application/problem+json; charset=utf-8
+      Server: Microsoft-IIS/10.0
+      X-Powered-By: ASP.NET
+      Date: Tue, 13 Aug 2024 06:26:07 GMT
+    }
+  
+    status: {
+      code: Bad Request
+      text: 400
+    }
+  
+    body: {
+      type: text
+      content: '''
+        {
+            "type": "https://tools.ietf.org/html/rfc9110#section-15.5.1",
+            "title": "One or more validation errors occurred.",
+            "status": 400,
+            "errors": {
+                "geoLocationDto": [
+                    "The geoLocationDto field is required."
+                ],
+                "$[0].Lat": [
+                    "The JSON value could not be converted to System.String. Path: $[0].Lat | LineNumber: 5 | BytePositionInLine: 25."
+                ]
+            },
+            "traceId": "00-e776f4c19a53671c503409b53c7901f5-80f079d441109bab-00"
+        }
+      '''
+    }
+  }
+}

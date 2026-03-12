@@ -1,0 +1,69 @@
+meta {
+  name: UploadAttendance
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{pulse_api}}/Attendance/UploadAttendance
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "DeviceId": "",
+      "FieldForceId": "2a53a317-1328-498f-8272-7307c1eb0159",
+      "GeoAddress": "",
+      "Location": "23.7464949,90.3921382",
+      "Type": "checkOut"//checkOut
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: UploadAttendance_Example
+  
+  request: {
+    url: {{pulse_api}}/Attendance/UploadAttendance
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "FieldForceId": "",
+          "DeviceId": "Device123",
+          "Type": "checkIn", //checkOut
+          "Location": "",
+          "GeoAddress": "123 Sample Street, Sample City"
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Transfer-Encoding: chunked
+      Content-Type: application/json; charset=utf-8
+      Server: Microsoft-IIS/10.0
+      X-Powered-By: ASP.NET
+      Date: Tue, 16 Jul 2024 05:12:58 GMT
+    }
+  
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "statusCode": 404,
+            "statusMessage": "FieldForce ID,Type required, please try again"
+        }
+      '''
+    }
+  }
+}

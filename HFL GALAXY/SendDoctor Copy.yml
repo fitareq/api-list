@@ -1,0 +1,768 @@
+info:
+  name: SendDoctor Copy
+  type: http
+  seq: 13
+
+http:
+  method: POST
+  url: "{{base_url}}/Doctor/SendDoctor"
+  body:
+    type: json
+    data: "// [\r
+
+      //     {\r
+
+      //         \"BirthDay\": \"1900-01-01\",\r
+
+      //         \"BMDCRegNumber\": \"1m3479\",\r
+
+      //         \"Category\": \"B\",\r
+
+      //         \"ChamberAddress\": \"SSK ROAD,FENI SADAR,FENI\",\r
+
+      //         \"ChamberName\": \"ZU MODEL HOSPITAL\",\r
+
+      //         \"Code\": \"M12105001\",\r
+
+      //         \"CreatedBy\": \"16702\",\r
+
+      //         \"DistrictCode\": \"56\",\r
+
+      //         \"DistrictName\": \"Bagerhat\",\r
+
+      //         \"Degree\": \"NULL, Pulmonology-MD, Physical Medicine \\u0026 Rehabilitation-MD\",\r
+
+      //         \"Designation\": \"CONSULTANT\",\r
+
+      //         \"DoctorStatus\": 1,\r
+
+      //         \"Email\": \"NULL\",\r
+
+      //         \"FourPCode\": \"11457\",\r
+
+      //         \"Gender\": \"Male\",\r
+
+      //         \"headType\": \"OwnDoctor\",\r
+
+      //         \"ID\": \"8b2e6558-deff-46f1-9cfc-843a339215ad\",\r
+
+      //         \"InstituteName\": \"ZU MODEL HOSPITAL\",\r
+
+      //         \"InsulineRxPerDay\": 0,\r
+
+      //         \"IsGroupDoctor\": false,\r
+
+      //         \"Lat\": \"23.7464976\",\r
+
+      //         \"LocalId\": 0,\r
+
+      //         \"Lon\": \"90.3921631\",\r
+
+      //         \"majorBrandList\": [\r
+
+      //             {\r
+
+      //                 \"DoctorCategoryBrandClassId\": \"7b6094a9-eb0a-4d65-bda5-195bdcafd270\",\r
+
+      //                 \"brandClassValue\": \"B-1\",\r
+
+      //                 \"BrandId\": \"333d7535-0a43-4bbe-9d6a-59521ed07d83\",\r
+
+      //                 \"brandName\": \"SANTOGEN\",\r
+
+      //                 \"Type\": \"Major\"\r
+
+      //             },\r
+
+      //             {\r
+
+      //                 \"DoctorCategoryBrandClassId\": \"7b381398-5e89-4686-ac79-241620ed0b07\",\r
+
+      //                 \"brandClassValue\": \"B-1\",\r
+
+      //                 \"BrandId\": \"043f7ed9-8e08-483b-8529-a1e375938d3c\",\r
+
+      //                 \"brandName\": \"ROSELA\",\r
+
+      //                 \"Type\": \"Major\"\r
+
+      //             },\r
+
+      //             {\r
+
+      //                 \"DoctorCategoryBrandClassId\": \"618dad7c-ded4-4cab-b071-42799588cc76\",\r
+
+      //                 \"brandClassValue\": \"B-1\",\r
+
+      //                 \"BrandId\": \"438a91ca-ed06-4138-80e6-441bd5933e48\",\r
+
+      //                 \"brandName\": \"SERGEL\",\r
+
+      //                 \"Type\": \"Major\"\r
+
+      //             },\r
+
+      //             {\r
+
+      //                 \"DoctorCategoryBrandClassId\": \"66e6fe56-d364-4c20-a416-8697e31a72ed\",\r
+
+      //                 \"brandClassValue\": \"B-2\",\r
+
+      //                 \"BrandId\": \"ba99b1bf-7b2e-4044-9776-4cfbd7183707\",\r
+
+      //                 \"brandName\": \"AVANZA\",\r
+
+      //                 \"Type\": \"Major\"\r
+
+      //             },\r
+
+      //             {\r
+
+      //                 \"DoctorCategoryBrandClassId\": \"4826d3e0-dac8-488a-96f3-d86bc4494320\",\r
+
+      //                 \"brandClassValue\": \"B-2\",\r
+
+      //                 \"BrandId\": \"ca76f582-a6c3-427a-bd4f-599fec1a2c84\",\r
+
+      //                 \"brandName\": \"TOLFORT\",\r
+
+      //                 \"Type\": \"Major\"\r
+
+      //             },\r
+
+      //             {\r
+
+      //                 \"DoctorCategoryBrandClassId\": \"9066323c-7ae5-40ce-bc20-4ae120f3073b\",\r
+
+      //                 \"brandClassValue\": \"B-0\",\r
+
+      //                 \"BrandId\": \"62dcda57-165e-44f9-8cda-4354df6d7ffb\",\r
+
+      //                 \"brandName\": \"ACECARD\",\r
+
+      //                 \"Type\": \"Major\"\r
+
+      //             },\r
+
+      //             {\r
+
+      //                 \"DoctorCategoryBrandClassId\": \"6e6c7f18-da92-4af5-9e08-b705d2732239\",\r
+
+      //                 \"brandClassValue\": \"B-0\",\r
+
+      //                 \"BrandId\": \"fa983a0f-2b74-466e-bf3d-2e7eab19ec9f\",\r
+
+      //                 \"brandName\": \"ACTILAC\",\r
+
+      //                 \"Type\": \"Major\"\r
+
+      //             },\r
+
+      //             {\r
+
+      //                 \"DoctorCategoryBrandClassId\": \"4011dae7-3669-4f27-b643-f3f611f0bdc9\",\r
+
+      //                 \"brandClassValue\": \"B-1\",\r
+
+      //                 \"BrandId\": \"bc35d440-fcc2-4d0e-8e93-3f33a659530b\",\r
+
+      //                 \"brandName\": \"DOCEFREZ\",\r
+
+      //                 \"Type\": \"Major\"\r
+
+      //             }\r
+
+      //         ],\r
+
+      //         \"marketCode\": \"M12105\",\r
+
+      //         \"marketId\": \"cf15a297-530e-4d79-8562-add2cbbfa313\",\r
+
+      //         \"MarriageDay\": \"1900-01-01\",\r
+
+      //         \"MobileNo\": \"01711363043\",\r
+
+      //         \"ModifiedBy\": \"\",\r
+
+      //         \"Name\": \"DR. BROZA GOPAL PAUL\",\r
+
+      //         \"NamePlateImagePath\": \"http://103.111.126.11/DoctorNamePlate%2fimage.jpg\",\r
+
+      //         \"NoOfGroupDoctor\": 0,\r
+
+      //         \"NoOfPatient\": 15,\r
+
+      //         \"NoOfPracticeDays\": 6,\r
+
+      //         \"NoOfRxPerDay\": 15,\r
+
+      //         \"otherBrandList\": [\r
+
+      //             {\r
+
+      //                 \"DoctorCategoryBrandClassId\": \"37aecb60-bad0-4758-9812-3fd9488c56f8\",\r
+
+      //                 \"brandClassValue\": \"B-1\",\r
+
+      //                 \"BrandId\": \"ecbb2b7e-497a-4df3-a388-e1172b5fa301\",\r
+
+      //                 \"brandName\": \"ZILAS\",\r
+
+      //                 \"Type\": \"Other\"\r
+
+      //             },\r
+
+      //             {\r
+
+      //                 \"DoctorCategoryBrandClassId\": \"8250f0ec-3f81-485d-b309-7c8a907e9483\",\r
+
+      //                 \"brandClassValue\": \"B-2\",\r
+
+      //                 \"BrandId\": \"25ee4450-4371-4930-8dcb-3f35360be60e\",\r
+
+      //                 \"brandName\": \"FUROTIL PLUS\",\r
+
+      //                 \"Type\": \"Other\"\r
+
+      //             },\r
+
+      //             {\r
+
+      //                 \"DoctorCategoryBrandClassId\": \"e9b330df-e440-46e4-adf2-b03392ad7fee\",\r
+
+      //                 \"brandClassValue\": \"B-1\",\r
+
+      //                 \"BrandId\": \"ac0ec797-25a1-46b3-ac74-27cdcdf71d0c\",\r
+
+      //                 \"brandName\": \"ANGENTA\",\r
+
+      //                 \"Type\": \"Other\"\r
+
+      //             },\r
+
+      //             {\r
+
+      //                 \"DoctorCategoryBrandClassId\": \"d8a24421-6775-41eb-815d-efe8314a3149\",\r
+
+      //                 \"brandClassValue\": \"B-1\",\r
+
+      //                 \"BrandId\": \"f350a380-a9e3-45d0-a84a-a04a47fa2b74\",\r
+
+      //                 \"brandName\": \"CLONATRIL\",\r
+
+      //                 \"Type\": \"Other\"\r
+
+      //             },\r
+
+      //             {\r
+
+      //                 \"DoctorCategoryBrandClassId\": \"a3eb4e93-30b4-4a1c-b656-88d5d0d838c2\",\r
+
+      //                 \"brandClassValue\": \"B-2\",\r
+
+      //                 \"BrandId\": \"287c972a-71a0-4591-807f-6b9c936a1447\",\r
+
+      //                 \"brandName\": \"DANIB\",\r
+
+      //                 \"Type\": \"Other\"\r
+
+      //             },\r
+
+      //             {\r
+
+      //                 \"DoctorCategoryBrandClassId\": \"8ec0b115-4117-4501-923e-62d171d86f6b\",\r
+
+      //                 \"brandClassValue\": \"B-2\",\r
+
+      //                 \"BrandId\": \"e42d7df1-9122-4921-a717-25c40da9be63\",\r
+
+      //                 \"brandName\": \"EYELIA\",\r
+
+      //                 \"Type\": \"Other\"\r
+
+      //             },\r
+
+      //             {\r
+
+      //                 \"DoctorCategoryBrandClassId\": \"3c38449d-53c8-4271-884e-99021a987786\",\r
+
+      //                 \"brandClassValue\": \"B-1\",\r
+
+      //                 \"BrandId\": \"88a04032-01e5-40c4-bc15-8fd436b42a47\",\r
+
+      //                 \"brandName\": \"GLYMIN\",\r
+
+      //                 \"Type\": \"Other\"\r
+
+      //             },\r
+
+      //             {\r
+
+      //                 \"DoctorCategoryBrandClassId\": \"88a572df-e344-4235-9214-3441826821a4\",\r
+
+      //                 \"brandClassValue\": \"B-1\",\r
+
+      //                 \"BrandId\": \"e88be0dd-20e8-47fe-8c4d-e160eed5be09\",\r
+
+      //                 \"brandName\": \"ADALIMAB\",\r
+
+      //                 \"Type\": \"Other\"\r
+
+      //             }\r
+
+      //         ],\r
+
+      //         \"PatientPerType\": \"Week\",\r
+
+      //         \"Religion\": \"Hindu\",\r
+
+      //         \"Speciality\": \"OPHTHALMOLOGIST\",\r
+
+      //         \"subMarketCode\": \"M1210501\",\r
+
+      //         \"SubMarketId\": \"ab4228f9-2af4-4cf2-b70f-c496c5109506\",\r
+
+      //         \"subMarketName\": \"SSK ROAD\",\r
+
+      //         \"ThanaCode\": \"49\",\r
+
+      //         \"ThanaName\": \"Morelganj\",\r
+
+      //         \"VisitingCardImagePath\": \"http://103.111.126.11/DoctorVisitingCard%2fimage.jpg\"\r
+
+      //     }\r
+
+      // ]\r
+
+      [\r
+
+      \    {\r
+
+      \        \"BirthDay\": \"\",\r
+
+      \        \"BMDCRegNumber\": \"N/A\",\r
+
+      \        \"Category\": \"B\",\r
+
+      \        \"ChamberAddress\": \"Dhanmondi Old 15\",\r
+
+      \        \"ChamberName\": \"Northern International Medical College \\u0026 Hospital \",\r
+
+      \        \"Code\": \"\",\r
+
+      \        \"CreatedBy\": \"31251\",\r
+
+      \        \"DistrictCode\": \"1\",\r
+
+      \        \"DistrictName\": \"Dhaka\",\r
+
+      \        \"Degree\": \"MBBS, FCPS\",\r
+
+      \        \"Designation\": \"Professor\",\r
+
+      \        \"DoctorStatus\": 0,\r
+
+      \        \"Email\": \"\",\r
+
+      \        \"FourPCode\": \"N/A\",\r
+
+      \        \"Gender\": \"Male\",\r
+
+      \        \"headType\": \"OwnDoctor\",\r
+
+      \        \"ID\": \"\",\r
+
+      \        \"InstituteName\": \"\",\r
+
+      \        \"InsulineRxPerDay\": 5,\r
+
+      \        \"IsGroupDoctor\": false,\r
+
+      \        \"Lat\": \"23.7448715\",\r
+
+      \        \"LocalId\": 4,\r
+
+      \        \"Lon\": \"90.3716798\",\r
+
+      \        \"majorBrandList\": [\r
+
+      \            {\r
+
+      \                \"DoctorCategoryBrandClassId\": \"3af20708-8796-4ad9-a0b7-8b6232dd75c9\",\r
+
+      \                \"brandClassValue\": \"B-0\",\r
+
+      \                \"BrandId\": \"01b2c518-6488-4975-ba36-5f0b39b36171\",\r
+
+      \                \"brandName\": \"ABASAGLAR\",\r
+
+      \                \"Type\": \"Major\"\r
+
+      \            },\r
+
+      \            {\r
+
+      \                \"DoctorCategoryBrandClassId\": \"84611941-d419-4aac-85fd-96fe072f9b6f\",\r
+
+      \                \"brandClassValue\": \"B-0\",\r
+
+      \                \"BrandId\": \"f6e899d4-8add-4f0c-b15b-e3dae606c62c\",\r
+
+      \                \"brandName\": \"HUMALOG\",\r
+
+      \                \"Type\": \"Major\"\r
+
+      \            }\r
+
+      \        ],\r
+
+      \        \"marketCode\": \"M46102\",\r
+
+      \        \"marketId\": \"d11f50c7-f4fe-49b3-8963-b810074a41d8\",\r
+
+      \        \"MarriageDay\": \"\",\r
+
+      \        \"MobileNo\": \"01819220694\",\r
+
+      \        \"ModifiedBy\": \"31251\",\r
+
+      \        \"Name\": \"Dr. Fazlul Haque \",\r
+
+      \        \"NamePlateImagePath\": \"content://media/external/images/media/1000130451\",\r
+
+      \        \"NoOfGroupDoctor\": 0,\r
+
+      \        \"NoOfPatient\": 10,\r
+
+      \        \"NoOfPracticeDays\": 3,\r
+
+      \        \"NoOfRxPerDay\": 5,\r
+
+      \        \"otherBrandList\": [\r
+
+      \            {\r
+
+      \                \"DoctorCategoryBrandClassId\": \"0589446a-03d0-4631-8d53-0d9ead20882c\",\r
+
+      \                \"brandClassValue\": \"B-0\",\r
+
+      \                \"BrandId\": \"6af45a47-2578-4ed0-b3c0-b7c650a22b8d\",\r
+
+      \                \"brandName\": \"HUMALOG MIX\",\r
+
+      \                \"Type\": \"Other\"\r
+
+      \            }\r
+
+      \        ],\r
+
+      \        \"PatientPerType\": \"Week\",\r
+
+      \        \"Religion\": \"Islam\",\r
+
+      \        \"Remarks\": \"\",\r
+
+      \        \"Speciality\": \"Medicine Specialist\",\r
+
+      \        \"subMarketCode\": \"M4610201\",\r
+
+      \        \"SubMarketId\": \"198a0770-1e8b-4fc9-b46e-1edf4f3e86a0\",\r
+
+      \        \"subMarketName\": \"EL-DHANMONDI-1\",\r
+
+      \        \"ThanaCode\": \"482\",\r
+
+      \        \"ThanaName\": \"Dhanmondi\",\r
+
+      \        \"VisitingCardImagePath\": \"content://media/external/images/media/1000130451\"\r
+
+      \    }\r
+
+      ]"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: SendDoctor
+    request:
+      url: "{{sales_pulse}}/Doctor/SendDoctor"
+      method: POST
+      body:
+        type: json
+        data: "[\r
+
+          \    {\r
+
+          \        \"ID\": \"\",\r
+
+          \        \"LocalId\": \"1234\",\r
+
+          \        \"Name\": \"Name3\",\r
+
+          \        \"Code\": \"Code\",\r
+
+          \        \"FourPCode\": \"123\",\r
+
+          \        \"BMDCRegNumber\": \"1234\",\r
+
+          \        \"SubMarketId\": \"999E3A19-A7CB-4E33-B4FB-00053AC35E5F\",\r
+
+          \        \"DoctorStatus\": 1,\r
+
+          \        \"Designation\": \"Ok\",\r
+
+          \        \"Degree\": \"MBBS\",\r
+
+          \        \"Speciality\": \"a\",\r
+
+          \        \"Category\": \"a\",\r
+
+          \        \"ChamberName\": \"a\",\r
+
+          \        \"ChamberAddress\": \"Chamber Address\",\r
+
+          \        \"InstituteName\": \"Institute Name\",\r
+
+          \        \"DistrictCode\": \"10\",\r
+
+          \        \"ThanaCode\": \"10\",\r
+
+          \        \"Lat\": \"23.74625\",\r
+
+          \        \"Lon\": \"90.39267\",\r
+
+          \        \"Email\": \"doctor@example.com\",\r
+
+          \        \"MobileNo\": \"1234567890\",\r
+
+          \        \"Religion\": \"Religion\",\r
+
+          \        \"Gender\": \"Male\",\r
+
+          \        \"BirthDay\": \"2000-01-01\",\r
+
+          \        \"MarriageDay\": \"1995-05-05\",\r
+
+          \        \"PatientPerType\": \"qq\",\r
+
+          \        \"NoOfPracticeDays\": 5,\r
+
+          \        \"NoOfPatient\": 100,\r
+
+          \        \"IsGroupDoctor\": true,\r
+
+          \        \"NoOfGroupDoctor\": 10,\r
+
+          \        \"NamePlateImagePath\": \"/aa\",\r
+
+          \        \"VisitingCardImagePath\": \"/bb\",\r
+
+          \        \"NoOfRxPerDay\": 10,\r
+
+          \        \"InsulineRxPerDay\": 5,\r
+
+          \        \"CreatedBy\": \"17801\",\r
+
+          \        \"ModifiedBy\": \"\",\r
+
+          \        \"Remarks\": \"\",\r
+
+          \        \"majorBrandList\": [\r
+
+          \            {\r
+
+          \                \"Type\": \"major\",\r
+
+          \                \"BrandId\": \"4D09B11D-B189-4F04-8303-00746D4A656D\",\r
+
+          \                \"DoctorCategoryBrandClassId\": \"C50F4876-FF57-4F1B-987A-0002F6C0B735\"\r
+
+          \            }\r
+
+          \        ],\r
+
+          \        \"otherBrandList\": [\r
+
+          \            {\r
+
+          \                \"Type\": \"other\",\r
+
+          \                \"BrandId\": \"420AAA1B-30AA-45B8-8292-01856622DF3E\",\r
+
+          \                \"DoctorCategoryBrandClassId\": \"C50F4876-FF57-4F1B-987A-0002F6C0B735\"\r
+
+          \            }\r
+
+          \        ]\r
+
+          \    }\r
+
+          ]"
+    response:
+      statusText: "200"
+      headers:
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Server
+          value: Microsoft-IIS/10.0
+        - name: X-Powered-By
+          value: ASP.NET
+        - name: Date
+          value: Sun, 05 May 2024 05:46:27 GMT
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 404,
+              "statusMessage": "Doctor entry stopped because there are occur an internal issue. An error occurred while updating the entries. See the inner exception for details."
+          }
+  - name: SendDoctor
+    request:
+      url: "{{sales_pulse}}/Doctor/SendDoctor"
+      method: POST
+      body:
+        type: json
+        data: "[\r
+
+          \    {\r
+
+          \        \"ID\": \"\",\r
+
+          \        \"LocalId\": \"1234\",\r
+
+          \        \"Name\": \"Name3\",\r
+
+          \        \"Code\": \"Code\",\r
+
+          \        \"FourPCode\": \"123\",\r
+
+          \        \"BMDCRegNumber\": \"1234\",\r
+
+          \        \"SubMarketId\": \"999E3A19-A7CB-4E33-B4FB-00053AC35E5F\",\r
+
+          \        \"DoctorStatus\": 1,\r
+
+          \        \"Designation\": \"Ok\",\r
+
+          \        \"Degree\": \"MBBS\",\r
+
+          \        \"Speciality\": \"a\",\r
+
+          \        \"Category\": \"a\",\r
+
+          \        \"ChamberName\": \"a\",\r
+
+          \        \"ChamberAddress\": \"Chamber Address\",\r
+
+          \        \"InstituteName\": \"Institute Name\",\r
+
+          \        \"DistrictCode\": \"10\",\r
+
+          \        \"ThanaCode\": \"10\",\r
+
+          \        \"Lat\": \"23.74625\",\r
+
+          \        \"Lon\": \"90.39267\",\r
+
+          \        \"Email\": \"doctor@example.com\",\r
+
+          \        \"MobileNo\": \"1234567890\",\r
+
+          \        \"Religion\": \"Religion\",\r
+
+          \        \"Gender\": \"Male\",\r
+
+          \        \"BirthDay\": \"2000-01-01\",\r
+
+          \        \"MarriageDay\": \"1995-05-05\",\r
+
+          \        \"PatientPerType\": \"qq\",\r
+
+          \        \"NoOfPracticeDays\": 5,\r
+
+          \        \"NoOfPatient\": 100,\r
+
+          \        \"IsGroupDoctor\": true,\r
+
+          \        \"NoOfGroupDoctor\": 10,\r
+
+          \        \"NamePlateImagePath\": \"/aa\",\r
+
+          \        \"VisitingCardImagePath\": \"/bb\",\r
+
+          \        \"NoOfRxPerDay\": 10,\r
+
+          \        \"InsulineRxPerDay\": 5,\r
+
+          \        \"CreatedBy\": \"17801\",\r
+
+          \        \"ModifiedBy\": \"\",\r
+
+          \        \"Remarks\": \"\",\r
+
+          \        \"majorBrandList\": [\r
+
+          \            {\r
+
+          \                \"Type\": \"major\",\r
+
+          \                \"BrandId\": \"4D09B11D-B189-4F04-8303-00746D4A656D\",\r
+
+          \                \"DoctorCategoryBrandClassId\": \"CDD1B362-F9CE-4603-B0A6-06A7A9C585A5\"\r
+
+          \            }\r
+
+          \        ],\r
+
+          \        \"otherBrandList\": [\r
+
+          \            {\r
+
+          \                \"Type\": \"other\",\r
+
+          \                \"BrandId\": \"420AAA1B-30AA-45B8-8292-01856622DF3E\",\r
+
+          \                \"DoctorCategoryBrandClassId\": \"E3EBE14A-343F-4A44-A754-06DD584A5514\"\r
+
+          \            }\r
+
+          \        ]\r
+
+          \    }\r
+
+          ]"
+    response:
+      statusText: "200"
+      headers:
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Server
+          value: Microsoft-IIS/10.0
+        - name: X-Powered-By
+          value: ASP.NET
+        - name: Date
+          value: Sun, 05 May 2024 06:09:37 GMT
+      body:
+        type: json
+        data: |-
+          {
+              "data": {
+                  "ids": [
+                      {
+                          "doctorId": "f06051ef-23e2-4a8f-9b2c-bdac9faed13f",
+                          "localId": "1234"
+                      }
+                  ]
+              },
+              "statusCode": 200,
+              "statusMessage": "Doctor submitted successfully"
+          }

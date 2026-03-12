@@ -1,0 +1,29 @@
+meta {
+  name: SAPOrderAcknowledgement
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{pulse_api}}/Sap/SAPOrderAcknowledgement
+  body: json
+  auth: inherit
+}
+
+body:json {
+  [
+      {
+          "OrderNo": "50304022"
+      },
+      {
+          "OrderNo": "50304021"
+      },
+       {
+          "OrderNo": "50304023"
+      }
+  ]
+}
+
+settings {
+  encodeUrl: true
+}

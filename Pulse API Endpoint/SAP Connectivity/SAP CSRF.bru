@@ -1,0 +1,20 @@
+meta {
+  name: SAP CSRF
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{pulse_api}}/login/SAP?Code=17801&password=''
+  body: none
+  auth: inherit
+}
+
+params:query {
+  Code: 17801
+  password: ''
+}
+
+settings {
+  encodeUrl: true
+}

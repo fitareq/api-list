@@ -1,0 +1,69 @@
+info:
+  name: GetPendingGroupDoctor
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{pulse_api}}/GroupDoctor/GetPendingGroupDoctor"
+  body:
+    type: json
+    data: "{\r\n    \"UserId\": \"17801\"\r\n}"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: GetPendingGroupDoctor
+    request:
+      url: "{{sales_pulse}}/GroupDoctor/GetPendingGroupDoctor"
+      method: POST
+      body:
+        type: json
+        data: "{\r\n    \"UserId\": \"17801\"\r\n}"
+    response:
+      statusText: "200"
+      headers:
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Server
+          value: Microsoft-IIS/10.0
+        - name: X-Powered-By
+          value: ASP.NET
+        - name: Date
+          value: Sun, 19 May 2024 11:03:27 GMT
+      body:
+        type: json
+        data: |-
+          {
+              "data": [
+                  {
+                      "id": "b9ed53a3-1665-4920-b9f8-4256d4a7a343",
+                      "name": "John Doe",
+                      "code": "M25203108",
+                      "subMarketId": "9ffa6764-99c5-4a7c-b754-1618b5f73846",
+                      "instituteName": "RANGPUR (SADAR) UPAZILA HEALTH COMPLEX",
+                      "isGroupDoctor": true,
+                      "noOfGroupDoctor": 5,
+                      "headType": "OwnGroupDoctor",
+                      "marketCode": "M25203",
+                      "marketName": "Allardarga",
+                      "subMarketCode": "M2520301",
+                      "subMarketName": "ALLARDARGA",
+                      "teamId": "0a1b605c-4007-4c87-a7a5-36394a5f05ab",
+                      "teamCode": "Aviator",
+                      "teamName": "Aviator",
+                      "departmentId": "3bb4859f-79ef-4a43-bd89-2c225ab5f29d",
+                      "departmentCode": "RX",
+                      "departmentName": "Rx General"
+                  }
+              ],
+              "statusCode": 200,
+              "statusMessage": "Pending Group Doctor Data Send Successfully!"
+          }

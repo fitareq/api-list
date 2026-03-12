@@ -1,0 +1,55 @@
+info:
+  name: Notification MarkAsRead
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: "{{pulse_api}}/Notification/MarkAsRead"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"NotificationId\": \"\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: MarkAsRead
+    request:
+      url: "{{pulse_api}}/Notification/MarkAsRead"
+      method: POST
+      body:
+        type: json
+        data: "{\r
+
+          \    \"NotificationId\": \"\"\r
+
+          }"
+    response:
+      statusText: "200"
+      headers:
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Server
+          value: Microsoft-IIS/10.0
+        - name: X-Powered-By
+          value: ASP.NET
+        - name: Date
+          value: Thu, 25 Jul 2024 04:41:32 GMT
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 404,
+              "statusMessage": "Please try with notification id"
+          }

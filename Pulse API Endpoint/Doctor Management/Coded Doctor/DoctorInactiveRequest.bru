@@ -1,0 +1,71 @@
+meta {
+  name: DoctorInactiveRequest
+  type: http
+  seq: 10
+}
+
+post {
+  url: {{pulse_api}}/Doctor/DoctorInactiveRequest
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "UserId": "",
+      "DoctorId": "ed2598b1-c7ff-4a2e-9abb-6fad9c6e81c3",
+      "Remarks":"Test inactive action",
+      "Lat": "23.7464815",
+      "Lon": "23.7464815"
+  
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: DoctorInactiveRequest_Example
+  
+  request: {
+    url: {{pulse_api}}/Doctor/DoctorInactiveRequest
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "UserId": "",
+          "DoctorId": "ed2598b1-c7ff-4a2e-9abb-6fad9c6e81c3",
+          "Remarks":"Test inactive action",
+          "Lat": "23.7464815",
+          "Lon": "23.7464815"
+      
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Transfer-Encoding: chunked
+      Content-Type: application/json; charset=utf-8
+      Server: Microsoft-IIS/10.0
+      X-Powered-By: ASP.NET
+      Date: Tue, 16 Jul 2024 04:24:54 GMT
+    }
+  
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "statusCode": 404,
+            "statusMessage": "User ID,Doctor ID required, please try again"
+        }
+      '''
+    }
+  }
+}

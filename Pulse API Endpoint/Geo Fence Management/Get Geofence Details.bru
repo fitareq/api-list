@@ -1,0 +1,190 @@
+meta {
+  name: Get Geofence Details
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{pulse_api}}/GeoFence/GetGeofenceDetails
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyTmFtZSI6Ikthd3NlciBBaG1lZCBOYWhpbiIsIkVtcGxveWVlQ29kZSI6IjMxMzUwIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiUEEiLCJEZXBhcnRtZW50Q29kZSI6IlNQU0FMRVMiLCJUZWFtQ29kZSI6Ik5FUFRVTkUiLCJUeXBlIjoib2ZmaWNlciIsImV4cCI6MTc2MDk1OTI3NywiaXNzIjoiU2FsZXNQdWxzZUFQSSIsImF1ZCI6IkhQTC1NSVMifQ.gmz1FU_wozJOf8ZiTO0ys6k04HLFC_htKFNr3ntjGBc
+}
+
+body:json {
+  {
+      "UserId": "10408"
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: New Request
+  
+  request: {
+    url: {{pulse_api}}/GeoFence/GetGeofenceDetails
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "UserId": "13921"
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Content-Type: application/json; charset=utf-8
+      Date: Mon, 10 Feb 2025 06:00:23 GMT
+      Server: Kestrel
+      Transfer-Encoding: chunked
+    }
+  
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "data": [
+                {
+                    "id": "00fee255-7c3c-4d93-b75b-9a5053d63c03",
+                    "geoFenceCode": "GF000004",
+                    "submarketId": "0da92d48-1902-4e9d-8642-00000275e02d",
+                    "submarketCode": "M4080407",
+                    "submarketName": "Boroychori",
+                    "latitude": 23,
+                    "longitude": 34.93,
+                    "radius": 50,
+                    "entryNotificationNeeded": true,
+                    "exitNotificationNeeded": true,
+                    "isActive": false,
+                    "createdBy": "c2580795-73e9-41a4-a05c-9697232d1a67",
+                    "createdByName": "Mahidur Rahman",
+                    "createdByCode": "13921",
+                    "creationDate": "2025-02-10T11:39:54.573",
+                    "modifiedBy": null,
+                    "modifiedByName": null,
+                    "modifiedByCode": null,
+                    "modificationDate": null,
+                    "isApproved": null,
+                    "approvedBy": null,
+                    "approvedByName": null,
+                    "approvedByCode": null,
+                    "approvalDate": null,
+                    "isRejected": false,
+                    "rejectedBy": null,
+                    "rejectedByName": null,
+                    "rejectedByCode": null,
+                    "rejectedDate": null
+                },
+                {
+                    "id": "e4fd5bc9-3139-4a1b-85e7-eaa722767739",
+                    "geoFenceCode": "GF000003",
+                    "submarketId": "0da92d48-1902-4e9d-8642-00000275e02d",
+                    "submarketCode": "M4080407",
+                    "submarketName": "Boroychori",
+                    "latitude": 23,
+                    "longitude": 34.93,
+                    "radius": 50,
+                    "entryNotificationNeeded": true,
+                    "exitNotificationNeeded": true,
+                    "isActive": false,
+                    "createdBy": "c2580795-73e9-41a4-a05c-9697232d1a67",
+                    "createdByName": "Mahidur Rahman",
+                    "createdByCode": "13921",
+                    "creationDate": "2025-02-10T11:39:52.84",
+                    "modifiedBy": null,
+                    "modifiedByName": null,
+                    "modifiedByCode": null,
+                    "modificationDate": null,
+                    "isApproved": null,
+                    "approvedBy": null,
+                    "approvedByName": null,
+                    "approvedByCode": null,
+                    "approvalDate": null,
+                    "isRejected": false,
+                    "rejectedBy": null,
+                    "rejectedByName": null,
+                    "rejectedByCode": null,
+                    "rejectedDate": null
+                },
+                {
+                    "id": "bc1302b4-b912-4ac4-9926-2cc5540bd8c9",
+                    "geoFenceCode": "GF000002",
+                    "submarketId": "0da92d48-1902-4e9d-8642-00000275e02d",
+                    "submarketCode": "M4080407",
+                    "submarketName": "Boroychori",
+                    "latitude": 23,
+                    "longitude": 34.93,
+                    "radius": 50,
+                    "entryNotificationNeeded": true,
+                    "exitNotificationNeeded": true,
+                    "isActive": true,
+                    "createdBy": "c2580795-73e9-41a4-a05c-9697232d1a67",
+                    "createdByName": "Mahidur Rahman",
+                    "createdByCode": "13921",
+                    "creationDate": "2025-02-10T11:39:51.17",
+                    "modifiedBy": null,
+                    "modifiedByName": null,
+                    "modifiedByCode": null,
+                    "modificationDate": null,
+                    "isApproved": true,
+                    "approvedBy": "11c11e9a-6c9a-4870-baba-24503a494267",
+                    "approvedByName": "Md. Ziarul Islam",
+                    "approvedByCode": "05324",
+                    "approvalDate": "2025-02-10T11:52:06.263",
+                    "isRejected": false,
+                    "rejectedBy": null,
+                    "rejectedByName": null,
+                    "rejectedByCode": null,
+                    "rejectedDate": null
+                },
+                {
+                    "id": "e530f7cb-d69d-428b-bc5f-9a072c00594f",
+                    "geoFenceCode": "GF000001",
+                    "submarketId": "0da92d48-1902-4e9d-8642-00000275e02d",
+                    "submarketCode": "M4080407",
+                    "submarketName": "Boroychori",
+                    "latitude": 23,
+                    "longitude": 34.93,
+                    "radius": 50,
+                    "entryNotificationNeeded": true,
+                    "exitNotificationNeeded": true,
+                    "isActive": false,
+                    "createdBy": "c2580795-73e9-41a4-a05c-9697232d1a67",
+                    "createdByName": "Mahidur Rahman",
+                    "createdByCode": "13921",
+                    "creationDate": "2025-02-10T11:39:49.053",
+                    "modifiedBy": null,
+                    "modifiedByName": null,
+                    "modifiedByCode": null,
+                    "modificationDate": null,
+                    "isApproved": false,
+                    "approvedBy": null,
+                    "approvedByName": null,
+                    "approvedByCode": null,
+                    "approvalDate": null,
+                    "isRejected": true,
+                    "rejectedBy": "11c11e9a-6c9a-4870-baba-24503a494267",
+                    "rejectedByName": "Md. Ziarul Islam",
+                    "rejectedByCode": "05324",
+                    "rejectedDate": "2025-02-10T11:54:01.387"
+                }
+            ],
+            "statusCode": 200,
+            "statusMessage": "Geofence details Send Successfully!"
+        }
+      '''
+    }
+  }
+}

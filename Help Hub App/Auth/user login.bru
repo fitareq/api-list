@@ -1,0 +1,23 @@
+meta {
+  name: user login
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{base_url}}/Login
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "empid": "01250",
+      "password": "hpl_hh@01250np"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

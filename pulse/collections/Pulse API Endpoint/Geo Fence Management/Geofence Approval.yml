@@ -1,0 +1,67 @@
+info:
+  name: Geofence Approval
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{pulse_api}}/GeoFence/GeofenceApproval"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"Flag\": \"Approve\",\r
+
+      \    \"GeoFenceId\": \"b9b32d48-5006-41d9-9dd8-9d137f1ddad7\",\r
+
+      \    \"Radius\": 50,\r
+
+      \    \"UserId\": \"97177285-B027-4752-8FB5-CFB4DCD24BC4\"\r
+
+      }"
+  auth:
+    type: bearer
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyTmFtZSI6IkVhaHNhbnVsIFllYW1pbiBLaGFuIiwiRW1wbG95ZWVDb2RlIjoiMzAyOTYiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJLQU0iLCJEZXBhcnRtZW50Q29kZSI6IlNQU0FMRVMiLCJUZWFtQ29kZSI6Ik5FUFRVTkUiLCJUeXBlIjoic3VwZXJ2aXNvciIsImV4cCI6MTc2MTAyNTQ2OCwiaXNzIjoiU2FsZXNQdWxzZUFQSSIsImF1ZCI6IkhQTC1NSVMifQ.p2YMZPQ0JC-uba_cSeEQFFWG_1zncZrk-1uOLKgFGrc
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: New Request
+    request:
+      url: "{{pulse_api}}/GeoFence/GeofenceApproval"
+      method: POST
+      body:
+        type: json
+        data: "{\r
+
+          \    \"GeoFenceId\":\"E530F7CB-D69D-428B-BC5F-9A072C00594F\",\r
+
+          \    \"UserId\":\"11C11E9A-6C9A-4870-BABA-24503A494267\",\r
+
+          \    \"Flag\":\"Reject\" // Reject\r
+
+          \r
+
+          }"
+    response:
+      statusText: "200"
+      headers:
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Date
+          value: Mon, 10 Feb 2025 05:54:01 GMT
+        - name: Server
+          value: Kestrel
+        - name: Transfer-Encoding
+          value: chunked
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 200,
+              "statusMessage": "Geofence rejected successfully"
+          }

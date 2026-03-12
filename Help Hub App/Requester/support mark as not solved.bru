@@ -1,0 +1,23 @@
+meta {
+  name: support mark as not solved
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{base_url}}/UserNotSolvedMarkSupport
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "support_id": "95837",
+      "not_solve_comment": "not solved"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

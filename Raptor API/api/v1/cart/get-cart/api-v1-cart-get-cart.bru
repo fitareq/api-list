@@ -1,0 +1,52 @@
+meta {
+  name: /api/v1/cart/get-cart
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/api/v1/cart/get-cart?UserId=string&DeliveryAddressId=a41daf79-8670-a0fb-280a-8f8430b1676b
+  body: none
+  auth: inherit
+}
+
+params:query {
+  UserId: string
+  DeliveryAddressId: a41daf79-8670-a0fb-280a-8f8430b1676b
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: OK
+  
+  request: {
+    url: {{baseUrl}}/api/v1/cart/get-cart?UserId=string&DeliveryAddressId=a41daf79-8670-a0fb-280a-8f8430b1676b
+    method: GET
+    mode: none
+    params:query: {
+      UserId: string
+      DeliveryAddressId: a41daf79-8670-a0fb-280a-8f8430b1676b
+    }
+  
+    headers: {
+      Authorization: Bearer <token>
+    }
+  }
+  
+  response: {
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: text
+      content: '''
+  
+      '''
+    }
+  }
+}

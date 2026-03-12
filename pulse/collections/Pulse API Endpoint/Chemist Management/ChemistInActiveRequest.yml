@@ -1,0 +1,59 @@
+info:
+  name: ChemistInActiveRequest
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{pulse_api}}/Chemist/ChemistInactiveRequest"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"UserId\": \"17801\",\r
+
+      \    \"ChemistId\": \"EB9DE09D-EC54-4B4B-882E-0000B473A0E4\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: ChemistInActiveRequest_Example
+    request:
+      url: "{{pulse_api}}/Chemist/ChemistInactiveRequest"
+      method: POST
+      body:
+        type: json
+        data: "{\r
+
+          \    \"UserId\": \"\",\r
+
+          \    \"ChemistId\": \"EB9DE09D-EC54-4B4B-882E-0000B473A0E4\"\r
+
+          }"
+    response:
+      statusText: "200"
+      headers:
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Server
+          value: Microsoft-IIS/10.0
+        - name: X-Powered-By
+          value: ASP.NET
+        - name: Date
+          value: Tue, 16 Jul 2024 03:59:14 GMT
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 404,
+              "statusMessage": "User ID && Chemist ID required, please try again"
+          }

@@ -1,0 +1,28 @@
+info:
+  name: GetOrderHistory
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{pulse_api}}/SpecialSales/GetOrderHistory"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"UserId\": \"31350\",\r
+
+      \    \"OrderDate\": null, // null\r
+
+      \    \"DeliveryDate\": null // null\r
+
+      }"
+  auth:
+    type: bearer
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyTmFtZSI6Ik1kLiBBYmR1ciBSYWhpbSIsIkVtcGxveWVlQ29kZSI6IjEwOTI0IiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiU01JTyIsIkRlcGFydG1lbnRDb2RlIjoiUlgiLCJUZWFtQ29kZSI6IkxVTUlOSU9VUyIsIlR5cGUiOiJvZmZpY2VyIiwiZXhwIjoxNzQ0NjI0NTYwLCJpc3MiOiJTYWxlc1B1bHNlQVBJIiwiYXVkIjoiSFBMLU1JUyJ9.1zbzUH2Xw4owU2jZC9_ZTfmrUqWoRUujgBJtw4721io
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

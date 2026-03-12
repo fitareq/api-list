@@ -1,0 +1,80 @@
+meta {
+  name: SubMarket Entry Edit
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{pulse_api}}/SubMarket/SubMarketEntry
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyTmFtZSI6IlNhaWR1ciBSYWhhbWFuIiwiRW1wbG95ZWVDb2RlIjoiMDUxMDUiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJSTSIsIkRlcGFydG1lbnRDb2RlIjoiUlgiLCJUZWFtQ29kZSI6IkxVTUlOSU9VUyIsIlR5cGUiOiJzdXBlcnZpc29yIiwiZXhwIjoxNzM0NDE0NjU5LCJpc3MiOiJTYWxlc1B1bHNlQVBJIiwiYXVkIjoiSFBMLU1JUyJ9.Uo6151BMldNFKgpiy2KpEZFiUkk_GnvIvKjUBtURPzY
+}
+
+body:json {
+  {
+      "Address": "Mitali Bazar",
+      "Description": "Mitali Bazar",
+      "LocationType": "", //HeadQuarter or Ex-HeadQuarter, or OutStation or Other
+      "Lat": "23.0320566",
+      "Lon": "90.76508",
+      "MarketCode": "M31003",
+      "Name": "Mitali Bazar 2",
+      "SubMarketId": "", // empty for create
+      "UserId": ""
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: SubMarket Entry_Example
+  
+  request: {
+    url: {{pulse_api}}/SubMarket/SubMarketEntry
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "Address": "test",
+          "Description": "test",
+          "Lat": "23.7463748",
+          "Lon": "90.3920738",
+          "MarketCode": "M72501",
+          "Name": "test sub market 1",
+          "SubMarketId": "",
+          "UserId": ""
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Transfer-Encoding: chunked
+      Content-Type: application/json; charset=utf-8
+      Server: Microsoft-IIS/10.0
+      X-Powered-By: ASP.NET
+      Date: Tue, 16 Jul 2024 03:42:40 GMT
+    }
+  
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "statusCode": 200,
+            "statusMessage": "SubMarket entry processed successfully"
+        }
+      '''
+    }
+  }
+}

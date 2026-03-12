@@ -1,0 +1,115 @@
+meta {
+  name: /api/v1/cart/add-to-cart
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/api/v1/cart/add-to-cart
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "userId": "string",
+    "deliveryAddressId": "40fa782d-7184-d309-7f5b-cc3ff7e18d7a",
+    "item": {
+      "productId": "string",
+      "productName": "string",
+      "imageUrl": "string",
+      "price": 1601.6923163064178,
+      "discountAmount": 6831.401550437681,
+      "quantity": 4905,
+      "isPrescriptionNeeded": false,
+      "vat": 7689.572130680455,
+      "addons": [
+        {
+          "productAddonsId": "string",
+          "addonName": "string",
+          "addonQuantity": 3028,
+          "addonAmount": 4677.05422409072,
+          "isRequired": false
+        },
+        {
+          "productAddonsId": "string",
+          "addonName": "string",
+          "addonQuantity": 8013,
+          "addonAmount": 5222.779666790709,
+          "isRequired": false
+        }
+      ],
+      "stockAvailable": false
+    }
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: OK
+  
+  request: {
+    url: {{baseUrl}}/api/v1/cart/add-to-cart
+    method: POST
+    mode: json
+    headers: {
+      Content-Type: application/json
+      Authorization: Bearer <token>
+    }
+  
+    body:json: {
+      {
+        "userId": "string",
+        "deliveryAddressId": "40fa782d-7184-d309-7f5b-cc3ff7e18d7a",
+        "item": {
+          "productId": "string",
+          "productName": "string",
+          "imageUrl": "string",
+          "price": 1601.6923163064178,
+          "discountAmount": 6831.401550437681,
+          "quantity": 4905,
+          "isPrescriptionNeeded": false,
+          "vat": 7689.572130680455,
+          "addons": [
+            {
+              "productAddonsId": "string",
+              "addonName": "string",
+              "addonQuantity": 3028,
+              "addonAmount": 4677.05422409072,
+              "isRequired": false
+            },
+            {
+              "productAddonsId": "string",
+              "addonName": "string",
+              "addonQuantity": 8013,
+              "addonAmount": 5222.779666790709,
+              "isRequired": false
+            }
+          ],
+          "stockAvailable": false
+        }
+      }
+    }
+  }
+  
+  response: {
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: text
+      content: '''
+  
+      '''
+    }
+  }
+}

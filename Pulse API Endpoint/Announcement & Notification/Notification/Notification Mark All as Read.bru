@@ -1,0 +1,61 @@
+meta {
+  name: Notification Mark All as Read
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{pulse_api}}/Notification/SetNotificationsMarkAsRead
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "UserCode": "0070856"
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Mark All as Read
+  
+  request: {
+    url: {{pulse_api}}/Notification/SetNotificationsMarkAsRead
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "UserCode": "0070856"
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Transfer-Encoding: chunked
+      Content-Type: application/json; charset=utf-8
+      Server: Microsoft-IIS/10.0
+      X-Powered-By: ASP.NET
+      Date: Thu, 25 Jul 2024 04:41:55 GMT
+    }
+  
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "statusCode": 200,
+            "statusMessage": "Notifications are set to mark as read"
+        }
+      '''
+    }
+  }
+}

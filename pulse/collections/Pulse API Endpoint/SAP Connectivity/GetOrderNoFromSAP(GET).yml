@@ -1,0 +1,15 @@
+info:
+  name: GetOrderNoFromSAP(GET)
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{pulse_api}}/SAP/GetPendingOrders"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

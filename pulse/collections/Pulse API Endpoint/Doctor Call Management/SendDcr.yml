@@ -1,0 +1,419 @@
+info:
+  name: SendDcr
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{pulse_api}}/DCR/SendDcr"
+  body:
+    type: json
+    data: "[\r
+
+      \    {\r
+
+      \        \"approvalDate\": \"\",\r
+
+      \        \"approvedBy\": \"\",\r
+
+      \        \"CallEntryBy\": \"17801\",\r
+
+      \        \"callEntryByCode\": \"\",\r
+
+      \        \"callEntryByName\": \"\",\r
+
+      \        \"CallEntryDate\": \"2024-09-11 11:35:01\",\r
+
+      \        \"CallEntryLocation\": \"23.7464988,90.3921863\",\r
+
+      \        \"CallExpenseAmount\": 0,\r
+
+      \        \"CallExpenseType\": \"\",\r
+
+      \        \"CallLocation\": \"Head Quarter\",\r
+
+      \        \"CallNumber\": 0,\r
+
+      \        \"CallShift\": \"Afternoon\",\r
+
+      \        \"Comment\": \"\",\r
+
+      \        \"dcrImagePath\": \"\",\r
+
+      \        \"DistanceFromDoctorLocation\": \"\",\r
+
+      \        \"doctorCode\": \"M25203002\",\r
+
+      \        \"DoctorHeadType\": \"OwnDoctor\",\r
+
+      \        \"DoctorId\": \"e53ee8fb-b451-4070-9072-621d614407a7\",\r
+
+      \        \"doctorName\": \"NASIMA AKTAR\",\r
+
+      \        \"hadCallExpense\": false,\r
+
+      \        \"HasGivenWpmItems\": false,\r
+
+      \        \"HasPromotedBrands\": false,\r
+
+      \        \"HasSeenPrescriptions\": false,\r
+
+      \        \"hasTransferred\": false,\r
+
+      \        \"ID\": \"\",\r
+
+      \        \"isApproved\": false,\r
+
+      \        \"IsJoinCall\": false,\r
+
+      \        \"isRejected\": false,\r
+
+      \        \"LocalDcrId\": 2,\r
+
+      \        \"marketCode\": \"\",\r
+
+      \        \"marketName\": \"\",\r
+
+      \        \"prescriptionProductList\": [],\r
+
+      \        \"promotedBrandList\": [],\r
+
+      \        \"rejectedBy\": \"\",\r
+
+      \        \"rejectedDate\": \"\",\r
+
+      \        \"subMarketCode\": \"\",\r
+
+      \        \"SubMarketId\": \"5313a392-6d17-434a-8c86-391c6c008411\",\r
+
+      \        \"subMarketName\": \"\",\r
+
+      \        \"TotalGivenWpmItems\": 0,\r
+
+      \        \"TotalPrescriptionProducts\": 0,\r
+
+      \        \"TotalPrescriptionsSeen\": 0,\r
+
+      \        \"TotalPromotedBrands\": 0,\r
+
+      \        \"VisitedWith\": \"\",\r
+
+      \        \"WpmItemList\": []\r
+
+      \    },\r
+
+      \    {\r
+
+      \        \"approvalDate\": \"\",\r
+
+      \        \"approvedBy\": \"\",\r
+
+      \        \"CallEntryBy\": \"17801\",\r
+
+      \        \"callEntryByCode\": \"\",\r
+
+      \        \"callEntryByName\": \"\",\r
+
+      \        \"CallEntryDate\": \"2024-09-11 11:35:14\",\r
+
+      \        \"CallEntryLocation\": \"23.7464988,90.3921863\",\r
+
+      \        \"CallExpenseAmount\": 0,\r
+
+      \        \"CallExpenseType\": \"\",\r
+
+      \        \"CallLocation\": \"Head Quarter\",\r
+
+      \        \"CallNumber\": 0,\r
+
+      \        \"CallShift\": \"Morning\",\r
+
+      \        \"Comment\": \"\",\r
+
+      \        \"dcrImagePath\": \"\",\r
+
+      \        \"DistanceFromDoctorLocation\": \"\",\r
+
+      \        \"doctorCode\": \"M25203015\",\r
+
+      \        \"DoctorHeadType\": \"OwnDoctor\",\r
+
+      \        \"DoctorId\": \"8e50a325-03e1-4a7f-bdee-a00c4e3937d9\",\r
+
+      \        \"doctorName\": \"SIMSON BISWAS ( KHOKON)\",\r
+
+      \        \"hadCallExpense\": false,\r
+
+      \        \"HasGivenWpmItems\": false,\r
+
+      \        \"HasPromotedBrands\": false,\r
+
+      \        \"HasSeenPrescriptions\": false,\r
+
+      \        \"hasTransferred\": false,\r
+
+      \        \"ID\": \"\",\r
+
+      \        \"isApproved\": false,\r
+
+      \        \"IsJoinCall\": false,\r
+
+      \        \"isRejected\": false,\r
+
+      \        \"LocalDcrId\": 3,\r
+
+      \        \"marketCode\": \"\",\r
+
+      \        \"marketName\": \"\",\r
+
+      \        \"prescriptionProductList\": [],\r
+
+      \        \"promotedBrandList\": [],\r
+
+      \        \"rejectedBy\": \"\",\r
+
+      \        \"rejectedDate\": \"\",\r
+
+      \        \"subMarketCode\": \"\",\r
+
+      \        \"SubMarketId\": \"5313a392-6d17-434a-8c86-391c6c008411\",\r
+
+      \        \"subMarketName\": \"\",\r
+
+      \        \"TotalGivenWpmItems\": 0,\r
+
+      \        \"TotalPrescriptionProducts\": 0,\r
+
+      \        \"TotalPrescriptionsSeen\": 0,\r
+
+      \        \"TotalPromotedBrands\": 0,\r
+
+      \        \"VisitedWith\": \"\",\r
+
+      \        \"WpmItemList\": []\r
+
+      \    }\r
+
+      ]"
+  auth:
+    type: bearer
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyTmFtZSI6Ik1kLiBTYWlkdXIgUmFobWFuIiwiRW1wbG95ZWVDb2RlIjoiMTc4MDEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJNSU8iLCJEZXBhcnRtZW50Q29kZSI6IlJYIiwiVGVhbUNvZGUiOiJBVklBVE9SIiwiVHlwZSI6Im9mZmljZXIiLCJleHAiOjE3MzM4MDg1NTQsImlzcyI6IlNhbGVzUHVsc2VBUEkiLCJhdWQiOiJIUEwtTUlTIn0.3Cqn1AOV4Xf5l5sIKBom7xBD9JyBg4mQG4gGrA9c-WU
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: SendDcr_success_body
+    request:
+      url: "{{pulse_api}}/DCR/SendDcr"
+      method: POST
+      body:
+        type: json
+        data: "[\r
+
+          \    {\r
+
+          \        \"CallEntryBy\": \"17802\",\r
+
+          \        \"CallEntryDate\": \"2024-06-05 14:39:19\",\r
+
+          \        \"CallEntryLocation\": \"23.7464791,90.3922251\",\r
+
+          \        \"CallExpenseAmount\": 200,\r
+
+          \        \"CallExpenseType\": \"test\",\r
+
+          \        \"CallLocation\": \"Head Quarter\",\r
+
+          \        \"CallNumber\": 0,\r
+
+          \        \"CallShift\": \"Morning\",\r
+
+          \        \"Comment\": \"\",\r
+
+          \        \"dcrImagePath\": \"content://media/external/images/media/1000009696\",\r
+
+          \        \"DistanceFromDoctorLocation\": \"\",\r
+
+          \        \"doctorCode\": \"M14303026\",\r
+
+          \        \"DoctorHeadType\": \"PairDoctor\",\r
+
+          \        \"DoctorId\": \"118afd7d-3464-420a-93f0-8ce858c3e001\",\r
+
+          \        \"doctorName\": \"M.H ANOWER\",\r
+
+          \        \"hadCallExpense\": true,\r
+
+          \        \"HasGivenWpmItems\": true,\r
+
+          \        \"HasPromotedBrands\": true,\r
+
+          \        \"HasSeenPrescriptions\": true,\r
+
+          \        \"IsJoinCall\": true,\r
+
+          \        \"LocalDcrId\": 0,\r
+
+          \        \"prescriptionProductList\": [\r
+
+          \            {\r
+
+          \                \"productCode\": \"80141\",\r
+
+          \                \"ProductId\": \"e245b398-f12f-4f59-b019-05ce581c7afe\",\r
+
+          \                \"productName\": \"D-VINE 20000 IU CAP\",\r
+
+          \                \"productStrength\": \"20000IU\"\r
+
+          \            },\r
+
+          \            {\r
+
+          \                \"productCode\": \"16401\",\r
+
+          \                \"ProductId\": \"36ad5668-452a-49b8-91b4-0c7a63791c55\",\r
+
+          \                \"productName\": \"ROZITH 250 MG TAB\",\r
+
+          \                \"productStrength\": \"250 MG\"\r
+
+          \            },\r
+
+          \            {\r
+
+          \                \"productCode\": \"80113\",\r
+
+          \                \"ProductId\": \"8fc0f6c9-5185-44ca-bbeb-1ec862784650\",\r
+
+          \                \"productName\": \"FUROTIL 1.5 GM IV INJ (N)\",\r
+
+          \                \"productStrength\": \"1.5 GM\"\r
+
+          \            },\r
+
+          \            {\r
+
+          \                \"productCode\": \"80172\",\r
+
+          \                \"ProductId\": \"e8550b71-4254-44fc-a581-0f0fe88baa18\",\r
+
+          \                \"productName\": \"SERGEL MUPS 40MG TAB\",\r
+
+          \                \"productStrength\": \"40 MG\"\r
+
+          \            }\r
+
+          \        ],\r
+
+          \        \"promotedBrandList\": [\r
+
+          \            {\r
+
+          \                \"brandCode\": \"ACT\",\r
+
+          \                \"BrandId\": \"505054bb-d3e8-45e8-9dde-59d9be2aece7\",\r
+
+          \                \"brandName\": \"ALCET\"\r
+
+          \            },\r
+
+          \            {\r
+
+          \                \"brandCode\": \"ARN\",\r
+
+          \                \"BrandId\": \"b2b60d33-601e-4744-9903-46e9971a32b9\",\r
+
+          \                \"brandName\": \"AERON\"\r
+
+          \            },\r
+
+          \            {\r
+
+          \                \"brandCode\": \"CLD\",\r
+
+          \                \"BrandId\": \"24b4e46f-35d2-4049-92bb-1a322843d1eb\",\r
+
+          \                \"brandName\": \"CLACIDO\"\r
+
+          \            }\r
+
+          \        ],\r
+
+          \        \"SubMarketId\": \"7041ff30-f8e9-48cd-ab92-b6fadad8d122\",\r
+
+          \        \"TotalGivenWpmItems\": 5,\r
+
+          \        \"TotalPrescriptionProducts\": 4,\r
+
+          \        \"TotalPrescriptionsSeen\": 5,\r
+
+          \        \"TotalPromotedBrands\": 3,\r
+
+          \        \"VisitedWith\": \"SM, DM, AM\",\r
+
+          \        \"WpmItemList\": [\r
+
+          \            {\r
+
+          \                \"Qty\": 2,\r
+
+          \                \"WpmTypeId\": \"1c3193a6-595a-451a-b855-02fc4a29c6be\",\r
+
+          \                \"wpmTypeName\": \"Aid\"\r
+
+          \            },\r
+
+          \            {\r
+
+          \                \"Qty\": 3,\r
+
+          \                \"WpmTypeId\": \"480ae6a3-d8d1-42e9-af03-0366c9f455f0\",\r
+
+          \                \"wpmTypeName\": \"Ins GD Outer Carton\"\r
+
+          \            },\r
+
+          \            {\r
+
+          \                \"Qty\": 5,\r
+
+          \                \"WpmTypeId\": \"3e151a74-1c51-4123-b380-152895e56089\",\r
+
+          \                \"wpmTypeName\": \"Calendar\"\r
+
+          \            },\r
+
+          \            {\r
+
+          \                \"Qty\": 6,\r
+
+          \                \"WpmTypeId\": \"6985991a-c408-4dc2-a850-6a7da0503213\",\r
+
+          \                \"wpmTypeName\": \"Ins Pad\"\r
+
+          \            },\r
+
+          \            {\r
+
+          \                \"Qty\": 7,\r
+
+          \                \"WpmTypeId\": \"2444f59c-cf53-4723-a584-b0a499be5609\",\r
+
+          \                \"wpmTypeName\": \"Ins Gadget\"\r
+
+          \            }\r
+
+          \        ]\r
+
+          \    }\r
+
+          ]\r\n"
+    response:
+      body:
+        type: text
+        data: ""

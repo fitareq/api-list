@@ -1,0 +1,71 @@
+info:
+  name: UploadAttendance
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{pulse_api}}/Attendance/UploadAttendance"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"DeviceId\": \"\",\r
+
+      \    \"FieldForceId\": \"2a53a317-1328-498f-8272-7307c1eb0159\",\r
+
+      \    \"GeoAddress\": \"\",\r
+
+      \    \"Location\": \"23.7464949,90.3921382\",\r
+
+      \    \"Type\": \"checkOut\"//checkOut\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: UploadAttendance_Example
+    request:
+      url: "{{pulse_api}}/Attendance/UploadAttendance"
+      method: POST
+      body:
+        type: json
+        data: "{\r
+
+          \    \"FieldForceId\": \"\",\r
+
+          \    \"DeviceId\": \"Device123\",\r
+
+          \    \"Type\": \"checkIn\", //checkOut\r
+
+          \    \"Location\": \"\",\r
+
+          \    \"GeoAddress\": \"123 Sample Street, Sample City\"\r
+
+          }"
+    response:
+      statusText: "200"
+      headers:
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Server
+          value: Microsoft-IIS/10.0
+        - name: X-Powered-By
+          value: ASP.NET
+        - name: Date
+          value: Tue, 16 Jul 2024 05:12:58 GMT
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 404,
+              "statusMessage": "FieldForce ID,Type required, please try again"
+          }

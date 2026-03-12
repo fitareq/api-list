@@ -1,0 +1,30 @@
+info:
+  name: TourPlanApproval
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{pulse_api}}/TourPlan/TourPlanApproval"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"UserId\": \"17801\",\r
+
+      \    \"TourPlanId\": \"cbd810bf-cc05-46cd-9e39-3d8bf2ad9b3d\",\r
+
+      \    \"Flag\": \"new\",\r
+
+      \    \"Remarks\": \"\"\r
+
+      \    //  //new,edit,reject\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

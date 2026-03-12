@@ -1,0 +1,18 @@
+info:
+  name: AllChemistOrderApproval
+  type: http
+  seq: 6
+
+http:
+  method: POST
+  url: "{{pulse_api}}/Chemist/AllChemistOrderApproval"
+  body:
+    type: json
+    data: "{\r\n    \"UserId\": \"\"\r\n}"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

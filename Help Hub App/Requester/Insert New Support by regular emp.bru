@@ -1,0 +1,36 @@
+meta {
+  name: Insert New Support by regular emp
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{base_url}}/UserSupport
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "entry_emp_code": "01250",
+      "entry_emp_sms_number": "01888818801",
+      "platform_id": "27",
+      "platform_name": "HPL Plant Attendance System",
+      "support_topic_id": "134",
+      "support_topic_name": "ID card punch not working",
+      "support_topic_priority": "Medium",
+      "support_text": "test support from postman for mail test",
+      "support_keyword": "",
+      "to_main_email": "ekbal.hossain@hpl.com.bd",
+      "to_second_email": "ratan.roy@hpl.com.bd",
+      "to_third_email": "hasan.mahedi@hpl.com.bd",
+      "to_fourth_email": "mdashraful.maruf@hpl.com.bd",
+      "support_img_string": ""
+      //"support_img_string": "{{img str}}"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

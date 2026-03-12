@@ -1,0 +1,23 @@
+meta {
+  name: GetOrderDataFieldForceSupervisorChemist
+  type: http
+  seq: 7
+}
+
+post {
+  url: {{pulse_api}}/Chemist/GetSupervisorMarketWiseOrderSummary
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "UserCode":"00708",
+      "DateFrom":"22/08/2024",
+      "DateTo":"22/08/2024"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

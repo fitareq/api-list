@@ -1,0 +1,22 @@
+meta {
+  name: Get User wise topic list
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{base_url}}/GetTopicsList
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "rpm_emp_code": "01250"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

@@ -1,0 +1,179 @@
+meta {
+  name: DcrReportForSupervisor
+  type: http
+  seq: 7
+}
+
+post {
+  url: {{pulse_api}}/DCR/DcrReportForSupervisor
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyTmFtZSI6IlMuTS4gRmFydWsgSG9zc2FpbiIsIkVtcGxveWVlQ29kZSI6IjA0NTMzIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiUk0iLCJEZXBhcnRtZW50Q29kZSI6IlJYIiwiVGVhbUNvZGUiOiJMdW1pbmlvdXMiLCJUeXBlIjoic3VwZXJ2aXNvciIsImV4cCI6MTcyODI3OTc3MCwiaXNzIjoiU2FsZXNQdWxzZUFQSSIsImF1ZCI6IkhQTC1NSVMifQ.ZaktzAEMXrL635v3-Z1xTyrdZ098-ZnwUMlRss_qe1g
+}
+
+body:json {
+  {
+      "UserCode": "04533",
+      "Year": 2024,
+      "Month": 6
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: DcrReportForSupervisor_Example
+  
+  request: {
+    url: {{pulse_api}}/DCR/DcrReportForSupervisor
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "UserCode": "04533",
+          "Year": 2024,
+          "Month": 6
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Transfer-Encoding: chunked
+      Content-Type: application/json; charset=utf-8
+      Server: Microsoft-IIS/10.0
+      X-Powered-By: ASP.NET
+      Date: Tue, 16 Jul 2024 05:06:08 GMT
+    }
+  
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "data": [
+                {
+                    "callDate": "06/05/2024 00:00:00",
+                    "year": 2024,
+                    "month": 6,
+                    "marketCode": "M14303",
+                    "marketName": "Uttara-11",
+                    "doctorNames": "M.H ANOWER|M.H ANOWER|M.H ANOWER|M.H ANOWER|M.H ANOWER|M.H ANOWER|M.H ANOWER|M.H ANOWER|M.H ANOWER|M.H ANOWER|M.H ANOWER|M.H ANOWER",
+                    "callBy": "Md. Eilius Hosen",
+                    "brandNames": "CLACIDO|ALCET|CLACIDO|CLACIDO|AERON|AERON|ALCET|CLACIDO|AERON|ALCET|AERON|ALCET",
+                    "totalDoctors": 1,
+                    "totalBrands": 3
+                },
+                {
+                    "callDate": "06/05/2024 00:00:00",
+                    "year": 2024,
+                    "month": 6,
+                    "marketCode": "M14303",
+                    "marketName": "Uttara-11",
+                    "doctorNames": "MD. MOBINUR RAHMAN|MD. MOBINUR RAHMAN|MD. MOBINUR RAHMAN",
+                    "callBy": "Md. Eilius Hosen",
+                    "brandNames": "ALCET|EMISTAT|CLACIDO",
+                    "totalDoctors": 1,
+                    "totalBrands": 3
+                },
+                {
+                    "callDate": "06/09/2024 00:00:00",
+                    "year": 2024,
+                    "month": 6,
+                    "marketCode": "M14303",
+                    "marketName": "Uttara-11",
+                    "doctorNames": "PROF NURUL AMIN|PROF NURUL AMIN|PROF NURUL AMIN|PROF NURUL AMIN|PROF NURUL AMIN",
+                    "callBy": "Md. Eilius Hosen",
+                    "brandNames": "ALCAFT EYE DROPS|ADRIBIN|ACTILAC|CASPOGIN|BONTIV",
+                    "totalDoctors": 1,
+                    "totalBrands": 5
+                },
+                {
+                    "callDate": "06/10/2024 00:00:00",
+                    "year": 2024,
+                    "month": 6,
+                    "marketCode": "M14303",
+                    "marketName": "Uttara-11",
+                    "doctorNames": "DR:MOURI SARKER|DR:MOURI SARKER|DR:MOURI SARKER|DR:MOURI SARKER",
+                    "callBy": "S.M. Faruk Hossain",
+                    "brandNames": "ADRIBIN|ABICON|ADALIMAB|ALCET",
+                    "totalDoctors": 1,
+                    "totalBrands": 4
+                },
+                {
+                    "callDate": "06/10/2024 00:00:00",
+                    "year": 2024,
+                    "month": 6,
+                    "marketCode": "M14303",
+                    "marketName": "Uttara-11",
+                    "doctorNames": "FIROZ AHMED BISWAS|FIROZ AHMED BISWAS|FIROZ AHMED BISWAS|FIROZ AHMED BISWAS|FIROZ AHMED BISWAS",
+                    "callBy": "Md. Eilius Hosen",
+                    "brandNames": "ALCET|ARTHROFEN|ADALIMAB|ACECARD|ABICON",
+                    "totalDoctors": 1,
+                    "totalBrands": 5
+                },
+                {
+                    "callDate": "06/10/2024 00:00:00",
+                    "year": 2024,
+                    "month": 6,
+                    "marketCode": "M14303",
+                    "marketName": "Uttara-11",
+                    "doctorNames": "HASAN AL-ZIAD|HASAN AL-ZIAD|HASAN AL-ZIAD|HASAN AL-ZIAD|HASAN AL-ZIAD|HASAN AL-ZIAD",
+                    "callBy": "Md. Eilius Hosen",
+                    "brandNames": "ADRIBIN|ACECARD|ADALIMAB|ABICON|ALLET|ALCET",
+                    "totalDoctors": 1,
+                    "totalBrands": 6
+                },
+                {
+                    "callDate": "06/10/2024 00:00:00",
+                    "year": 2024,
+                    "month": 6,
+                    "marketCode": "M14303",
+                    "marketName": "Uttara-11",
+                    "doctorNames": "PROF NURUL AMIN|PROF NURUL AMIN|PROF NURUL AMIN|PROF NURUL AMIN|PROF NURUL AMIN",
+                    "callBy": "Md. Eilius Hosen",
+                    "brandNames": "ACECARD|ABICON|ALCET|ADALIMAB|ADRIBIN",
+                    "totalDoctors": 1,
+                    "totalBrands": 5
+                },
+                {
+                    "callDate": "06/11/2024 00:00:00",
+                    "year": 2024,
+                    "month": 6,
+                    "marketCode": "M14303",
+                    "marketName": "Uttara-11",
+                    "doctorNames": "M.H ANOWER|M.H ANOWER|M.H ANOWER",
+                    "callBy": "Md. Eilius Hosen",
+                    "brandNames": "ACECARD|ADRIBIN|ABICON",
+                    "totalDoctors": 1,
+                    "totalBrands": 3
+                },
+                {
+                    "callDate": "06/20/2024 00:00:00",
+                    "year": 2024,
+                    "month": 6,
+                    "marketCode": "M14303",
+                    "marketName": "Uttara-11",
+                    "doctorNames": "HASAN AL-ZIAD|HASAN AL-ZIAD|HASAN AL-ZIAD",
+                    "callBy": "Md. Eilius Hosen",
+                    "brandNames": "ACECARD|ABICON|ADRIBIN",
+                    "totalDoctors": 1,
+                    "totalBrands": 3
+                }
+            ],
+            "statusCode": 200,
+            "statusMessage": "Success"
+        }
+      '''
+    }
+  }
+}

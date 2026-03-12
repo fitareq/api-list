@@ -1,0 +1,109 @@
+info:
+  name: GetWpmTypes
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{pulse_api}}/Basic/GetWpmTypes"
+  body:
+    type: json
+    data: "{\r\n    \"UserId\": \"17801\"\r\n}"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: GetWpmTypes_Example
+    request:
+      url: "{{pulse_api}}/Basic/GetWpmTypes"
+      method: POST
+      body:
+        type: json
+        data: "{\r\n    \"UserId\": \"17802\"\r\n}"
+    response:
+      statusText: "200"
+      headers:
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Server
+          value: Microsoft-IIS/10.0
+        - name: X-Powered-By
+          value: ASP.NET
+        - name: Date
+          value: Tue, 16 Jul 2024 05:08:18 GMT
+      body:
+        type: json
+        data: |-
+          {
+              "data": [
+                  {
+                      "id": "0d2f5637-de94-426d-bc26-26e3442303af",
+                      "name": "Folder",
+                      "details": null
+                  },
+                  {
+                      "id": "2fd72263-e6e9-410b-be57-4135fc795eda",
+                      "name": "Diary",
+                      "details": null
+                  },
+                  {
+                      "id": "14eb5378-5669-4cda-89f5-4bc73b55402d",
+                      "name": "GD Outer Carton",
+                      "details": null
+                  },
+                  {
+                      "id": "398adb33-f3ed-4286-9140-4fe2930de489",
+                      "name": "WPM Other",
+                      "details": null
+                  },
+                  {
+                      "id": "0ce8d6a3-3f0f-4011-85cb-7180cba2114d",
+                      "name": "Sticker",
+                      "details": null
+                  },
+                  {
+                      "id": "838fb7ea-5ae4-4cf6-b1dd-762fee050ce6",
+                      "name": "Sales Aid",
+                      "details": null
+                  },
+                  {
+                      "id": "d998431f-876b-416e-8ad9-7c0c46595a27",
+                      "name": "Pen",
+                      "details": null
+                  },
+                  {
+                      "id": "daee57dd-b551-4ea5-8ae1-97bea4696954",
+                      "name": "Show Card",
+                      "details": null
+                  },
+                  {
+                      "id": "5da0c671-a957-4e4a-9a84-a9fe2ea02646",
+                      "name": "Journal",
+                      "details": null
+                  },
+                  {
+                      "id": "9eea89a9-e759-44e4-a1b0-b6b008efa676",
+                      "name": "Gadget",
+                      "details": null
+                  },
+                  {
+                      "id": "918721cd-b43d-4378-a120-d566b1937083",
+                      "name": "Others",
+                      "details": null
+                  },
+                  {
+                      "id": "08619ab1-101e-40e5-b270-f0751a71578e",
+                      "name": "Pad",
+                      "details": null
+                  }
+              ],
+              "statusCode": 200,
+              "statusMessage": "Wpm types send Successfully!"
+          }

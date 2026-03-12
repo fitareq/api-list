@@ -1,0 +1,58 @@
+meta {
+  name: AllDcrApproval
+  type: http
+  seq: 8
+}
+
+post {
+  url: {{pulse_api}}/DCR/AllDcrApproval
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "UserId": "17801"
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: AllDcrApproval
+  
+  request: {
+    url: {{pulse_api}}/DCR/AllDcrApproval
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "UserId": "17801"
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Transfer-Encoding: chunked
+      Server: Microsoft-IIS/10.0
+      WWW-Authenticate: Bearer error="invalid_token", error_description="The token expired at '07/27/2024 09:59:55'"
+      X-Powered-By: ASP.NET
+      Date: Mon, 09 Sep 2024 15:49:06 GMT
+    }
+  
+    status: {
+      code: Unauthorized
+      text: 401
+    }
+  
+    body: {
+      type: text
+      content: '''
+  
+      '''
+    }
+  }
+}

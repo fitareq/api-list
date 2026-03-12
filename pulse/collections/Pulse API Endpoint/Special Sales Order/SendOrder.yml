@@ -1,0 +1,136 @@
+info:
+  name: SendOrder
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{pulse_api}}/SpecialSales/SendOrder"
+  body:
+    type: json
+    data: "[\r
+
+      \    {\r
+
+      \        \"chemistCode\": \"0510249419\",\r
+
+      \        \"chemistId\": \"8202fbac-a0de-4e44-b06d-acfa3acc2a37\",\r
+
+      \        \"chemistName\": \"Medicase Pharma\",\r
+
+      \        \"comment\": \"\",\r
+
+      \        \"contactNumber\": \"\",\r
+
+      \        \"contactPersonName\": \"\",\r
+
+      \        \"deliveryAddress\": \"\",\r
+
+      \        \"deliveryDate\": \"2025-06-18\",\r
+
+      \        \"deliveryShift\": \"Morning\",\r
+
+      \        \"depotId\": \"bedab429-42c8-4939-91d9-a8dc1e551d6c\",\r
+
+      \        \"depotName\": \"Dhaka\",\r
+
+      \        \"discountAmount\": \"0\",\r
+
+      \        \"doctorCode\": \"\",\r
+
+      \        \"doctorId\": \"\",\r
+
+      \        \"doctorName\": \"\",\r
+
+      \        \"id\": 0,\r
+
+      \        \"localStatus\": \"synced\",\r
+
+      \        \"localStatusTime\": 1750161515003,\r
+
+      \        \"location\": \"23.7463367,90.3921764\",\r
+
+      \        \"netTotal\": \"12144.83\",\r
+
+      \        \"orderEntryBy\": \"10f7f70c-0e57-4555-9f00-d9b5b2b7d578\",\r
+
+      \        \"orderEntryDate\": \"2025-06-17\",\r
+
+      \        \"orderNumber\": \"\",\r
+
+      \        \"orderStatus\": \"synced\",\r
+
+      \        \"patientAddress\": \"\",\r
+
+      \        \"patientName\": \"\",\r
+
+      \        \"paymentMode\": \"Cash\",\r
+
+      \        \"productList\": [\r
+
+      \            {\r
+
+      \                \"ItemDiscountAmount\": \"0\",\r
+
+      \                \"ProductCode\": \"80138\",\r
+
+      \                \"ProductId\": \"8e8f5c90-3173-45bf-a9ea-1459422e6f18\",\r
+
+      \                \"ProductName\": \"Ketoalfa Tablet 600 mg\",\r
+
+      \                \"Quantity\": \"2\",\r
+
+      \                \"totalPrice\": \"3598.20\",\r
+
+      \                \"tradePrice\": \"1799.10\",\r
+
+      \                \"vat\": \"313.04\"\r
+
+      \            },\r
+
+      \            {\r
+
+      \                \"ItemDiscountAmount\": \"0\",\r
+
+      \                \"ProductCode\": \"80297\",\r
+
+      \                \"ProductId\": \"62674eff-3a3f-4f3d-878e-bf4168929bc8\",\r
+
+      \                \"ProductName\": \"Roxatat Tablet 100mg\",\r
+
+      \                \"Quantity\": \"5\",\r
+
+      \                \"totalPrice\": \"6746.65\",\r
+
+      \                \"tradePrice\": \"1349.33\",\r
+
+      \                \"vat\": \"234.78\"\r
+
+      \            }\r
+
+      \        ],\r
+
+      \        \"subMarketCode\": \"M4270101\",\r
+
+      \        \"subMarketId\": \"2551964b-8627-43b6-8132-d2a3fc0858da\",\r
+
+      \        \"subMarketName\": \"Nephro-BSMMU-2\",\r
+
+      \        \"totalQty\": \"7\",\r
+
+      \        \"tpTotal\": \"10344.85\",\r
+
+      \        \"vatTotal\": \"1799.98\"\r
+
+      \    }\r
+
+      ]"
+  auth:
+    type: bearer
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyTmFtZSI6Ik1kLiBLYW1ydXp6YW1hbiIsIkVtcGxveWVlQ29kZSI6IjMxMjkzIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiUEEiLCJEZXBhcnRtZW50Q29kZSI6IlNQU0FMRVMiLCJUZWFtQ29kZSI6Ik5FUFRVTkUiLCJUeXBlIjoib2ZmaWNlciIsImV4cCI6MTc1NzkzNjYyOSwiaXNzIjoiU2FsZXNQdWxzZUFQSSIsImF1ZCI6IkhQTC1NSVMifQ.UpmG325mEjHK93T2giwx9_O8esM3aBG3WzMbZXWjfZc
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

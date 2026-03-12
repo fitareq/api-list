@@ -1,0 +1,24 @@
+info:
+  name: GetCreditDueMRZWise
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{pulse_api}}/CRM/GetCreditDueMRZWise"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"UserId\": \"15013\" //00126\r
+
+      }"
+  auth:
+    type: bearer
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyTmFtZSI6Ik1kLiBTaG9saXVyIFJhaG1hbiIsIkVtcGxveWVlQ29kZSI6IjE1MDEzIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiTUlPIiwiRGVwYXJ0bWVudENvZGUiOiJSWCIsIlRlYW1Db2RlIjoiVkVOVFVSRSIsIlR5cGUiOiJvZmZpY2VyIiwiZXhwIjoxNzY1NjAzODI1LCJpc3MiOiJTYWxlc1B1bHNlQVBJIiwiYXVkIjoiSFBMLU1JUyJ9.kzkoLAZRoTh2UT6EK-56UZ_cdmabC79xAqcuvdQG5aE
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

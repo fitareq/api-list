@@ -1,0 +1,90 @@
+meta {
+  name: SendDcr
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{base_url}}/api/DCR/SendDcr
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyTmFtZSI6IkguTC5TVVJBTkdBIFNBTUFSQVNJTkdIQSIsIkVtcGxveWVlQ29kZSI6IjA4OTUiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJNUiIsIkRlcGFydG1lbnRDb2RlIjoiR0VORVJBTCIsIlRlYW1Db2RlIjoiR0VORVJBTCIsIlR5cGUiOiJvZmZpY2VyIiwiZXhwIjoxNzY1MzQ0MzU5LCJpc3MiOiJTYWxlc1B1bHNlQVBJIiwiYXVkIjoiSFBMLU1JUyJ9.BSwa2ZMslnCqurml0xSjWQjQvkF62x7fJVfZu_6zEPY
+}
+
+body:json {
+  [
+      {
+          "approvalDate": "",
+          "approvedBy": "",
+          "CallEntryBy": "0895",
+          "callEntryByCode": "",
+          "callEntryByName": "",
+          "CallEntryDate": "2025-09-11 11:42:29",
+          "CallEntryLocation": "23.7463619,90.3921964",
+          "CallExpenseAmount": 0,
+          "CallExpenseType": "",
+          "CallLocation": "Ex Head Quarter",
+          "CallNumber": 0,
+          "CallShift": "Evening",
+          "Comment": "",
+          "dcrImagePath": "",
+          "DistanceFromDoctorLocation": "",
+          "doctorCode": "M00003026",
+          "DoctorHeadType": "OwnDoctor",
+          "DoctorId": "7194a408-587f-413b-84c2-023ee11828dc",
+          "doctorName": "Dr.Samantha C. Jayawardhana",
+          "hadCallExpense": false,
+          "HasGivenWpmItems": false,
+          "HasPromotedBrands": true,
+          "HasSeenPrescriptions": false,
+          "hasTransferred": false,
+          "ID": "",
+          "isApproved": false,
+          "IsJoinCall": false,
+          "isRejected": false,
+          "LocalDcrId": 0,
+          "marketCode": "",
+          "marketName": "",
+          "prescriptionProductList": [],
+          "promotedBrandList": [
+              {
+                  "brandCode": "ACD",
+                  "BrandId": "497f12c3-13f0-4108-b27e-fd95a32703fc",
+                  "brandName": "Acecard",
+                  "isTargetBrand": false
+              },
+              {
+                  "brandCode": "ACT",
+                  "BrandId": "11a5e407-3289-4a30-ac38-ecbe0723deb4",
+                  "brandName": "Alcet",
+                  "isTargetBrand": false
+              },
+              {
+                  "brandCode": "AND",
+                  "BrandId": "77ba397e-8c57-45dc-b568-b86b1e286620",
+                  "brandName": "Andep",
+                  "isTargetBrand": false
+              }
+          ],
+          "rejectedBy": "",
+          "rejectedDate": "",
+          "subMarketCode": "",
+          "SubMarketId": "ffe55948-dc62-4c11-a746-cc2f4ada3f38",
+          "subMarketName": "",
+          "TotalGivenWpmItems": 0,
+          "TotalPrescriptionProducts": 0,
+          "TotalPrescriptionsSeen": 0,
+          "TotalPromotedBrands": 3,
+          "VisitedWith": "",
+          "WpmItemList": []
+      }
+  ]
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

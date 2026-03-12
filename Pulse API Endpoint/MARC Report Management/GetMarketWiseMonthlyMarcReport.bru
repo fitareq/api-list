@@ -1,0 +1,20 @@
+meta {
+  name: GetMarketWiseMonthlyMarcReport
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{pulse_api}}/Report/GetMarketWiseMonthlyMarcReport?marketCode=M10104&year=2025
+  body: none
+  auth: inherit
+}
+
+params:query {
+  marketCode: M10104
+  year: 2025
+}
+
+settings {
+  encodeUrl: true
+}

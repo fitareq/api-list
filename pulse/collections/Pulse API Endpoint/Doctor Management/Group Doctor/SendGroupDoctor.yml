@@ -1,0 +1,127 @@
+info:
+  name: SendGroupDoctor
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{pulse_api}}/GroupDoctor/SendGroupDoctor"
+  body:
+    type: json
+    data: "[\r
+
+      \    {\r
+
+      \        \"ChamberName\": \"DR.SUKANTO DAS\",\r
+
+      \        \"CreatedBy\": \"\",\r
+
+      \        \"DistrictCode\": \"49\",\r
+
+      \        \"districtName\": \"Barishal\",\r
+
+      \        \"DoctorStatus\": 1,\r
+
+      \        \"ID\": \"ec43e059-be8d-4b37-8579-63795cfddfe7\",\r
+
+      \        \"InstituteName\": \"DHAKA MEDICAL COLLEGE\",\r
+
+      \        \"IsGroupDoctor\": true,\r
+
+      \        \"Lat\": \"23.7464978\",\r
+
+      \        \"localId\": 0,\r
+
+      \        \"Lon\": \"90.3921616\",\r
+
+      \        \"ModifiedBy\": \"16702\",\r
+
+      \        \"Name\": \"DR.SUKANTO DAS\",\r
+
+      \        \"NoOfGroupDoctor\": 10,\r
+
+      \        \"Remarks\": \"\",\r
+
+      \        \"subMarketCode\": \"M1210501\",\r
+
+      \        \"SubMarketId\": \"ab4228f9-2af4-4cf2-b70f-c496c5109506\",\r
+
+      \        \"subMarketName\": \"SSK ROAD\",\r
+
+      \        \"ThanaCode\": \"17\",\r
+
+      \        \"thanaName\": \"Bakerganj\"\r
+
+      \    }\r
+
+      ]"
+  auth:
+    type: bearer
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyTmFtZSI6Ik1kLiBCYWNjaHUgTWlhIiwiRW1wbG95ZWVDb2RlIjoiMTY3MDIiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJNSU8iLCJEZXBhcnRtZW50Q29kZSI6IlJYIiwiVGVhbUNvZGUiOiJBVklBVE9SIiwiVHlwZSI6Im9mZmljZXIiLCJleHAiOjE3MzM4MTIwMTMsImlzcyI6IlNhbGVzUHVsc2VBUEkiLCJhdWQiOiJIUEwtTUlTIn0.Eswt6zNtQgzIooW-HSmdR_7ViLgAv0DEZL1cDhB3iis
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: SendGroupDoctor
+    request:
+      url: "{{sales_pulse}}/GroupDoctor/SendGroupDoctor"
+      method: POST
+      body:
+        type: json
+        data: "[\r
+
+          \    {\r
+
+          \        \"ID\": \"\", // empty when new entry\r
+
+          \        \"Name\": \"John Doe\",\r
+
+          \        \"ChamberName\": \"ABC Hospital\",\r
+
+          \        \"SubMarketId\": \"9ffa6764-99c5-4a7c-b754-1618b5f73846\",\r
+
+          \        \"IsGroupDoctor\": true,\r
+
+          \        \"DoctorStatus\": 1,\r
+
+          \        \"Lat\": \"40.7128\",\r
+
+          \        \"Lon\": \"-74.0060\",\r
+
+          \        \"NoOfGroupDoctor\": 5,\r
+
+          \        \"InstituteName\": \"RANGPUR (SADAR) UPAZILA HEALTH COMPLEX\",\r
+
+          \        \"CreatedBy\": \"17801\",\r
+
+          \        \"ModifiedBy\": \"17801\",\r
+
+          \        \"Remarks\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit.\"\r
+
+          \    }\r
+
+          ]"
+    response:
+      statusText: "200"
+      headers:
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Server
+          value: Microsoft-IIS/10.0
+        - name: X-Powered-By
+          value: ASP.NET
+        - name: Date
+          value: Sun, 19 May 2024 10:51:54 GMT
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 404,
+              "statusMessage": "Group Doctor entry stopped because there are occur an internal issue. An error occurred while updating the entries. See the inner exception for details."
+          }

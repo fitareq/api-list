@@ -1,0 +1,26 @@
+info:
+  name: GetOfficerGeoLocation
+  type: http
+  seq: 6
+
+http:
+  method: POST
+  url: "{{pulse_api}}/GeoFence/GetOfficerGeoLocation"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"UserCode\": \"14433\",\r
+
+      \    \"RecordDate\": \"2025-07-22\"\r
+
+      }"
+  auth:
+    type: bearer
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyTmFtZSI6IkFOTSBTYWlmdWxsYWgiLCJFbXBsb3llZUNvZGUiOiIxNDQzMyIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IlNNSU8iLCJEZXBhcnRtZW50Q29kZSI6IlJYIiwiVGVhbUNvZGUiOiJMVU1JTklPVVMiLCJUeXBlIjoib2ZmaWNlciIsImV4cCI6MTc2MzE5OTgxMywiaXNzIjoiU2FsZXNQdWxzZUFQSSIsImF1ZCI6IkhQTC1NSVMifQ.a0QoOOfUrUesY9dC4fMME0tc60eYvffgIKzkyA3EaiI
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

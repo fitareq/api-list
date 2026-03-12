@@ -1,0 +1,78 @@
+meta {
+  name: /api/v1/auth/delivery-associate-login
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/api/v1/auth/delivery-associate-login
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+  Accept: text/plain
+}
+
+body:json {
+  {
+    "associateCode": 789,
+    "password": "string",
+    "fcmToken": "string"
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: OK
+  
+  request: {
+    url: {{baseUrl}}/api/v1/auth/delivery-associate-login
+    method: POST
+    mode: json
+    headers: {
+      Content-Type: application/json
+      Accept: text/plain
+      Authorization: Bearer <token>
+    }
+  
+    body:json: {
+      {
+        "associateCode": 789,
+        "password": "string",
+        "fcmToken": "string"
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Content-Type: application/json
+    }
+  
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+          "data": {
+            "accessToken": "string",
+            "refreshToken": "string",
+            "userId": "64e0fd78-f1bf-f628-3851-5b3f87647674",
+            "expiryDate": "2011-04-12T09:02:46.687Z"
+          },
+          "statusCode": 5369,
+          "statusMessage": "string"
+        }
+      '''
+    }
+  }
+}

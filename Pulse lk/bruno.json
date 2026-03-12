@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "Pulse lk",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}

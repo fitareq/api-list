@@ -1,0 +1,18 @@
+info:
+  name: GetChemistOrderProductTeamMapDetails
+  type: http
+  seq: 10
+
+http:
+  method: POST
+  url: "{{pulse_api}}/Basic/GetChemistOrderProductTeamMapDetails"
+  body:
+    type: json
+    data: "{\r\n    \"UserId\":\"17801\"\r\n}"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

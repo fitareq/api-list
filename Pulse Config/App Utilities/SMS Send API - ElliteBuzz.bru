@@ -1,0 +1,74 @@
+meta {
+  name: SMS Send API - ElliteBuzz
+  type: http
+  seq: 2
+}
+
+get {
+  url: https://bangladeshsms.com/smsapi?api_key=C20063365ee9c224005c37.89118261&type=text&contacts=01888818801&senderid=HPLMIS&msg=test 28 august, 2025
+  body: none
+  auth: none
+}
+
+params:query {
+  api_key: C20063365ee9c224005c37.89118261
+  type: text
+  contacts: 01888818801
+  senderid: HPLMIS
+  msg: test 28 august, 2025
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: ElliteBuzz previous
+  
+  request: {
+    url: https://bangladeshsms.com/smsapi?api_key=C20063365ee9c224005c37.89118261&type=text&contacts=01888818801&senderid=HPLMIS&msg=test 28 august, 2024
+    method: GET
+    mode: none
+    params:query: {
+      api_key: C20063365ee9c224005c37.89118261
+      type: text
+      contacts: 01888818801
+      senderid: HPLMIS
+      msg: test 28 august, 2024
+    }
+  }
+  
+  response: {
+    headers: {
+      Date: Sun, 22 Sep 2024 08:51:34 GMT
+      Content-Type: text/html; charset=UTF-8
+      Transfer-Encoding: chunked
+      Connection: keep-alive
+      vary: Accept-Encoding
+      x-powered-by: PHP/7.4.33
+      Cache-Control: no-cache, private
+      set-cookie: XSRF-TOKEN=eyJpdiI6ImpiM2ZoTVc2R0wveklkYUVOYzlXR1E9PSIsInZhbHVlIjoiSWIrdlJJaGhuaVRjUTc1RzdtM3l4S09WdFVyTjArRmljRjQ1bC9hOEJ3Tk9lM0ppUE5qS3p4R3RvTEJoL2RSMnFleWdoOXM1cStWTE04WkQycUJ3QnBQdCtVUjAwUHR5R2JUVUpLNHQzeXAyakV4eXBsaS9QVlhybHp6YjhOcEYiLCJtYWMiOiI1YmU3MmFhZTNhZmVmNjRhYjZkY2JjYWQ4YjVjNmQ0MDY2ODE4MDQyODMwNmU0ZTFiYmEyM2JiMTUyNDQ3NzIwIn0%3D; expires=Sun, 22-Sep-2024 10:51:34 GMT; Max-Age=7200; path=/; samesite=lax
+      set-cookie: laravel_session=eyJpdiI6ImNFdldmWGo3clNqWU9kWkc5c21yekE9PSIsInZhbHVlIjoicEh2YTZ2NFhNNVUrNnNnZG5vMGR5MFkvWjFmMlY2dWNwUWJkU3g0L3doYTBhOUQyVzRKcEpwN3dZZ2Z0ekpSMXNSN0cxOWh3UkZHUDBpMGt6SVlZemEvMS9DR3Q5RGhiUUkyRFNuM3RTZUFtRHZCMkpWajdHVk93S0NmLzRaa0YiLCJtYWMiOiJjNzA2OTMyMTM0MGI5YjA2YjRjZTAzOGVmNWJlODhmZmE1ODNkNjI0YmU0MjE4ZDdmN2ZkNGUzMjk0YWYzNGFmIn0%3D; expires=Sun, 22-Sep-2024 10:51:34 GMT; Max-Age=7200; path=/; httponly; samesite=lax
+      strict-transport-security: max-age=31536000
+      CF-Cache-Status: DYNAMIC
+      Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=rSnkNwLJbPlGaNK5XR7ZTEcGtzw%2FuWXwaVHTFgS0nb5f2%2Fws56fR%2B85d5Q7sYNK0Zk9bloL1HRzgZjvxo9AQGYwo2txmAzI5R19rhf1It1nMcyeFWDtQl5UsD0q2RvyAyatw0g%3D%3D"}],"group":"cf-nel","max_age":604800}
+      NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+      Speculation-Rules: "/cdn-cgi/speculation"
+      Server: cloudflare
+      CF-RAY: 8c710dcb4ecc7716-DAC
+      Content-Encoding: br
+    }
+  
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: html
+      content: '''
+        SMS SUBMITTED: ID - bw-rdC200633666efda967ac8a
+      '''
+    }
+  }
+}

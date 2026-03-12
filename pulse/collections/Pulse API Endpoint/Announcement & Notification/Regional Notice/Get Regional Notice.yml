@@ -1,0 +1,18 @@
+info:
+  name: Get Regional Notice
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{pulse_api}}/Notice/GetRegionalNotice"
+  body:
+    type: json
+    data: "{\r\n    \"UserId\": \"17801\"\r\n}"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

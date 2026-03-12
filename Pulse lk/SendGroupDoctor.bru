@@ -1,0 +1,47 @@
+meta {
+  name: SendGroupDoctor
+  type: http
+  seq: 7
+}
+
+post {
+  url: {{base_url}}/PulseLK/api/GroupDoctor/SendGroupDoctor
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyTmFtZSI6IkguTC5TVVJBTkdBIFNBTUFSQVNJTkdIQSIsIkVtcGxveWVlQ29kZSI6IjA4OTUiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJNUiIsIkRlcGFydG1lbnRDb2RlIjoiR0VORVJBTCIsIlRlYW1Db2RlIjoiR0VORVJBTCIsIlR5cGUiOiJvZmZpY2VyIiwiZXhwIjoxNzY2OTE2NTIzLCJpc3MiOiJTYWxlc1B1bHNlQVBJIiwiYXVkIjoiSFBMLU1JUyJ9.mbsTINqZPQWPZXJKgpbqlKJU2wa4pxRAAOiY0b_PkGI
+}
+
+body:json {
+  [
+      {
+          "ChamberName": "test ",
+          "CreatedBy": "0895",
+          "DistrictCode": "",
+          "districtName": "",
+          "DoctorStatus": 0,
+          "ID": "",
+          "InstituteName": "",
+          "IsGroupDoctor": true,
+          "Lat": "23.746558",
+          "localId": 0,
+          "Lon": "90.3921626",
+          "ModifiedBy": "",
+          "Name": "test ",
+          "NoOfGroupDoctor": 5,
+          "Remarks": "",
+          "subMarketCode": "M0000310",
+          "SubMarketId": "244053af-81ff-4484-8acf-28aab7dd658e",
+          "subMarketName": "Kirinda",
+          "ThanaCode": "",
+          "thanaName": ""
+      }
+  ]
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

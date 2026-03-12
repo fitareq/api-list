@@ -1,0 +1,6 @@
+name: production
+variables:
+  - name: pulse_api
+    value: http://hplpulse.com/PulseAPI/api
+  - name: pulse_api_ssl
+    value: https://hplpulse.com/PulseAPI/api

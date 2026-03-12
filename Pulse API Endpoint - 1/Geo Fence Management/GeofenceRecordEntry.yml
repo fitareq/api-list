@@ -1,0 +1,34 @@
+info:
+  name: GeofenceRecordEntry
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{pulse_api}}/GeoFence/GeofenceRecordEntry"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"GeofenceId\": \"e59ce9c2-f2cb-4295-85b6-4ed834071bd4\",\r
+
+      \    \"TransitionType\": \"entry\", //exit\r
+
+      \    \"TransitionTime\": \"2025-03-13 09:39:51.170\",\r
+
+      \    \"Lat\": \"23.746395800000016\",\r
+
+      \    \"Lon\": \"90.39225829999998\",\r
+
+      \     \"GeoAddress\":\"\"\r
+
+      }"
+  auth:
+    type: bearer
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyTmFtZSI6Ikthd3NlciBBaG1lZCBOYWhpbiIsIkVtcGxveWVlQ29kZSI6IjMxMzUwIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiUEEiLCJEZXBhcnRtZW50Q29kZSI6IlNQU0FMRVMiLCJUZWFtQ29kZSI6Ik5FUFRVTkUiLCJUeXBlIjoib2ZmaWNlciIsImV4cCI6MTc0OTUzNTA0NywiaXNzIjoiU2FsZXNQdWxzZUFQSSIsImF1ZCI6IkhQTC1NSVMifQ.Yp2ZKBjuXrIQWEMPtTrhPG6aD_XSnNqEqck1OMr_EjY
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

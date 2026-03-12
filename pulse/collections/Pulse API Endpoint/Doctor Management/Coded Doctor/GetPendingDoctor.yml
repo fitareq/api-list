@@ -1,0 +1,718 @@
+info:
+  name: GetPendingDoctor
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: "{{pulse_api}}/Doctor/GetPendingDoctor"
+  body:
+    type: json
+    data: "{\r\n    \"UserId\": \"01710\"\r\n}"
+  auth:
+    type: bearer
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyTmFtZSI6IlN1ZGhpciBDaGFuZHJhIERhcyIsIkVtcGxveWVlQ29kZSI6IjAxNzEwIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiUk0iLCJEZXBhcnRtZW50Q29kZSI6IlJYIiwiVGVhbUNvZGUiOiJMVU1JTklPVVMiLCJUeXBlIjoic3VwZXJ2aXNvciIsImV4cCI6MTc3NTk5MjE1MCwiaXNzIjoiU2FsZXNQdWxzZUFQSSIsImF1ZCI6IkhQTC1NSVMifQ.bhZbqPbEXc6qP4_SFDbbLtsMSWPmq_vSRkNMugDzvf0
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: GetPendingDoctor_Example
+    request:
+      url: "{{pulse_api}}/Doctor/GetPendingDoctor"
+      method: POST
+      body:
+        type: json
+        data: "{\r\n    \"UserId\": \"17802\"\r\n}"
+    response:
+      statusText: "200"
+      headers:
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Server
+          value: Microsoft-IIS/10.0
+        - name: X-Powered-By
+          value: ASP.NET
+        - name: Date
+          value: Tue, 16 Jul 2024 04:23:07 GMT
+      body:
+        type: json
+        data: |-
+          {
+              "data": [
+                  {
+                      "id": "ed2598b1-c7ff-4a2e-9abb-6fad9c6e81c3",
+                      "name": "MD. NEZAM UDDIN",
+                      "code": "M14303019",
+                      "fourPCode": null,
+                      "bmdcRegNumber": null,
+                      "sourceDoctorCode": null,
+                      "marketId": "9ee263f0-897e-443c-9f7d-2f7318fa7c51",
+                      "subMarketId": "ea0b9252-e0c5-4ee1-8666-55b950af30d6",
+                      "doctorStatus": 4,
+                      "isActive": false,
+                      "isApproved": false,
+                      "approvalDate": null,
+                      "isRejected": false,
+                      "rejectedBy": null,
+                      "rejectedDate": null,
+                      "remarks": "Test inactive action",
+                      "headType": "PairDoctor",
+                      "teamId": "139489b6-c778-4af5-b739-6126bb8bb64b",
+                      "teamCode": "Venture",
+                      "teamName": "Venture",
+                      "departmentId": "3bb4859f-79ef-4a43-bd89-2c225ab5f29d",
+                      "departmentCode": "RX",
+                      "departmentName": "Rx General",
+                      "doctorDesignation": null,
+                      "doctorDegree": "RMP",
+                      "speciality": "GP GENERAL PRACTITIONER",
+                      "category": "P",
+                      "chamberName": "JONONI PHARMACY",
+                      "chamberAddress": "CHALABON,DOKKINKHAN",
+                      "instituteName": "NO",
+                      "districtCode": "56",
+                      "thanaCode": "48",
+                      "lat": null,
+                      "lon": null,
+                      "email": null,
+                      "mobileNo": null,
+                      "religion": "Muslim",
+                      "gender": "Male",
+                      "birthDay": null,
+                      "marriageDay": null,
+                      "patientPerType": "Week",
+                      "noOfPracticeDays": 0,
+                      "noOfPatient": 10,
+                      "isGroupDoctor": false,
+                      "noOfGroupDoctor": 0,
+                      "namePlateImagePath": "http://103.111.126.11/DoctorNamePlate%2fimage.jpg",
+                      "visitingCardImagePath": "http://103.111.126.11/DoctorVisitingCard%2fimage.jpg",
+                      "noOfRxPerDay": null,
+                      "insulineRxPerDay": 0,
+                      "isDCREntryAllowed": true,
+                      "isWPMEntryAllowed": true,
+                      "isTourPlanVisitAllowed": true,
+                      "isOrderAllowed": false,
+                      "fieldForceCode": "07807",
+                      "fieldForceName": "Wali Ullah",
+                      "marketCode": "M14303",
+                      "marketName": "Uttara-11",
+                      "subMarketCode": "M1430301",
+                      "subMarketName": "SAPPORO DENTAL COLLEGE",
+                      "doctorMajorBrandMapDetails": [
+                          {
+                              "typeId": "64d9ce17-9f3e-4b38-b825-d1f6e1c0a4ac",
+                              "typeName": "Major",
+                              "brandId": "ba82fbcb-452b-44a8-9c30-abab72cf291a",
+                              "brandName": "EMISTAT",
+                              "brandCode": "EMT",
+                              "brandClassId": null,
+                              "brandClassCode": null,
+                              "brandClassRange": null,
+                              "brandClassValue": null
+                          },
+                          {
+                              "typeId": "64d9ce17-9f3e-4b38-b825-d1f6e1c0a4ac",
+                              "typeName": "Major",
+                              "brandId": "3db12c21-2536-44ad-b881-570b2d08dea2",
+                              "brandName": "SANTE",
+                              "brandCode": "SNT",
+                              "brandClassId": null,
+                              "brandClassCode": null,
+                              "brandClassRange": null,
+                              "brandClassValue": null
+                          },
+                          {
+                              "typeId": "64d9ce17-9f3e-4b38-b825-d1f6e1c0a4ac",
+                              "typeName": "Major",
+                              "brandId": "505054bb-d3e8-45e8-9dde-59d9be2aece7",
+                              "brandName": "ALCET",
+                              "brandCode": "ACT",
+                              "brandClassId": null,
+                              "brandClassCode": null,
+                              "brandClassRange": null,
+                              "brandClassValue": null
+                          },
+                          {
+                              "typeId": "64d9ce17-9f3e-4b38-b825-d1f6e1c0a4ac",
+                              "typeName": "Major",
+                              "brandId": "4e5530c7-10a8-4f59-8f96-b6ae13a87cc9",
+                              "brandName": "POGO",
+                              "brandCode": "PGO",
+                              "brandClassId": null,
+                              "brandClassCode": null,
+                              "brandClassRange": null,
+                              "brandClassValue": null
+                          },
+                          {
+                              "typeId": "64d9ce17-9f3e-4b38-b825-d1f6e1c0a4ac",
+                              "typeName": "Major",
+                              "brandId": "11029b62-acf6-410a-afe9-4135c3247257",
+                              "brandName": "ACTILAC",
+                              "brandCode": "ALC",
+                              "brandClassId": null,
+                              "brandClassCode": null,
+                              "brandClassRange": null,
+                              "brandClassValue": null
+                          }
+                      ],
+                      "doctorOtherBrandMapDetails": [
+                          {
+                              "typeId": "7a0a4c5a-583e-46ab-87c1-9b3082584bfe",
+                              "typeName": "Other",
+                              "brandId": "028f7554-3e90-42f3-a091-b5fa1d76ae88",
+                              "brandName": "VIFAS",
+                              "brandCode": "VFS",
+                              "brandClassId": null,
+                              "brandClassCode": null,
+                              "brandClassRange": null,
+                              "brandClassValue": null
+                          },
+                          {
+                              "typeId": "7a0a4c5a-583e-46ab-87c1-9b3082584bfe",
+                              "typeName": "Other",
+                              "brandId": "f3b86199-f646-47a7-bad7-be936660792c",
+                              "brandName": "VISET",
+                              "brandCode": "VST",
+                              "brandClassId": null,
+                              "brandClassCode": null,
+                              "brandClassRange": null,
+                              "brandClassValue": null
+                          }
+                      ]
+                  },
+                  {
+                      "id": "b9dd9439-cb05-4e94-9fc4-440393d94203",
+                      "name": "test anik 30",
+                      "code": "M72501114",
+                      "fourPCode": "heusud",
+                      "bmdcRegNumber": "jsjsjsjjs",
+                      "sourceDoctorCode": null,
+                      "marketId": "37a91a83-b2b9-4dc8-8cea-4b0979f4576d",
+                      "subMarketId": "42323aef-7404-4ac3-9a07-810d921ea03e",
+                      "doctorStatus": 0,
+                      "isActive": false,
+                      "isApproved": false,
+                      "approvalDate": null,
+                      "isRejected": false,
+                      "rejectedBy": null,
+                      "rejectedDate": null,
+                      "remarks": "",
+                      "headType": "OwnDoctor",
+                      "teamId": "0a1b605c-4007-4c87-a7a5-36394a5f05ab",
+                      "teamCode": "Aviator",
+                      "teamName": "Aviator",
+                      "departmentId": "3bb4859f-79ef-4a43-bd89-2c225ab5f29d",
+                      "departmentCode": "RX",
+                      "departmentName": "Rx General",
+                      "doctorDesignation": "Sr. Registrar",
+                      "doctorDegree": "MBBS",
+                      "speciality": "Paediatric Nephrologist",
+                      "category": "A",
+                      "chamberName": "test",
+                      "chamberAddress": "test",
+                      "instituteName": "RANGPUR (SADAR) UPAZILA HEALTH COMPLEX",
+                      "districtCode": "0",
+                      "thanaCode": "0",
+                      "lat": 23.7464509,
+                      "lon": 23.7464509,
+                      "email": "",
+                      "mobileNo": "",
+                      "religion": "Islam",
+                      "gender": "Male",
+                      "birthDay": null,
+                      "marriageDay": null,
+                      "patientPerType": "Week",
+                      "noOfPracticeDays": 5,
+                      "noOfPatient": 15,
+                      "isGroupDoctor": false,
+                      "noOfGroupDoctor": 0,
+                      "namePlateImagePath": "http://103.111.126.11/DoctorNamePlate%2fimage.jpg",
+                      "visitingCardImagePath": "http://103.111.126.11/DoctorVisitingCard%2fimage.jpg",
+                      "noOfRxPerDay": 10,
+                      "insulineRxPerDay": 0,
+                      "isDCREntryAllowed": false,
+                      "isWPMEntryAllowed": false,
+                      "isTourPlanVisitAllowed": false,
+                      "isOrderAllowed": false,
+                      "fieldForceCode": "17802",
+                      "fieldForceName": "Md. Eilius Hosen",
+                      "marketCode": "M72501",
+                      "marketName": "KBFGH-2",
+                      "subMarketCode": "M7250101",
+                      "subMarketName": "AMC (AICHI MEDICAL COLLEGE HOSPITAL) THANA HEALTH COMPLEX",
+                      "doctorMajorBrandMapDetails": [
+                          {
+                              "typeId": "64d9ce17-9f3e-4b38-b825-d1f6e1c0a4ac",
+                              "typeName": "Major",
+                              "brandId": "11029b62-acf6-410a-afe9-4135c3247257",
+                              "brandName": "ACTILAC",
+                              "brandCode": "ALC",
+                              "brandClassId": "633fe83d-5a76-42a8-8c5f-880ee9334d49",
+                              "brandClassCode": "2",
+                              "brandClassRange": "2-4 Rx",
+                              "brandClassValue": "A-2"
+                          },
+                          {
+                              "typeId": "64d9ce17-9f3e-4b38-b825-d1f6e1c0a4ac",
+                              "typeName": "Major",
+                              "brandId": "b2dff1e9-d0a6-4324-a58a-3037cb058bdd",
+                              "brandName": "ACECARD",
+                              "brandCode": "ACD",
+                              "brandClassId": "ae794fa2-dfbe-4929-a2cd-785d96bea77c",
+                              "brandClassCode": "3",
+                              "brandClassRange": ">=5 Rx",
+                              "brandClassValue": "A-3"
+                          },
+                          {
+                              "typeId": "64d9ce17-9f3e-4b38-b825-d1f6e1c0a4ac",
+                              "typeName": "Major",
+                              "brandId": "2b0d0b78-b2a3-4c9f-9b24-b4dd57a5788d",
+                              "brandName": "ADRIBIN",
+                              "brandCode": "ABN",
+                              "brandClassId": "744f8adf-608d-4e9f-a891-988b6bbb2cb9",
+                              "brandClassCode": "1",
+                              "brandClassRange": "<=1 Rx",
+                              "brandClassValue": "A-1"
+                          },
+                          {
+                              "typeId": "64d9ce17-9f3e-4b38-b825-d1f6e1c0a4ac",
+                              "typeName": "Major",
+                              "brandId": "adaf7f2a-79d2-4ede-a482-a2a47cca162a",
+                              "brandName": "ADALIMAB",
+                              "brandCode": "ADA",
+                              "brandClassId": "cb8d0a8f-a88f-4341-95b7-59402c000544",
+                              "brandClassCode": "2",
+                              "brandClassRange": "2-4 Rx",
+                              "brandClassValue": "A-2"
+                          },
+                          {
+                              "typeId": "64d9ce17-9f3e-4b38-b825-d1f6e1c0a4ac",
+                              "typeName": "Major",
+                              "brandId": "a798432a-c074-438b-bfda-c673e5f24ded",
+                              "brandName": "ABICON",
+                              "brandCode": "ABI",
+                              "brandClassId": "0de7311c-ecde-431e-86f6-0b591b613e2d",
+                              "brandClassCode": "3",
+                              "brandClassRange": ">=5 Rx",
+                              "brandClassValue": "A-3"
+                          }
+                      ],
+                      "doctorOtherBrandMapDetails": [
+                          {
+                              "typeId": "7a0a4c5a-583e-46ab-87c1-9b3082584bfe",
+                              "typeName": "Other",
+                              "brandId": "10b76b12-333e-404e-becd-129a205855d2",
+                              "brandName": "CANCIDAS",
+                              "brandCode": "CAN",
+                              "brandClassId": "0369b508-edca-4bd0-841b-6dbd2b5bdc4a",
+                              "brandClassCode": "3",
+                              "brandClassRange": ">=5 Rx",
+                              "brandClassValue": "A-3"
+                          },
+                          {
+                              "typeId": "7a0a4c5a-583e-46ab-87c1-9b3082584bfe",
+                              "typeName": "Other",
+                              "brandId": "0a92c2a2-1b9a-4897-9420-28253ebc81e7",
+                              "brandName": "BIVA",
+                              "brandCode": "BVA",
+                              "brandClassId": "7e2d6d30-791a-41c0-b599-4806696b77b5",
+                              "brandClassCode": "3",
+                              "brandClassRange": ">=5 Rx",
+                              "brandClassValue": "A-3"
+                          },
+                          {
+                              "typeId": "7a0a4c5a-583e-46ab-87c1-9b3082584bfe",
+                              "typeName": "Other",
+                              "brandId": "03328e26-e513-4ad6-af2e-157f82e375b6",
+                              "brandName": "BROMOXOL",
+                              "brandCode": "BXL",
+                              "brandClassId": "d2ea43f3-239f-4058-8d07-abe71e6bcd13",
+                              "brandClassCode": "3",
+                              "brandClassRange": ">=5 Rx",
+                              "brandClassValue": "A-3"
+                          },
+                          {
+                              "typeId": "7a0a4c5a-583e-46ab-87c1-9b3082584bfe",
+                              "typeName": "Other",
+                              "brandId": "33523641-cf5b-435b-aea3-fc3e0c4c1752",
+                              "brandName": "AROXOL",
+                              "brandCode": "AXL",
+                              "brandClassId": "b5456c57-6f65-4d7a-ba09-5d782f76844a",
+                              "brandClassCode": "1",
+                              "brandClassRange": "<=1 Rx",
+                              "brandClassValue": "A-1"
+                          },
+                          {
+                              "typeId": "7a0a4c5a-583e-46ab-87c1-9b3082584bfe",
+                              "typeName": "Other",
+                              "brandId": "6888205a-f5fe-4648-901a-f39ed27d8b59",
+                              "brandName": "ADAPEL",
+                              "brandCode": "APL",
+                              "brandClassId": "3e61e1f1-8ed8-4706-b69f-8ede7a3dfa75",
+                              "brandClassCode": "3",
+                              "brandClassRange": ">=5 Rx",
+                              "brandClassValue": "A-3"
+                          }
+                      ]
+                  },
+                  {
+                      "id": "f1735126-12e6-4834-bec6-8e397f82fe1b",
+                      "name": "test 11 june",
+                      "code": "M72501115",
+                      "fourPCode": "123455",
+                      "bmdcRegNumber": "12345",
+                      "sourceDoctorCode": null,
+                      "marketId": "37a91a83-b2b9-4dc8-8cea-4b0979f4576d",
+                      "subMarketId": "42323aef-7404-4ac3-9a07-810d921ea03e",
+                      "doctorStatus": 0,
+                      "isActive": false,
+                      "isApproved": false,
+                      "approvalDate": null,
+                      "isRejected": false,
+                      "rejectedBy": null,
+                      "rejectedDate": null,
+                      "remarks": "",
+                      "headType": "OwnDoctor",
+                      "teamId": "0a1b605c-4007-4c87-a7a5-36394a5f05ab",
+                      "teamCode": "Aviator",
+                      "teamName": "Aviator",
+                      "departmentId": "3bb4859f-79ef-4a43-bd89-2c225ab5f29d",
+                      "departmentCode": "RX",
+                      "departmentName": "Rx General",
+                      "doctorDesignation": "Sr. Registrar",
+                      "doctorDegree": "MBBS, FCPS",
+                      "speciality": "Paediatric Nephrologist",
+                      "category": "A",
+                      "chamberName": "test",
+                      "chamberAddress": "test",
+                      "instituteName": "B.D DRUG HOUSE",
+                      "districtCode": "0",
+                      "thanaCode": "0",
+                      "lat": 23.7464223,
+                      "lon": 23.7464223,
+                      "email": "",
+                      "mobileNo": "",
+                      "religion": "Islam",
+                      "gender": "Male",
+                      "birthDay": null,
+                      "marriageDay": null,
+                      "patientPerType": "Month",
+                      "noOfPracticeDays": 25,
+                      "noOfPatient": 25,
+                      "isGroupDoctor": false,
+                      "noOfGroupDoctor": 0,
+                      "namePlateImagePath": "http://103.111.126.11/DoctorNamePlate%2fM72501115_nameplate_20240611115836563.jpg",
+                      "visitingCardImagePath": "http://103.111.126.11/DoctorVisitingCard%2fM72501115_visitingcard_20240611115836584.jpg",
+                      "noOfRxPerDay": 15,
+                      "insulineRxPerDay": 0,
+                      "isDCREntryAllowed": false,
+                      "isWPMEntryAllowed": false,
+                      "isTourPlanVisitAllowed": false,
+                      "isOrderAllowed": false,
+                      "fieldForceCode": "17802",
+                      "fieldForceName": "Md. Eilius Hosen",
+                      "marketCode": "M72501",
+                      "marketName": "KBFGH-2",
+                      "subMarketCode": "M7250101",
+                      "subMarketName": "AMC (AICHI MEDICAL COLLEGE HOSPITAL) THANA HEALTH COMPLEX",
+                      "doctorMajorBrandMapDetails": [
+                          {
+                              "typeId": "64d9ce17-9f3e-4b38-b825-d1f6e1c0a4ac",
+                              "typeName": "Major",
+                              "brandId": "77e99d30-20db-47b1-b306-42c1de8db888",
+                              "brandName": "SERGEL",
+                              "brandCode": "SER",
+                              "brandClassId": "2c856e74-86de-47ec-aaea-69957ff4b4f9",
+                              "brandClassCode": "3",
+                              "brandClassRange": ">=5 Rx",
+                              "brandClassValue": "A-3"
+                          },
+                          {
+                              "typeId": "64d9ce17-9f3e-4b38-b825-d1f6e1c0a4ac",
+                              "typeName": "Major",
+                              "brandId": "a798432a-c074-438b-bfda-c673e5f24ded",
+                              "brandName": "ABICON",
+                              "brandCode": "ABI",
+                              "brandClassId": "0de7311c-ecde-431e-86f6-0b591b613e2d",
+                              "brandClassCode": "3",
+                              "brandClassRange": ">=5 Rx",
+                              "brandClassValue": "A-3"
+                          },
+                          {
+                              "typeId": "64d9ce17-9f3e-4b38-b825-d1f6e1c0a4ac",
+                              "typeName": "Major",
+                              "brandId": "2b0d0b78-b2a3-4c9f-9b24-b4dd57a5788d",
+                              "brandName": "ADRIBIN",
+                              "brandCode": "ABN",
+                              "brandClassId": "744f8adf-608d-4e9f-a891-988b6bbb2cb9",
+                              "brandClassCode": "1",
+                              "brandClassRange": "<=1 Rx",
+                              "brandClassValue": "A-1"
+                          },
+                          {
+                              "typeId": "64d9ce17-9f3e-4b38-b825-d1f6e1c0a4ac",
+                              "typeName": "Major",
+                              "brandId": "c86a7900-1565-4b2d-b1a1-e329041c6887",
+                              "brandName": "ANGENTA",
+                              "brandCode": "ANG",
+                              "brandClassId": "1b1c9b60-2766-4191-b2cd-5c060ff9d226",
+                              "brandClassCode": "3",
+                              "brandClassRange": ">=5 Rx",
+                              "brandClassValue": "A-3"
+                          },
+                          {
+                              "typeId": "64d9ce17-9f3e-4b38-b825-d1f6e1c0a4ac",
+                              "typeName": "Major",
+                              "brandId": "adaf7f2a-79d2-4ede-a482-a2a47cca162a",
+                              "brandName": "ADALIMAB",
+                              "brandCode": "ADA",
+                              "brandClassId": "cb8d0a8f-a88f-4341-95b7-59402c000544",
+                              "brandClassCode": "2",
+                              "brandClassRange": "2-4 Rx",
+                              "brandClassValue": "A-2"
+                          }
+                      ],
+                      "doctorOtherBrandMapDetails": [
+                          {
+                              "typeId": "7a0a4c5a-583e-46ab-87c1-9b3082584bfe",
+                              "typeName": "Other",
+                              "brandId": "47a254a0-15fa-4550-b076-09ada682b813",
+                              "brandName": "INDIMIDE SR",
+                              "brandCode": "IMD",
+                              "brandClassId": "2481c5f2-beeb-4cc2-80cc-2117cd8b497a",
+                              "brandClassCode": "3",
+                              "brandClassRange": ">=5 Rx",
+                              "brandClassValue": "A-3"
+                          },
+                          {
+                              "typeId": "7a0a4c5a-583e-46ab-87c1-9b3082584bfe",
+                              "typeName": "Other",
+                              "brandId": "12e03569-6707-4f6c-96de-ad49b1a17180",
+                              "brandName": "BETMIRA ER",
+                              "brandCode": "BMR",
+                              "brandClassId": "418c57d5-9c74-4a1b-ae94-40110e8a87f1",
+                              "brandClassCode": "3",
+                              "brandClassRange": ">=5 Rx",
+                              "brandClassValue": "A-3"
+                          },
+                          {
+                              "typeId": "7a0a4c5a-583e-46ab-87c1-9b3082584bfe",
+                              "typeName": "Other",
+                              "brandId": "24b4e46f-35d2-4049-92bb-1a322843d1eb",
+                              "brandName": "CLACIDO",
+                              "brandCode": "CLD",
+                              "brandClassId": "e2cc26fc-5758-4d7d-8ffb-5784eb2b8ba4",
+                              "brandClassCode": "3",
+                              "brandClassRange": ">=5 Rx",
+                              "brandClassValue": "A-3"
+                          },
+                          {
+                              "typeId": "7a0a4c5a-583e-46ab-87c1-9b3082584bfe",
+                              "typeName": "Other",
+                              "brandId": "db7e3859-1b82-49f6-8df7-6a3f96dfc095",
+                              "brandName": "DENVAR",
+                              "brandCode": "DEN",
+                              "brandClassId": "e75613d2-8c53-4679-a96d-9055a98640c1",
+                              "brandClassCode": "1",
+                              "brandClassRange": "<=1 Rx",
+                              "brandClassValue": "A-1"
+                          },
+                          {
+                              "typeId": "7a0a4c5a-583e-46ab-87c1-9b3082584bfe",
+                              "typeName": "Other",
+                              "brandId": "dd36c0eb-a195-495e-a0a7-e3a28e6e2326",
+                              "brandName": "DABIRAN",
+                              "brandCode": "DBN",
+                              "brandClassId": "af7e9278-d20a-45df-be84-07c6b527cf3b",
+                              "brandClassCode": "1",
+                              "brandClassRange": "<=1 Rx",
+                              "brandClassValue": "A-1"
+                          }
+                      ]
+                  },
+                  {
+                      "id": "c3521769-1977-493e-8e4d-6bf8e8c5479e",
+                      "name": "test doctor july 7 1",
+                      "code": "M72501117",
+                      "fourPCode": "12345",
+                      "bmdcRegNumber": "12345",
+                      "sourceDoctorCode": null,
+                      "marketId": "37a91a83-b2b9-4dc8-8cea-4b0979f4576d",
+                      "subMarketId": "42323aef-7404-4ac3-9a07-810d921ea03e",
+                      "doctorStatus": 0,
+                      "isActive": false,
+                      "isApproved": false,
+                      "approvalDate": null,
+                      "isRejected": false,
+                      "rejectedBy": null,
+                      "rejectedDate": null,
+                      "remarks": "",
+                      "headType": "OwnDoctor",
+                      "teamId": "0a1b605c-4007-4c87-a7a5-36394a5f05ab",
+                      "teamCode": "Aviator",
+                      "teamName": "Aviator",
+                      "departmentId": "3bb4859f-79ef-4a43-bd89-2c225ab5f29d",
+                      "departmentCode": "RX",
+                      "departmentName": "Rx General",
+                      "doctorDesignation": "Professor",
+                      "doctorDegree": "MBBS",
+                      "speciality": "Paediatric Nephrologist",
+                      "category": "A",
+                      "chamberName": "test",
+                      "chamberAddress": "test",
+                      "instituteName": "SIR SALIMULLAH MEDICAL COLLEGE AND MITFORD HOSPITAL.",
+                      "districtCode": "0",
+                      "thanaCode": "0",
+                      "lat": 23.7458884,
+                      "lon": 23.7458884,
+                      "email": "dev.hpl.mis@gmail.com",
+                      "mobileNo": "01888818801",
+                      "religion": "Islam",
+                      "gender": "Male",
+                      "birthDay": "2024-07-07T00:00:00",
+                      "marriageDay": "2024-07-07T00:00:00",
+                      "patientPerType": "Week",
+                      "noOfPracticeDays": 5,
+                      "noOfPatient": 25,
+                      "isGroupDoctor": false,
+                      "noOfGroupDoctor": 0,
+                      "namePlateImagePath": "http://103.111.126.11/DoctorNamePlate%2fM72501117_nameplate_20240707203413952.jpg",
+                      "visitingCardImagePath": "http://103.111.126.11/DoctorVisitingCard%2fM72501117_visitingcard_20240707203414003.jpg",
+                      "noOfRxPerDay": 15,
+                      "insulineRxPerDay": 100,
+                      "isDCREntryAllowed": false,
+                      "isWPMEntryAllowed": false,
+                      "isTourPlanVisitAllowed": false,
+                      "isOrderAllowed": false,
+                      "fieldForceCode": "17802",
+                      "fieldForceName": "Md. Eilius Hosen",
+                      "marketCode": "M72501",
+                      "marketName": "KBFGH-2",
+                      "subMarketCode": "M7250101",
+                      "subMarketName": "AMC (AICHI MEDICAL COLLEGE HOSPITAL) THANA HEALTH COMPLEX",
+                      "doctorMajorBrandMapDetails": [
+                          {
+                              "typeId": "64d9ce17-9f3e-4b38-b825-d1f6e1c0a4ac",
+                              "typeName": "Major",
+                              "brandId": "505054bb-d3e8-45e8-9dde-59d9be2aece7",
+                              "brandName": "ALCET",
+                              "brandCode": "ACT",
+                              "brandClassId": "9e758142-8ba7-4320-9d51-68a934030220",
+                              "brandClassCode": "3",
+                              "brandClassRange": ">=5 Rx",
+                              "brandClassValue": "A-3"
+                          },
+                          {
+                              "typeId": "64d9ce17-9f3e-4b38-b825-d1f6e1c0a4ac",
+                              "typeName": "Major",
+                              "brandId": "10bb309f-84a6-45ec-b95b-abe6c744e347",
+                              "brandName": "ARTHROFEN",
+                              "brandCode": "AFN",
+                              "brandClassId": "038610de-9527-411d-aa48-26fcb0ce4fa5",
+                              "brandClassCode": "2",
+                              "brandClassRange": "2-4 Rx",
+                              "brandClassValue": "A-2"
+                          },
+                          {
+                              "typeId": "64d9ce17-9f3e-4b38-b825-d1f6e1c0a4ac",
+                              "typeName": "Major",
+                              "brandId": "a798432a-c074-438b-bfda-c673e5f24ded",
+                              "brandName": "ABICON",
+                              "brandCode": "ABI",
+                              "brandClassId": "0de7311c-ecde-431e-86f6-0b591b613e2d",
+                              "brandClassCode": "3",
+                              "brandClassRange": ">=5 Rx",
+                              "brandClassValue": "A-3"
+                          },
+                          {
+                              "typeId": "64d9ce17-9f3e-4b38-b825-d1f6e1c0a4ac",
+                              "typeName": "Major",
+                              "brandId": "2b0d0b78-b2a3-4c9f-9b24-b4dd57a5788d",
+                              "brandName": "ADRIBIN",
+                              "brandCode": "ABN",
+                              "brandClassId": "05243651-7348-42eb-87ed-c84cc877b9d0",
+                              "brandClassCode": "2",
+                              "brandClassRange": "2-4 Rx",
+                              "brandClassValue": "A-2"
+                          },
+                          {
+                              "typeId": "64d9ce17-9f3e-4b38-b825-d1f6e1c0a4ac",
+                              "typeName": "Major",
+                              "brandId": "adaf7f2a-79d2-4ede-a482-a2a47cca162a",
+                              "brandName": "ADALIMAB",
+                              "brandCode": "ADA",
+                              "brandClassId": "cb8d0a8f-a88f-4341-95b7-59402c000544",
+                              "brandClassCode": "2",
+                              "brandClassRange": "2-4 Rx",
+                              "brandClassValue": "A-2"
+                          }
+                      ],
+                      "doctorOtherBrandMapDetails": [
+                          {
+                              "typeId": "7a0a4c5a-583e-46ab-87c1-9b3082584bfe",
+                              "typeName": "Other",
+                              "brandId": "26366f8a-5e24-4e3b-a6d4-133b2803a836",
+                              "brandName": "ALLET",
+                              "brandCode": "ALT",
+                              "brandClassId": "dc250d1a-fd09-425b-9fcb-05d297aef8e3",
+                              "brandClassCode": "1",
+                              "brandClassRange": "<=1 Rx",
+                              "brandClassValue": "A-1"
+                          },
+                          {
+                              "typeId": "7a0a4c5a-583e-46ab-87c1-9b3082584bfe",
+                              "typeName": "Other",
+                              "brandId": "98e83e62-7303-457d-9759-3188b158d4ca",
+                              "brandName": "BARITINIB",
+                              "brandCode": "BTN",
+                              "brandClassId": "2f56f606-0df3-46d0-b039-25b96bdc038a",
+                              "brandClassCode": "2",
+                              "brandClassRange": "2-4 Rx",
+                              "brandClassValue": "A-2"
+                          },
+                          {
+                              "typeId": "7a0a4c5a-583e-46ab-87c1-9b3082584bfe",
+                              "typeName": "Other",
+                              "brandId": "b2b60d33-601e-4744-9903-46e9971a32b9",
+                              "brandName": "AERON",
+                              "brandCode": "ARN",
+                              "brandClassId": "8e9a38ee-3a5c-440c-80af-8c211ae0f6d6",
+                              "brandClassCode": "2",
+                              "brandClassRange": "2-4 Rx",
+                              "brandClassValue": "A-2"
+                          },
+                          {
+                              "typeId": "7a0a4c5a-583e-46ab-87c1-9b3082584bfe",
+                              "typeName": "Other",
+                              "brandId": "b51a4c45-d2f6-4e22-bb38-c9e888251c4d",
+                              "brandName": "ALINIX",
+                              "brandCode": "ALX",
+                              "brandClassId": "b093e0ef-a25d-4219-b9e4-1a6687170b4e",
+                              "brandClassCode": "3",
+                              "brandClassRange": ">=5 Rx",
+                              "brandClassValue": "A-3"
+                          },
+                          {
+                              "typeId": "7a0a4c5a-583e-46ab-87c1-9b3082584bfe",
+                              "typeName": "Other",
+                              "brandId": "d386ca1f-d8f5-43aa-9a02-e48ea0b90211",
+                              "brandName": "ANULID",
+                              "brandCode": "ANU",
+                              "brandClassId": "29b27441-227c-4be3-b4a5-69d3b7beaaad",
+                              "brandClassCode": "3",
+                              "brandClassRange": ">=5 Rx",
+                              "brandClassValue": "A-3"
+                          }
+                      ]
+                  }
+              ],
+              "statusCode": 200,
+              "statusMessage": "Pending Doctor Data Send Successfully!"
+          }

@@ -1,0 +1,7 @@
+info:
+  name: Geo Fence Management
+  type: folder
+  seq: 12
+
+request:
+  auth: inherit

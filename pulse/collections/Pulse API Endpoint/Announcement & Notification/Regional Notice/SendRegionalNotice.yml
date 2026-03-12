@@ -1,0 +1,32 @@
+info:
+  name: SendRegionalNotice
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{pulse_api}}/Notice/EntryEditRegionalNotice"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"Id\": \"\",//empty for create\r
+
+      \    \"Title\": \"test\",\r
+
+      \    \"Body\": \"test\",\r
+
+      \    \"Remarks\": \"\",\r
+
+      \    \"ExpireDate\": \"2024-08-05\",\r
+
+      \    \"UserId\": \"04533\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

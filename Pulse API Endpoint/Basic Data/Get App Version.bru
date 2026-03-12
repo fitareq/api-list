@@ -1,0 +1,15 @@
+meta {
+  name: Get App Version
+  type: http
+  seq: 11
+}
+
+get {
+  url: {{pulse_api}}/Basic/get-appVersion
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

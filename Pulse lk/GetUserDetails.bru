@@ -1,0 +1,26 @@
+meta {
+  name: GetUserDetails
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{base_url}}/api/Basic/GetUserDetails
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyTmFtZSI6IlUuSC5USEFSQU5HQSBTQU1BTiBLVU1BUkEiLCJFbXBsb3llZUNvZGUiOiIwODkxIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiUkMiLCJEZXBhcnRtZW50Q29kZSI6IkdFTkVSQUwiLCJUZWFtQ29kZSI6IkdFTkVSQUwiLCJUeXBlIjoic3VwZXJ2aXNvciIsImV4cCI6MTc2ODYyMjQ2MiwiaXNzIjoiU2FsZXNQdWxzZUFQSSIsImF1ZCI6IkhQTC1NSVMifQ.I5hjzcB8oZAWrRx-6Pr_9cSMuAGWKrciIVG-dtJJwlg
+}
+
+body:json {
+  {
+      "UserId": "0891"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

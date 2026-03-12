@@ -1,0 +1,65 @@
+meta {
+  name: ChemistTransferRequest
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{pulse_api}}/Chemist/ChemistTransferRequest
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "UserId": "17801",
+      "ChemistId": "EB9DE09D-EC54-4B4B-882E-0000B473A0E4",
+      "SubMarketId": "27E22490-52C6-453A-ACCC-575EF70D4B60"
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: ChemistTransferRequest_Example
+  
+  request: {
+    url: {{pulse_api}}/Chemist/ChemistTransferRequest
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "UserId": "",
+          "ChemistId": "EB9DE09D-EC54-4B4B-882E-0000B473A0E4",
+          "SubMarketId": "27E22490-52C6-453A-ACCC-575EF70D4B60"
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Transfer-Encoding: chunked
+      Content-Type: application/json; charset=utf-8
+      Server: Microsoft-IIS/10.0
+      X-Powered-By: ASP.NET
+      Date: Tue, 16 Jul 2024 04:01:26 GMT
+    }
+  
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "statusCode": 404,
+            "statusMessage": "User ID,Chemist ID, SubMarket ID required, please try again"
+        }
+      '''
+    }
+  }
+}

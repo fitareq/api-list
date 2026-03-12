@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "Help Hub App",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}

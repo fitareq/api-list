@@ -1,0 +1,165 @@
+meta {
+  name: /api/v1/user/update-profile
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/api/v1/user/update-profile
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "email": "string",
+    "registrationLocation": "string",
+    "deliveryAddresses": [
+      {
+        "addressLabel": "string",
+        "addressLineOne": "string",
+        "addressLineTwo": "string",
+        "thanaCode": "string",
+        "districtCode": "string",
+        "contactNumber": "string",
+        "isDefaultAddress": true,
+        "lat": 6185.134336050631,
+        "lon": 9203.99324522032,
+        "geoAddress": "string",
+        "depotId": "string",
+        "thanaName": "string",
+        "districtName": "string",
+        "depotName": "string",
+        "addressId": "string",
+        "areaCode": "string",
+        "areaName": "string"
+      },
+      {
+        "addressLabel": "string",
+        "addressLineOne": "string",
+        "addressLineTwo": "string",
+        "thanaCode": "string",
+        "districtCode": "string",
+        "contactNumber": "string",
+        "isDefaultAddress": true,
+        "lat": 9792.067070114394,
+        "lon": 8026.108234945955,
+        "geoAddress": "string",
+        "depotId": "string",
+        "thanaName": "string",
+        "districtName": "string",
+        "depotName": "string",
+        "addressId": "string",
+        "areaCode": "string",
+        "areaName": "string"
+      }
+    ],
+    "profile": {
+      "name": "string",
+      "address": "string",
+      "thanaCode": "string",
+      "districtCode": "string",
+      "gender": "string",
+      "dateOfBirth": "string",
+      "profileImagePath": "string",
+      "thanaName": "string",
+      "districtName": "string"
+    },
+    "userType": "string"
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: OK
+  
+  request: {
+    url: {{baseUrl}}/api/v1/user/update-profile
+    method: POST
+    mode: json
+    headers: {
+      Content-Type: application/json
+      Authorization: Bearer <token>
+    }
+  
+    body:json: {
+      {
+        "email": "string",
+        "registrationLocation": "string",
+        "deliveryAddresses": [
+          {
+            "addressLabel": "string",
+            "addressLineOne": "string",
+            "addressLineTwo": "string",
+            "thanaCode": "string",
+            "districtCode": "string",
+            "contactNumber": "string",
+            "isDefaultAddress": true,
+            "lat": 6185.134336050631,
+            "lon": 9203.99324522032,
+            "geoAddress": "string",
+            "depotId": "string",
+            "thanaName": "string",
+            "districtName": "string",
+            "depotName": "string",
+            "addressId": "string",
+            "areaCode": "string",
+            "areaName": "string"
+          },
+          {
+            "addressLabel": "string",
+            "addressLineOne": "string",
+            "addressLineTwo": "string",
+            "thanaCode": "string",
+            "districtCode": "string",
+            "contactNumber": "string",
+            "isDefaultAddress": true,
+            "lat": 9792.067070114394,
+            "lon": 8026.108234945955,
+            "geoAddress": "string",
+            "depotId": "string",
+            "thanaName": "string",
+            "districtName": "string",
+            "depotName": "string",
+            "addressId": "string",
+            "areaCode": "string",
+            "areaName": "string"
+          }
+        ],
+        "profile": {
+          "name": "string",
+          "address": "string",
+          "thanaCode": "string",
+          "districtCode": "string",
+          "gender": "string",
+          "dateOfBirth": "string",
+          "profileImagePath": "string",
+          "thanaName": "string",
+          "districtName": "string"
+        },
+        "userType": "string"
+      }
+    }
+  }
+  
+  response: {
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: text
+      content: '''
+  
+      '''
+    }
+  }
+}

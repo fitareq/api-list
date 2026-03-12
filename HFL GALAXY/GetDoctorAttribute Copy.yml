@@ -1,0 +1,1141 @@
+info:
+  name: GetDoctorAttribute Copy
+  type: http
+  seq: 6
+
+http:
+  method: POST
+  url: "{{base_url}}/Basic/GetDoctorAttribute"
+  body:
+    type: json
+    data: "{\r\n    \"UserId\": \"800160\"\r\n}"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: GetDoctorAttribute_Example
+    request:
+      url: "{{pulse_api}}/Basic/GetDoctorAttribute"
+      method: POST
+      body:
+        type: json
+        data: "{\r\n    \"UserId\": \"17802\"\r\n}"
+    response:
+      statusText: "200"
+      headers:
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Server
+          value: Microsoft-IIS/10.0
+        - name: X-Powered-By
+          value: ASP.NET
+        - name: Date
+          value: Tue, 16 Jul 2024 04:20:36 GMT
+      body:
+        type: json
+        data: |-
+          {
+              "data": [
+                  {
+                      "id": "d86cf9d8-10d1-44b7-a4a1-00ebfc961dec",
+                      "code": 128,
+                      "name": "Paediatric Nephrologist",
+                      "typeName": "Speciality",
+                      "description": null
+                  },
+                  {
+                      "id": "ac04f404-e05d-4a2f-ad11-01bd2b4e1935",
+                      "code": 91,
+                      "name": "Cardiovascular & Thoracic Surgeon",
+                      "typeName": "Speciality",
+                      "description": null
+                  },
+                  {
+                      "id": "d3a884cd-42ca-4c86-9252-02fd2f6bda80",
+                      "code": 54,
+                      "name": "MBBS",
+                      "typeName": "Degree",
+                      "description": "MBBS"
+                  },
+                  {
+                      "id": "6151cf98-205c-45dc-8e28-06df69f0f47a",
+                      "code": 78,
+                      "name": "Sr. Registrar",
+                      "typeName": "Designation",
+                      "description": null
+                  },
+                  {
+                      "id": "dec4eb68-140f-4dfd-bead-09d7fe328c19",
+                      "code": 47,
+                      "name": "Microbiology-MD",
+                      "typeName": "Degree",
+                      "description": "Microbiology-MD"
+                  },
+                  {
+                      "id": "8be4b126-6d9b-4735-9081-0bd655c6d8f1",
+                      "code": 148,
+                      "name": "Transfusion Medicine Specialist",
+                      "typeName": "Speciality",
+                      "description": null
+                  },
+                  {
+                      "id": "8b7c3934-4e55-4b34-92bd-0efc835c63d6",
+                      "code": 125,
+                      "name": "Paediatric Cardiologist ",
+                      "typeName": "Speciality",
+                      "description": null
+                  },
+                  {
+                      "id": "1c830425-79cb-47b5-820d-0eff456cabdb",
+                      "code": 113,
+                      "name": "Microbiologist & Immunologist ",
+                      "typeName": "Speciality",
+                      "description": null
+                  },
+                  {
+                      "id": "083d572b-d80e-4183-85d1-0fcc7a8b452c",
+                      "code": 123,
+                      "name": "Orthopaedic Surgeon",
+                      "typeName": "Speciality",
+                      "description": null
+                  },
+                  {
+                      "id": "70a3a0c5-2d90-4e48-b6a6-11650e84c05c",
+                      "code": 21,
+                      "name": "Physical Medicine & Rehabilitation-MD",
+                      "typeName": "Degree",
+                      "description": "Physical Medicine & Rehabilitation-MD"
+                  },
+                  {
+                      "id": "c5ac8eab-7ecc-42c9-9e62-1285a184b43a",
+                      "code": 141,
+                      "name": "Radiologist & Imaging Specialist",
+                      "typeName": "Speciality",
+                      "description": null
+                  },
+                  {
+                      "id": "e6091dcf-97da-4f33-8387-170eca7c3e93",
+                      "code": 33,
+                      "name": "Ophthalmology-MS",
+                      "typeName": "Degree",
+                      "description": "Ophthalmology-MS"
+                  },
+                  {
+                      "id": "2b8b85aa-6e57-4026-87e1-174a1d2b74b9",
+                      "code": 52,
+                      "name": "Anatomy-MS",
+                      "typeName": "Degree",
+                      "description": "Anatomy-MS"
+                  },
+                  {
+                      "id": "1b180ac6-5fc2-410f-b3c3-1841cf94213d",
+                      "code": 116,
+                      "name": "Neuro Surgeon",
+                      "typeName": "Speciality",
+                      "description": null
+                  },
+                  {
+                      "id": "b997c241-a46b-480a-a921-19929a44c1ea",
+                      "code": 49,
+                      "name": "Pharmacology-MD",
+                      "typeName": "Degree",
+                      "description": "Pharmacology-MD"
+                  },
+                  {
+                      "id": "275dfe59-f107-48ec-bbf4-1ad1add62e38",
+                      "code": 31,
+                      "name": "Neuro-Surgery-MS",
+                      "typeName": "Degree",
+                      "description": "Neuro-Surgery-MS"
+                  },
+                  {
+                      "id": "96cc5617-b8c6-4285-bff8-1f987384dda9",
+                      "code": 149,
+                      "name": "Urologist",
+                      "typeName": "Speciality",
+                      "description": null
+                  },
+                  {
+                      "id": "57f3ca5f-ef89-45ac-84c2-214c8171d49a",
+                      "code": 30,
+                      "name": "Community Ophthalmology-MS",
+                      "typeName": "Degree",
+                      "description": "Community Ophthalmology-MS"
+                  },
+                  {
+                      "id": "daa6cb8a-a00e-4793-9491-228f9192b9c3",
+                      "code": 1,
+                      "name": "FCPS",
+                      "typeName": "Degree",
+                      "description": "FCPS"
+                  },
+                  {
+                      "id": "f48c0b81-a1d3-4e34-9543-260ece027d2f",
+                      "code": 25,
+                      "name": "Pulmonology-MD",
+                      "typeName": "Degree",
+                      "description": "Pulmonology-MD"
+                  },
+                  {
+                      "id": "3478b29f-ca06-4d0a-b18b-28bc8a0ef0f9",
+                      "code": 118,
+                      "name": "Nuclear Medicine Specialist",
+                      "typeName": "Speciality",
+                      "description": null
+                  },
+                  {
+                      "id": "42bdffb0-ce4a-47bd-96a2-2982d3076ace",
+                      "code": 145,
+                      "name": "Surgeon ",
+                      "typeName": "Speciality",
+                      "description": null
+                  },
+                  {
+                      "id": "828a0e77-908e-458e-828d-298b5ad6609b",
+                      "code": 98,
+                      "name": "Dental Surgeon",
+                      "typeName": "Speciality",
+                      "description": null
+                  },
+                  {
+                      "id": "e9e8ca07-fc20-41a9-9c76-2a38b6690472",
+                      "code": 112,
+                      "name": "Medicine Specialist",
+                      "typeName": "Speciality",
+                      "description": null
+                  },
+                  {
+                      "id": "30c06c06-69b6-4e90-b433-2adc1d08756a",
+                      "code": 8,
+                      "name": "Endocrinology & Metabolism-MD",
+                      "typeName": "Degree",
+                      "description": "Endocrinology & Metabolism-MD"
+                  },
+                  {
+                      "id": "5031b87c-c7e7-4f51-8e23-2da415060f23",
+                      "code": 76,
+                      "name": "Sr. Clinical Assistant (CA)",
+                      "typeName": "Designation",
+                      "description": null
+                  },
+                  {
+                      "id": "2bf7024a-3946-49d3-b264-2ddd0fdaf745",
+                      "code": 152,
+                      "name": "A",
+                      "typeName": "Category",
+                      "description": ">=20 patients/day"
+                  },
+                  {
+                      "id": "993f327d-45af-400f-93d4-3425d9c9fa37",
+                      "code": 143,
+                      "name": "Respiratory Medicine ",
+                      "typeName": "Speciality",
+                      "description": null
+                  },
+                  {
+                      "id": "0f658b34-af32-44e5-8991-355741d7f64b",
+                      "code": 156,
+                      "name": "P",
+                      "typeName": "Category",
+                      "description": "RMP/PC Doctor"
+                  },
+                  {
+                      "id": "cbccb992-5dc2-4021-8782-3777c29bef44",
+                      "code": 103,
+                      "name": "ENT Specialist",
+                      "typeName": "Speciality",
+                      "description": null
+                  },
+                  {
+                      "id": "e92e4d7f-f8cf-4de5-859a-3783d3e0679b",
+                      "code": 96,
+                      "name": "Conservative Dentistry and Endodontics",
+                      "typeName": "Speciality",
+                      "description": null
+                  },
+                  {
+                      "id": "a8632f0a-d52d-41c1-8616-37b5de541533",
+                      "code": 35,
+                      "name": "Otolaryngology-MS",
+                      "typeName": "Degree",
+                      "description": "Otolaryngology-MS"
+                  },
+                  {
+                      "id": "fecc9af5-d540-4e8c-9637-388363d224c2",
+                      "code": 75,
+                      "name": "SACMO",
+                      "typeName": "Designation",
+                      "description": null
+                  },
+                  {
+                      "id": "8878895f-8e34-4ad4-828c-39f7f211fd38",
+                      "code": 144,
+                      "name": "Rheumatologist",
+                      "typeName": "Speciality",
+                      "description": null
+                  },
+                  {
+                      "id": "95e39a33-7064-44bb-b08e-3c3d2070d346",
+                      "code": 18,
+                      "name": "Paediatric Gastroenterology-MD",
+                      "typeName": "Degree",
+                      "description": "Paediatric Gastroenterology-MD"
+                  },
+                  {
+                      "id": "d62e9a9e-e2f1-4b62-ac6e-3cb543d4f82e",
+                      "code": 86,
+                      "name": "Consultant",
+                      "typeName": "Designation",
+                      "description": null
+                  },
+                  {
+                      "id": "a3f2602d-a0f3-4d7c-a9e9-3e7ee4811fb4",
+                      "code": 135,
+                      "name": "Physical Medicine Specialist",
+                      "typeName": "Speciality",
+                      "description": null
+                  },
+                  {
+                      "id": "1e5e333f-05ae-4ded-8d5c-3f38639178b5",
+                      "code": 74,
+                      "name": "RMP",
+                      "typeName": "Designation",
+                      "description": null
+                  },
+                  {
+                      "id": "4cdeb725-e013-4cd4-9b34-418408af4f18",
+                      "code": 46,
+                      "name": "Biochemistry-MD",
+                      "typeName": "Degree",
+                      "description": "Biochemistry-MD"
+                  },
+                  {
+                      "id": "a33c38c4-0295-417e-9bc9-45e586f7e9ec",
+                      "code": 109,
+                      "name": "Hematologist",
+                      "typeName": "Speciality",
+                      "description": null
+                  },
+                  {
+                      "id": "d17f07f8-8b5d-475f-892f-461f275bc091",
+                      "code": 136,
+                      "name": "Physiotherapist",
+                      "typeName": "Speciality",
+                      "description": null
+                  },
+                  {
+                      "id": "dfcda10d-f014-4bfb-9b2d-478f67c963ef",
+                      "code": 68,
+                      "name": "Professor",
+                      "typeName": "Designation",
+                      "description": null
+                  },
+                  {
+                      "id": "bbb91fd7-c7bc-4071-9c2a-47f680db4851",
+                      "code": 106,
+                      "name": "General Surgeon",
+                      "typeName": "Speciality",
+                      "description": null
+                  },
+                  {
+                      "id": "81020549-773f-44d9-b3eb-49c6b6b53aaa",
+                      "code": 15,
+                      "name": "Neurology-MD",
+                      "typeName": "Degree",
+                      "description": "Neurology-MD"
+                  },
+                  {
+                      "id": "f68b947f-ebcc-4111-8099-4bef00b3db78",
+                      "code": 85,
+                      "name": "Clinician",
+                      "typeName": "Designation",
+                      "description": null
+                  },
+                  {
+                      "id": "b5a3ec36-71b8-4702-b95c-4d5577058a09",
+                      "code": 63,
+                      "name": "Jr. Consultant",
+                      "typeName": "Designation",
+                      "description": null
+                  },
+                  {
+                      "id": "98c7258a-9102-45c7-926f-4f15039cd388",
+                      "code": 130,
+                      "name": "Paediatric Surgeon",
+                      "typeName": "Speciality",
+                      "description": null
+                  },
+                  {
+                      "id": "719d1a4a-06fc-41f7-a367-50dde363a62b",
+                      "code": 120,
+                      "name": "Ophthalmologist ",
+                      "typeName": "Speciality",
+                      "description": null
+                  },
+                  {
+                      "id": "852ee37a-4511-4120-830a-542aa1d6b2f8",
+                      "code": 23,
+                      "name": "Rheumatology-MD",
+                      "typeName": "Degree",
+                      "description": "Rheumatology-MD"
+                  },
+                  {
+                      "id": "86d9783a-d422-49dd-9083-55a058a17f9c",
+                      "code": 27,
+                      "name": "Anaesthesiology-MS",
+                      "typeName": "Degree",
+                      "description": "Anaesthesiology-MS"
+                  },
+                  {
+                      "id": "2d6f52b9-8358-4de1-8acc-55a57e480841",
+                      "code": 61,
+                      "name": "Indoor Medical Officer",
+                      "typeName": "Designation",
+                      "description": null
+                  },
+                  {
+                      "id": "37ee94f6-3d36-40be-824e-56577e92cf8f",
+                      "code": 19,
+                      "name": "Paediatric Hematology-MD",
+                      "typeName": "Degree",
+                      "description": "Paediatric Hematology-MD"
+                  },
+                  {
+                      "id": "7c3705fd-a5da-4eaf-915f-56f5e6c668d6",
+                      "code": 100,
+                      "name": "Dermatologist & Venereologist",
+                      "typeName": "Speciality",
+                      "description": null
+                  },
+                  {
+                      "id": "b4f4c141-2c47-4ae0-a0a3-5c20d5daf3b4",
+                      "code": 77,
+                      "name": "Sr. Consultant",
+                      "typeName": "Designation",
+                      "description": null
+                  },
+                  {
+                      "id": "9e9a3d59-a5e6-4f47-9ce7-5ca1bd0d6018",
+                      "code": 150,
+                      "name": "Vascular Surgeon ",
+                      "typeName": "Speciality",
+                      "description": null
+                  },
+                  {
+                      "id": "5725ef0c-3849-464a-b527-5ca1e4e65948",
+                      "code": 11,
+                      "name": "Hepatology-MD",
+                      "typeName": "Degree",
+                      "description": "Hepatology-MD"
+                  },
+                  {
+                      "id": "d6434e34-b07d-49db-81ed-5cb8c7483083",
+                      "code": 111,
+                      "name": "Hepatologist",
+                      "typeName": "Speciality",
+                      "description": null
+                  },
+                  {
+                      "id": "6912eac9-5d1e-4ffc-b242-5fdaa4596828",
+                      "code": 10,
+                      "name": "Hematology-MD",
+                      "typeName": "Degree",
+                      "description": "Hematology-MD"
+                  },
+                  {
+                      "id": "e74942b5-8e3d-4a40-84a5-60f38a80d94d",
+                      "code": 83,
+                      "name": "Chief Medical Officer",
+                      "typeName": "Designation",
+                      "description": null
+                  },
+                  {
+                      "id": "ef0d319d-d22a-4b91-9f79-60fbe33910f7",
+                      "code": 84,
+                      "name": "Clinical Assistant (CA)",
+                      "typeName": "Designation",
+                      "description": null
+                  },
+                  {
+                      "id": "1c829cf7-3f85-4769-966d-617b9db16e18",
+                      "code": 42,
+                      "name": "Oral and Maxillofacial Surgery-MS",
+                      "typeName": "Degree",
+                      "description": "Oral and Maxillofacial Surgery-MS"
+                  },
+                  {
+                      "id": "b3508244-6fc1-49d4-bd11-628a7bcf6618",
+                      "code": 95,
+                      "name": "Community Ophthalmologist",
+                      "typeName": "Speciality",
+                      "description": null
+                  },
+                  {
+                      "id": "94051fca-7028-496b-bb82-6345a5a0a4b5",
+                      "code": 17,
+                      "name": "Paediatrics-MD",
+                      "typeName": "Degree",
+                      "description": "Paediatrics-MD"
+                  },
+                  {
+                      "id": "4e8a6e02-1314-494f-b6a1-645365e49434",
+                      "code": 24,
+                      "name": "Transfusion Medicine-MD",
+                      "typeName": "Degree",
+                      "description": "Transfusion Medicine-MD"
+                  },
+                  {
+                      "id": "df4e25a0-efeb-4688-b49e-64a9bb47b7e1",
+                      "code": 134,
+                      "name": "Pedodontics ",
+                      "typeName": "Speciality",
+                      "description": null
+                  },
+                  {
+                      "id": "3ec66f44-27cc-453b-8584-682d57c05efe",
+                      "code": 89,
+                      "name": "Cardiac Surgeon",
+                      "typeName": "Speciality",
+                      "description": null
+                  },
+                  {
+                      "id": "cd0e3a18-1f8d-4c3e-b619-6a91dcd35c70",
+                      "code": 45910,
+                      "name": "Computer Science",
+                      "typeName": "Designation",
+                      "description": "Portfolio Website"
+                  },
+                  {
+                      "id": "68cb226f-3e47-47a2-b436-6b96d80f52bc",
+                      "code": 71,
+                      "name": "Resident Physician",
+                      "typeName": "Designation",
+                      "description": null
+                  },
+                  {
+                      "id": "4a441076-98d4-45b2-8b8e-6bc53c66b7fa",
+                      "code": 151,
+                      "name": "Virologist",
+                      "typeName": "Speciality",
+                      "description": null
+                  },
+                  {
+                      "id": "4be05578-2ef7-454e-b14f-6ec7f00ccc81",
+                      "code": 99,
+                      "name": "Dentist",
+                      "typeName": "Speciality",
+                      "description": null
+                  },
+                  {
+                      "id": "47d069fc-7413-4833-84af-6f85423cd8b8",
+                      "code": 105,
+                      "name": "Gastroenterologist",
+                      "typeName": "Speciality",
+                      "description": null
+                  },
+                  {
+                      "id": "d3e57597-bb91-4519-9be1-72e91eefcc19",
+                      "code": 26,
+                      "name": "Nuclear Medicine-MD",
+                      "typeName": "Degree",
+                      "description": "Nuclear Medicine-MD"
+                  },
+                  {
+                      "id": "ad072add-2faa-4c39-91c2-737cc9ca8059",
+                      "code": 102,
+                      "name": "Endocrinologist",
+                      "typeName": "Speciality",
+                      "description": null
+                  },
+                  {
+                      "id": "d182f63e-c0b3-4300-b113-7898a7ef76d9",
+                      "code": 110,
+                      "name": "Hepatobiliary Surgeon",
+                      "typeName": "Speciality",
+                      "description": null
+                  },
+                  {
+                      "id": "6e175b5f-b71e-4961-a289-79c93f0ee6e6",
+                      "code": 44,
+                      "name": "Prosthodontics-MS",
+                      "typeName": "Degree",
+                      "description": "Prosthodontics-MS"
+                  },
+                  {
+                      "id": "5c5c1bae-0c02-422e-a29a-7b48528e11bc",
+                      "code": 12,
+                      "name": "Internal Medicine-MD",
+                      "typeName": "Degree",
+                      "description": "Internal Medicine-MD"
+                  },
+                  {
+                      "id": "71b0217b-1f94-43af-ae8a-7c43ae928210",
+                      "code": 28,
+                      "name": "Cardiovascular & Thoracic-MS",
+                      "typeName": "Degree",
+                      "description": "Cardiovascular & Thoracic-MS"
+                  },
+                  {
+                      "id": "16669c56-ec8c-467a-85a1-7d584f7bc8c3",
+                      "code": 67,
+                      "name": "PC",
+                      "typeName": "Designation",
+                      "description": null
+                  },
+                  {
+                      "id": "a7571f25-ec75-46ef-918a-7e4af89b0fa8",
+                      "code": 114,
+                      "name": "Neonatologist ",
+                      "typeName": "Speciality",
+                      "description": null
+                  },
+                  {
+                      "id": "1e9ef17b-25d0-4074-9f78-827baa1b4f5f",
+                      "code": 7,
+                      "name": "Dermatology & Venereology-MD",
+                      "typeName": "Degree",
+                      "description": "Dermatology & Venereology-MD"
+                  },
+                  {
+                      "id": "b771259e-3321-4ab6-b9d6-82c59e605a47",
+                      "code": 129,
+                      "name": "Paediatric Oncologist ",
+                      "typeName": "Speciality",
+                      "description": null
+                  },
+                  {
+                      "id": "bb4fe88b-59ea-441b-8eb7-8315841ec1d1",
+                      "code": 20,
+                      "name": "Paediatric Nephrology-MD",
+                      "typeName": "Degree",
+                      "description": "Paediatric Nephrology-MD"
+                  },
+                  {
+                      "id": "c84c674e-9763-42a7-b95c-83c8e958cb6a",
+                      "code": 37,
+                      "name": "Radiology and Imaging  -MS",
+                      "typeName": "Degree",
+                      "description": "Radiology and Imaging  -MS"
+                  },
+                  {
+                      "id": "be713469-538d-483f-a033-8425b2268017",
+                      "code": 58,
+                      "name": "Emergency Medical Officer",
+                      "typeName": "Designation",
+                      "description": null
+                  },
+                  {
+                      "id": "18989f88-a415-45ed-a8d4-84aad6b8098e",
+                      "code": 14,
+                      "name": "Nephrology-MD",
+                      "typeName": "Degree",
+                      "description": "Nephrology-MD"
+                  },
+                  {
+                      "id": "db1c997a-0eca-4486-8abe-877d473a0855",
+                      "code": 38,
+                      "name": "General Surgery-MS",
+                      "typeName": "Degree",
+                      "description": "General Surgery-MS"
+                  },
+                  {
+                      "id": "6c87ff03-a884-41c4-bd6f-878fa8eeb552",
+                      "code": 121,
+                      "name": "Oral and Maxillofacial Surgeon",
+                      "typeName": "Speciality",
+                      "description": null
+                  },
+                  {
+                      "id": "9a819139-2db5-4743-a496-87b2d46b763b",
+                      "code": 97,
+                      "name": "Cosmetologist",
+                      "typeName": "Speciality",
+                      "description": null
+                  },
+                  {
+                      "id": "d4d16033-6080-4c0d-81ee-88736de6b692",
+                      "code": 117,
+                      "name": "Neurologist",
+                      "typeName": "Speciality",
+                      "description": null
+                  },
+                  {
+                      "id": "67be81da-d94c-4bce-9608-889e06708f4a",
+                      "code": 127,
+                      "name": "Paediatric Hematologist",
+                      "typeName": "Speciality",
+                      "description": null
+                  },
+                  {
+                      "id": "216e08a2-ec6f-4d42-bef9-8ccdd87b8796",
+                      "code": 147,
+                      "name": "Thoracic Surgeon",
+                      "typeName": "Speciality",
+                      "description": null
+                  },
+                  {
+                      "id": "7fc903c6-07ff-4410-acd3-8f643eb21e85",
+                      "code": 56,
+                      "name": "Dietician",
+                      "typeName": "Designation",
+                      "description": null
+                  },
+                  {
+                      "id": "727f5c28-8018-4de1-9483-8f75c53c4c4d",
+                      "code": 80,
+                      "name": "Assistant Registrar",
+                      "typeName": "Designation",
+                      "description": null
+                  },
+                  {
+                      "id": "84d9ad11-3f88-450e-a2af-8f79993f0560",
+                      "code": 22,
+                      "name": "Psychiatry-MD",
+                      "typeName": "Degree",
+                      "description": "Psychiatry-MD"
+                  },
+                  {
+                      "id": "66d12bec-b1bc-40fa-9349-92f3cc8c6b93",
+                      "code": 122,
+                      "name": "Orthodontics",
+                      "typeName": "Speciality",
+                      "description": null
+                  },
+                  {
+                      "id": "ccc27ba2-2dea-4006-9804-96a9f94bb15d",
+                      "code": 51,
+                      "name": "Virology-MD",
+                      "typeName": "Degree",
+                      "description": "Virology-MD"
+                  },
+                  {
+                      "id": "3589fab9-5cc4-4941-9321-982c88074e85",
+                      "code": 73,
+                      "name": "Resident Surgeon",
+                      "typeName": "Designation",
+                      "description": null
+                  },
+                  {
+                      "id": "909fe1fd-4e3a-425b-9597-98fc06122a0a",
+                      "code": 90,
+                      "name": "Cardiologist",
+                      "typeName": "Speciality",
+                      "description": null
+                  },
+                  {
+                      "id": "8eb463bc-0c05-45f3-a1fe-996ffc257deb",
+                      "code": 16,
+                      "name": "Oncology-MD",
+                      "typeName": "Degree",
+                      "description": "Oncology-MD"
+                  },
+                  {
+                      "id": "67a15b3b-13d8-4d12-a8d8-9c10d644b316",
+                      "code": 133,
+                      "name": "Pathologist",
+                      "typeName": "Speciality",
+                      "description": null
+                  },
+                  {
+                      "id": "6c53b991-c76c-4d70-a843-9c4d3bd391ad",
+                      "code": 81,
+                      "name": "Associate Professor",
+                      "typeName": "Designation",
+                      "description": null
+                  },
+                  {
+                      "id": "51c84d26-6dab-4709-b953-9f1c491b5271",
+                      "code": 34,
+                      "name": "Orthopedics Surgery-MS",
+                      "typeName": "Degree",
+                      "description": "Orthopedics Surgery-MS"
+                  },
+                  {
+                      "id": "33a62203-c02e-45c4-aa43-9f2e16c8d490",
+                      "code": 104,
+                      "name": "Forensic Medicine Specialist",
+                      "typeName": "Speciality",
+                      "description": null
+                  },
+                  {
+                      "id": "6a96bbab-8626-4a2b-8916-a3388227a7cc",
+                      "code": 43,
+                      "name": "Orthodontics-MS",
+                      "typeName": "Degree",
+                      "description": "Orthodontics-MS"
+                  },
+                  {
+                      "id": "2d15aacb-1c96-4061-848b-a61fd36b41ad",
+                      "code": 4,
+                      "name": "DDT",
+                      "typeName": "Degree",
+                      "description": "Diploma in Dental Technology"
+                  },
+                  {
+                      "id": "73a04542-23c0-47db-8624-a85f3e30e94d",
+                      "code": 140,
+                      "name": "Pulmonologist",
+                      "typeName": "Speciality",
+                      "description": null
+                  },
+                  {
+                      "id": "89c784b9-f3fb-42b5-a514-aa74ee1146ae",
+                      "code": 115,
+                      "name": "Nephrologist ",
+                      "typeName": "Speciality",
+                      "description": null
+                  },
+                  {
+                      "id": "99441c4e-7d6d-47f3-9c7d-aaa3efb44fba",
+                      "code": 50,
+                      "name": "Physiology-MD",
+                      "typeName": "Degree",
+                      "description": "Physiology-MD"
+                  },
+                  {
+                      "id": "af462adb-cd6c-49ae-991c-ae8250d40993",
+                      "code": 6,
+                      "name": "MD",
+                      "typeName": "Degree",
+                      "description": "MD"
+                  },
+                  {
+                      "id": "d8e14571-0a04-4a91-bdbe-b06ba304afc0",
+                      "code": 64,
+                      "name": "Jr. Registrar",
+                      "typeName": "Designation",
+                      "description": null
+                  },
+                  {
+                      "id": "bf0c2ef5-a117-40af-b505-b242efc0e1fa",
+                      "code": 146,
+                      "name": "Surgical Oncologist",
+                      "typeName": "Speciality",
+                      "description": null
+                  },
+                  {
+                      "id": "7278fc19-5d40-495b-b8ee-b38aed8e930d",
+                      "code": 41,
+                      "name": "Conservative Dentistry and Endodontics-MS",
+                      "typeName": "Degree",
+                      "description": "Conservative Dentistry and Endodontics-MS"
+                  },
+                  {
+                      "id": "61889080-eb6e-4dee-9dd8-b566c5ecec2f",
+                      "code": 131,
+                      "name": "Paediatrician",
+                      "typeName": "Speciality",
+                      "description": null
+                  },
+                  {
+                      "id": "9314c100-aac5-4a5c-afaa-b5bd11b5c45f",
+                      "code": 92,
+                      "name": "Chest Specialist",
+                      "typeName": "Speciality",
+                      "description": null
+                  },
+                  {
+                      "id": "a5f8147a-9cef-479d-ae10-b734cd30ee93",
+                      "code": 126,
+                      "name": "Paediatric Gastroenterologist ",
+                      "typeName": "Speciality",
+                      "description": null
+                  },
+                  {
+                      "id": "eabdc98f-1814-470c-8dc8-b835b80f6029",
+                      "code": 36,
+                      "name": "Paediatric Surgery-MS",
+                      "typeName": "Degree",
+                      "description": "Paediatric Surgery-MS"
+                  },
+                  {
+                      "id": "2f1cd4cb-d803-45ef-9aac-bac0e0f90f52",
+                      "code": 153,
+                      "name": "B",
+                      "typeName": "Category",
+                      "description": "<20 patient/day"
+                  },
+                  {
+                      "id": "c093e7c1-5cbc-44f9-8114-bb390ab34e05",
+                      "code": 107,
+                      "name": "GP General Practitioner",
+                      "typeName": "Speciality",
+                      "description": null
+                  },
+                  {
+                      "id": "714f42d5-a9a5-40f1-bde4-c24a826b383e",
+                      "code": 2,
+                      "name": "DMF",
+                      "typeName": "Degree",
+                      "description": "Diploma of Medical Faculty"
+                  },
+                  {
+                      "id": "185178c1-d15f-4306-aeea-c52c2cc79915",
+                      "code": 32,
+                      "name": "Obstetrics & Gynaecology-MS",
+                      "typeName": "Degree",
+                      "description": "Obstetrics & Gynaecology-MS"
+                  },
+                  {
+                      "id": "0b0cdd1f-b641-4568-afb4-c6073428903a",
+                      "code": 157,
+                      "name": "G",
+                      "typeName": "Category",
+                      "description": "Guest Doctor"
+                  },
+                  {
+                      "id": "f87321d7-ab57-4366-8cb1-c97f227116b0",
+                      "code": 3,
+                      "name": "DMS",
+                      "typeName": "Degree",
+                      "description": "Diploma in Medical Services"
+                  },
+                  {
+                      "id": "66e368a7-229d-4289-a36d-cbbee7e01fe2",
+                      "code": 29,
+                      "name": "Surgery",
+                      "typeName": "Degree",
+                      "description": "Surgery"
+                  },
+                  {
+                      "id": "34e1d204-ac9d-4aeb-86ae-cc36112818cf",
+                      "code": 13,
+                      "name": "Neonatology-MD",
+                      "typeName": "Degree",
+                      "description": "Neonatology-MD"
+                  },
+                  {
+                      "id": "a82f27ac-062b-4f2d-a536-ccda6ce58d25",
+                      "code": 69,
+                      "name": "Registrar",
+                      "typeName": "Designation",
+                      "description": null
+                  },
+                  {
+                      "id": "d72fe05f-2021-41d6-9d4e-cd43acdcf650",
+                      "code": 9,
+                      "name": "Gastroenterology-MD",
+                      "typeName": "Degree",
+                      "description": "Gastroenterology-MD"
+                  },
+                  {
+                      "id": "6f8a17c4-a784-4878-9a32-cde7de15a048",
+                      "code": 45,
+                      "name": "Pedodontics-MS",
+                      "typeName": "Degree",
+                      "description": "Pedodontics-MS"
+                  },
+                  {
+                      "id": "57fcc46c-72bd-4c3a-8617-ceea94936e7c",
+                      "code": 108,
+                      "name": "Gynaecologist & Obstetrician",
+                      "typeName": "Speciality",
+                      "description": null
+                  },
+                  {
+                      "id": "a870749b-1d57-46e2-95a4-d06205aa8811",
+                      "code": 119,
+                      "name": "Oncologist ",
+                      "typeName": "Speciality",
+                      "description": null
+                  },
+                  {
+                      "id": "e2ed19aa-2343-4ed6-80a2-d0afe8cfb977",
+                      "code": 70,
+                      "name": "Resident Medical Officer",
+                      "typeName": "Designation",
+                      "description": null
+                  },
+                  {
+                      "id": "63836611-2961-4fcb-927e-d11b2bdb35d7",
+                      "code": 55,
+                      "name": "DMRT",
+                      "typeName": "Degree",
+                      "description": "DMRT"
+                  },
+                  {
+                      "id": "58cf254d-9791-443d-92c4-d258514564c1",
+                      "code": 53,
+                      "name": "Laboratory Medicine  -MD",
+                      "typeName": "Degree",
+                      "description": "Laboratory Medicine  -MD"
+                  },
+                  {
+                      "id": "6d849e5f-968c-45c4-921a-d89e8aaa901b",
+                      "code": 60,
+                      "name": "Honorary Medical Officer",
+                      "typeName": "Designation",
+                      "description": null
+                  },
+                  {
+                      "id": "55bb410a-cb92-43d9-8786-d9e09e641b75",
+                      "code": 101,
+                      "name": "Diabetologist",
+                      "typeName": "Speciality",
+                      "description": null
+                  },
+                  {
+                      "id": "8582bb53-0f7d-4bb1-876e-dc52f7da138d",
+                      "code": 65,
+                      "name": "LMAF",
+                      "typeName": "Designation",
+                      "description": null
+                  },
+                  {
+                      "id": "47780f4c-15f8-4295-aac8-dd29acfce402",
+                      "code": 79,
+                      "name": "Assistant Professor",
+                      "typeName": "Designation",
+                      "description": null
+                  },
+                  {
+                      "id": "48833ab7-d4df-4e7a-9cb0-ddcbf4995f7d",
+                      "code": 5,
+                      "name": "RMP",
+                      "typeName": "Degree",
+                      "description": "Rural Medical Practitioner"
+                  },
+                  {
+                      "id": "c74943f8-e91d-4069-a007-e3d6e57899f5",
+                      "code": 94,
+                      "name": "Clinical Pathologist",
+                      "typeName": "Speciality",
+                      "description": null
+                  },
+                  {
+                      "id": "00ea41a8-0f9d-4234-836a-e584fb7b841d",
+                      "code": 93,
+                      "name": "Child Health Specialist",
+                      "typeName": "Speciality",
+                      "description": null
+                  },
+                  {
+                      "id": "9862f23d-6f2f-43ef-a99c-e63b652422ea",
+                      "code": 137,
+                      "name": "Preventive and Social Medicine ",
+                      "typeName": "Speciality",
+                      "description": null
+                  },
+                  {
+                      "id": "ea4f1de0-e122-447b-9bd6-eacadb77aa10",
+                      "code": 48,
+                      "name": "Pathology-MD",
+                      "typeName": "Degree",
+                      "description": "Pathology-MD"
+                  },
+                  {
+                      "id": "baec9477-477c-4caf-bc95-ead00ed63a0e",
+                      "code": 88,
+                      "name": "Aneasthesiologist",
+                      "typeName": "Speciality",
+                      "description": null
+                  },
+                  {
+                      "id": "2973cac9-ce0c-4ff7-ac98-ebcb0d06f2f9",
+                      "code": 40,
+                      "name": "Hepatobiliary Surgery-MS",
+                      "typeName": "Degree",
+                      "description": "Hepatobiliary Surgery-MS"
+                  },
+                  {
+                      "id": "873fab18-0956-4d8b-9f14-eda38c90208f",
+                      "code": 87,
+                      "name": "Alternative Medicine Specialist",
+                      "typeName": "Speciality",
+                      "description": null
+                  },
+                  {
+                      "id": "b22a4659-8c7d-4c84-8246-efeeab60cf85",
+                      "code": 72,
+                      "name": "Resident Surgeon",
+                      "typeName": "Designation",
+                      "description": null
+                  },
+                  {
+                      "id": "54751082-7d53-4941-a649-f31df2f2dec6",
+                      "code": 82,
+                      "name": "Assistant Dietician",
+                      "typeName": "Designation",
+                      "description": null
+                  },
+                  {
+                      "id": "6bc937c4-3aba-4d36-a23b-f3df46121ceb",
+                      "code": 124,
+                      "name": "Orthopaedist",
+                      "typeName": "Speciality",
+                      "description": null
+                  },
+                  {
+                      "id": "cb8f4720-1b4d-473d-8da3-f4e6efb35b4c",
+                      "code": 62,
+                      "name": "Jr. Clinician",
+                      "typeName": "Designation",
+                      "description": null
+                  },
+                  {
+                      "id": "084c816e-b234-4c25-aed8-f54c61946fc0",
+                      "code": 57,
+                      "name": "DMF",
+                      "typeName": "Designation",
+                      "description": null
+                  },
+                  {
+                      "id": "a0e121e1-7a9e-4b49-9b26-f5829e9f34e4",
+                      "code": 142,
+                      "name": "Radiologist and Imaging ",
+                      "typeName": "Speciality",
+                      "description": null
+                  },
+                  {
+                      "id": "fde5294f-cf8c-47a0-b328-f5bdec5049ef",
+                      "code": 138,
+                      "name": "Prosthodontics",
+                      "typeName": "Speciality",
+                      "description": null
+                  },
+                  {
+                      "id": "a874f2f0-f54d-493c-a785-f8f471803854",
+                      "code": 39,
+                      "name": "Urology-MS",
+                      "typeName": "Degree",
+                      "description": "Urology-MS"
+                  },
+                  {
+                      "id": "900d85f8-1df8-42f4-82ec-f9e85662d0fe",
+                      "code": 132,
+                      "name": "Palliative Care Medicine ",
+                      "typeName": "Speciality",
+                      "description": null
+                  },
+                  {
+                      "id": "e1698bbf-eb4f-41e3-bce0-fd680d091de5",
+                      "code": 59,
+                      "name": "Family Physician",
+                      "typeName": "Designation",
+                      "description": null
+                  },
+                  {
+                      "id": "bf865fd7-ca20-473e-984b-fe5b8555b4ee",
+                      "code": 66,
+                      "name": "Medical Officer",
+                      "typeName": "Designation",
+                      "description": null
+                  },
+                  {
+                      "id": "a712d53e-71ef-4bd7-bc8c-fe8acf27a44f",
+                      "code": 139,
+                      "name": "Psychiatrist",
+                      "typeName": "Speciality",
+                      "description": null
+                  }
+              ],
+              "statusCode": 200,
+              "statusMessage": "Doctor Attribute Information Send Successfully!"
+          }

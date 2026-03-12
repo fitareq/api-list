@@ -1,0 +1,22 @@
+meta {
+  name: Get Closed support list admin
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{base_url}}/AdminClosedList
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "empid": "31246"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

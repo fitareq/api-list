@@ -1,0 +1,400 @@
+meta {
+  name: GetDCRAttribute
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{pulse_api}}/Basic/GetDCRAttribute
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{auth_token_anik_user}}
+}
+
+body:json {
+  {
+      "UserId": "18409"
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: GetDCRAttribute_Example
+  
+  request: {
+    url: {{pulse_api}}/Basic/GetDCRAttribute
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "UserId": "17802"
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Transfer-Encoding: chunked
+      Content-Type: application/json; charset=utf-8
+      Server: Microsoft-IIS/10.0
+      X-Powered-By: ASP.NET
+      Date: Tue, 16 Jul 2024 05:05:06 GMT
+    }
+  
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "data": [
+                {
+                    "id": "6f74d82f-f921-45fd-b91c-073806b438af",
+                    "code": 34,
+                    "name": "Manager",
+                    "description": null,
+                    "typeId": "19518e95-acb4-4869-94fe-502285b205ea",
+                    "typeName": "VisitedWith",
+                    "remarks": null
+                },
+                {
+                    "id": "b5ca53da-ecfa-4a24-a6f8-0b9a8337ca4c",
+                    "code": 37,
+                    "name": "SMIO",
+                    "description": null,
+                    "typeId": "19518e95-acb4-4869-94fe-502285b205ea",
+                    "typeName": "VisitedWith",
+                    "remarks": null
+                },
+                {
+                    "id": "427d77ff-fd5f-45b4-ac3f-149c9c48d9d3",
+                    "code": 5,
+                    "name": "Morning",
+                    "description": null,
+                    "typeId": "87c346f6-c1fc-4584-b3ae-c43af8d2016c",
+                    "typeName": "Shift",
+                    "remarks": null
+                },
+                {
+                    "id": "2ca509a3-119d-4b57-b90b-1c9d5f3e1df9",
+                    "code": 35,
+                    "name": "SrManager",
+                    "description": null,
+                    "typeId": "19518e95-acb4-4869-94fe-502285b205ea",
+                    "typeName": "VisitedWith",
+                    "remarks": null
+                },
+                {
+                    "id": "ccf53465-d2c0-41e7-a3f2-1d012ec6f1d6",
+                    "code": 13,
+                    "name": "DGM",
+                    "description": null,
+                    "typeId": "19518e95-acb4-4869-94fe-502285b205ea",
+                    "typeName": "VisitedWith",
+                    "remarks": null
+                },
+                {
+                    "id": "b35116e0-19e2-445a-87a1-27d3ede9375e",
+                    "code": 16,
+                    "name": "SM",
+                    "description": null,
+                    "typeId": "19518e95-acb4-4869-94fe-502285b205ea",
+                    "typeName": "VisitedWith",
+                    "remarks": null
+                },
+                {
+                    "id": "bbf635e2-854e-4e1a-8a6a-2e0faead6245",
+                    "code": 1,
+                    "name": "Head Quarter",
+                    "description": null,
+                    "typeId": "58390ee3-4b8f-4946-986c-c36dd9737cba",
+                    "typeName": "Location",
+                    "remarks": null
+                },
+                {
+                    "id": "b6179611-dd9a-41e3-bb89-381a2cc4718f",
+                    "code": 7,
+                    "name": "Any",
+                    "description": null,
+                    "typeId": "87c346f6-c1fc-4584-b3ae-c43af8d2016c",
+                    "typeName": "Shift",
+                    "remarks": null
+                },
+                {
+                    "id": "c85ba14c-4e97-4cf9-a317-439e12b943ab",
+                    "code": 33,
+                    "name": "DM",
+                    "description": null,
+                    "typeId": "19518e95-acb4-4869-94fe-502285b205ea",
+                    "typeName": "VisitedWith",
+                    "remarks": null
+                },
+                {
+                    "id": "fa9a517b-8820-4cd2-8387-4a1074cfb90b",
+                    "code": 30,
+                    "name": "RH",
+                    "description": null,
+                    "typeId": "19518e95-acb4-4869-94fe-502285b205ea",
+                    "typeName": "VisitedWith",
+                    "remarks": null
+                },
+                {
+                    "id": "eb3ff7fa-dabb-46fb-9c37-4aaada2c3048",
+                    "code": 2,
+                    "name": "Ex Head Quarter",
+                    "description": null,
+                    "typeId": "58390ee3-4b8f-4946-986c-c36dd9737cba",
+                    "typeName": "Location",
+                    "remarks": null
+                },
+                {
+                    "id": "5d1e0dee-db20-441a-a78f-4c54ed4d31e9",
+                    "code": 31,
+                    "name": "AM",
+                    "description": null,
+                    "typeId": "19518e95-acb4-4869-94fe-502285b205ea",
+                    "typeName": "VisitedWith",
+                    "remarks": null
+                },
+                {
+                    "id": "ae112c35-9b0b-4b5b-8083-4dac282d13ae",
+                    "code": 28,
+                    "name": "DH",
+                    "description": null,
+                    "typeId": "19518e95-acb4-4869-94fe-502285b205ea",
+                    "typeName": "VisitedWith",
+                    "remarks": null
+                },
+                {
+                    "id": "24f43f45-dba2-4f0e-ba14-5aa8ee4e9858",
+                    "code": 8,
+                    "name": "EDS",
+                    "description": null,
+                    "typeId": "19518e95-acb4-4869-94fe-502285b205ea",
+                    "typeName": "VisitedWith",
+                    "remarks": null
+                },
+                {
+                    "id": "cb794cc2-801f-4843-a9a5-5e36f32e8b18",
+                    "code": 36,
+                    "name": "MIO",
+                    "description": null,
+                    "typeId": "19518e95-acb4-4869-94fe-502285b205ea",
+                    "typeName": "VisitedWith",
+                    "remarks": null
+                },
+                {
+                    "id": "71a3b44a-3dd7-40a9-aa9a-5e697b23ae88",
+                    "code": 4,
+                    "name": "Other",
+                    "description": null,
+                    "typeId": "58390ee3-4b8f-4946-986c-c36dd9737cba",
+                    "typeName": "Location",
+                    "remarks": null
+                },
+                {
+                    "id": "a47b4f5a-67e6-4c73-95e2-62215a2aa8f8",
+                    "code": 20,
+                    "name": "MAM",
+                    "description": null,
+                    "typeId": "19518e95-acb4-4869-94fe-502285b205ea",
+                    "typeName": "VisitedWith",
+                    "remarks": null
+                },
+                {
+                    "id": "a3e7177f-f4fe-4869-99db-62b8a56f258d",
+                    "code": 11,
+                    "name": "ADM",
+                    "description": null,
+                    "typeId": "19518e95-acb4-4869-94fe-502285b205ea",
+                    "typeName": "VisitedWith",
+                    "remarks": null
+                },
+                {
+                    "id": "002f9937-d87e-483f-b855-6496dfc1b334",
+                    "code": 23,
+                    "name": "SrKAM",
+                    "description": null,
+                    "typeId": "19518e95-acb4-4869-94fe-502285b205ea",
+                    "typeName": "VisitedWith",
+                    "remarks": null
+                },
+                {
+                    "id": "c6c9daed-1b21-4b90-954f-67330f80f1ab",
+                    "code": 32,
+                    "name": "RM",
+                    "description": null,
+                    "typeId": "19518e95-acb4-4869-94fe-502285b205ea",
+                    "typeName": "VisitedWith",
+                    "remarks": null
+                },
+                {
+                    "id": "5200fe4b-8c1e-4135-b554-74d4c2f6a5e6",
+                    "code": 21,
+                    "name": "MM",
+                    "description": null,
+                    "typeId": "19518e95-acb4-4869-94fe-502285b205ea",
+                    "typeName": "VisitedWith",
+                    "remarks": null
+                },
+                {
+                    "id": "1fc9312b-40de-4f7f-8d26-75923cb7c5ec",
+                    "code": 14,
+                    "name": "AGM",
+                    "description": null,
+                    "typeId": "19518e95-acb4-4869-94fe-502285b205ea",
+                    "typeName": "VisitedWith",
+                    "remarks": null
+                },
+                {
+                    "id": "2869af92-d7fc-452b-9afd-841bc1bbd1c5",
+                    "code": 27,
+                    "name": "SPE",
+                    "description": null,
+                    "typeId": "19518e95-acb4-4869-94fe-502285b205ea",
+                    "typeName": "VisitedWith",
+                    "remarks": null
+                },
+                {
+                    "id": "4d294402-34f8-4b3e-867f-98a7e01c7de7",
+                    "code": 19,
+                    "name": "PPM",
+                    "description": null,
+                    "typeId": "19518e95-acb4-4869-94fe-502285b205ea",
+                    "typeName": "VisitedWith",
+                    "remarks": null
+                },
+                {
+                    "id": "e322705e-eeba-4d30-bf5f-a3e53c7a9a38",
+                    "code": 24,
+                    "name": "PM",
+                    "description": null,
+                    "typeId": "19518e95-acb4-4869-94fe-502285b205ea",
+                    "typeName": "VisitedWith",
+                    "remarks": null
+                },
+                {
+                    "id": "828c9ffa-17e2-41fd-9913-a6151b19340c",
+                    "code": 3,
+                    "name": "Out Station",
+                    "description": null,
+                    "typeId": "58390ee3-4b8f-4946-986c-c36dd9737cba",
+                    "typeName": "Location",
+                    "remarks": null
+                },
+                {
+                    "id": "b8f2e1dc-2e43-477e-9ce6-a83fb6671eb1",
+                    "code": 6,
+                    "name": "Evening",
+                    "description": null,
+                    "typeId": "87c346f6-c1fc-4584-b3ae-c43af8d2016c",
+                    "typeName": "Shift",
+                    "remarks": null
+                },
+                {
+                    "id": "9e2ce221-7cc8-4e35-8900-aa8e23e9477f",
+                    "code": 29,
+                    "name": "ZH",
+                    "description": null,
+                    "typeId": "19518e95-acb4-4869-94fe-502285b205ea",
+                    "typeName": "VisitedWith",
+                    "remarks": null
+                },
+                {
+                    "id": "ddca5d85-f0cc-42d0-a55f-b30723b69687",
+                    "code": 12,
+                    "name": "GM",
+                    "description": null,
+                    "typeId": "19518e95-acb4-4869-94fe-502285b205ea",
+                    "typeName": "VisitedWith",
+                    "remarks": null
+                },
+                {
+                    "id": "62f85127-1078-4202-a652-b8bb87a29da4",
+                    "code": 25,
+                    "name": "SPM",
+                    "description": null,
+                    "typeId": "19518e95-acb4-4869-94fe-502285b205ea",
+                    "typeName": "VisitedWith",
+                    "remarks": null
+                },
+                {
+                    "id": "559696f9-e3a9-4319-bd5e-ca8729238735",
+                    "code": 26,
+                    "name": "PE",
+                    "description": null,
+                    "typeId": "19518e95-acb4-4869-94fe-502285b205ea",
+                    "typeName": "VisitedWith",
+                    "remarks": null
+                },
+                {
+                    "id": "f15a24b7-9e37-44d7-8054-cc1375da22a8",
+                    "code": 22,
+                    "name": "KAM",
+                    "description": null,
+                    "typeId": "19518e95-acb4-4869-94fe-502285b205ea",
+                    "typeName": "VisitedWith",
+                    "remarks": null
+                },
+                {
+                    "id": "5f46afcb-3378-4b40-80d2-dd2e739bda26",
+                    "code": 9,
+                    "name": "EDM",
+                    "description": null,
+                    "typeId": "19518e95-acb4-4869-94fe-502285b205ea",
+                    "typeName": "VisitedWith",
+                    "remarks": null
+                },
+                {
+                    "id": "2105195a-ceaa-4e19-b8e2-de4ecc33311e",
+                    "code": 10,
+                    "name": "ADS",
+                    "description": null,
+                    "typeId": "19518e95-acb4-4869-94fe-502285b205ea",
+                    "typeName": "VisitedWith",
+                    "remarks": null
+                },
+                {
+                    "id": "c69823bc-6d1b-43bc-a54d-e013509c8cd9",
+                    "code": 15,
+                    "name": "SSM",
+                    "description": null,
+                    "typeId": "19518e95-acb4-4869-94fe-502285b205ea",
+                    "typeName": "VisitedWith",
+                    "remarks": null
+                },
+                {
+                    "id": "bd8866ad-5c0e-4411-ba27-e2752a9b7d8b",
+                    "code": 18,
+                    "name": "GPM",
+                    "description": null,
+                    "typeId": "19518e95-acb4-4869-94fe-502285b205ea",
+                    "typeName": "VisitedWith",
+                    "remarks": null
+                },
+                {
+                    "id": "89566180-6247-4e11-ae69-e7928c251ed3",
+                    "code": 17,
+                    "name": "ASM",
+                    "description": null,
+                    "typeId": "19518e95-acb4-4869-94fe-502285b205ea",
+                    "typeName": "VisitedWith",
+                    "remarks": null
+                }
+            ],
+            "statusCode": 200,
+            "statusMessage": "Doctor call report attribute data fetched successfully"
+        }
+      '''
+    }
+  }
+}

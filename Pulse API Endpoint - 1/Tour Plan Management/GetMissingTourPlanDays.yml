@@ -1,0 +1,260 @@
+info:
+  name: GetMissingTourPlanDays
+  type: http
+  seq: 7
+
+http:
+  method: POST
+  url: "{{pulse_api}}/TourPlan/GetMissingTourPlanDays"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"UserId\": \"04416\"\r
+
+      \   // \"TourPlanMonth\":1,\r
+
+      \   // \"TourPlanYear\":2025\r
+
+      }\r
+
+      \r\n"
+  auth:
+    type: bearer
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyTmFtZSI6Ik1kLiBUb2ZhaWwgQWhtbWVkIiwiRW1wbG95ZWVDb2RlIjoiMDQ0MTYiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJTTUlPIiwiRGVwYXJ0bWVudENvZGUiOiJSWCIsIlRlYW1Db2RlIjoiQVZJQVRPUiIsIlR5cGUiOiJvZmZpY2VyIiwiZXhwIjoxNzc5Njc5MzQ1LCJpc3MiOiJTYWxlc1B1bHNlQVBJIiwiYXVkIjoiSFBMLU1JUyJ9.88_1pyIJ2jDpv8JH8YbOEbANyfqa1y3-9PS-G3w_hC8
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: GetMissingTourPlanDays
+    request:
+      url: "{{pulse_api}}/TourPlan/GetMissingTourPlanDays"
+      method: POST
+      body:
+        type: json
+        data: "{\r
+
+          \    \"UserId\": \"04416\"\r
+
+          \   // \"TourPlanMonth\":1,\r
+
+          \   // \"TourPlanYear\":2025\r
+
+          }\r
+
+          \r\n"
+    response:
+      statusText: "200"
+      headers:
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Server
+          value: Microsoft-IIS/10.0
+        - name: X-Powered-By
+          value: ASP.NET
+        - name: Date
+          value: Tue, 24 Feb 2026 09:01:54 GMT
+      body:
+        type: json
+        data: |-
+          {
+              "data": [
+                  {
+                      "userCode": "04416",
+                      "year": 2026,
+                      "month": 2,
+                      "day": 2,
+                      "displayDate": "2026-2-2"
+                  },
+                  {
+                      "userCode": "04416",
+                      "year": 2026,
+                      "month": 2,
+                      "day": 3,
+                      "displayDate": "2026-2-3"
+                  },
+                  {
+                      "userCode": "04416",
+                      "year": 2026,
+                      "month": 3,
+                      "day": 7,
+                      "displayDate": "2026-3-7"
+                  },
+                  {
+                      "userCode": "04416",
+                      "year": 2026,
+                      "month": 3,
+                      "day": 8,
+                      "displayDate": "2026-3-8"
+                  },
+                  {
+                      "userCode": "04416",
+                      "year": 2026,
+                      "month": 3,
+                      "day": 9,
+                      "displayDate": "2026-3-9"
+                  },
+                  {
+                      "userCode": "04416",
+                      "year": 2026,
+                      "month": 3,
+                      "day": 10,
+                      "displayDate": "2026-3-10"
+                  },
+                  {
+                      "userCode": "04416",
+                      "year": 2026,
+                      "month": 3,
+                      "day": 11,
+                      "displayDate": "2026-3-11"
+                  },
+                  {
+                      "userCode": "04416",
+                      "year": 2026,
+                      "month": 3,
+                      "day": 12,
+                      "displayDate": "2026-3-12"
+                  },
+                  {
+                      "userCode": "04416",
+                      "year": 2026,
+                      "month": 3,
+                      "day": 13,
+                      "displayDate": "2026-3-13"
+                  },
+                  {
+                      "userCode": "04416",
+                      "year": 2026,
+                      "month": 3,
+                      "day": 14,
+                      "displayDate": "2026-3-14"
+                  },
+                  {
+                      "userCode": "04416",
+                      "year": 2026,
+                      "month": 3,
+                      "day": 15,
+                      "displayDate": "2026-3-15"
+                  },
+                  {
+                      "userCode": "04416",
+                      "year": 2026,
+                      "month": 3,
+                      "day": 16,
+                      "displayDate": "2026-3-16"
+                  },
+                  {
+                      "userCode": "04416",
+                      "year": 2026,
+                      "month": 3,
+                      "day": 17,
+                      "displayDate": "2026-3-17"
+                  },
+                  {
+                      "userCode": "04416",
+                      "year": 2026,
+                      "month": 3,
+                      "day": 18,
+                      "displayDate": "2026-3-18"
+                  },
+                  {
+                      "userCode": "04416",
+                      "year": 2026,
+                      "month": 3,
+                      "day": 19,
+                      "displayDate": "2026-3-19"
+                  },
+                  {
+                      "userCode": "04416",
+                      "year": 2026,
+                      "month": 3,
+                      "day": 20,
+                      "displayDate": "2026-3-20"
+                  },
+                  {
+                      "userCode": "04416",
+                      "year": 2026,
+                      "month": 3,
+                      "day": 21,
+                      "displayDate": "2026-3-21"
+                  },
+                  {
+                      "userCode": "04416",
+                      "year": 2026,
+                      "month": 3,
+                      "day": 22,
+                      "displayDate": "2026-3-22"
+                  },
+                  {
+                      "userCode": "04416",
+                      "year": 2026,
+                      "month": 3,
+                      "day": 23,
+                      "displayDate": "2026-3-23"
+                  },
+                  {
+                      "userCode": "04416",
+                      "year": 2026,
+                      "month": 3,
+                      "day": 24,
+                      "displayDate": "2026-3-24"
+                  },
+                  {
+                      "userCode": "04416",
+                      "year": 2026,
+                      "month": 3,
+                      "day": 25,
+                      "displayDate": "2026-3-25"
+                  },
+                  {
+                      "userCode": "04416",
+                      "year": 2026,
+                      "month": 3,
+                      "day": 26,
+                      "displayDate": "2026-3-26"
+                  },
+                  {
+                      "userCode": "04416",
+                      "year": 2026,
+                      "month": 3,
+                      "day": 27,
+                      "displayDate": "2026-3-27"
+                  },
+                  {
+                      "userCode": "04416",
+                      "year": 2026,
+                      "month": 3,
+                      "day": 28,
+                      "displayDate": "2026-3-28"
+                  },
+                  {
+                      "userCode": "04416",
+                      "year": 2026,
+                      "month": 3,
+                      "day": 29,
+                      "displayDate": "2026-3-29"
+                  },
+                  {
+                      "userCode": "04416",
+                      "year": 2026,
+                      "month": 3,
+                      "day": 30,
+                      "displayDate": "2026-3-30"
+                  },
+                  {
+                      "userCode": "04416",
+                      "year": 2026,
+                      "month": 3,
+                      "day": 31,
+                      "displayDate": "2026-3-31"
+                  }
+              ],
+              "statusCode": 200,
+              "statusMessage": "Missing Tour plan details gets successfully"
+          }

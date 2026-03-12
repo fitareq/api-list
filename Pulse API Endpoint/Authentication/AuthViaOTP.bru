@@ -1,0 +1,68 @@
+meta {
+  name: AuthViaOTP
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{pulse_api}}/login/Auth
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+      "DeviceId": "",
+      "SmsHashType": "play_store",
+      "Username": "20522"
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: AuthViaOTP_Example
+  
+  request: {
+    url: {{pulse_api}}/login/Auth
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "Username": "17802",
+          "SmsHashType": "anik",
+          "DeviceId": ""
+      }
+      
+      //anik forhad signed_apk
+    }
+  }
+  
+  response: {
+    headers: {
+      Transfer-Encoding: chunked
+      Content-Type: application/json; charset=utf-8
+      Server: Microsoft-IIS/10.0
+      X-Powered-By: ASP.NET
+      Date: Tue, 16 Jul 2024 03:37:25 GMT
+    }
+  
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "statusCode": 406,
+            "statusMessage": "User is already authenticated with Android - a12s | samsung | SM-A127F",
+            "data": null
+        }
+      '''
+    }
+  }
+}

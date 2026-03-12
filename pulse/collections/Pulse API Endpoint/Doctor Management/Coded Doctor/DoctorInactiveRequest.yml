@@ -1,0 +1,75 @@
+info:
+  name: DoctorInactiveRequest
+  type: http
+  seq: 10
+
+http:
+  method: POST
+  url: "{{pulse_api}}/Doctor/DoctorInactiveRequest"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"UserId\": \"\",\r
+
+      \    \"DoctorId\": \"ed2598b1-c7ff-4a2e-9abb-6fad9c6e81c3\",\r
+
+      \    \"Remarks\":\"Test inactive action\",\r
+
+      \    \"Lat\": \"23.7464815\",\r
+
+      \    \"Lon\": \"23.7464815\"\r
+
+      \r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: DoctorInactiveRequest_Example
+    request:
+      url: "{{pulse_api}}/Doctor/DoctorInactiveRequest"
+      method: POST
+      body:
+        type: json
+        data: "{\r
+
+          \    \"UserId\": \"\",\r
+
+          \    \"DoctorId\": \"ed2598b1-c7ff-4a2e-9abb-6fad9c6e81c3\",\r
+
+          \    \"Remarks\":\"Test inactive action\",\r
+
+          \    \"Lat\": \"23.7464815\",\r
+
+          \    \"Lon\": \"23.7464815\"\r
+
+          \r
+
+          }"
+    response:
+      statusText: "200"
+      headers:
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Server
+          value: Microsoft-IIS/10.0
+        - name: X-Powered-By
+          value: ASP.NET
+        - name: Date
+          value: Tue, 16 Jul 2024 04:24:54 GMT
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 404,
+              "statusMessage": "User ID,Doctor ID required, please try again"
+          }

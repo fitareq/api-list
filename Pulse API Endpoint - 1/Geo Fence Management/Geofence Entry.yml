@@ -1,0 +1,471 @@
+info:
+  name: Geofence Entry
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{pulse_api}}/GeoFence/GeofenceEntry"
+  body:
+    type: json
+    data: "// {\r
+
+      //     \"CreatedBy\": \"d0c7737c-34d9-4fb0-8f7f-1c47856eef9b\",\r
+
+      //     \"doctorList\": [\r
+
+      //         {\r
+
+      //             \"DoctorId\": \"bf2e6719-644c-489d-9c67-cb7161099136\"\r
+
+      //         },\r
+
+      //         {\r
+
+      //             \"DoctorId\": \"bb7eecca-b23c-4339-bcbc-c0c6be93a194\"\r
+
+      //         }\r
+
+      //     ],\r
+
+      //     \"Id\": \"\",\r
+
+      //     \"Lat\": \"23.746438000000012\",\r
+
+      //     \"Lon\": \"90.3922435\",\r
+
+      //     \"ModifiedBy\": \"\",\r
+
+      //     \"SubMarketId\": \"bddaa83e-7547-4bdc-b194-c787c387d8df\",\r
+
+      //     \"GeoFenceName\":\"\",\r
+
+      //     \"GeoAddress\":\"\"\r
+
+      // }\r
+
+      // {\r
+
+      //     \"CreatedBy\": \"43338adb-b5f0-4a5e-8b4d-03b38deb6db8\",\r
+
+      //     \"doctorList\": [\r
+
+      //         {\r
+
+      //             \"DoctorId\": \"1eb0ca4f-7f05-40b2-8a18-bdc5ad15bd82\"\r
+
+      //         }\r
+
+      //     ],\r
+
+      //     \"Id\": \"d582dc5c-2921-4c8f-9125-fae0624d831d\",\r
+
+      //     \"Lat\": \"23.754348708688806\",\r
+
+      //     \"Lon\": \"90.38393229524492\",\r
+
+      //     \"ModifiedBy\": \"43338adb-b5f0-4a5e-8b4d-03b38deb6db8\",\r
+
+      //     \"SubMarketId\": \"84a02f04-79c8-4842-92ee-72c3243b9cc9\",\r
+
+      //     \"GeoFenceName\": \"\",\r
+
+      //     \"GeoAddress\": \"\"\r
+
+      // }\r
+
+      // {\r
+
+      //     \"CreatedBy\": \"43338adb-b5f0-4a5e-8b4d-03b38deb6db8\",\r
+
+      //     \"doctorList\": [\r
+
+      //         {\r
+
+      //             \"DoctorId\": \"1eb0ca4f-7f05-40b2-8a18-bdc5ad15bd82\"\r
+
+      //         },\r
+
+      //         {\r
+
+      //             \"DoctorId\": \"1f8089dd-46b9-457f-8ae8-d6824e5cb8c4\"\r
+
+      //         }\r
+
+      //     ],\r
+
+      //     \"chemistList\": [\r
+
+      //         {\r
+
+      //             \"ChemistId\": \"1eb0ca4f-7f05-40b2-8a18-bdc5ad15bd82\"\r
+
+      //         }\r
+
+      //     ],\r
+
+      //     \"GeoAddress\": \"Indira Road, Tejgaon, Dhaka, 1215, Bangladesh\",\r
+
+      //     \"GeoFenceName\": \"Nikdu\",\r
+
+      //     \"Id\": \"d582dc5c-2921-4c8f-9125-fae0624d831d\",\r
+
+      //     \"Lat\": \"23.754348708688806\",\r
+
+      //     \"Lon\": \"90.38393229524492\",\r
+
+      //     \"ModifiedBy\": \"43338adb-b5f0-4a5e-8b4d-03b38deb6db8\",\r
+
+      //     \"SubMarketId\": \"84a02f04-79c8-4842-92ee-72c3243b9cc9\"\r
+
+      // }\r
+
+      {\r
+
+      \    \"chemistList\": [\r
+
+      \        {\r
+
+      \            \"ChemistId\": \"a6ebcfc6-c6f7-47bb-b4e0-3b8c53f18b45\"\r
+
+      \        },\r
+
+      \        {\r
+
+      \            \"ChemistId\": \"8d309125-46ab-4dc7-a729-b77a13acef5a\"\r
+
+      \        },\r
+
+      \        {\r
+
+      \            \"ChemistId\": \"45a2c7bc-261f-4d12-85ad-2be2a37b588b\"\r
+
+      \        },\r
+
+      \        {\r
+
+      \            \"ChemistId\": \"2a993cf7-9cc0-4e6d-aab1-242c8d221b2c\"\r
+
+      \        }\r
+
+      \    ],\r
+
+      \    \"CreatedBy\": \"ed847293-c7e4-4c2d-a7aa-37caae33ec69\",\r
+
+      \    \"doctorList\": [\r
+
+      \        {\r
+
+      \            \"DoctorId\": \"1a6fb645-d2c9-40d5-8165-a8ab88c84cd8\"\r
+
+      \        },\r
+
+      \        {\r
+
+      \            \"DoctorId\": \"ac6a68a2-afca-4940-930c-2748d0939eb5\"\r
+
+      \        },\r
+
+      \        {\r
+
+      \            \"DoctorId\": \"6f8475db-9cf5-47a8-bbc0-c71c30d361a1\"\r
+
+      \        },\r
+
+      \        {\r
+
+      \            \"DoctorId\": \"26c0b360-74df-49b9-b3a0-2e19c9d54296\"\r
+
+      \        }\r
+
+      \    ],\r
+
+      \    \"GeoAddress\": \"Ramna, Dhaka, 1205, Bangladesh\",\r
+
+      \    \"GeoFenceName\": \"sub\",\r
+
+      \    \"Id\": \"\",\r
+
+      \    \"Lat\": \"23.73965515240319\",\r
+
+      \    \"Lon\": \"90.39206569456042\",\r
+
+      \    \"ModifiedBy\": \"\",\r
+
+      \    \"SubMarketId\": \"804e84a6-8dd9-4ae2-a279-c201b852dfc7\"\r
+
+      }"
+  auth:
+    type: bearer
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyTmFtZSI6Ik1kLiBUb2ZhaWwgQWhtbWVkIiwiRW1wbG95ZWVDb2RlIjoiMDQ0MTYiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJTTUlPIiwiRGVwYXJ0bWVudENvZGUiOiJSWCIsIlRlYW1Db2RlIjoiQVZJQVRPUiIsIlR5cGUiOiJvZmZpY2VyIiwiZXhwIjoxNzY0MTUwODcxLCJpc3MiOiJTYWxlc1B1bHNlQVBJIiwiYXVkIjoiSFBMLU1JUyJ9.tSEFUa38NrPcAVwKOUidZxT5If7QR7Zm8lMOEfRBoQI
+
+runtime:
+  scripts:
+    - type: before-request
+      code: |-
+        try {
+            const response = await bru.sendRequest({
+                url: "https://pm-echo.com/get",
+                method: "GET"
+            });
+
+            console.log(response.json());
+        } catch (err) {
+            console.error(err);
+        }
+        try {
+            const response = await bru.sendRequest({
+                url: "https://pm-echo.com/get",
+                method: "GET"
+            });
+
+            console.log(response.json());
+        } catch (err) {
+            console.error(err);
+        }
+    - type: after-response
+      code: |-
+        var template = `
+        <canvas id="myChart" height="75"></canvas>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script> 
+
+        <script>
+            var ctx = document.getElementById("myChart");
+
+            var myChart = new Chart(ctx, {
+                type: "bar",
+                data: {
+                    labels: ["Status Code", "Status Message"],
+                    datasets: [{
+                        data: [{{response.statusCode}}, "{{response.statusMessage}}"],
+                        
+                        // Change these colours to customize the chart
+                        backgroundColor: ["#003f5c", "#58508d", "#bc5090", "#ff6361", "#ffa600"],
+                    }]
+                },
+                options: {
+                    legend: { display: false },
+                    title: {
+                        display: true,
+                        text: 'Response Data'
+                    },
+                    scales: {
+                        xAxes: [{
+                            display: true,
+                            scaleLabel: {
+                                display: true,
+                                labelString: 'Data'
+                            }
+                        }],
+                        yAxes: [{
+                            display: true,
+                            scaleLabel: {
+                                display: true,
+                                labelString: 'Value'
+                            }
+                        }]
+                    }
+                }
+
+            });
+
+        //     // Access the data passed to pm.visualizer.set() from the JavaScript
+            // code of the Visualizer template
+        //     pm.getData(function (err, value) {
+                myChart.data.datasets[0].data = [value.response.statusCode, value.response.statusMessage];
+                myChart.update();
+            });
+
+        </script>`;
+
+        function constructVisualizerPayload() {
+            var res = res.getBody();
+            
+            var visualizerData = {
+                
+                // Status Code as a number
+                statusCode: res.statusCode,
+                
+                // Status Message as a string
+                statusMessage: res.statusMessage
+            };
+
+            return {response: visualizerData};
+        }
+
+        // pm.visualizer.set(template, constructVisualizerPayload());
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Geofence Entry
+    request:
+      url: "{{pulse_api}}/GeoFence/GeofenceEntry"
+      method: POST
+      body:
+        type: json
+        data: "{\r
+
+          \    \"Id\": \"\", // new entry-> Id empty, exiting entry have Id\r
+
+          \    \"SubMarketId\": \"0DA92D48-1902-4E9D-8642-00000275E02D\",\r
+
+          \    \"Lat\": \"23.00\",\r
+
+          \    \"Lon\": \"34.93\",\r
+
+          \    \"CreatedBy\": \"C2580795-73E9-41A4-A05C-9697232D1A67\",\r
+
+          \    \"ModifiedBy\": \"C2580795-73E9-41A4-A05C-9697232D1A67\"\r
+
+          }"
+    response:
+      statusText: "200"
+      headers:
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Date
+          value: Mon, 10 Feb 2025 05:39:54 GMT
+        - name: Server
+          value: Kestrel
+        - name: Transfer-Encoding
+          value: chunked
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 200,
+              "statusMessage": "Geofence entry processed successfully"
+          }
+  - name: Geofence Entry
+    request:
+      url: "{{pulse_api}}/GeoFence/GeofenceEntry"
+      method: POST
+      body:
+        type: json
+        data: "// {\r
+
+          //     \"CreatedBy\": \"d0c7737c-34d9-4fb0-8f7f-1c47856eef9b\",\r
+
+          //     \"doctorList\": [\r
+
+          //         {\r
+
+          //             \"DoctorId\": \"bf2e6719-644c-489d-9c67-cb7161099136\"\r
+
+          //         },\r
+
+          //         {\r
+
+          //             \"DoctorId\": \"bb7eecca-b23c-4339-bcbc-c0c6be93a194\"\r
+
+          //         }\r
+
+          //     ],\r
+
+          //     \"Id\": \"\",\r
+
+          //     \"Lat\": \"23.746438000000012\",\r
+
+          //     \"Lon\": \"90.3922435\",\r
+
+          //     \"ModifiedBy\": \"\",\r
+
+          //     \"SubMarketId\": \"bddaa83e-7547-4bdc-b194-c787c387d8df\",\r
+
+          //     \"GeoFenceName\":\"\",\r
+
+          //     \"GeoAddress\":\"\"\r
+
+          // }\r
+
+          // {\r
+
+          //     \"CreatedBy\": \"43338adb-b5f0-4a5e-8b4d-03b38deb6db8\",\r
+
+          //     \"doctorList\": [\r
+
+          //         {\r
+
+          //             \"DoctorId\": \"1eb0ca4f-7f05-40b2-8a18-bdc5ad15bd82\"\r
+
+          //         }\r
+
+          //     ],\r
+
+          //     \"Id\": \"d582dc5c-2921-4c8f-9125-fae0624d831d\",\r
+
+          //     \"Lat\": \"23.754348708688806\",\r
+
+          //     \"Lon\": \"90.38393229524492\",\r
+
+          //     \"ModifiedBy\": \"43338adb-b5f0-4a5e-8b4d-03b38deb6db8\",\r
+
+          //     \"SubMarketId\": \"84a02f04-79c8-4842-92ee-72c3243b9cc9\",\r
+
+          //     \"GeoFenceName\": \"\",\r
+
+          //     \"GeoAddress\": \"\"\r
+
+          // }\r
+
+          {\r
+
+          \    \"CreatedBy\": \"43338adb-b5f0-4a5e-8b4d-03b38deb6db8\",\r
+
+          \    \"doctorList\": [\r
+
+          \        {\r
+
+          \            \"DoctorId\": \"1eb0ca4f-7f05-40b2-8a18-bdc5ad15bd82\"\r
+
+          \        },\r
+
+          \        {\r
+
+          \            \"DoctorId\": \"1f8089dd-46b9-457f-8ae8-d6824e5cb8c4\"\r
+
+          \        }\r
+
+          \    ],\r
+
+          \    \"GeoAddress\": \"Indira Road, Tejgaon, Dhaka, 1215, Bangladesh\",\r
+
+          \    \"GeoFenceName\": \"Nikdu\",\r
+
+          \    \"Id\": \"d582dc5c-2921-4c8f-9125-fae0624d831d\",\r
+
+          \    \"Lat\": \"23.754348708688806\",\r
+
+          \    \"Lon\": \"90.38393229524492\",\r
+
+          \    \"ModifiedBy\": \"43338adb-b5f0-4a5e-8b4d-03b38deb6db8\",\r
+
+          \    \"SubMarketId\": \"84a02f04-79c8-4842-92ee-72c3243b9cc9\"\r
+
+          }"
+    response:
+      statusText: "500"
+      headers:
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Server
+          value: Microsoft-IIS/10.0
+        - name: X-Powered-By
+          value: ASP.NET
+        - name: Date
+          value: Wed, 23 Jul 2025 06:57:19 GMT
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 404,
+              "statusMessage": "An unexpected error occurred while processing geofence entry"
+          }

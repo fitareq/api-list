@@ -1,0 +1,52 @@
+info:
+  name: GetNotificationsCount
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{pulse_api}}/Notification/GetNotificationsCount"
+  body:
+    type: json
+    data: "{\r\n    \"UserCode\": \"17801\"\r\n}"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: GetNotificationsCount_Example
+    request:
+      url: "{{pulse_api}}/Notification/GetNotificationsCount"
+      method: POST
+      body:
+        type: json
+        data: "{\r\n    \"UserCode\": \"17802\"\r\n}"
+    response:
+      statusText: "200"
+      headers:
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Server
+          value: Microsoft-IIS/10.0
+        - name: X-Powered-By
+          value: ASP.NET
+        - name: Date
+          value: Tue, 16 Jul 2024 05:10:31 GMT
+      body:
+        type: json
+        data: |-
+          {
+              "data": {
+                  "totalNotification": 38,
+                  "totalReadNotification": 0,
+                  "totalUnReadNotification": 38
+              },
+              "statusCode": 200,
+              "statusMessage": "Notification Data Send Successfully!"
+          }

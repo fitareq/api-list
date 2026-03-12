@@ -1,0 +1,87 @@
+info:
+  name: SubMarket Entry Edit
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{pulse_api}}/SubMarket/SubMarketEntry"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"Address\": \"Mitali Bazar\",\r
+
+      \    \"Description\": \"Mitali Bazar\",\r
+
+      \    \"LocationType\": \"\", //HeadQuarter or Ex-HeadQuarter, or OutStation or Other\r
+
+      \    \"Lat\": \"23.0320566\",\r
+
+      \    \"Lon\": \"90.76508\",\r
+
+      \    \"MarketCode\": \"M31003\",\r
+
+      \    \"Name\": \"Mitali Bazar 2\",\r
+
+      \    \"SubMarketId\": \"\", // empty for create\r
+
+      \    \"UserId\": \"\"\r
+
+      }"
+  auth:
+    type: bearer
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyTmFtZSI6IlNhaWR1ciBSYWhhbWFuIiwiRW1wbG95ZWVDb2RlIjoiMDUxMDUiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJSTSIsIkRlcGFydG1lbnRDb2RlIjoiUlgiLCJUZWFtQ29kZSI6IkxVTUlOSU9VUyIsIlR5cGUiOiJzdXBlcnZpc29yIiwiZXhwIjoxNzM0NDE0NjU5LCJpc3MiOiJTYWxlc1B1bHNlQVBJIiwiYXVkIjoiSFBMLU1JUyJ9.Uo6151BMldNFKgpiy2KpEZFiUkk_GnvIvKjUBtURPzY
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: SubMarket Entry_Example
+    request:
+      url: "{{pulse_api}}/SubMarket/SubMarketEntry"
+      method: POST
+      body:
+        type: json
+        data: "{\r
+
+          \    \"Address\": \"test\",\r
+
+          \    \"Description\": \"test\",\r
+
+          \    \"Lat\": \"23.7463748\",\r
+
+          \    \"Lon\": \"90.3920738\",\r
+
+          \    \"MarketCode\": \"M72501\",\r
+
+          \    \"Name\": \"test sub market 1\",\r
+
+          \    \"SubMarketId\": \"\",\r
+
+          \    \"UserId\": \"\"\r
+
+          }"
+    response:
+      statusText: "200"
+      headers:
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Server
+          value: Microsoft-IIS/10.0
+        - name: X-Powered-By
+          value: ASP.NET
+        - name: Date
+          value: Tue, 16 Jul 2024 03:42:40 GMT
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 200,
+              "statusMessage": "SubMarket entry processed successfully"
+          }

@@ -1,0 +1,69 @@
+info:
+  name: GetCurrentDayNotifications
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{pulse_api}}/Notification/GetCurrentDayNotifications"
+  body:
+    type: json
+    data: "{\r\n    \"UserCode\": \"13141\"\r\n}"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: GetCurrentDayNotifications_Example
+    request:
+      url: "{{pulse_api}}/Notification/GetCurrentDayNotifications"
+      method: POST
+      body:
+        type: json
+        data: "{\r\n    \"UserCode\": \"17802\"\r\n}"
+    response:
+      statusText: "200"
+      headers:
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Server
+          value: Microsoft-IIS/10.0
+        - name: X-Powered-By
+          value: ASP.NET
+        - name: Date
+          value: Tue, 16 Jul 2024 05:09:55 GMT
+      body:
+        type: json
+        data: |-
+          {
+              "data": [
+                  {
+                      "id": "4a7376a2-3ee5-459d-9538-4d10cd023e6d",
+                      "title": "SubMarket",
+                      "body": "Your supervisor created new Sub market [M7250104-test sub market 1, test] for marketM72501, please download basic data to get updated Sub market information in your app.",
+                      "receiverId": "15f76642-0139-4b3a-a3ec-d8392b4fcf8f",
+                      "fieldForceGroupId": null,
+                      "typeIdentifyId": "M7250104",
+                      "type": "SubMarket",
+                      "remarks": null,
+                      "hasAttachment": false,
+                      "attachmentType": null,
+                      "attachmentPath": null,
+                      "imagePath": null,
+                      "externalLink": null,
+                      "createdBy": "FCM",
+                      "creationDate": "2024-07-16T09:42:40.267",
+                      "isFlagged": true,
+                      "markAsRead": false,
+                      "markReadDatetime": null
+                  }
+              ],
+              "statusCode": 200,
+              "statusMessage": "Notification Data Send Successfully!"
+          }

@@ -1,0 +1,7 @@
+info:
+  name: WPM & Gadget Management
+  type: folder
+  seq: 8
+
+request:
+  auth: inherit

@@ -1,0 +1,327 @@
+info:
+  name: SendChemistSalesOrder_Using IP
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: http://103.111.126.11/PulseAPI/api/Chemist/SendChemistSalesOrder
+  body:
+    type: json
+    data: "[\r
+
+      \    {\r
+
+      \        \"chemistCode\": \"2701130\",\r
+
+      \        \"chemistId\": \"6336cf3c-54bc-4799-a909-00e18ff0e948\",\r
+
+      \        \"chemistName\": \"AKHI PHARMACY\",\r
+
+      \        \"comment\": \"ssl\",\r
+
+      \        \"deliveryDate\": \"2025-03-10\",\r
+
+      \        \"deliveryShift\": \"Evening\",\r
+
+      \        \"depotId\": \"289db1ac-7b73-458f-bd03-9a0ed30afde5\",\r
+
+      \        \"depotName\": \"Kushtia\",\r
+
+      \        \"discountAmount\": \"0\",\r
+
+      \        \"id\": 0,\r
+
+      \        \"localStatus\": \"synced\",\r
+
+      \        \"localStatusTime\": 1723608634435,\r
+
+      \        \"location\": \"23.7465216,90.392125\",\r
+
+      \        \"netTotal\": \"660.05\",\r
+
+      \        \"orderEntryBy\": \"c514f345-80cf-431d-85b2-fd75ad84e781\",\r
+
+      \        \"orderEntryDate\": \"2025-03-10\",\r
+
+      \        \"orderNumber\": \"\",\r
+
+      \        \"orderStatus\": \"synced\",\r
+
+      \        \"paymentMode\": \"Cash\",\r
+
+      \        \"productList\": [\r
+
+      \            {\r
+
+      \                \"ItemDiscountAmount\": \"0\",\r
+
+      \                \"ProductCode\": \"80247\",\r
+
+      \                \"ProductId\": \"314ce983-91d7-4173-813f-4fcffabe50d5\",\r
+
+      \                \"ProductName\": \"Abicon Chewable Tablet 500/100 mg\",\r
+
+      \                \"Quantity\": \"5\",\r
+
+      \                \"totalPrice\": \"562.2\",\r
+
+      \                \"tradePrice\": \"112.44\",\r
+
+      \                \"vat\": \"19.57\"\r
+
+      \            }\r
+
+      \        ],\r
+
+      \        \"subMarketCode\": \"M2520301\",\r
+
+      \        \"subMarketId\": \"5313a392-6d17-434a-8c86-391c6c008411\",\r
+
+      \        \"subMarketName\": \"ALLARDARGA\",\r
+
+      \        \"totalQty\": \"5\",\r
+
+      \        \"tpTotal\": \"562.2\",\r
+
+      \        \"vatTotal\": \"97.85\"\r
+
+      \    }\r
+
+      ]"
+  auth:
+    type: bearer
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyTmFtZSI6Ik1kLiBTYWlkdXIgUmFobWFuIiwiRW1wbG95ZWVDb2RlIjoiMTc4MDEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJNSU8iLCJEZXBhcnRtZW50Q29kZSI6IlJYIiwiVGVhbUNvZGUiOiJBVklBVE9SIiwiVHlwZSI6Im9mZmljZXIiLCJleHAiOjE3NDkzNTY0ODgsImlzcyI6IlNhbGVzUHVsc2VBUEkiLCJhdWQiOiJIUEwtTUlTIn0.GHwu3M_SFWxvd_ExHcU2buqNls3iphB7kNMKSx7BCkA
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: SendChemistSalesOrder_Example
+    request:
+      url: "{{pulse_api}}/Chemist/SendChemistSalesOrder"
+      method: POST
+      body:
+        type: json
+        data: "[\r
+
+          \    {\r
+
+          \        \"chemistCode\": \"2709578\",\r
+
+          \        \"chemistId\": \"05d2cf6b-d504-45f2-b8fd-3c8883fb868c\",\r
+
+          \        \"chemistName\": \"SHAWON PHARMACY \",\r
+
+          \        \"comment\": \"test\",\r
+
+          \        \"deliveryDate\": \"2024-02-14\",\r
+
+          \        \"deliveryShift\": \"Morning\",\r
+
+          \        \"depotId\": \"0ae95bfc-a048-45e7-a21d-a7bcd0c24c4d\",\r
+
+          \        \"depotName\": \"Kushtia\",\r
+
+          \        \"discountAmount\": \"0\",\r
+
+          \        \"id\": 0,\r
+
+          \        \"localStatus\": \"save\",\r
+
+          \        \"localStatusTime\": 1707818162674,\r
+
+          \        \"location\": \"23.746487,90.3921065\",\r
+
+          \        \"netTotal\": \"554.44\",\r
+
+          \        \"orderDate\": \"2024-02-13\",\r
+
+          \        \"orderEntryBy\": \"\",\r
+
+          \        \"orderNumber\": \"\",\r
+
+          \        \"orderStatus\": \"\",\r
+
+          \        \"paymentMode\": \"Credit\",\r
+
+          \        \"productList\": [\r
+
+          \            {\r
+
+          \                \"ItemDiscountAmount\": \"0\",\r
+
+          \                \"ProductCode\": \"71101\",\r
+
+          \                \"ProductId\": \"e99e3b06-adb9-4c50-a3c2-0072a802e64b\",\r
+
+          \                \"ProductName\": \"ZOVENTA 90MG/5ML PFS\",\r
+
+          \                \"Quantity\": \" 1\",\r
+
+          \                \"totalPrice\": \"422.43\",\r
+
+          \                \"tradePrice\": \"359.82\",\r
+
+          \                \"vat\": \"62.61\"\r
+
+          \            },\r
+
+          \            {\r
+
+          \                \"ItemDiscountAmount\": \"0\",\r
+
+          \                \"ProductCode\": \"12503\",\r
+
+          \                \"ProductId\": \"4b464f62-4099-4048-ae09-00b7b8f9e371\",\r
+
+          \                \"ProductName\": \"ANDEP 25 MG TAB\",\r
+
+          \                \"Quantity\": \" 1\",\r
+
+          \                \"totalPrice\": \"422.43\",\r
+
+          \                \"tradePrice\": \"359.82\",\r
+
+          \                \"vat\": \"62.61\"\r
+
+          \            }\r
+
+          \        ],\r
+
+          \        \"subMarketCode\": \"M6061707\",\r
+
+          \        \"subMarketId\": \"34daf42a-cf65-4a7c-a14f-b36b75fd9dad\",\r
+
+          \        \"subMarketName\": \"PHILLHNAGAR\",\r
+
+          \        \"totalQty\": \"2\",\r
+
+          \        \"tpTotal\": \"472.26\",\r
+
+          \        \"vatTotal\": \"82.18\"\r
+
+          \    },\r
+
+          \    {\r
+
+          \        \"chemistCode\": \"2709578\",\r
+
+          \        \"chemistId\": \"05d2cf6b-d504-45f2-b8fd-3c8883fb868c\",\r
+
+          \        \"chemistName\": \"SHAWON PHARMACY \",\r
+
+          \        \"comment\": \"test\",\r
+
+          \        \"deliveryDate\": \"2024-02-14\",\r
+
+          \        \"deliveryShift\": \"Morning\",\r
+
+          \        \"depotId\": \"0ae95bfc-a048-45e7-a21d-a7bcd0c24c4d\",\r
+
+          \        \"depotName\": \"Kushtia\",\r
+
+          \        \"discountAmount\": \"0\",\r
+
+          \        \"id\": 0,\r
+
+          \        \"localStatus\": \"save\",\r
+
+          \        \"localStatusTime\": 1707818162674,\r
+
+          \        \"location\": \"23.746487,90.3921065\",\r
+
+          \        \"netTotal\": \"554.44\",\r
+
+          \        \"orderDate\": \"2024-02-13\",\r
+
+          \        \"orderEntryBy\": \"2a53a317-1328-498f-8272-7307c1eb0159\",\r
+
+          \        \"orderNumber\": \"\",\r
+
+          \        \"orderStatus\": \"\",\r
+
+          \        \"paymentMode\": \"Credit\",\r
+
+          \        \"productList\": [\r
+
+          \            {\r
+
+          \                \"ItemDiscountAmount\": \"0\",\r
+
+          \                \"ProductCode\": \"71101\",\r
+
+          \                \"ProductId\": \"e99e3b06-adb9-4c50-a3c2-0072a802e64b\",\r
+
+          \                \"ProductName\": \"ZOVENTA 90MG/5ML PFS\",\r
+
+          \                \"Quantity\": \" 1\",\r
+
+          \                \"totalPrice\": \"422.43\",\r
+
+          \                \"tradePrice\": \"359.82\",\r
+
+          \                \"vat\": \"62.61\"\r
+
+          \            },\r
+
+          \            {\r
+
+          \                \"ItemDiscountAmount\": \"0\",\r
+
+          \                \"ProductCode\": \"12503\",\r
+
+          \                \"ProductId\": \"4b464f62-4099-4048-ae09-00b7b8f9e371\",\r
+
+          \                \"ProductName\": \"ANDEP 25 MG TAB\",\r
+
+          \                \"Quantity\": \" 1\",\r
+
+          \                \"totalPrice\": \"422.43\",\r
+
+          \                \"tradePrice\": \"359.82\",\r
+
+          \                \"vat\": \"62.61\"\r
+
+          \            }\r
+
+          \        ],\r
+
+          \        \"subMarketCode\": \"M6061707\",\r
+
+          \        \"subMarketId\": \"34daf42a-cf65-4a7c-a14f-b36b75fd9dad\",\r
+
+          \        \"subMarketName\": \"PHILLHNAGAR\",\r
+
+          \        \"totalQty\": \"2\",\r
+
+          \        \"tpTotal\": \"472.26\",\r
+
+          \        \"vatTotal\": \"82.18\"\r
+
+          \    }\r
+
+          ]"
+    response:
+      statusText: "200"
+      headers:
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Server
+          value: Microsoft-IIS/10.0
+        - name: X-Powered-By
+          value: ASP.NET
+        - name: Date
+          value: Tue, 16 Jul 2024 04:03:26 GMT
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 404,
+              "statusMessage": "Unrecognized Guid format."
+          }

@@ -1,0 +1,69 @@
+meta {
+  name: ChemistOrderApproval
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{pulse_api}}/Chemist/ChemistOrderApproval
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "ChemistOrderId": "cccd09bc-99c3-49cd-bc3a-b4db843013c4",
+    "UserId": "00836",
+    "Comment": "",
+    "Flag": "approve" //approve, //reject
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: ChemistOrderApproval_Example
+  
+  request: {
+    url: {{pulse_api}}/Chemist/ChemistOrderApproval
+    method: POST
+    mode: json
+    body:json: {
+      {
+        "ChemistOrderId": "cccd09bc-99c3-49cd-bc3a-b4db843013c4",
+        "UserId": "",
+        "Comment": "",
+        "Flag": "approve" //approve, //reject
+      }
+      
+    }
+  }
+  
+  response: {
+    headers: {
+      Transfer-Encoding: chunked
+      Content-Type: application/json; charset=utf-8
+      Server: Microsoft-IIS/10.0
+      X-Powered-By: ASP.NET
+      Date: Tue, 16 Jul 2024 04:05:15 GMT
+    }
+  
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "statusCode": 404,
+            "statusMessage": "User ID, Chemist Order ID, Flag required, please try again"
+        }
+      '''
+    }
+  }
+}

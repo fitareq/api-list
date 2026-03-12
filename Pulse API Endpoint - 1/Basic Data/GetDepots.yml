@@ -1,0 +1,69 @@
+info:
+  name: GetDepots
+  type: http
+  seq: 8
+
+http:
+  method: POST
+  url: "{{pulse_api}}/Basic/GetDepots"
+  body:
+    type: json
+    data: "{\r\n    \"UserId\": \"17801\"\r\n}"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: GetDepots_Example
+    request:
+      url: "{{pulse_api}}/Basic/GetDepots"
+      method: POST
+      body:
+        type: json
+        data: "{\r\n    \"UserId\": \"17802\"\r\n}"
+    response:
+      statusText: "200"
+      headers:
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Server
+          value: Microsoft-IIS/10.0
+        - name: X-Powered-By
+          value: ASP.NET
+        - name: Date
+          value: Tue, 16 Jul 2024 03:45:57 GMT
+      body:
+        type: json
+        data: |-
+          {
+              "data": [
+                  {
+                      "id": "091b4c62-a7b0-464d-ab60-8f229d2bb467",
+                      "code": "22",
+                      "name": "Uttara",
+                      "address": "H#26,R#01,S#10, Uttara",
+                      "mobile": "01938899200",
+                      "lat": 0,
+                      "lon": 0,
+                      "isActive": true
+                  },
+                  {
+                      "id": "e784e231-42fc-44c3-981f-204f35bc14b7",
+                      "code": "39",
+                      "name": "Gazipur",
+                      "address": "colleage road, gazipur",
+                      "mobile": "01313786728",
+                      "lat": 0,
+                      "lon": 0,
+                      "isActive": true
+                  }
+              ],
+              "statusCode": 200,
+              "statusMessage": "Depots Data Send Successfully!"
+          }

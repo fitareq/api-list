@@ -1,0 +1,59 @@
+meta {
+  name: SendTourPlan
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{base_url}}/api/TourPlan/SendTourPlan
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyTmFtZSI6IkguTC5TVVJBTkdBIFNBTUFSQVNJTkdIQSIsIkVtcGxveWVlQ29kZSI6IjA4OTUiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJNUiIsIkRlcGFydG1lbnRDb2RlIjoiR0VORVJBTCIsIlRlYW1Db2RlIjoiR0VORVJBTCIsIlR5cGUiOiJvZmZpY2VyIiwiZXhwIjoxNzY1Njg3NzQ5LCJpc3MiOiJTYWxlc1B1bHNlQVBJIiwiYXVkIjoiSFBMLU1JUyJ9.MHMjciNL8hvoK2h1pl1cfmI0nDk4U0U2asmKVaBAUK4
+}
+
+body:json {
+  [
+      {
+          "ID": "0f7e678e-f29f-418e-95fa-0b5000629760",
+          "localId": 0,
+          "planDay": "27",
+          "planEntryBy": "ab683c4f-3bc8-42d1-bfd1-e5e238034ba1",
+          "planEntryByCode": "0895",
+          "planEntryByName": "H.L.SURANGA SAMARASINGHA",
+          "planEntryDate": "2025-09-15T12:58:04.06",
+          "planEntryLocation": "23.7464454,90.3925318",
+          "planLocation": "Ex Head Quarter",
+          "planModificationDateTime": "2025-09-15",
+          "planMonth": "9",
+          "planNote": "",
+          "planSession": "Evening",
+          "planStatus": 2,
+          "planYear": "2025",
+          "reason": "",
+          "subMarketList": [
+              {
+                  "geoFenceId": "00000000-0000-0000-0000-000000000000",
+                  "headType": "OwnMarket",
+                  "subMarketCode": "M0000304",
+                  "subMarketId": "6b797e89-25db-414e-890c-0793e077ef4c",
+                  "subMarketName": "Kekanadura"
+              },
+              {
+                  "geoFenceId": "",
+                  "headType": "OwnMarket",
+                  "subMarketCode": "M0000305",
+                  "subMarketId": "65d4eab1-55b4-4738-a31e-2054d1c55efc",
+                  "subMarketName": "Devinuwara"
+              }
+          ]
+      }
+  ]
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

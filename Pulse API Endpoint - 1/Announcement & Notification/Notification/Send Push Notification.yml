@@ -1,0 +1,63 @@
+info:
+  name: Send Push Notification
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{pulse_api}}/Notification/SendPushNotification"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"UserCode\": \"17802\",\r
+
+      \    \"Title\": \"Pulse\",\r
+
+      \    \"Body\": \"Test notification\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Send Push Notification_Example
+    request:
+      url: "{{pulse_api}}/Notification/SendPushNotification"
+      method: POST
+      body:
+        type: json
+        data: "{\r
+
+          \    \"UserCode\": \"17802\",\r
+
+          \    \"Title\": \"Pulse\",\r
+
+          \    \"Body\": \"Test notification\"\r
+
+          }"
+    response:
+      statusText: "200"
+      headers:
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Server
+          value: Microsoft-IIS/10.0
+        - name: X-Powered-By
+          value: ASP.NET
+        - name: Date
+          value: Tue, 16 Jul 2024 05:11:46 GMT
+      body:
+        type: json
+        data: |-
+          {
+              "isSuccess": true,
+              "message": "Push Notification sent successfully"
+          }

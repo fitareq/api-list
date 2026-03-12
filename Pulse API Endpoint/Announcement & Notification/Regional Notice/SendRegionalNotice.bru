@@ -1,0 +1,26 @@
+meta {
+  name: SendRegionalNotice
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{pulse_api}}/Notice/EntryEditRegionalNotice
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "Id": "",//empty for create
+      "Title": "test",
+      "Body": "test",
+      "Remarks": "",
+      "ExpireDate": "2024-08-05",
+      "UserId": "04533"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

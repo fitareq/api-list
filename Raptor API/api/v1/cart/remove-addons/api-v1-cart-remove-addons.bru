@@ -1,0 +1,65 @@
+meta {
+  name: /api/v1/cart/remove-addons
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/api/v1/cart/remove-addons
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "userId": "string",
+    "deliveryAddressId": "b48f2ad9-3196-1881-4580-ab336534e568",
+    "productId": "string",
+    "addonsId": "string"
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: OK
+  
+  request: {
+    url: {{baseUrl}}/api/v1/cart/remove-addons
+    method: POST
+    mode: json
+    headers: {
+      Content-Type: application/json
+      Authorization: Bearer <token>
+    }
+  
+    body:json: {
+      {
+        "userId": "string",
+        "deliveryAddressId": "b48f2ad9-3196-1881-4580-ab336534e568",
+        "productId": "string",
+        "addonsId": "string"
+      }
+    }
+  }
+  
+  response: {
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: text
+      content: '''
+  
+      '''
+    }
+  }
+}

@@ -1,0 +1,63 @@
+info:
+  name: ChemistTransferRequest
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: "{{pulse_api}}/Chemist/ChemistTransferRequest"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"UserId\": \"17801\",\r
+
+      \    \"ChemistId\": \"EB9DE09D-EC54-4B4B-882E-0000B473A0E4\",\r
+
+      \    \"SubMarketId\": \"27E22490-52C6-453A-ACCC-575EF70D4B60\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: ChemistTransferRequest_Example
+    request:
+      url: "{{pulse_api}}/Chemist/ChemistTransferRequest"
+      method: POST
+      body:
+        type: json
+        data: "{\r
+
+          \    \"UserId\": \"\",\r
+
+          \    \"ChemistId\": \"EB9DE09D-EC54-4B4B-882E-0000B473A0E4\",\r
+
+          \    \"SubMarketId\": \"27E22490-52C6-453A-ACCC-575EF70D4B60\"\r
+
+          }"
+    response:
+      statusText: "200"
+      headers:
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Server
+          value: Microsoft-IIS/10.0
+        - name: X-Powered-By
+          value: ASP.NET
+        - name: Date
+          value: Tue, 16 Jul 2024 04:01:26 GMT
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 404,
+              "statusMessage": "User ID,Chemist ID, SubMarket ID required, please try again"
+          }

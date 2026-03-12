@@ -1,0 +1,12 @@
+opencollection: 1.0.0
+info:
+  name: "pulse"
+  type: workspace
+
+collections:
+  - name: "Pulse API Endpoint"
+    path: "collections/Pulse API Endpoint"
+
+specs:
+
+docs: ''

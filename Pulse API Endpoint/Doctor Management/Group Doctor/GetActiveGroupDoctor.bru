@@ -1,0 +1,127 @@
+meta {
+  name: GetActiveGroupDoctor
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{pulse_api}}/GroupDoctor/GetActiveGroupDoctor
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "UserId": "17801"
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: GetActiveGroupDoctor
+  
+  request: {
+    url: {{pulse_api}}/GroupDoctor/GetActiveGroupDoctor
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "UserId": "17801"
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Transfer-Encoding: chunked
+      Content-Type: application/json; charset=utf-8
+      Server: Microsoft-IIS/10.0
+      X-Powered-By: ASP.NET
+      Date: Sun, 11 Aug 2024 09:30:48 GMT
+    }
+  
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "data": [
+                {
+                    "id": "88dc91e0-7bbf-4410-b7c3-1b5d7510ceb9",
+                    "name": "Mahedi test5",
+                    "code": "M25203125",
+                    "subMarketId": "9ffa6764-99c5-4a7c-b754-1618b5f73846",
+                    "instituteName": "RANGPUR (SADAR) UPAZILA HEALTH COMPLEX",
+                    "isGroupDoctor": true,
+                    "noOfGroupDoctor": 2,
+                    "headType": "OwnGroupDoctor",
+                    "marketCode": "M25203",
+                    "marketName": "Allardarga",
+                    "subMarketCode": "M2520301",
+                    "subMarketName": "ALLARDARGA",
+                    "lat": 40.7128,
+                    "lon": -74.006,
+                    "teamId": "0a1b605c-4007-4c87-a7a5-36394a5f05ab",
+                    "teamCode": "Aviator",
+                    "teamName": "Aviator",
+                    "departmentId": "3bb4859f-79ef-4a43-bd89-2c225ab5f29d",
+                    "departmentCode": "RX",
+                    "departmentName": "Rx General",
+                    "doctorStatus": 1,
+                    "isActive": true,
+                    "isApproved": true,
+                    "approvalDate": null,
+                    "isRejected": false,
+                    "rejectedBy": null,
+                    "rejectedDate": null,
+                    "remarks": "",
+                    "districtName": "",
+                    "thanaName": ""
+                },
+                {
+                    "id": "a163ce40-be7c-4d3e-a2f0-c5106196eac0",
+                    "name": "Niloy Alamgir Hospital 1",
+                    "code": "M25203130",
+                    "subMarketId": "9ffa6764-99c5-4a7c-b754-1618b5f73846",
+                    "instituteName": "RANGPUR (SADAR) UPAZILA HEALTH COMPLEX",
+                    "isGroupDoctor": true,
+                    "noOfGroupDoctor": 5,
+                    "headType": "OwnGroupDoctor",
+                    "marketCode": "M25203",
+                    "marketName": "Allardarga",
+                    "subMarketCode": "M2520301",
+                    "subMarketName": "ALLARDARGA",
+                    "lat": 23.7464598,
+                    "lon": 90.3922221,
+                    "teamId": "0a1b605c-4007-4c87-a7a5-36394a5f05ab",
+                    "teamCode": "Aviator",
+                    "teamName": "Aviator",
+                    "departmentId": "3bb4859f-79ef-4a43-bd89-2c225ab5f29d",
+                    "departmentCode": "RX",
+                    "departmentName": "Rx General",
+                    "doctorStatus": 1,
+                    "isActive": true,
+                    "isApproved": true,
+                    "approvalDate": "2024-06-03T15:10:15.577",
+                    "isRejected": false,
+                    "rejectedBy": null,
+                    "rejectedDate": null,
+                    "remarks": "",
+                    "districtName": "",
+                    "thanaName": ""
+                }
+            ],
+            "statusCode": 200,
+            "statusMessage": "Group Doctor Data Send Successfully!"
+        }
+      '''
+    }
+  }
+}

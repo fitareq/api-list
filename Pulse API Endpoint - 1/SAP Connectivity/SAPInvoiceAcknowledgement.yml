@@ -1,0 +1,50 @@
+info:
+  name: SAPInvoiceAcknowledgement
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{pulse_api}}/Sap/SAPInvoiceAcknowledgement"
+  body:
+    type: json
+    data: "[\r
+
+      \    {\r
+
+      \        \"OrderNo\": \"50304027\",\r
+
+      \        \"InvoiceNo\": \"123\",\r
+
+      \        \"InvoiceAmount\": \"500\"\r
+
+      \    },\r
+
+      \    {\r
+
+      \        \"OrderNo\": \"50304016\",\r
+
+      \        \"InvoiceNo\": \"123\",\r
+
+      \        \"InvoiceAmount\": \"600\"\r
+
+      \    },\r
+
+      \    {\r
+
+      \        \"OrderNo\": \"50304015\",\r
+
+      \        \"InvoiceNo\": \"123\",\r
+
+      \        \"InvoiceAmount\": \"700\"\r
+
+      \    }\r
+
+      ]"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

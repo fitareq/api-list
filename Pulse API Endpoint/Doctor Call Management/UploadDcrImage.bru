@@ -1,0 +1,59 @@
+meta {
+  name: UploadDcrImage
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{pulse_api}}/DCR/UploadDcrImage
+  body: multipartForm
+  auth: inherit
+}
+
+body:multipart-form {
+  dcrImageUpload[0].DcrId: 
+  dcrImageUpload[0].Image: @file()
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: UploadDcrImage_Example
+  
+  request: {
+    url: {{pulse_api}}/DCR/UploadDcrImage
+    method: POST
+    mode: multipartForm
+    body:multipart-form: {
+      dcrImageUpload[0].DcrId: 
+      dcrImageUpload[0].Image: @file(postman-cloud:///1ef31d41-27ac-4c00-a245-81438d4dd9cf)
+    }
+  }
+  
+  response: {
+    headers: {
+      Transfer-Encoding: chunked
+      Content-Type: application/json; charset=utf-8
+      Server: Microsoft-IIS/10.0
+      X-Powered-By: ASP.NET
+      Date: Tue, 16 Jul 2024 05:06:45 GMT
+    }
+  
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "statusCode": 404,
+            "statusMessage": "DCR image upload failed, an unexpected error occured"
+        }
+      '''
+    }
+  }
+}

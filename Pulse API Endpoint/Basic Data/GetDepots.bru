@@ -1,0 +1,83 @@
+meta {
+  name: GetDepots
+  type: http
+  seq: 8
+}
+
+post {
+  url: {{pulse_api}}/Basic/GetDepots
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "UserId": "17801"
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: GetDepots_Example
+  
+  request: {
+    url: {{pulse_api}}/Basic/GetDepots
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "UserId": "17802"
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Transfer-Encoding: chunked
+      Content-Type: application/json; charset=utf-8
+      Server: Microsoft-IIS/10.0
+      X-Powered-By: ASP.NET
+      Date: Tue, 16 Jul 2024 03:45:57 GMT
+    }
+  
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "data": [
+                {
+                    "id": "091b4c62-a7b0-464d-ab60-8f229d2bb467",
+                    "code": "22",
+                    "name": "Uttara",
+                    "address": "H#26,R#01,S#10, Uttara",
+                    "mobile": "01938899200",
+                    "lat": 0,
+                    "lon": 0,
+                    "isActive": true
+                },
+                {
+                    "id": "e784e231-42fc-44c3-981f-204f35bc14b7",
+                    "code": "39",
+                    "name": "Gazipur",
+                    "address": "colleage road, gazipur",
+                    "mobile": "01313786728",
+                    "lat": 0,
+                    "lon": 0,
+                    "isActive": true
+                }
+            ],
+            "statusCode": 200,
+            "statusMessage": "Depots Data Send Successfully!"
+        }
+      '''
+    }
+  }
+}

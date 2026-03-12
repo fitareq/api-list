@@ -1,0 +1,66 @@
+meta {
+  name: /api/v1/districts
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/api/v1/districts
+  body: none
+  auth: inherit
+}
+
+headers {
+  Accept: text/plain
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: OK
+  
+  request: {
+    url: {{baseUrl}}/api/v1/districts
+    method: GET
+    mode: none
+    headers: {
+      Accept: text/plain
+      Authorization: Bearer <token>
+    }
+  }
+  
+  response: {
+    headers: {
+      Content-Type: application/json
+    }
+  
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+          "data": [
+            {
+              "id": "1a595933-d84b-0546-45d1-55709abb9e5f",
+              "code": 3868,
+              "name": "string"
+            },
+            {
+              "id": "c254a5cf-c1eb-c55d-4af9-814d6f5f5cea",
+              "code": 2018,
+              "name": "string"
+            }
+          ],
+          "statusCode": 1019,
+          "statusMessage": "string"
+        }
+      '''
+    }
+  }
+}

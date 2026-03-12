@@ -1,0 +1,21 @@
+meta {
+  name: Get Regional Notice
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{pulse_api}}/Notice/GetRegionalNotice
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "UserId": "17801"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,52 @@
+meta {
+  name: /api/v1/auth/verify-email
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/api/v1/auth/verify-email?email=string&token=string
+  body: none
+  auth: inherit
+}
+
+params:query {
+  email: string
+  token: string
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: OK
+  
+  request: {
+    url: {{baseUrl}}/api/v1/auth/verify-email?email=string&token=string
+    method: GET
+    mode: none
+    params:query: {
+      email: string
+      token: string
+    }
+  
+    headers: {
+      Authorization: Bearer <token>
+    }
+  }
+  
+  response: {
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: text
+      content: '''
+  
+      '''
+    }
+  }
+}

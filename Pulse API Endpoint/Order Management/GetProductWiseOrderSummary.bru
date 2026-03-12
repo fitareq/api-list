@@ -1,0 +1,27 @@
+meta {
+  name: GetProductWiseOrderSummary
+  type: http
+  seq: 9
+}
+
+post {
+  url: {{pulse_api}}/Chemist/GetProductWiseOrderSummary
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyTmFtZSI6Ik1kLiBTZWxpbXV6emFtYW4iLCJFbXBsb3llZUNvZGUiOiIwMjMwNyIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkFNIiwiRGVwYXJ0bWVudENvZGUiOiJSWCIsIlRlYW1Db2RlIjoiTFVNSU5JT1VTIiwiVHlwZSI6InN1cGVydmlzb3IiLCJleHAiOjE3MzQ4Mzk0NTcsImlzcyI6IlNhbGVzUHVsc2VBUEkiLCJhdWQiOiJIUEwtTUlTIn0.aQhlSHcOKvfY6-x1LIbgegeH7u2lW9eYToR-JG0noYs
+}
+
+body:json {
+  {
+      "UserCode":"17801",
+      "DateFrom":"22/09/2024",
+      "DateTo":"22/09/2024"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

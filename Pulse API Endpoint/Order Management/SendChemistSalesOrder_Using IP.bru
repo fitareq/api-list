@@ -1,0 +1,200 @@
+meta {
+  name: SendChemistSalesOrder_Using IP
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://103.111.126.11/PulseAPI/api/Chemist/SendChemistSalesOrder
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyTmFtZSI6Ik1kLiBTYWlkdXIgUmFobWFuIiwiRW1wbG95ZWVDb2RlIjoiMTc4MDEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJNSU8iLCJEZXBhcnRtZW50Q29kZSI6IlJYIiwiVGVhbUNvZGUiOiJBVklBVE9SIiwiVHlwZSI6Im9mZmljZXIiLCJleHAiOjE3NDkzNTY0ODgsImlzcyI6IlNhbGVzUHVsc2VBUEkiLCJhdWQiOiJIUEwtTUlTIn0.GHwu3M_SFWxvd_ExHcU2buqNls3iphB7kNMKSx7BCkA
+}
+
+body:json {
+  [
+      {
+          "chemistCode": "2701130",
+          "chemistId": "6336cf3c-54bc-4799-a909-00e18ff0e948",
+          "chemistName": "AKHI PHARMACY",
+          "comment": "ssl",
+          "deliveryDate": "2025-03-10",
+          "deliveryShift": "Evening",
+          "depotId": "289db1ac-7b73-458f-bd03-9a0ed30afde5",
+          "depotName": "Kushtia",
+          "discountAmount": "0",
+          "id": 0,
+          "localStatus": "synced",
+          "localStatusTime": 1723608634435,
+          "location": "23.7465216,90.392125",
+          "netTotal": "660.05",
+          "orderEntryBy": "c514f345-80cf-431d-85b2-fd75ad84e781",
+          "orderEntryDate": "2025-03-10",
+          "orderNumber": "",
+          "orderStatus": "synced",
+          "paymentMode": "Cash",
+          "productList": [
+              {
+                  "ItemDiscountAmount": "0",
+                  "ProductCode": "80247",
+                  "ProductId": "314ce983-91d7-4173-813f-4fcffabe50d5",
+                  "ProductName": "Abicon Chewable Tablet 500/100 mg",
+                  "Quantity": "5",
+                  "totalPrice": "562.2",
+                  "tradePrice": "112.44",
+                  "vat": "19.57"
+              }
+          ],
+          "subMarketCode": "M2520301",
+          "subMarketId": "5313a392-6d17-434a-8c86-391c6c008411",
+          "subMarketName": "ALLARDARGA",
+          "totalQty": "5",
+          "tpTotal": "562.2",
+          "vatTotal": "97.85"
+      }
+  ]
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: SendChemistSalesOrder_Example
+  
+  request: {
+    url: {{pulse_api}}/Chemist/SendChemistSalesOrder
+    method: POST
+    mode: json
+    body:json: {
+      [
+          {
+              "chemistCode": "2709578",
+              "chemistId": "05d2cf6b-d504-45f2-b8fd-3c8883fb868c",
+              "chemistName": "SHAWON PHARMACY ",
+              "comment": "test",
+              "deliveryDate": "2024-02-14",
+              "deliveryShift": "Morning",
+              "depotId": "0ae95bfc-a048-45e7-a21d-a7bcd0c24c4d",
+              "depotName": "Kushtia",
+              "discountAmount": "0",
+              "id": 0,
+              "localStatus": "save",
+              "localStatusTime": 1707818162674,
+              "location": "23.746487,90.3921065",
+              "netTotal": "554.44",
+              "orderDate": "2024-02-13",
+              "orderEntryBy": "",
+              "orderNumber": "",
+              "orderStatus": "",
+              "paymentMode": "Credit",
+              "productList": [
+                  {
+                      "ItemDiscountAmount": "0",
+                      "ProductCode": "71101",
+                      "ProductId": "e99e3b06-adb9-4c50-a3c2-0072a802e64b",
+                      "ProductName": "ZOVENTA 90MG/5ML PFS",
+                      "Quantity": " 1",
+                      "totalPrice": "422.43",
+                      "tradePrice": "359.82",
+                      "vat": "62.61"
+                  },
+                  {
+                      "ItemDiscountAmount": "0",
+                      "ProductCode": "12503",
+                      "ProductId": "4b464f62-4099-4048-ae09-00b7b8f9e371",
+                      "ProductName": "ANDEP 25 MG TAB",
+                      "Quantity": " 1",
+                      "totalPrice": "422.43",
+                      "tradePrice": "359.82",
+                      "vat": "62.61"
+                  }
+              ],
+              "subMarketCode": "M6061707",
+              "subMarketId": "34daf42a-cf65-4a7c-a14f-b36b75fd9dad",
+              "subMarketName": "PHILLHNAGAR",
+              "totalQty": "2",
+              "tpTotal": "472.26",
+              "vatTotal": "82.18"
+          },
+          {
+              "chemistCode": "2709578",
+              "chemistId": "05d2cf6b-d504-45f2-b8fd-3c8883fb868c",
+              "chemistName": "SHAWON PHARMACY ",
+              "comment": "test",
+              "deliveryDate": "2024-02-14",
+              "deliveryShift": "Morning",
+              "depotId": "0ae95bfc-a048-45e7-a21d-a7bcd0c24c4d",
+              "depotName": "Kushtia",
+              "discountAmount": "0",
+              "id": 0,
+              "localStatus": "save",
+              "localStatusTime": 1707818162674,
+              "location": "23.746487,90.3921065",
+              "netTotal": "554.44",
+              "orderDate": "2024-02-13",
+              "orderEntryBy": "2a53a317-1328-498f-8272-7307c1eb0159",
+              "orderNumber": "",
+              "orderStatus": "",
+              "paymentMode": "Credit",
+              "productList": [
+                  {
+                      "ItemDiscountAmount": "0",
+                      "ProductCode": "71101",
+                      "ProductId": "e99e3b06-adb9-4c50-a3c2-0072a802e64b",
+                      "ProductName": "ZOVENTA 90MG/5ML PFS",
+                      "Quantity": " 1",
+                      "totalPrice": "422.43",
+                      "tradePrice": "359.82",
+                      "vat": "62.61"
+                  },
+                  {
+                      "ItemDiscountAmount": "0",
+                      "ProductCode": "12503",
+                      "ProductId": "4b464f62-4099-4048-ae09-00b7b8f9e371",
+                      "ProductName": "ANDEP 25 MG TAB",
+                      "Quantity": " 1",
+                      "totalPrice": "422.43",
+                      "tradePrice": "359.82",
+                      "vat": "62.61"
+                  }
+              ],
+              "subMarketCode": "M6061707",
+              "subMarketId": "34daf42a-cf65-4a7c-a14f-b36b75fd9dad",
+              "subMarketName": "PHILLHNAGAR",
+              "totalQty": "2",
+              "tpTotal": "472.26",
+              "vatTotal": "82.18"
+          }
+      ]
+    }
+  }
+  
+  response: {
+    headers: {
+      Transfer-Encoding: chunked
+      Content-Type: application/json; charset=utf-8
+      Server: Microsoft-IIS/10.0
+      X-Powered-By: ASP.NET
+      Date: Tue, 16 Jul 2024 04:03:26 GMT
+    }
+  
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "statusCode": 404,
+            "statusMessage": "Unrecognized Guid format."
+        }
+      '''
+    }
+  }
+}

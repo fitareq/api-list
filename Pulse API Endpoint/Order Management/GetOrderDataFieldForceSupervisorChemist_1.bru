@@ -1,0 +1,27 @@
+meta {
+  name: GetOrderDataFieldForceSupervisorChemist_1
+  type: http
+  seq: 10
+}
+
+post {
+  url: {{pulse_api}}/Chemist/GetOrderDataFieldForceSupervisorChemist
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyTmFtZSI6IlMuTS4gRmFydWsgSG9zc2FpbiIsIkVtcGxveWVlQ29kZSI6IjA0NTMzIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiUk0iLCJEZXBhcnRtZW50Q29kZSI6IlJYIiwiVGVhbUNvZGUiOiJMdW1pbmlvdXMiLCJUeXBlIjoic3VwZXJ2aXNvciIsImV4cCI6MTcyODI3OTc3MCwiaXNzIjoiU2FsZXNQdWxzZUFQSSIsImF1ZCI6IkhQTC1NSVMifQ.ZaktzAEMXrL635v3-Z1xTyrdZ098-ZnwUMlRss_qe1g
+}
+
+body:json {
+  {
+      "UserCode":"00226",
+      "DateFrom":"22/09/2024",
+      "DateTo":"22/09/2024"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

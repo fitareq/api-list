@@ -1,0 +1,26 @@
+info:
+  name: Download Tour Plan Summary
+  type: http
+  seq: 6
+
+http:
+  method: POST
+  url: "{{pulse_api}}/TourPlan/download-summary"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"UserId\": \"17801\"\r
+
+      \    // \"TourPlanMonth\" : 1,\r
+
+      \    // \"TourPlanYear\" : 2026\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

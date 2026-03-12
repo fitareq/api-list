@@ -1,0 +1,75 @@
+meta {
+  name: GetAnnouncementSummary
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{pulse_api}}/Announcement/GetAnnouncementSummary
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "UserId": "17801"
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: GetAnnouncementSummary_Example
+  
+  request: {
+    url: {{pulse_api}}/Announcement/GetAnnouncementSummary
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "UserId": "17802"
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Transfer-Encoding: chunked
+      Content-Type: application/json; charset=utf-8
+      Server: Microsoft-IIS/10.0
+      X-Powered-By: ASP.NET
+      Date: Tue, 16 Jul 2024 05:10:54 GMT
+    }
+  
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "data": [
+                {
+                    "announcementCategory": "Holiday ",
+                    "title": "Holiday on account of Muharram (Ashura)",
+                    "details": "Dear All Members of Healthcare Family,\r\nPlease be informed that, as per management decision; Corporate Head Office will remain closed on July 17, 2024; Wednesday on account of Muharram (Ashura).\r\nThe Office will resume on July 18, 2024, Thursday after the vacation. We request all the Department Heads to communicate this to their team members. Sales, Manufacturing Plant and Healthcare Distribution will follow their own schedule.\r\n",
+                    "bannerImagePath": "http://103.111.126.11/BannerImage%2Fa854426a-b4c3-4bf6-bd5a-90c44a7ef2f0_Holiday%20on%20account%20of%20Muharram%20%28Ashura%29_20240714_151521.png"
+                },
+                {
+                    "announcementCategory": "Generel Notice",
+                    "title": "Test Title for API",
+                    "details": "?? Ready to Accelerate Your Career to CEO? \r\n\r\nOur Agile Leadership Development Program is designed to fast-track talented individuals from officer roles to CEO positions in just ? years!\r\n\r\nCurious to know the magic number? Stay tuned and find out today at 8:30 PM! ???\r\n\r\nDon’t miss out on this game-changing opportunity to leapfrog your career and become the next leader at Akij Resource.",
+                    "bannerImagePath": "http://103.111.126.11/BannerImage%2Ff30ec6a8-935f-47d1-b795-9854e8c90e9b_Test%20Title%20for%20API_20240714_144750.png"
+                }
+            ],
+            "statusCode": 200,
+            "statusMessage": "Last 5 announcement data get successfully!"
+        }
+      '''
+    }
+  }
+}

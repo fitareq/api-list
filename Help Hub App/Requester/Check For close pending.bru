@@ -1,0 +1,24 @@
+meta {
+  name: Check For close pending
+  type: http
+  seq: 7
+}
+
+post {
+  url: {{base_url}}/UserCheckClosePendingSupport
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "machine_name": "",
+      "machine_id": "15",
+      "emp_code": "12345"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

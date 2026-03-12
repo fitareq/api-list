@@ -1,0 +1,15 @@
+meta {
+  name: GetOrderNoFromSAP(GET)
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{pulse_api}}/SAP/GetPendingOrders
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

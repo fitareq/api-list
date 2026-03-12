@@ -1,0 +1,20 @@
+info:
+  name: GetCreditSummary
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{pulse_api}}/CRM/GetCreditSummary"
+  body:
+    type: json
+    data: "{\r\n    \"MRZCode\": \"M43102\"\r\n}"
+  auth:
+    type: bearer
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyTmFtZSI6Ikthd3NlciBBaG1lZCBOYWhpbiIsIkVtcGxveWVlQ29kZSI6IjMxMzUwIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiUEEiLCJEZXBhcnRtZW50Q29kZSI6IlNQU0FMRVMiLCJUZWFtQ29kZSI6Ik5FUFRVTkUiLCJUeXBlIjoib2ZmaWNlciIsImV4cCI6MTc2MDk1OTI3NywiaXNzIjoiU2FsZXNQdWxzZUFQSSIsImF1ZCI6IkhQTC1NSVMifQ.gmz1FU_wozJOf8ZiTO0ys6k04HLFC_htKFNr3ntjGBc
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

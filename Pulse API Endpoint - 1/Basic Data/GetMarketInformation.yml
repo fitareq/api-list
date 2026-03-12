@@ -1,0 +1,169 @@
+info:
+  name: GetMarketInformation
+  type: http
+  seq: 7
+
+http:
+  method: POST
+  url: "{{pulse_api}}/Basic/GetMarketInformation"
+  body:
+    type: json
+    data: "{\r\n    \"UserId\": \"17801\"\r\n}"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: GetMarketInformation_Example
+    request:
+      url: "{{pulse_api}}/Basic/GetMarketInformation"
+      method: POST
+      body:
+        type: json
+        data: "{\r\n    \"UserId\": \"17802\"\r\n}"
+    response:
+      statusText: "200"
+      headers:
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Server
+          value: Microsoft-IIS/10.0
+        - name: X-Powered-By
+          value: ASP.NET
+        - name: Date
+          value: Tue, 16 Jul 2024 03:45:41 GMT
+      body:
+        type: json
+        data: |-
+          {
+              "data": [
+                  {
+                      "marketID": "37a91a83-b2b9-4dc8-8cea-4b0979f4576d",
+                      "regionID": "17d33f0e-8ec7-4d5a-9b20-8c50c857fa90",
+                      "marketCode": "M72501",
+                      "regionCode": "R725",
+                      "marketName": "KBFGH-2",
+                      "regionName": "UTTARA - E",
+                      "subMarketID": "42323aef-7404-4ac3-9a07-810d921ea03e",
+                      "subMarketCode": "M7250101",
+                      "subMarketName": "AMC (AICHI MEDICAL COLLEGE HOSPITAL) THANA HEALTH COMPLEX",
+                      "subMarketType": "OwnSubMarket"
+                  },
+                  {
+                      "marketID": "37a91a83-b2b9-4dc8-8cea-4b0979f4576d",
+                      "regionID": "17d33f0e-8ec7-4d5a-9b20-8c50c857fa90",
+                      "marketCode": "M72501",
+                      "regionCode": "R725",
+                      "marketName": "KBFGH-2",
+                      "regionName": "UTTARA - E",
+                      "subMarketID": "c3f899cf-82e8-415d-9371-81fb54c38f8f",
+                      "subMarketCode": "M7250102",
+                      "subMarketName": "test sub market 2 edit",
+                      "subMarketType": "OwnSubMarket"
+                  },
+                  {
+                      "marketID": "37a91a83-b2b9-4dc8-8cea-4b0979f4576d",
+                      "regionID": "17d33f0e-8ec7-4d5a-9b20-8c50c857fa90",
+                      "marketCode": "M72501",
+                      "regionCode": "R725",
+                      "marketName": "KBFGH-2",
+                      "regionName": "UTTARA - E",
+                      "subMarketID": "5b729b80-5d76-4b1a-b0fb-a748edd1f04a",
+                      "subMarketCode": "M7250103",
+                      "subMarketName": "test sub market 1",
+                      "subMarketType": "OwnSubMarket"
+                  },
+                  {
+                      "marketID": "37a91a83-b2b9-4dc8-8cea-4b0979f4576d",
+                      "regionID": "17d33f0e-8ec7-4d5a-9b20-8c50c857fa90",
+                      "marketCode": "M72501",
+                      "regionCode": "R725",
+                      "marketName": "KBFGH-2",
+                      "regionName": "UTTARA - E",
+                      "subMarketID": "23c4de62-90ec-4693-808c-d39c01681944",
+                      "subMarketCode": "M7250104",
+                      "subMarketName": "test sub market 1",
+                      "subMarketType": "OwnSubMarket"
+                  },
+                  {
+                      "marketID": "9ee263f0-897e-443c-9f7d-2f7318fa7c51",
+                      "regionID": "17d33f0e-8ec7-4d5a-9b20-8c50c857fa90",
+                      "marketCode": "M14303",
+                      "regionCode": "R725",
+                      "marketName": "Uttara-11",
+                      "regionName": "UTTARA - E",
+                      "subMarketID": "2031ee3b-c9f5-4d05-9643-4be568b5ece1",
+                      "subMarketCode": "M1430304",
+                      "subMarketName": "SECTOR-4",
+                      "subMarketType": "PairSubMarket"
+                  },
+                  {
+                      "marketID": "9ee263f0-897e-443c-9f7d-2f7318fa7c51",
+                      "regionID": "17d33f0e-8ec7-4d5a-9b20-8c50c857fa90",
+                      "marketCode": "M14303",
+                      "regionCode": "R725",
+                      "marketName": "Uttara-11",
+                      "regionName": "UTTARA - E",
+                      "subMarketID": "ea0b9252-e0c5-4ee1-8666-55b950af30d6",
+                      "subMarketCode": "M1430301",
+                      "subMarketName": "SAPPORO DENTAL COLLEGE",
+                      "subMarketType": "PairSubMarket"
+                  },
+                  {
+                      "marketID": "9ee263f0-897e-443c-9f7d-2f7318fa7c51",
+                      "regionID": "17d33f0e-8ec7-4d5a-9b20-8c50c857fa90",
+                      "marketCode": "M14303",
+                      "regionCode": "R725",
+                      "marketName": "Uttara-11",
+                      "regionName": "UTTARA - E",
+                      "subMarketID": "059815d0-7e72-4a9b-a880-5a481dc851a7",
+                      "subMarketCode": "M1430303",
+                      "subMarketName": "POPULAR DIAGNOSTIC CENTRE",
+                      "subMarketType": "PairSubMarket"
+                  },
+                  {
+                      "marketID": "9ee263f0-897e-443c-9f7d-2f7318fa7c51",
+                      "regionID": "17d33f0e-8ec7-4d5a-9b20-8c50c857fa90",
+                      "marketCode": "M14303",
+                      "regionCode": "R725",
+                      "marketName": "Uttara-11",
+                      "regionName": "UTTARA - E",
+                      "subMarketID": "01b243ea-037e-47f6-8a7f-9982b15a2e12",
+                      "subMarketCode": "M1430305",
+                      "subMarketName": "SECTOR- 6",
+                      "subMarketType": "PairSubMarket"
+                  },
+                  {
+                      "marketID": "9ee263f0-897e-443c-9f7d-2f7318fa7c51",
+                      "regionID": "17d33f0e-8ec7-4d5a-9b20-8c50c857fa90",
+                      "marketCode": "M14303",
+                      "regionCode": "R725",
+                      "marketName": "Uttara-11",
+                      "regionName": "UTTARA - E",
+                      "subMarketID": "7041ff30-f8e9-48cd-ab92-b6fadad8d122",
+                      "subMarketCode": "M1430306",
+                      "subMarketName": "BRAC MARKET & MAZAR ROAD",
+                      "subMarketType": "PairSubMarket"
+                  },
+                  {
+                      "marketID": "9ee263f0-897e-443c-9f7d-2f7318fa7c51",
+                      "regionID": "17d33f0e-8ec7-4d5a-9b20-8c50c857fa90",
+                      "marketCode": "M14303",
+                      "regionCode": "R725",
+                      "marketName": "Uttara-11",
+                      "regionName": "UTTARA - E",
+                      "subMarketID": "37994795-7ade-44de-99b8-cc79b4d0808f",
+                      "subMarketCode": "M1430302",
+                      "subMarketName": "BRAC CLINIC",
+                      "subMarketType": "PairSubMarket"
+                  }
+              ],
+              "statusCode": 200,
+              "statusMessage": "Market Information Send Successfully!"
+          }

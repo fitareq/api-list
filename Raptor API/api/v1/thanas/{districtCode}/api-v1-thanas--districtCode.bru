@@ -1,0 +1,76 @@
+meta {
+  name: /api/v1/thanas/:districtCode
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/api/v1/thanas/:districtCode
+  body: none
+  auth: inherit
+}
+
+params:path {
+  districtCode: 7994
+}
+
+headers {
+  Accept: text/plain
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: OK
+  
+  request: {
+    url: {{baseUrl}}/api/v1/thanas/:districtCode
+    method: GET
+    mode: none
+    params:path: {
+      districtCode: 7994
+    }
+  
+    headers: {
+      Accept: text/plain
+      Authorization: Bearer <token>
+    }
+  }
+  
+  response: {
+    headers: {
+      Content-Type: application/json
+    }
+  
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+          "data": [
+            {
+              "id": "e2cc7b06-7200-800f-3987-ded4cb214f80",
+              "code": 5702,
+              "name": "string",
+              "districtCode": 7560
+            },
+            {
+              "id": "976ce01d-4036-7da1-d8c4-aa610671b7c0",
+              "code": 9092,
+              "name": "string",
+              "districtCode": 2593
+            }
+          ],
+          "statusCode": 4269,
+          "statusMessage": "string"
+        }
+      '''
+    }
+  }
+}

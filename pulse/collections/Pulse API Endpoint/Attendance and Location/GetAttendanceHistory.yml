@@ -1,0 +1,20 @@
+info:
+  name: GetAttendanceHistory
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{pulse_api}}/Attendance/GetAttendanceHistory"
+  body:
+    type: json
+    data: "{\r\n    \"UserId\": \"04203\"\r\n}"
+  auth:
+    type: bearer
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyTmFtZSI6Ik1kLiBNZXNiYWggVWRkaW4iLCJFbXBsb3llZUNvZGUiOiIwNDIwMyIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IlJNIiwiRGVwYXJ0bWVudENvZGUiOiJSWCIsIlRlYW1Db2RlIjoiTFVNSU5JT1VTIiwiVHlwZSI6InN1cGVydmlzb3IiLCJleHAiOjE3NjI5MjI0MjcsImlzcyI6IlNhbGVzUHVsc2VBUEkiLCJhdWQiOiJIUEwtTUlTIn0.e-f4Rv-KrbBFc4-vCZelEYwXmQL3YbrhM5EWtdfnqro
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

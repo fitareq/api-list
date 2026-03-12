@@ -1,0 +1,67 @@
+info:
+  name: AuthViaOTP
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{base_url}}/login/Auth"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"DeviceId\": \"\",\r
+
+      \    \"SmsHashType\": \"anik\",\r
+
+      \    \"Username\": \"16801\"\r
+
+      }"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: AuthViaOTP_Example
+    request:
+      url: "{{pulse_api}}/login/Auth"
+      method: POST
+      body:
+        type: json
+        data: "{\r
+
+          \    \"Username\": \"17802\",\r
+
+          \    \"SmsHashType\": \"anik\",\r
+
+          \    \"DeviceId\": \"\"\r
+
+          }\r
+
+          \r
+
+          //anik forhad signed_apk"
+    response:
+      statusText: "200"
+      headers:
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Server
+          value: Microsoft-IIS/10.0
+        - name: X-Powered-By
+          value: ASP.NET
+        - name: Date
+          value: Tue, 16 Jul 2024 03:37:25 GMT
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 406,
+              "statusMessage": "User is already authenticated with Android - a12s | samsung | SM-A127F",
+              "data": null
+          }

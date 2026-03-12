@@ -1,0 +1,251 @@
+meta {
+  name: DcrReport
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{pulse_api}}/DCR/DcrReport
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "UserCode": "17801",
+      "Year": 2024,
+      "Month": 6,
+      "ReportType": "BrandWise"
+  }
+  
+  //BrandWise, DoctorWise, SubMarketWise
+  
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: DcrReport_Example
+  
+  request: {
+    url: {{pulse_api}}/DCR/DcrReport
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "UserCode": "17802",
+          "Year": 2024,
+          "Month": 6,
+          "ReportType": "BrandWise"
+      }
+      
+      //BrandWise, DoctorWise, SubMarketWise
+      
+    }
+  }
+  
+  response: {
+    headers: {
+      Transfer-Encoding: chunked
+      Content-Type: application/json; charset=utf-8
+      Server: Microsoft-IIS/10.0
+      X-Powered-By: ASP.NET
+      Date: Tue, 16 Jul 2024 05:05:56 GMT
+    }
+  
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "data": [
+                {
+                    "callEntryDate": "2024-06-05",
+                    "year": 2024,
+                    "month": 6,
+                    "doctorNames": "M.H ANOWER, M.H ANOWER, M.H ANOWER, M.H ANOWER",
+                    "totalCall": 4,
+                    "brandName": "AERON"
+                },
+                {
+                    "callEntryDate": "2024-06-05",
+                    "year": 2024,
+                    "month": 6,
+                    "doctorNames": "M.H ANOWER, M.H ANOWER, M.H ANOWER, M.H ANOWER, MD. MOBINUR RAHMAN",
+                    "totalCall": 5,
+                    "brandName": "ALCET"
+                },
+                {
+                    "callEntryDate": "2024-06-05",
+                    "year": 2024,
+                    "month": 6,
+                    "doctorNames": "M.H ANOWER, M.H ANOWER, M.H ANOWER, M.H ANOWER, MD. MOBINUR RAHMAN",
+                    "totalCall": 5,
+                    "brandName": "CLACIDO"
+                },
+                {
+                    "callEntryDate": "2024-06-05",
+                    "year": 2024,
+                    "month": 6,
+                    "doctorNames": "MD. MOBINUR RAHMAN",
+                    "totalCall": 1,
+                    "brandName": "EMISTAT"
+                },
+                {
+                    "callEntryDate": "2024-06-09",
+                    "year": 2024,
+                    "month": 6,
+                    "doctorNames": "PROF NURUL AMIN",
+                    "totalCall": 1,
+                    "brandName": "ACTILAC"
+                },
+                {
+                    "callEntryDate": "2024-06-09",
+                    "year": 2024,
+                    "month": 6,
+                    "doctorNames": "PROF NURUL AMIN",
+                    "totalCall": 1,
+                    "brandName": "ADRIBIN"
+                },
+                {
+                    "callEntryDate": "2024-06-09",
+                    "year": 2024,
+                    "month": 6,
+                    "doctorNames": "PROF NURUL AMIN",
+                    "totalCall": 1,
+                    "brandName": "ALCAFT EYE DROPS"
+                },
+                {
+                    "callEntryDate": "2024-06-09",
+                    "year": 2024,
+                    "month": 6,
+                    "doctorNames": "PROF NURUL AMIN",
+                    "totalCall": 1,
+                    "brandName": "BONTIV"
+                },
+                {
+                    "callEntryDate": "2024-06-09",
+                    "year": 2024,
+                    "month": 6,
+                    "doctorNames": "PROF NURUL AMIN",
+                    "totalCall": 1,
+                    "brandName": "CASPOGIN"
+                },
+                {
+                    "callEntryDate": "2024-06-10",
+                    "year": 2024,
+                    "month": 6,
+                    "doctorNames": "HASAN AL-ZIAD, PROF NURUL AMIN, FIROZ AHMED BISWAS",
+                    "totalCall": 3,
+                    "brandName": "ABICON"
+                },
+                {
+                    "callEntryDate": "2024-06-10",
+                    "year": 2024,
+                    "month": 6,
+                    "doctorNames": "HASAN AL-ZIAD, PROF NURUL AMIN, FIROZ AHMED BISWAS",
+                    "totalCall": 3,
+                    "brandName": "ACECARD"
+                },
+                {
+                    "callEntryDate": "2024-06-10",
+                    "year": 2024,
+                    "month": 6,
+                    "doctorNames": "PROF NURUL AMIN, HASAN AL-ZIAD, FIROZ AHMED BISWAS",
+                    "totalCall": 3,
+                    "brandName": "ADALIMAB"
+                },
+                {
+                    "callEntryDate": "2024-06-10",
+                    "year": 2024,
+                    "month": 6,
+                    "doctorNames": "PROF NURUL AMIN, HASAN AL-ZIAD",
+                    "totalCall": 2,
+                    "brandName": "ADRIBIN"
+                },
+                {
+                    "callEntryDate": "2024-06-10",
+                    "year": 2024,
+                    "month": 6,
+                    "doctorNames": "FIROZ AHMED BISWAS, HASAN AL-ZIAD, PROF NURUL AMIN",
+                    "totalCall": 3,
+                    "brandName": "ALCET"
+                },
+                {
+                    "callEntryDate": "2024-06-10",
+                    "year": 2024,
+                    "month": 6,
+                    "doctorNames": "HASAN AL-ZIAD",
+                    "totalCall": 1,
+                    "brandName": "ALLET"
+                },
+                {
+                    "callEntryDate": "2024-06-10",
+                    "year": 2024,
+                    "month": 6,
+                    "doctorNames": "FIROZ AHMED BISWAS",
+                    "totalCall": 1,
+                    "brandName": "ARTHROFEN"
+                },
+                {
+                    "callEntryDate": "2024-06-11",
+                    "year": 2024,
+                    "month": 6,
+                    "doctorNames": "M.H ANOWER",
+                    "totalCall": 1,
+                    "brandName": "ABICON"
+                },
+                {
+                    "callEntryDate": "2024-06-11",
+                    "year": 2024,
+                    "month": 6,
+                    "doctorNames": "M.H ANOWER",
+                    "totalCall": 1,
+                    "brandName": "ACECARD"
+                },
+                {
+                    "callEntryDate": "2024-06-11",
+                    "year": 2024,
+                    "month": 6,
+                    "doctorNames": "M.H ANOWER",
+                    "totalCall": 1,
+                    "brandName": "ADRIBIN"
+                },
+                {
+                    "callEntryDate": "2024-06-20",
+                    "year": 2024,
+                    "month": 6,
+                    "doctorNames": "HASAN AL-ZIAD",
+                    "totalCall": 1,
+                    "brandName": "ABICON"
+                },
+                {
+                    "callEntryDate": "2024-06-20",
+                    "year": 2024,
+                    "month": 6,
+                    "doctorNames": "HASAN AL-ZIAD",
+                    "totalCall": 1,
+                    "brandName": "ACECARD"
+                },
+                {
+                    "callEntryDate": "2024-06-20",
+                    "year": 2024,
+                    "month": 6,
+                    "doctorNames": "HASAN AL-ZIAD",
+                    "totalCall": 1,
+                    "brandName": "ADRIBIN"
+                }
+            ],
+            "statusCode": 200,
+            "statusMessage": "Success"
+        }
+      '''
+    }
+  }
+}

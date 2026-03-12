@@ -1,0 +1,180 @@
+info:
+  name: DCR History
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: "{{pulse_api}}/DCR/GetDcrHistory"
+  body:
+    type: json
+    data: "{\r\n    \"UserId\": \"17801\"\r\n}"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: DCR History_Example
+    request:
+      url: "{{pulse_api}}/DCR/GetDcrHistory"
+      method: POST
+      body:
+        type: json
+        data: "{\r\n    \"UserId\": \"17802\"\r\n}"
+    response:
+      statusText: "200"
+      headers:
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Server
+          value: Microsoft-IIS/10.0
+        - name: X-Powered-By
+          value: ASP.NET
+        - name: Date
+          value: Tue, 16 Jul 2024 05:05:43 GMT
+      body:
+        type: json
+        data: |-
+          {
+              "data": [
+                  {
+                      "dcrId": "72ad7193-c8c7-4b00-9323-7c9e9f3d78be",
+                      "callNo": 92,
+                      "callEntryBy": "15f76642-0139-4b3a-a3ec-d8392b4fcf8f",
+                      "callEntryDate": "2024-07-07T18:44:39",
+                      "doctorId": "118afd7d-3464-420a-93f0-8ce858c3e001",
+                      "doctorName": "M.H ANOWER",
+                      "doctorCode": "M14303026",
+                      "doctorHeadType": "PairDoctor",
+                      "subMarketId": "7041ff30-f8e9-48cd-ab92-b6fadad8d122",
+                      "subMarketCode": "M1430306",
+                      "subMarketName": "BRAC MARKET & MAZAR ROAD",
+                      "marketCode": "M14303",
+                      "marketName": "Uttara-11",
+                      "callLocation": "Head Quarter",
+                      "callShift": "Morning",
+                      "visitedWith": "AM",
+                      "comment": "",
+                      "hasPromotedBrands": true,
+                      "isJoinCall": true,
+                      "totalPromotedBrands": 5,
+                      "hasSeenPrescriptions": true,
+                      "totalPrescriptionsSeen": 15,
+                      "totalPrescriptionProducts": 5,
+                      "hasGivenWpmItems": true,
+                      "totalGivenWpmItems": 3,
+                      "callEntryLocation": "23.7466647,90.392663",
+                      "distanceFromDoctorLocation": "",
+                      "callExpenseType": "",
+                      "callExpenseAmount": 0,
+                      "promotedBrandList": [
+                          {
+                              "brandId": "505054bb-d3e8-45e8-9dde-59d9be2aece7",
+                              "brandCode": "ACT",
+                              "brandName": "ALCET",
+                              "isTargetBrand": false
+                          },
+                          {
+                              "brandId": "db7e3859-1b82-49f6-8df7-6a3f96dfc095",
+                              "brandCode": "DEN",
+                              "brandName": "DENVAR",
+                              "isTargetBrand": false
+                          },
+                          {
+                              "brandId": "f4377fbd-9a83-488b-88fe-baba62ec1370",
+                              "brandCode": "FTL",
+                              "brandName": "FUROTIL",
+                              "isTargetBrand": false
+                          },
+                          {
+                              "brandId": "a798432a-c074-438b-bfda-c673e5f24ded",
+                              "brandCode": "ABI",
+                              "brandName": "ABICON",
+                              "isTargetBrand": false
+                          },
+                          {
+                              "brandId": "77e99d30-20db-47b1-b306-42c1de8db888",
+                              "brandCode": "SER",
+                              "brandName": "SERGEL",
+                              "isTargetBrand": true
+                          }
+                      ],
+                      "prescriptionProductList": [
+                          {
+                              "productId": "4b464f62-4099-4048-ae09-00b7b8f9e371",
+                              "productCode": "12503",
+                              "productName": "ANDEP 25 MG TAB",
+                              "productStrength": "25 MG"
+                          },
+                          {
+                              "productId": "7b379f8b-05bb-4b95-ac5e-0232de2f3704",
+                              "productCode": "80100",
+                              "productName": "APEMILAST 10 MG TAB",
+                              "productStrength": "10 MG"
+                          },
+                          {
+                              "productId": "e99e3b06-adb9-4c50-a3c2-0072a802e64b",
+                              "productCode": "71101",
+                              "productName": "ZOVENTA 90MG/5ML PFS",
+                              "productStrength": "90MG/5ML"
+                          },
+                          {
+                              "productId": "6071b95f-8aaa-4b58-967e-014983a09bb1",
+                              "productCode": "42702",
+                              "productName": "EYEPHEN PLUS",
+                              "productStrength": "NULL"
+                          },
+                          {
+                              "productId": "dd36038f-1ea5-4ca0-86c5-01fe2784d4a9",
+                              "productCode": "22602",
+                              "productName": "ROXETIL 200 MG",
+                              "productStrength": "200 MG"
+                          }
+                      ],
+                      "wpmItemList": [
+                          {
+                              "wpmItemId": "00da151f-4319-41bd-be3f-ba4a4e1dfa14",
+                              "wpmItemName": "Jute Bag 2pcs combo",
+                              "wpmTypeId": "9eea89a9-e759-44e4-a1b0-b6b008efa676",
+                              "wpmTypeName": "Gadget",
+                              "qty": 4,
+                              "brandName": "ALCET"
+                          },
+                          {
+                              "wpmItemId": "0c8c2d0f-733d-4db4-8bfe-dbd941114fd8",
+                              "wpmItemName": "Spiral Medium Pad-CLD",
+                              "wpmTypeId": "08619ab1-101e-40e5-b270-f0751a71578e",
+                              "wpmTypeName": "Pad",
+                              "qty": 2,
+                              "brandName": "CLACIDO"
+                          },
+                          {
+                              "wpmItemId": "6fbb0059-3c17-493e-97a6-df5d09a0aa08",
+                              "wpmItemName": "Lifebuoy Hand Wash (2pcs)",
+                              "wpmTypeId": "9eea89a9-e759-44e4-a1b0-b6b008efa676",
+                              "wpmTypeName": "Gadget",
+                              "qty": 1,
+                              "brandName": "ALCET"
+                          }
+                      ],
+                      "isApproved": true,
+                      "approvedBy": "6153afe9-4e02-4f42-9c88-fd27ce13af5d",
+                      "approvalDate": "2024-07-07T18:44:45.073",
+                      "isRejected": false,
+                      "rejectedBy": null,
+                      "rejectedDate": null,
+                      "hasTransferred": false,
+                      "dcrImagePath": "http://103.111.126.11/DCRImage%2f72ad7193-c8c7-4b00-9323-7c9e9f3d78be_20240707184649519.jpg",
+                      "callEntryByName": "Md. Eilius Hosen",
+                      "callEntryByCode": "17802"
+                  }
+              ],
+              "statusCode": 200,
+              "statusMessage": "DCR history send successfully"
+          }

@@ -1,0 +1,83 @@
+meta {
+  name: GetPendingGroupDoctor
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{pulse_api}}/GroupDoctor/GetPendingGroupDoctor
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "UserId": "17801"
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: GetPendingGroupDoctor
+  
+  request: {
+    url: {{sales_pulse}}/GroupDoctor/GetPendingGroupDoctor
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "UserId": "17801"
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Transfer-Encoding: chunked
+      Content-Type: application/json; charset=utf-8
+      Server: Microsoft-IIS/10.0
+      X-Powered-By: ASP.NET
+      Date: Sun, 19 May 2024 11:03:27 GMT
+    }
+  
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "data": [
+                {
+                    "id": "b9ed53a3-1665-4920-b9f8-4256d4a7a343",
+                    "name": "John Doe",
+                    "code": "M25203108",
+                    "subMarketId": "9ffa6764-99c5-4a7c-b754-1618b5f73846",
+                    "instituteName": "RANGPUR (SADAR) UPAZILA HEALTH COMPLEX",
+                    "isGroupDoctor": true,
+                    "noOfGroupDoctor": 5,
+                    "headType": "OwnGroupDoctor",
+                    "marketCode": "M25203",
+                    "marketName": "Allardarga",
+                    "subMarketCode": "M2520301",
+                    "subMarketName": "ALLARDARGA",
+                    "teamId": "0a1b605c-4007-4c87-a7a5-36394a5f05ab",
+                    "teamCode": "Aviator",
+                    "teamName": "Aviator",
+                    "departmentId": "3bb4859f-79ef-4a43-bd89-2c225ab5f29d",
+                    "departmentCode": "RX",
+                    "departmentName": "Rx General"
+                }
+            ],
+            "statusCode": 200,
+            "statusMessage": "Pending Group Doctor Data Send Successfully!"
+        }
+      '''
+    }
+  }
+}

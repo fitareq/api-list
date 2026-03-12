@@ -1,0 +1,69 @@
+info:
+  name: UploadDoctorImage Copy
+  type: http
+  seq: 14
+
+http:
+  method: POST
+  url: "{{base_url}}/Doctor/UploadDoctorImage"
+  body:
+    type: multipart-form
+    data:
+      - name: doctorImageUpload[0].DoctorId
+        type: text
+        value: f06051ef-23e2-4a8f-9b2c-bdac9faed13f
+      - name: doctorImageUpload[0].NamePlate
+        type: file
+        value:
+          - postman-cloud:///1ef0b852-2b6b-4590-8714-bbed67a4992d
+      - name: doctorImageUpload[0].VisitingCard
+        type: file
+        value:
+          - postman-cloud:///1ef0b852-a970-4170-a272-bc24195d3ed3
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: UploadDoctorImage
+    request:
+      url: "{{sales_pulse}}/Doctor/UploadDoctorImage"
+      method: POST
+      body:
+        type: multipart-form
+        data:
+          - name: DoctorId
+            type: text
+            value: f06051ef-23e2-4a8f-9b2c-bdac9faed13f
+          - name: NamePlate
+            type: file
+            value:
+              - postman-cloud:///1eecbf51-0a88-4650-8c26-06983bec15a7
+          - name: VisitingCard
+            type: file
+            value:
+              - postman-cloud:///1eece2b7-e4ec-40b0-ae76-fd06cf0c6ca1
+    response:
+      statusText: "200"
+      headers:
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Server
+          value: Microsoft-IIS/10.0
+        - name: X-Powered-By
+          value: ASP.NET
+        - name: Date
+          value: Mon, 06 May 2024 08:31:48 GMT
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 200,
+              "statusMessage": "Doctor image upload successfully"
+          }

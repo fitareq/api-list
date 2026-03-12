@@ -1,0 +1,25 @@
+meta {
+  name: TourPlanApproval
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{pulse_api}}/TourPlan/TourPlanApproval
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "UserId": "17801",
+      "TourPlanId": "cbd810bf-cc05-46cd-9e39-3d8bf2ad9b3d",
+      "Flag": "new",
+      "Remarks": ""
+      //  //new,edit,reject
+  }
+}
+
+settings {
+  encodeUrl: true
+}

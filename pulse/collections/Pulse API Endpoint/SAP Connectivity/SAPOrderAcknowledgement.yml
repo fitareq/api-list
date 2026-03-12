@@ -1,0 +1,38 @@
+info:
+  name: SAPOrderAcknowledgement
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{pulse_api}}/Sap/SAPOrderAcknowledgement"
+  body:
+    type: json
+    data: "[\r
+
+      \    {\r
+
+      \        \"OrderNo\": \"50304022\"\r
+
+      \    },\r
+
+      \    {\r
+
+      \        \"OrderNo\": \"50304021\"\r
+
+      \    },\r
+
+      \     {\r
+
+      \        \"OrderNo\": \"50304023\"\r
+
+      \    }\r
+
+      ]"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

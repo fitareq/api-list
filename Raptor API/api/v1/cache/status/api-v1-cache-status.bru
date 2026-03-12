@@ -1,0 +1,58 @@
+meta {
+  name: /api/v1/cache/status
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/api/v1/cache/status
+  body: none
+  auth: inherit
+}
+
+headers {
+  Accept: text/plain
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: OK
+  
+  request: {
+    url: {{baseUrl}}/api/v1/cache/status
+    method: GET
+    mode: none
+    headers: {
+      Accept: text/plain
+      Authorization: Bearer <token>
+    }
+  }
+  
+  response: {
+    headers: {
+      Content-Type: application/json
+    }
+  
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+          "usedMemoryMB": "string",
+          "usedMemoryRssMB": "string",
+          "usedMemoryPeakMB": "string",
+          "usedMemoryDatasetMB": "string",
+          "totalSystemMemoryMB": "string",
+          "maxMemoryMB": "string"
+        }
+      '''
+    }
+  }
+}

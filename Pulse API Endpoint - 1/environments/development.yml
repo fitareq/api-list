@@ -1,0 +1,6 @@
+name: development
+variables:
+  - name: pulse_api
+    value: http://103.111.126.19/PulseAPI/api
+  - name: pulse_api_ssl
+    value: https://sandbox.hplpulse.com/PulseAPI/api

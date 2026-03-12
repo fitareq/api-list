@@ -1,0 +1,26 @@
+meta {
+  name: Update support as solved by admin
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{base_url}}/AdminSupport
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "support_id": "577",
+      "solve_comment": "test solve via postman",
+      "solver_emp_code": "31246",
+      "solver_name": "Md Ashraful Maruf Anik",
+      "solver_mail": "mdashraful.maruf@hpl.com.bd"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

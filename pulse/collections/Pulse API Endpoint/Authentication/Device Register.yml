@@ -1,0 +1,97 @@
+info:
+  name: Device Register
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: "{{pulse_api}}/login/DeviceSessionRegister"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"AppVersion\": \"1.0.1\",\r
+
+      \    \"BearerToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyTmFtZSI6Ik1kLiBTYWlkdXIgUmFobWFuIiwiRW1wbG95ZWVDb2RlIjoiMTc4MDEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJNSU8iLCJEZXBhcnRtZW50Q29kZSI6IlJYIiwiVGVhbUNvZGUiOiJBVklBVE9SIiwiVHlwZSI6Im9mZmljZXIiLCJleHAiOjE3MzQ4NDI0OTMsImlzcyI6IlNhbGVzUHVsc2VBUEkiLCJhdWQiOiJIUEwtTUlTIn0.YWyV1fgDMOy_GBlALj30RU4TRRkMXdKxPfQvjo6XkMQ\",\r
+
+      \    \"DeviceFCMToken\": \"d8q90cq3QVCLR9NRpPGZTO:APA91bEknaqxltgsBGWcrVmWjt-hUC03K8pCQUWi9cmqxPieXW7M_tde_N7tA1Nw9tLxlCZkEBPIA83JPWPDFpzDtIcmsqj4jEMVZbpjsGGhRERa0cUs6ncYhn_N9HOSifFqf28jYCh7\",\r
+
+      \    \"DeviceId\": \"7b5dd1aa01c168ee\",\r
+
+      \    \"DeviceInfo\": \"m11q | samsung | SM-M115F\",\r
+
+      \    \"DeviceLocation\": \"\",\r
+
+      \    \"DeviceType\": \"Android\",\r
+
+      \    \"SessionRemarks\": \"Login Session\",\r
+
+      \    \"SessionTime\": \"2024-09-23 10:41:34\",\r
+
+      \    \"SessionType\": \"Login\",\r
+
+      \    \"UserId\": \"17801\"\r
+
+      }"
+  auth:
+    type: bearer
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyTmFtZSI6Ik1kLiBTYWlkdXIgUmFobWFuIiwiRW1wbG95ZWVDb2RlIjoiMTc4MDEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJNSU8iLCJEZXBhcnRtZW50Q29kZSI6IlJYIiwiVGVhbUNvZGUiOiJBVklBVE9SIiwiVHlwZSI6Im9mZmljZXIiLCJleHAiOjE3MzQ4NDI0OTMsImlzcyI6IlNhbGVzUHVsc2VBUEkiLCJhdWQiOiJIUEwtTUlTIn0.YWyV1fgDMOy_GBlALj30RU4TRRkMXdKxPfQvjo6XkMQ
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Device Register_Example
+    request:
+      url: "{{pulse_api}}/login/DeviceSessionRegister"
+      method: POST
+      body:
+        type: json
+        data: "{\r
+
+          \    \"UserId\": \"17803\",\r
+
+          \    \"BearerToken\" : \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyTmFtZSI6Ik1kLiBTYWlkdXIgUmFobWFuIiwiRW1wbG95ZWVDb2RlIjoiMTc4MDEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJNSU8iLCJleHAiOjE3MDYyNjMyMzgsImlzcyI6IlNhbGVzUHVsc2VBUEkiLCJhdWQiOiJIUEwtTUlTIn0.ltSYeLfaM7Qsu7Qhl_bJ02PJ5_kOvv9mzNeJVGbIRWU\",\r
+
+          \    \"DeviceType\": \"Android\",\r
+
+          \    \"DeviceInfo\": \"SM-A12f\",\r
+
+          \    \"DeviceId\": \"testid123\",\r
+
+          \    \"DeviceFCMToken\": \"testFcmToken123\",\r
+
+          \    \"SessionType\": \"Login\", //if logout then check value 'Logout'\r
+
+          \    \"SessionTime\": \"2023-12-17 11:20:10\", //if logout then also check this value\r
+
+          \    \"SessionRemarks\": \"Login Session\",\r
+
+          \    \"DeviceLocation\": \"23.123123,24.123123\",\r
+
+          \    \"AppVersion\": \"0.0.1\"\r
+
+          }"
+    response:
+      statusText: "200"
+      headers:
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Server
+          value: Microsoft-IIS/10.0
+        - name: X-Powered-By
+          value: ASP.NET
+        - name: Date
+          value: Tue, 16 Jul 2024 03:40:17 GMT
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 200,
+              "statusMessage": "Device and Session information saved successfully"
+          }

@@ -1,0 +1,76 @@
+meta {
+  name: /api/v1/areas/:thanaCode
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/api/v1/areas/:thanaCode
+  body: none
+  auth: inherit
+}
+
+params:path {
+  thanaCode: 7994
+}
+
+headers {
+  Accept: text/plain
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: OK
+  
+  request: {
+    url: {{baseUrl}}/api/v1/areas/:thanaCode
+    method: GET
+    mode: none
+    params:path: {
+      thanaCode: 7994
+    }
+  
+    headers: {
+      Accept: text/plain
+      Authorization: Bearer <token>
+    }
+  }
+  
+  response: {
+    headers: {
+      Content-Type: application/json
+    }
+  
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+          "data": [
+            {
+              "id": "877bcb9f-8922-ea33-d035-bbaf1f3da068",
+              "code": 2853,
+              "name": "string",
+              "thanaCode": 4396
+            },
+            {
+              "id": "0152e03c-b2ba-c763-e541-fa472701231b",
+              "code": 5964,
+              "name": "string",
+              "thanaCode": 1321
+            }
+          ],
+          "statusCode": 4634,
+          "statusMessage": "string"
+        }
+      '''
+    }
+  }
+}

@@ -1,0 +1,249 @@
+meta {
+  name: Get SubMarket
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{pulse_api}}/Basic/GetSubMarket
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyTmFtZSI6Ik1kLiBBdGlxdWwgSXNsYW0iLCJFbXBsb3llZUNvZGUiOiIxMDQwOCIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IlNNSU8iLCJEZXBhcnRtZW50Q29kZSI6IlJYIiwiVGVhbUNvZGUiOiJWRU5UVVJFIiwiVHlwZSI6Im9mZmljZXIiLCJleHAiOjE3NjM0NDA5NDcsImlzcyI6IlNhbGVzUHVsc2VBUEkiLCJhdWQiOiJIUEwtTUlTIn0.r2cx1WtEJTIPZ4CccmAfYodQv5BdhriY9nNVjn0LiiE
+}
+
+body:json {
+  {
+      "LastSyncDate": "",
+      "UserId": "10408"
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: Get SubMarket_Example
+  
+  request: {
+    url: {{pulse_api}}/Basic/GetSubMarket
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "UserId": "17802",
+          "LastSyncDate": "2023-12-17 11:20:10" //user last downloaded brand data at this time; //for first time download this value will be 'null' 
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Transfer-Encoding: chunked
+      Content-Type: application/json; charset=utf-8
+      Server: Microsoft-IIS/10.0
+      X-Powered-By: ASP.NET
+      Date: Tue, 16 Jul 2024 03:43:13 GMT
+    }
+  
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "data": [
+                {
+                    "subMarketId": "2031ee3b-c9f5-4d05-9643-4be568b5ece1",
+                    "subMarketCode": "M1430304",
+                    "subMarketName": "SECTOR-4",
+                    "subMarketDescription": "UTTARA-11",
+                    "subMarketAddress": "SECTOR-4",
+                    "subMarketLat": null,
+                    "subMarketLon": null,
+                    "baseMarketId": "9ee263f0-897e-443c-9f7d-2f7318fa7c51",
+                    "baseMarketCode": "M14303",
+                    "baseMarketName": "Uttara-11",
+                    "subMarketType": "PairMarket",
+                    "departmentCode": "RX",
+                    "departmentName": "Rx General",
+                    "teamCode": "Venture",
+                    "teamName": "Venture",
+                    "isActive": true
+                },
+                {
+                    "subMarketId": "ea0b9252-e0c5-4ee1-8666-55b950af30d6",
+                    "subMarketCode": "M1430301",
+                    "subMarketName": "SAPPORO DENTAL COLLEGE",
+                    "subMarketDescription": "UTTARA-11",
+                    "subMarketAddress": "SAPPORO DENTAL COLLEGE",
+                    "subMarketLat": null,
+                    "subMarketLon": null,
+                    "baseMarketId": "9ee263f0-897e-443c-9f7d-2f7318fa7c51",
+                    "baseMarketCode": "M14303",
+                    "baseMarketName": "Uttara-11",
+                    "subMarketType": "PairMarket",
+                    "departmentCode": "RX",
+                    "departmentName": "Rx General",
+                    "teamCode": "Venture",
+                    "teamName": "Venture",
+                    "isActive": true
+                },
+                {
+                    "subMarketId": "059815d0-7e72-4a9b-a880-5a481dc851a7",
+                    "subMarketCode": "M1430303",
+                    "subMarketName": "POPULAR DIAGNOSTIC CENTRE",
+                    "subMarketDescription": "UTTARA-11",
+                    "subMarketAddress": "POPULAR DIAGNOSTIC CENTRE",
+                    "subMarketLat": null,
+                    "subMarketLon": null,
+                    "baseMarketId": "9ee263f0-897e-443c-9f7d-2f7318fa7c51",
+                    "baseMarketCode": "M14303",
+                    "baseMarketName": "Uttara-11",
+                    "subMarketType": "PairMarket",
+                    "departmentCode": "RX",
+                    "departmentName": "Rx General",
+                    "teamCode": "Venture",
+                    "teamName": "Venture",
+                    "isActive": true
+                },
+                {
+                    "subMarketId": "01b243ea-037e-47f6-8a7f-9982b15a2e12",
+                    "subMarketCode": "M1430305",
+                    "subMarketName": "SECTOR- 6",
+                    "subMarketDescription": "UTTARA-11",
+                    "subMarketAddress": "SECTOR- 6",
+                    "subMarketLat": null,
+                    "subMarketLon": null,
+                    "baseMarketId": "9ee263f0-897e-443c-9f7d-2f7318fa7c51",
+                    "baseMarketCode": "M14303",
+                    "baseMarketName": "Uttara-11",
+                    "subMarketType": "PairMarket",
+                    "departmentCode": "RX",
+                    "departmentName": "Rx General",
+                    "teamCode": "Venture",
+                    "teamName": "Venture",
+                    "isActive": true
+                },
+                {
+                    "subMarketId": "7041ff30-f8e9-48cd-ab92-b6fadad8d122",
+                    "subMarketCode": "M1430306",
+                    "subMarketName": "BRAC MARKET & MAZAR ROAD",
+                    "subMarketDescription": "UTTARA-11",
+                    "subMarketAddress": "BRAC MARKET & MAZAR ROAD",
+                    "subMarketLat": null,
+                    "subMarketLon": null,
+                    "baseMarketId": "9ee263f0-897e-443c-9f7d-2f7318fa7c51",
+                    "baseMarketCode": "M14303",
+                    "baseMarketName": "Uttara-11",
+                    "subMarketType": "PairMarket",
+                    "departmentCode": "RX",
+                    "departmentName": "Rx General",
+                    "teamCode": "Venture",
+                    "teamName": "Venture",
+                    "isActive": true
+                },
+                {
+                    "subMarketId": "37994795-7ade-44de-99b8-cc79b4d0808f",
+                    "subMarketCode": "M1430302",
+                    "subMarketName": "BRAC CLINIC",
+                    "subMarketDescription": "UTTARA-11",
+                    "subMarketAddress": "BRAC CLINIC",
+                    "subMarketLat": null,
+                    "subMarketLon": null,
+                    "baseMarketId": "9ee263f0-897e-443c-9f7d-2f7318fa7c51",
+                    "baseMarketCode": "M14303",
+                    "baseMarketName": "Uttara-11",
+                    "subMarketType": "PairMarket",
+                    "departmentCode": "RX",
+                    "departmentName": "Rx General",
+                    "teamCode": "Venture",
+                    "teamName": "Venture",
+                    "isActive": true
+                },
+                {
+                    "subMarketId": "42323aef-7404-4ac3-9a07-810d921ea03e",
+                    "subMarketCode": "M7250101",
+                    "subMarketName": "AMC (AICHI MEDICAL COLLEGE HOSPITAL) THANA HEALTH COMPLEX",
+                    "subMarketDescription": "UTTARA-E",
+                    "subMarketAddress": "AMC (AICHI MEDICAL COLLEGE HOSPITAL) THANA HEALTH COMPLEX",
+                    "subMarketLat": null,
+                    "subMarketLon": null,
+                    "baseMarketId": "37a91a83-b2b9-4dc8-8cea-4b0979f4576d",
+                    "baseMarketCode": "M72501",
+                    "baseMarketName": "KBFGH-2",
+                    "subMarketType": "OwnMarket",
+                    "departmentCode": "RX",
+                    "departmentName": "Rx General",
+                    "teamCode": "Aviator",
+                    "teamName": "Aviator",
+                    "isActive": true
+                },
+                {
+                    "subMarketId": "c3f899cf-82e8-415d-9371-81fb54c38f8f",
+                    "subMarketCode": "M7250102",
+                    "subMarketName": "test sub market 2 edit",
+                    "subMarketDescription": "test",
+                    "subMarketAddress": "test",
+                    "subMarketLat": 23.7463874,
+                    "subMarketLon": 90.3920897,
+                    "baseMarketId": "37a91a83-b2b9-4dc8-8cea-4b0979f4576d",
+                    "baseMarketCode": "M72501",
+                    "baseMarketName": "KBFGH-2",
+                    "subMarketType": "OwnMarket",
+                    "departmentCode": "RX",
+                    "departmentName": "Rx General",
+                    "teamCode": "Aviator",
+                    "teamName": "Aviator",
+                    "isActive": true
+                },
+                {
+                    "subMarketId": "5b729b80-5d76-4b1a-b0fb-a748edd1f04a",
+                    "subMarketCode": "M7250103",
+                    "subMarketName": "test sub market 1",
+                    "subMarketDescription": "test",
+                    "subMarketAddress": "test",
+                    "subMarketLat": 23.7463748,
+                    "subMarketLon": 90.3920738,
+                    "baseMarketId": "37a91a83-b2b9-4dc8-8cea-4b0979f4576d",
+                    "baseMarketCode": "M72501",
+                    "baseMarketName": "KBFGH-2",
+                    "subMarketType": "OwnMarket",
+                    "departmentCode": "RX",
+                    "departmentName": "Rx General",
+                    "teamCode": "Aviator",
+                    "teamName": "Aviator",
+                    "isActive": true
+                },
+                {
+                    "subMarketId": "23c4de62-90ec-4693-808c-d39c01681944",
+                    "subMarketCode": "M7250104",
+                    "subMarketName": "test sub market 1",
+                    "subMarketDescription": "test",
+                    "subMarketAddress": "test",
+                    "subMarketLat": 23.7463748,
+                    "subMarketLon": 90.3920738,
+                    "baseMarketId": "37a91a83-b2b9-4dc8-8cea-4b0979f4576d",
+                    "baseMarketCode": "M72501",
+                    "baseMarketName": "KBFGH-2",
+                    "subMarketType": "OwnMarket",
+                    "departmentCode": "RX",
+                    "departmentName": "Rx General",
+                    "teamCode": "Aviator",
+                    "teamName": "Aviator",
+                    "isActive": true
+                }
+            ],
+            "statusCode": 200,
+            "statusMessage": "SubMarket Data Send Successfully!"
+        }
+      '''
+    }
+  }
+}

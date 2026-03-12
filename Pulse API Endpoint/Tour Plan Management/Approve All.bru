@@ -1,0 +1,21 @@
+meta {
+  name: Approve All
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{pulse_api}}/TourPlan/AllTourPlanApproval
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "UserId": "13025"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

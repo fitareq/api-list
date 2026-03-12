@@ -1,0 +1,21 @@
+meta {
+  name: ForTokenUnAuthorizeByAdmin
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://103.111.126.15/SalesPulseAPI/api/Basic/Unauthorized
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+      "JwtToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyTmFtZSI6Ik1kLiBSaXBvbiBBbGkiLCJFbXBsb3llZUNvZGUiOiIxNTIwNCIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6Ik1JTyIsIkRlcGFydG1lbnRDb2RlIjoiUlgiLCJUZWFtQ29kZSI6IkF2aWF0b3IiLCJUeXBlIjoib2ZmaWNlciIsImV4cCI6MTcwODA1MjMyNiwiaXNzIjoiU2FsZXNQdWxzZUFQSSIsImF1ZCI6IkhQTC1NSVMifQ.cQaXCGgNuUs9ZEV7C9Fp4N9ySswy-AhOaXrV_JLusdk"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

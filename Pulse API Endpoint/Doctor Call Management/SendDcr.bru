@@ -1,0 +1,239 @@
+meta {
+  name: SendDcr
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{pulse_api}}/DCR/SendDcr
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyTmFtZSI6Ik1kLiBTYWlkdXIgUmFobWFuIiwiRW1wbG95ZWVDb2RlIjoiMTc4MDEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJNSU8iLCJEZXBhcnRtZW50Q29kZSI6IlJYIiwiVGVhbUNvZGUiOiJBVklBVE9SIiwiVHlwZSI6Im9mZmljZXIiLCJleHAiOjE3MzM4MDg1NTQsImlzcyI6IlNhbGVzUHVsc2VBUEkiLCJhdWQiOiJIUEwtTUlTIn0.3Cqn1AOV4Xf5l5sIKBom7xBD9JyBg4mQG4gGrA9c-WU
+}
+
+body:json {
+  [
+      {
+          "approvalDate": "",
+          "approvedBy": "",
+          "CallEntryBy": "17801",
+          "callEntryByCode": "",
+          "callEntryByName": "",
+          "CallEntryDate": "2024-09-11 11:35:01",
+          "CallEntryLocation": "23.7464988,90.3921863",
+          "CallExpenseAmount": 0,
+          "CallExpenseType": "",
+          "CallLocation": "Head Quarter",
+          "CallNumber": 0,
+          "CallShift": "Afternoon",
+          "Comment": "",
+          "dcrImagePath": "",
+          "DistanceFromDoctorLocation": "",
+          "doctorCode": "M25203002",
+          "DoctorHeadType": "OwnDoctor",
+          "DoctorId": "e53ee8fb-b451-4070-9072-621d614407a7",
+          "doctorName": "NASIMA AKTAR",
+          "hadCallExpense": false,
+          "HasGivenWpmItems": false,
+          "HasPromotedBrands": false,
+          "HasSeenPrescriptions": false,
+          "hasTransferred": false,
+          "ID": "",
+          "isApproved": false,
+          "IsJoinCall": false,
+          "isRejected": false,
+          "LocalDcrId": 2,
+          "marketCode": "",
+          "marketName": "",
+          "prescriptionProductList": [],
+          "promotedBrandList": [],
+          "rejectedBy": "",
+          "rejectedDate": "",
+          "subMarketCode": "",
+          "SubMarketId": "5313a392-6d17-434a-8c86-391c6c008411",
+          "subMarketName": "",
+          "TotalGivenWpmItems": 0,
+          "TotalPrescriptionProducts": 0,
+          "TotalPrescriptionsSeen": 0,
+          "TotalPromotedBrands": 0,
+          "VisitedWith": "",
+          "WpmItemList": []
+      },
+      {
+          "approvalDate": "",
+          "approvedBy": "",
+          "CallEntryBy": "17801",
+          "callEntryByCode": "",
+          "callEntryByName": "",
+          "CallEntryDate": "2024-09-11 11:35:14",
+          "CallEntryLocation": "23.7464988,90.3921863",
+          "CallExpenseAmount": 0,
+          "CallExpenseType": "",
+          "CallLocation": "Head Quarter",
+          "CallNumber": 0,
+          "CallShift": "Morning",
+          "Comment": "",
+          "dcrImagePath": "",
+          "DistanceFromDoctorLocation": "",
+          "doctorCode": "M25203015",
+          "DoctorHeadType": "OwnDoctor",
+          "DoctorId": "8e50a325-03e1-4a7f-bdee-a00c4e3937d9",
+          "doctorName": "SIMSON BISWAS ( KHOKON)",
+          "hadCallExpense": false,
+          "HasGivenWpmItems": false,
+          "HasPromotedBrands": false,
+          "HasSeenPrescriptions": false,
+          "hasTransferred": false,
+          "ID": "",
+          "isApproved": false,
+          "IsJoinCall": false,
+          "isRejected": false,
+          "LocalDcrId": 3,
+          "marketCode": "",
+          "marketName": "",
+          "prescriptionProductList": [],
+          "promotedBrandList": [],
+          "rejectedBy": "",
+          "rejectedDate": "",
+          "subMarketCode": "",
+          "SubMarketId": "5313a392-6d17-434a-8c86-391c6c008411",
+          "subMarketName": "",
+          "TotalGivenWpmItems": 0,
+          "TotalPrescriptionProducts": 0,
+          "TotalPrescriptionsSeen": 0,
+          "TotalPromotedBrands": 0,
+          "VisitedWith": "",
+          "WpmItemList": []
+      }
+  ]
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: SendDcr_success_body
+  
+  request: {
+    url: {{pulse_api}}/DCR/SendDcr
+    method: POST
+    mode: json
+    body:json: {
+      [
+          {
+              "CallEntryBy": "17802",
+              "CallEntryDate": "2024-06-05 14:39:19",
+              "CallEntryLocation": "23.7464791,90.3922251",
+              "CallExpenseAmount": 200,
+              "CallExpenseType": "test",
+              "CallLocation": "Head Quarter",
+              "CallNumber": 0,
+              "CallShift": "Morning",
+              "Comment": "",
+              "dcrImagePath": "content://media/external/images/media/1000009696",
+              "DistanceFromDoctorLocation": "",
+              "doctorCode": "M14303026",
+              "DoctorHeadType": "PairDoctor",
+              "DoctorId": "118afd7d-3464-420a-93f0-8ce858c3e001",
+              "doctorName": "M.H ANOWER",
+              "hadCallExpense": true,
+              "HasGivenWpmItems": true,
+              "HasPromotedBrands": true,
+              "HasSeenPrescriptions": true,
+              "IsJoinCall": true,
+              "LocalDcrId": 0,
+              "prescriptionProductList": [
+                  {
+                      "productCode": "80141",
+                      "ProductId": "e245b398-f12f-4f59-b019-05ce581c7afe",
+                      "productName": "D-VINE 20000 IU CAP",
+                      "productStrength": "20000IU"
+                  },
+                  {
+                      "productCode": "16401",
+                      "ProductId": "36ad5668-452a-49b8-91b4-0c7a63791c55",
+                      "productName": "ROZITH 250 MG TAB",
+                      "productStrength": "250 MG"
+                  },
+                  {
+                      "productCode": "80113",
+                      "ProductId": "8fc0f6c9-5185-44ca-bbeb-1ec862784650",
+                      "productName": "FUROTIL 1.5 GM IV INJ (N)",
+                      "productStrength": "1.5 GM"
+                  },
+                  {
+                      "productCode": "80172",
+                      "ProductId": "e8550b71-4254-44fc-a581-0f0fe88baa18",
+                      "productName": "SERGEL MUPS 40MG TAB",
+                      "productStrength": "40 MG"
+                  }
+              ],
+              "promotedBrandList": [
+                  {
+                      "brandCode": "ACT",
+                      "BrandId": "505054bb-d3e8-45e8-9dde-59d9be2aece7",
+                      "brandName": "ALCET"
+                  },
+                  {
+                      "brandCode": "ARN",
+                      "BrandId": "b2b60d33-601e-4744-9903-46e9971a32b9",
+                      "brandName": "AERON"
+                  },
+                  {
+                      "brandCode": "CLD",
+                      "BrandId": "24b4e46f-35d2-4049-92bb-1a322843d1eb",
+                      "brandName": "CLACIDO"
+                  }
+              ],
+              "SubMarketId": "7041ff30-f8e9-48cd-ab92-b6fadad8d122",
+              "TotalGivenWpmItems": 5,
+              "TotalPrescriptionProducts": 4,
+              "TotalPrescriptionsSeen": 5,
+              "TotalPromotedBrands": 3,
+              "VisitedWith": "SM, DM, AM",
+              "WpmItemList": [
+                  {
+                      "Qty": 2,
+                      "WpmTypeId": "1c3193a6-595a-451a-b855-02fc4a29c6be",
+                      "wpmTypeName": "Aid"
+                  },
+                  {
+                      "Qty": 3,
+                      "WpmTypeId": "480ae6a3-d8d1-42e9-af03-0366c9f455f0",
+                      "wpmTypeName": "Ins GD Outer Carton"
+                  },
+                  {
+                      "Qty": 5,
+                      "WpmTypeId": "3e151a74-1c51-4123-b380-152895e56089",
+                      "wpmTypeName": "Calendar"
+                  },
+                  {
+                      "Qty": 6,
+                      "WpmTypeId": "6985991a-c408-4dc2-a850-6a7da0503213",
+                      "wpmTypeName": "Ins Pad"
+                  },
+                  {
+                      "Qty": 7,
+                      "WpmTypeId": "2444f59c-cf53-4723-a584-b0a499be5609",
+                      "wpmTypeName": "Ins Gadget"
+                  }
+              ]
+          }
+      ]
+      
+    }
+  }
+  
+  response: {
+    body: {
+      type: text
+      content: '''
+  
+      '''
+    }
+  }
+}

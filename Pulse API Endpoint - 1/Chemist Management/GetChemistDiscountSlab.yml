@@ -1,0 +1,467 @@
+info:
+  name: GetChemistDiscountSlab
+  type: http
+  seq: 7
+
+http:
+  method: POST
+  url: "{{pulse_api}}/SAP/GetChemistDiscountSlab"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"UserId\" :\"17827\",\r
+
+      \    \"Month\" : \"11\",\r
+
+      \    \"Year\":\"2024\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: GetChemistDiscountSlab
+    request:
+      url: "{{pulse_api}}/SAP/GetChemistDiscountSlab"
+      method: POST
+      body:
+        type: json
+        data: "{\r
+
+          \    \"UserId\" :\"12137\",\r
+
+          \    \"Month\" : \"04\",\r
+
+          \    \"Year\":\"2022\"\r
+
+          }"
+    response:
+      statusText: "200"
+      headers:
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Server
+          value: Microsoft-IIS/10.0
+        - name: X-Powered-By
+          value: ASP.NET
+        - name: Date
+          value: Tue, 22 Oct 2024 11:07:41 GMT
+      body:
+        type: json
+        data: |-
+          {
+              "data": [
+                  {
+                      "chemistCode": "0100003",
+                      "chemistName": "Jahanur Medicine Suplier",
+                      "invoiceAmount": 15550.61,
+                      "eligibleAmount": 13020.81
+                  },
+                  {
+                      "chemistCode": "0100061",
+                      "chemistName": "Howladar Medical Hall",
+                      "invoiceAmount": 25961.7,
+                      "eligibleAmount": 19790.09
+                  },
+                  {
+                      "chemistCode": "0100279",
+                      "chemistName": "Badsha Medical Hall",
+                      "invoiceAmount": 1988.93,
+                      "eligibleAmount": 749.62
+                  },
+                  {
+                      "chemistCode": "0101756",
+                      "chemistName": "Brothers Medical Hall",
+                      "invoiceAmount": 2094.55,
+                      "eligibleAmount": 1184.41
+                  },
+                  {
+                      "chemistCode": "0102109",
+                      "chemistName": "Momotaj Medical Hall",
+                      "invoiceAmount": 7559.7,
+                      "eligibleAmount": 5914.57
+                  },
+                  {
+                      "chemistCode": "0102515",
+                      "chemistName": "Shefa Drug House",
+                      "invoiceAmount": 53428.35,
+                      "eligibleAmount": 42304.71
+                  },
+                  {
+                      "chemistCode": "0102860",
+                      "chemistName": "Momota Clinic (Barisal)",
+                      "invoiceAmount": 53993.47,
+                      "eligibleAmount": 44226.07
+                  },
+                  {
+                      "chemistCode": "0103243",
+                      "chemistName": "Ahad Medical Hall",
+                      "invoiceAmount": 20470.61,
+                      "eligibleAmount": 16901.09
+                  },
+                  {
+                      "chemistCode": "0103281",
+                      "chemistName": "Nirota Medical Hall",
+                      "invoiceAmount": 101246.15,
+                      "eligibleAmount": 80002.46
+                  },
+                  {
+                      "chemistCode": "0103321",
+                      "chemistName": "Fare Health Clinic (Barisal)",
+                      "invoiceAmount": 14309.64,
+                      "eligibleAmount": 9771.51
+                  },
+                  {
+                      "chemistCode": "0104378",
+                      "chemistName": "Jit Medical Hall",
+                      "invoiceAmount": 255273.21,
+                      "eligibleAmount": 210088.97
+                  },
+                  {
+                      "chemistCode": "0104487",
+                      "chemistName": "Abdur Razzak Medical hall",
+                      "invoiceAmount": 174251.56,
+                      "eligibleAmount": 142074.99
+                  },
+                  {
+                      "chemistCode": "0104725",
+                      "chemistName": "Tanu Medical Hall",
+                      "invoiceAmount": 126051.63,
+                      "eligibleAmount": 100077.64
+                  },
+                  {
+                      "chemistCode": "0105505",
+                      "chemistName": "A.R Medicine Mart",
+                      "invoiceAmount": 64531.12,
+                      "eligibleAmount": 50645.23
+                  },
+                  {
+                      "chemistCode": "0106904",
+                      "chemistName": "Polly Chikishaloy",
+                      "invoiceAmount": 8290.15,
+                      "eligibleAmount": 7061.46
+                  },
+                  {
+                      "chemistCode": "0107012",
+                      "chemistName": "Ma Medical Hall",
+                      "invoiceAmount": 3828.26,
+                      "eligibleAmount": 3260.86
+                  },
+                  {
+                      "chemistCode": "0107228",
+                      "chemistName": "J.S Medicine Mart",
+                      "invoiceAmount": 139207.63,
+                      "eligibleAmount": 104561.41
+                  },
+                  {
+                      "chemistCode": "0109337",
+                      "chemistName": "Munsi Pharmacy",
+                      "invoiceAmount": 2992.2,
+                      "eligibleAmount": 2548.72
+                  },
+                  {
+                      "chemistCode": "0109363",
+                      "chemistName": "Sharthok Medical Hall",
+                      "invoiceAmount": 51201.81,
+                      "eligibleAmount": 37479.46
+                  },
+                  {
+                      "chemistCode": "0109578",
+                      "chemistName": "Dipu Medical Hall",
+                      "invoiceAmount": 2112.14,
+                      "eligibleAmount": 1799.1
+                  },
+                  {
+                      "chemistCode": "0111128",
+                      "chemistName": "Hamim Medical Hall (M)",
+                      "invoiceAmount": 59343.4,
+                      "eligibleAmount": 46638.08
+                  },
+                  {
+                      "chemistCode": "0111284",
+                      "chemistName": "Dr.Md.Shafiqul Islam",
+                      "invoiceAmount": 23427.08,
+                      "eligibleAmount": 19415.4
+                  },
+                  {
+                      "chemistCode": "0111502",
+                      "chemistName": "Jahan Pharmacy (Kalibari Road)",
+                      "invoiceAmount": 15224.98,
+                      "eligibleAmount": 12854.49
+                  },
+                  {
+                      "chemistCode": "0111630",
+                      "chemistName": "Nusrat Medicine Conner",
+                      "invoiceAmount": 36360.04,
+                      "eligibleAmount": 26018.7
+                  },
+                  {
+                      "chemistCode": "0111747",
+                      "chemistName": "Khondokar Pharmacy",
+                      "invoiceAmount": 16589.1,
+                      "eligibleAmount": 13634.79
+                  },
+                  {
+                      "chemistCode": "0111766",
+                      "chemistName": "Bismilla Medical Hall (M)",
+                      "invoiceAmount": 12034.96,
+                      "eligibleAmount": 8463.26
+                  },
+                  {
+                      "chemistCode": "0111769",
+                      "chemistName": "Rupa Medical Hall ( N )",
+                      "invoiceAmount": 2112.14,
+                      "eligibleAmount": 1799.1
+                  },
+                  {
+                      "chemistCode": "0111809",
+                      "chemistName": "Hasan Drugs House",
+                      "invoiceAmount": 15876.25,
+                      "eligibleAmount": 13418.99
+                  },
+                  {
+                      "chemistCode": "0112241",
+                      "chemistName": "Hawladar Medical Hall",
+                      "invoiceAmount": 9777.46,
+                      "eligibleAmount": 5884.55
+                  },
+                  {
+                      "chemistCode": "0112360",
+                      "chemistName": "Shorif Pharma",
+                      "invoiceAmount": 3833.51,
+                      "eligibleAmount": 3265.35
+                  },
+                  {
+                      "chemistCode": "0112361",
+                      "chemistName": "Abdullah pharmacy",
+                      "invoiceAmount": 3537.83,
+                      "eligibleAmount": 2593.7
+                  },
+                  {
+                      "chemistCode": "0112362",
+                      "chemistName": "Shikder Medical Hall",
+                      "invoiceAmount": 6160.41,
+                      "eligibleAmount": 5247.37
+                  },
+                  {
+                      "chemistCode": "0112672",
+                      "chemistName": "Shikder Medical Hall",
+                      "invoiceAmount": 15876.32,
+                      "eligibleAmount": 13417.89
+                  },
+                  {
+                      "chemistCode": "0113007",
+                      "chemistName": "Gazi Medical Hall",
+                      "invoiceAmount": 3168.21,
+                      "eligibleAmount": 2173.91
+                  },
+                  {
+                      "chemistCode": "0113008",
+                      "chemistName": "Islamia Medical Hall",
+                      "invoiceAmount": 9975.48,
+                      "eligibleAmount": 8497
+                  },
+                  {
+                      "chemistCode": "0113009",
+                      "chemistName": "Mahbub Medical Hall",
+                      "invoiceAmount": 10120.67,
+                      "eligibleAmount": 8620.68
+                  },
+                  {
+                      "chemistCode": "0113155",
+                      "chemistName": "ASHIK MEDICAL HALL",
+                      "invoiceAmount": 5412.36,
+                      "eligibleAmount": 1949.03
+                  },
+                  {
+                      "chemistCode": "0113203",
+                      "chemistName": "Shad Medicine Shop",
+                      "invoiceAmount": 188302.12,
+                      "eligibleAmount": 142274.66
+                  },
+                  {
+                      "chemistCode": "0113581",
+                      "chemistName": "MAA MEDICINE",
+                      "invoiceAmount": 1232.08,
+                      "eligibleAmount": 524.74
+                  },
+                  {
+                      "chemistCode": "0113646",
+                      "chemistName": "BARISHAL METRO POLITON HOSPITAL",
+                      "invoiceAmount": 9275.82,
+                      "eligibleAmount": 6851.55
+                  },
+                  {
+                      "chemistCode": "0113918",
+                      "chemistName": "KHAN PHARMACY",
+                      "invoiceAmount": 18379.17,
+                      "eligibleAmount": 13952.78
+                  },
+                  {
+                      "chemistCode": "0114184",
+                      "chemistName": "JAHANARA MEDICINE CORNER",
+                      "invoiceAmount": 9025.88,
+                      "eligibleAmount": 6788.6
+                  },
+                  {
+                      "chemistCode": "0114214",
+                      "chemistName": "CHOUDHURI MEDICAL HALL",
+                      "invoiceAmount": 1311.3,
+                      "eligibleAmount": 1116.95
+                  },
+                  {
+                      "chemistCode": "0114215",
+                      "chemistName": "ALL SINHA MEDICINE CORNER(N)",
+                      "invoiceAmount": 1452.1,
+                      "eligibleAmount": 1236.88
+                  },
+                  {
+                      "chemistCode": "0114216",
+                      "chemistName": "MS KHAN MEDICAL HALL",
+                      "invoiceAmount": 5456.36,
+                      "eligibleAmount": 4647.67
+                  },
+                  {
+                      "chemistCode": "0114308",
+                      "chemistName": "SHIKDER PHARMACY",
+                      "invoiceAmount": 15005.01,
+                      "eligibleAmount": 12658.7
+                  },
+                  {
+                      "chemistCode": "0114673",
+                      "chemistName": "AFZAL DROUG HOUSE",
+                      "invoiceAmount": 633.63,
+                      "eligibleAmount": 539.73
+                  },
+                  {
+                      "chemistCode": "0114846",
+                      "chemistName": "Family Pharma",
+                      "invoiceAmount": 3238.6,
+                      "eligibleAmount": 2758.62
+                  },
+                  {
+                      "chemistCode": "0114870",
+                      "chemistName": "KHAN DRUG HOUSE",
+                      "invoiceAmount": 20461.36,
+                      "eligibleAmount": 17053.97
+                  },
+                  {
+                      "chemistCode": "0114872",
+                      "chemistName": "HAZI PHARMACY",
+                      "invoiceAmount": 1056.07,
+                      "eligibleAmount": 899.55
+                  },
+                  {
+                      "chemistCode": "0114874",
+                      "chemistName": "MA MEDICAL HALL (N)",
+                      "invoiceAmount": 8395.75,
+                      "eligibleAmount": 6776.61
+                  },
+                  {
+                      "chemistCode": "0114952",
+                      "chemistName": "BISMILLAH MEDICAL HALL",
+                      "invoiceAmount": 4277.1,
+                      "eligibleAmount": 3643.17
+                  },
+                  {
+                      "chemistCode": "0115030",
+                      "chemistName": "ABU SALE MEDICAL HALL",
+                      "invoiceAmount": 7348.49,
+                      "eligibleAmount": 6259.37
+                  },
+                  {
+                      "chemistCode": "0115231",
+                      "chemistName": "MREDHA MEDICAL CORNER",
+                      "invoiceAmount": 616.04,
+                      "eligibleAmount": 524.74
+                  },
+                  {
+                      "chemistCode": "0115240",
+                      "chemistName": "TARIKA MEDICAL HALL",
+                      "invoiceAmount": 1179.27,
+                      "eligibleAmount": 1004.49
+                  },
+                  {
+                      "chemistCode": "0115743",
+                      "chemistName": "MEDICINE GARDEN",
+                      "invoiceAmount": 8633.38,
+                      "eligibleAmount": 7353.82
+                  },
+                  {
+                      "chemistCode": "0115865",
+                      "chemistName": "Dr.Abul Kalam Biswas",
+                      "invoiceAmount": 90026.34,
+                      "eligibleAmount": 76493.85
+                  },
+                  {
+                      "chemistCode": "0115906",
+                      "chemistName": "HASIB MEDICAL HALL",
+                      "invoiceAmount": 1029.66,
+                      "eligibleAmount": 877.06
+                  },
+                  {
+                      "chemistCode": "0115923",
+                      "chemistName": "DIGITAL MEDICAL HALL",
+                      "invoiceAmount": 1056.07,
+                      "eligibleAmount": 899.55
+                  },
+                  {
+                      "chemistCode": "0116026",
+                      "chemistName": "ASA Bukhainagar Health Center",
+                      "invoiceAmount": 5399.15,
+                      "eligibleAmount": 0
+                  },
+                  {
+                      "chemistCode": "0116175",
+                      "chemistName": "ATIKAH DRUG HOUSE(Natullahbad)",
+                      "invoiceAmount": 1452.1,
+                      "eligibleAmount": 1236.88
+                  },
+                  {
+                      "chemistCode": "0116177",
+                      "chemistName": "SKY TUCH MEDISHOP",
+                      "invoiceAmount": 2296.95,
+                      "eligibleAmount": 0
+                  },
+                  {
+                      "chemistCode": "0116253",
+                      "chemistName": "Shirsho Medicine Corner",
+                      "invoiceAmount": 1056.07,
+                      "eligibleAmount": 899.55
+                  },
+                  {
+                      "chemistCode": "0116272",
+                      "chemistName": "ERA DRUG HOUSE",
+                      "invoiceAmount": 396.03,
+                      "eligibleAmount": 0
+                  },
+                  {
+                      "chemistCode": "0116337",
+                      "chemistName": "MUSLIM PHARMACY",
+                      "invoiceAmount": 4664.31,
+                      "eligibleAmount": 3973.01
+                  },
+                  {
+                      "chemistCode": "0116583",
+                      "chemistName": "MA MEDICAL HALL AND SURGICAL",
+                      "invoiceAmount": 1056.07,
+                      "eligibleAmount": 0
+                  },
+                  {
+                      "chemistCode": "0116619",
+                      "chemistName": "Dr. Asif al Mukit",
+                      "invoiceAmount": 17821.35,
+                      "eligibleAmount": 0
+                  }
+              ],
+              "statusCode": 200,
+              "message": "Chemist wise Discount Slab get successfully"
+          }

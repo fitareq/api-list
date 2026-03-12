@@ -1,0 +1,137 @@
+meta {
+  name: /api/v1/user/update-delivery-address
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/api/v1/user/update-delivery-address
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "deliveryAddresses": [
+      {
+        "addressLabel": "string",
+        "addressLineOne": "string",
+        "addressLineTwo": "string",
+        "thanaCode": "string",
+        "districtCode": "string",
+        "contactNumber": "string",
+        "isDefaultAddress": true,
+        "lat": 5920.524520891968,
+        "lon": 8010.316589604374,
+        "geoAddress": "string",
+        "depotId": "string",
+        "thanaName": "string",
+        "districtName": "string",
+        "depotName": "string",
+        "addressId": "string",
+        "areaCode": "string",
+        "areaName": "string"
+      },
+      {
+        "addressLabel": "string",
+        "addressLineOne": "string",
+        "addressLineTwo": "string",
+        "thanaCode": "string",
+        "districtCode": "string",
+        "contactNumber": "string",
+        "isDefaultAddress": true,
+        "lat": 586.8581076691859,
+        "lon": 4109.352160267561,
+        "geoAddress": "string",
+        "depotId": "string",
+        "thanaName": "string",
+        "districtName": "string",
+        "depotName": "string",
+        "addressId": "string",
+        "areaCode": "string",
+        "areaName": "string"
+      }
+    ]
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: OK
+  
+  request: {
+    url: {{baseUrl}}/api/v1/user/update-delivery-address
+    method: POST
+    mode: json
+    headers: {
+      Content-Type: application/json
+      Authorization: Bearer <token>
+    }
+  
+    body:json: {
+      {
+        "deliveryAddresses": [
+          {
+            "addressLabel": "string",
+            "addressLineOne": "string",
+            "addressLineTwo": "string",
+            "thanaCode": "string",
+            "districtCode": "string",
+            "contactNumber": "string",
+            "isDefaultAddress": true,
+            "lat": 5920.524520891968,
+            "lon": 8010.316589604374,
+            "geoAddress": "string",
+            "depotId": "string",
+            "thanaName": "string",
+            "districtName": "string",
+            "depotName": "string",
+            "addressId": "string",
+            "areaCode": "string",
+            "areaName": "string"
+          },
+          {
+            "addressLabel": "string",
+            "addressLineOne": "string",
+            "addressLineTwo": "string",
+            "thanaCode": "string",
+            "districtCode": "string",
+            "contactNumber": "string",
+            "isDefaultAddress": true,
+            "lat": 586.8581076691859,
+            "lon": 4109.352160267561,
+            "geoAddress": "string",
+            "depotId": "string",
+            "thanaName": "string",
+            "districtName": "string",
+            "depotName": "string",
+            "addressId": "string",
+            "areaCode": "string",
+            "areaName": "string"
+          }
+        ]
+      }
+    }
+  }
+  
+  response: {
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: text
+      content: '''
+  
+      '''
+    }
+  }
+}

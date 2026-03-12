@@ -1,0 +1,67 @@
+meta {
+  name: /api/v1/notification/send
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/api/v1/notification/send
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "userId": "string",
+    "title": "string",
+    "body": "string",
+    "imageUrl": "string",
+    "type": "string"
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: OK
+  
+  request: {
+    url: {{baseUrl}}/api/v1/notification/send
+    method: POST
+    mode: json
+    headers: {
+      Content-Type: application/json
+      Authorization: Bearer <token>
+    }
+  
+    body:json: {
+      {
+        "userId": "string",
+        "title": "string",
+        "body": "string",
+        "imageUrl": "string",
+        "type": "string"
+      }
+    }
+  }
+  
+  response: {
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: text
+      content: '''
+  
+      '''
+    }
+  }
+}

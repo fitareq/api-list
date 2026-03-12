@@ -1,0 +1,27 @@
+meta {
+  name: Get WPM Data From SAP
+  type: http
+  seq: 1
+}
+
+get {
+  url: http://hs4cidev.hpl.com.bd:8000/zapidemo/webapidemo?POST_TYPE=PULSEWPM&ORG=60000145&MON=SEPTEMBER&YEAR=2022
+  body: none
+  auth: basic
+}
+
+params:query {
+  POST_TYPE: PULSEWPM
+  ORG: 60000145
+  MON: SEPTEMBER
+  YEAR: 2022
+}
+
+auth:basic {
+  username: 30106
+  password: 157285
+}
+
+settings {
+  encodeUrl: true
+}

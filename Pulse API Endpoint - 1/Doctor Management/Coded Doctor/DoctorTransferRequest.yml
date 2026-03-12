@@ -1,0 +1,75 @@
+info:
+  name: DoctorTransferRequest
+  type: http
+  seq: 9
+
+http:
+  method: POST
+  url: "{{pulse_api}}/Doctor/DoctorTransferRequest"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"UserId\": \"17801\",\r
+
+      \    \"DoctorId\": \"\",\r
+
+      \    \"SubMarketId\": \"27E22490-52C6-453A-ACCC-575EF70D4B60\",\r
+
+      \    \"Remarks\":\"Reason for transfer\",\r
+
+      \    \"Lat\": \"23.7464815\",\r
+
+      \    \"Lon\": \"23.7464815\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: DoctorTransferRequest_Example
+    request:
+      url: "{{pulse_api}}/Doctor/DoctorTransferRequest"
+      method: POST
+      body:
+        type: json
+        data: "{\r
+
+          \    \"UserId\": \"17801\",\r
+
+          \    \"DoctorId\": \"\",\r
+
+          \    \"SubMarketId\": \"27E22490-52C6-453A-ACCC-575EF70D4B60\",\r
+
+          \    \"Remarks\":\"Reason for transfer\",\r
+
+          \    \"Lat\": \"23.7464815\",\r
+
+          \    \"Lon\": \"23.7464815\"\r
+
+          }"
+    response:
+      statusText: "200"
+      headers:
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Server
+          value: Microsoft-IIS/10.0
+        - name: X-Powered-By
+          value: ASP.NET
+        - name: Date
+          value: Tue, 16 Jul 2024 04:24:36 GMT
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 404,
+              "statusMessage": "User ID,Doctor ID, SubMarket ID required, please try again"
+          }

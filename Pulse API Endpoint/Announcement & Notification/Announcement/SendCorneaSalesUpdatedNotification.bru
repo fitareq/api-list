@@ -1,0 +1,19 @@
+meta {
+  name: SendCorneaSalesUpdatedNotification
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{pulse_api}}/Announcement/SendCorneaSalesUpdatedNotification?body="test"
+  body: json
+  auth: inherit
+}
+
+params:query {
+  body: "test"
+}
+
+settings {
+  encodeUrl: true
+}

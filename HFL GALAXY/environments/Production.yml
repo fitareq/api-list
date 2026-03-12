@@ -1,0 +1,6 @@
+name: Production
+variables:
+  - name: base_url
+    value: http://103.111.126.10/PulseAPI/api
+  - secret: true
+    name: token

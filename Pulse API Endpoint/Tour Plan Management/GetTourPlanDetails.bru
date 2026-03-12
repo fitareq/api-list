@@ -1,0 +1,315 @@
+meta {
+  name: GetTourPlanDetails
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{pulse_api}}/TourPlan/GetTourPlanDetails
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyTmFtZSI6Ik1kLiBTYWlkdXIgUmFobWFuIiwiRW1wbG95ZWVDb2RlIjoiMTc4MDEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJNSU8iLCJEZXBhcnRtZW50Q29kZSI6IlJYIiwiVGVhbUNvZGUiOiJBVklBVE9SIiwiVHlwZSI6Im9mZmljZXIiLCJleHAiOjE3NDc3MzQ5MDQsImlzcyI6IlNhbGVzUHVsc2VBUEkiLCJhdWQiOiJIUEwtTUlTIn0.-TnIe_cAjMMCGUi5J_XrhDxz0CDwbfr5LkqXIYnhcVQ
+}
+
+body:json {
+  {
+      "UserId": "03111",
+      "TourPlanMonth" : 1,
+      "TourPlanYear" : 2026
+  }
+  
+  
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: GetTourPlanDetails_Example
+  
+  request: {
+    url: {{pulse_api}}/TourPlan/GetTourPlanDetails
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "UserId": "17801"
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Transfer-Encoding: chunked
+      Content-Type: application/json; charset=utf-8
+      Server: Microsoft-IIS/10.0
+      X-Powered-By: ASP.NET
+      Date: Tue, 16 Jul 2024 05:07:43 GMT
+    }
+  
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "data": [
+                {
+                    "id": "3b1890ab-c24c-42dd-be09-93f1533d0d6d",
+                    "planCode": "Plan-0715-17801-Morning",
+                    "planEntryBy": "2a53a317-1328-498f-8272-7307c1eb0159",
+                    "planEntryDateTime": "2024-07-15T00:00:00",
+                    "planYear": "2024",
+                    "planMonth": "7",
+                    "planDay": "15",
+                    "planLocation": "Head-Quarter",
+                    "planSession": "Morning",
+                    "planEditCount": 0,
+                    "planStatus": 0,
+                    "isApproved": false,
+                    "approvedBy": null,
+                    "approvalDate": null,
+                    "isRejected": false,
+                    "rejectedBy": null,
+                    "planModifiedBy": null,
+                    "rejectedDate": null,
+                    "planModificationDateTime": "2024-07-15T10:52:44.103",
+                    "tourPlanSubMarketGeoFenceInfos": [
+                        {
+                            "subMarketId": "9ffa6764-99c5-4a7c-b754-1618b5f73846",
+                            "subMarketName": "ALLARDARGA",
+                            "subMarketCode": "M2520301",
+                            "subMarketHeadType": "Pair",
+                            "geoFenceId": "fdcc827a-7d4e-4f40-958e-9dbcfa765208",
+                            "geoFenceCode": "G-0000002",
+                            "recordDate": "2024-07-15T00:00:00",
+                            "entryTime": "2024-07-15T17:00:00",
+                            "entryLocation": "23.7473546,90.3923474",
+                            "exitTime": "2024-07-15T18:00:00",
+                            "exitLocation": "23.7473546,90.3923474",
+                            "dwellDurationInMinute": 60,
+                            "hasSentEntryNotification": true,
+                            "hasSentExitNotification": true,
+                            "hasTouchedGeoFencePoint": true
+                        },
+                        {
+                            "subMarketId": "9aba4bfe-3ecb-4fdb-95ce-0718cb524baf",
+                            "subMarketName": "VAGJAT BA",
+                            "subMarketCode": "M6061709",
+                            "subMarketHeadType": "Own",
+                            "geoFenceId": "5bd281ce-38de-498c-b78b-b5a103b993b1",
+                            "geoFenceCode": "G-0000001",
+                            "recordDate": "2024-07-14T00:00:00",
+                            "entryTime": "2024-07-14T10:05:00",
+                            "entryLocation": "23.7473546,90.3923474",
+                            "exitTime": "2024-07-14T11:05:00",
+                            "exitLocation": "23.7473546,90.3923474",
+                            "dwellDurationInMinute": 60,
+                            "hasSentEntryNotification": true,
+                            "hasSentExitNotification": true,
+                            "hasTouchedGeoFencePoint": true
+                        }
+                    ],
+                    "planEntryByName": "Md. Saidur Rahman",
+                    "approvedByName": null,
+                    "rejectedByName": null,
+                    "planModifiedByName": null
+                },
+                {
+                    "id": "c756fcb5-273b-42f5-bb0a-dfecc4d76f06",
+                    "planCode": "Plan-0715-17801-Evening",
+                    "planEntryBy": "2a53a317-1328-498f-8272-7307c1eb0159",
+                    "planEntryDateTime": "2024-07-15T00:00:00",
+                    "planYear": "2024",
+                    "planMonth": "7",
+                    "planDay": "15",
+                    "planLocation": "Head-Quarter",
+                    "planSession": "Evening",
+                    "planEditCount": 0,
+                    "planStatus": 0,
+                    "isApproved": false,
+                    "approvedBy": null,
+                    "approvalDate": null,
+                    "isRejected": false,
+                    "rejectedBy": null,
+                    "planModifiedBy": null,
+                    "rejectedDate": null,
+                    "planModificationDateTime": null,
+                    "tourPlanSubMarketGeoFenceInfos": [
+                        {
+                            "subMarketId": "9aba4bfe-3ecb-4fdb-95ce-0718cb524baf",
+                            "subMarketName": "VAGJAT BA",
+                            "subMarketCode": "M6061709",
+                            "subMarketHeadType": "Own",
+                            "geoFenceId": "5bd281ce-38de-498c-b78b-b5a103b993b1",
+                            "geoFenceCode": "G-0000001",
+                            "recordDate": "2024-07-14T00:00:00",
+                            "entryTime": "2024-07-14T10:05:00",
+                            "entryLocation": "23.7473546,90.3923474",
+                            "exitTime": "2024-07-14T11:05:00",
+                            "exitLocation": "23.7473546,90.3923474",
+                            "dwellDurationInMinute": 60,
+                            "hasSentEntryNotification": true,
+                            "hasSentExitNotification": true,
+                            "hasTouchedGeoFencePoint": true
+                        },
+                        {
+                            "subMarketId": "9ffa6764-99c5-4a7c-b754-1618b5f73846",
+                            "subMarketName": "ALLARDARGA",
+                            "subMarketCode": "M2520301",
+                            "subMarketHeadType": "Pair",
+                            "geoFenceId": "fdcc827a-7d4e-4f40-958e-9dbcfa765208",
+                            "geoFenceCode": "G-0000002",
+                            "recordDate": "2024-07-15T00:00:00",
+                            "entryTime": "2024-07-15T17:00:00",
+                            "entryLocation": "23.7473546,90.3923474",
+                            "exitTime": "2024-07-15T18:00:00",
+                            "exitLocation": "23.7473546,90.3923474",
+                            "dwellDurationInMinute": 60,
+                            "hasSentEntryNotification": true,
+                            "hasSentExitNotification": true,
+                            "hasTouchedGeoFencePoint": true
+                        }
+                    ],
+                    "planEntryByName": "Md. Saidur Rahman",
+                    "approvedByName": null,
+                    "rejectedByName": null,
+                    "planModifiedByName": null
+                },
+                {
+                    "id": "386f6eef-96c1-49f4-8e60-2d6683063123",
+                    "planCode": "Plan-0714-17801-Morning",
+                    "planEntryBy": "2a53a317-1328-498f-8272-7307c1eb0159",
+                    "planEntryDateTime": "2024-07-14T00:00:00",
+                    "planYear": "2024",
+                    "planMonth": "7",
+                    "planDay": "14",
+                    "planLocation": "Head-Quarter",
+                    "planSession": "Morning",
+                    "planEditCount": 0,
+                    "planStatus": 0,
+                    "isApproved": false,
+                    "approvedBy": null,
+                    "approvalDate": null,
+                    "isRejected": false,
+                    "rejectedBy": null,
+                    "planModifiedBy": null,
+                    "rejectedDate": null,
+                    "planModificationDateTime": null,
+                    "tourPlanSubMarketGeoFenceInfos": [
+                        {
+                            "subMarketId": "9aba4bfe-3ecb-4fdb-95ce-0718cb524baf",
+                            "subMarketName": "VAGJAT BA",
+                            "subMarketCode": "M6061709",
+                            "subMarketHeadType": "Own",
+                            "geoFenceId": "5bd281ce-38de-498c-b78b-b5a103b993b1",
+                            "geoFenceCode": "G-0000001",
+                            "recordDate": "2024-07-14T00:00:00",
+                            "entryTime": "2024-07-14T10:05:00",
+                            "entryLocation": "23.7473546,90.3923474",
+                            "exitTime": "2024-07-14T11:05:00",
+                            "exitLocation": "23.7473546,90.3923474",
+                            "dwellDurationInMinute": 60,
+                            "hasSentEntryNotification": true,
+                            "hasSentExitNotification": true,
+                            "hasTouchedGeoFencePoint": true
+                        },
+                        {
+                            "subMarketId": "9ffa6764-99c5-4a7c-b754-1618b5f73846",
+                            "subMarketName": "ALLARDARGA",
+                            "subMarketCode": "M2520301",
+                            "subMarketHeadType": "Pair",
+                            "geoFenceId": "fdcc827a-7d4e-4f40-958e-9dbcfa765208",
+                            "geoFenceCode": "G-0000002",
+                            "recordDate": "2024-07-15T00:00:00",
+                            "entryTime": "2024-07-15T17:00:00",
+                            "entryLocation": "23.7473546,90.3923474",
+                            "exitTime": "2024-07-15T18:00:00",
+                            "exitLocation": "23.7473546,90.3923474",
+                            "dwellDurationInMinute": 60,
+                            "hasSentEntryNotification": true,
+                            "hasSentExitNotification": true,
+                            "hasTouchedGeoFencePoint": true
+                        }
+                    ],
+                    "planEntryByName": "Md. Saidur Rahman",
+                    "approvedByName": null,
+                    "rejectedByName": null,
+                    "planModifiedByName": null
+                },
+                {
+                    "id": "e2828c9e-f8ad-4ebd-b589-f2c94ef8093a",
+                    "planCode": "Plan-0714-17801-Evening",
+                    "planEntryBy": "2a53a317-1328-498f-8272-7307c1eb0159",
+                    "planEntryDateTime": "2024-07-14T00:00:00",
+                    "planYear": "2024",
+                    "planMonth": "7",
+                    "planDay": "14",
+                    "planLocation": "Head-Quarter",
+                    "planSession": "Evening",
+                    "planEditCount": 0,
+                    "planStatus": 0,
+                    "isApproved": false,
+                    "approvedBy": null,
+                    "approvalDate": null,
+                    "isRejected": false,
+                    "rejectedBy": null,
+                    "planModifiedBy": null,
+                    "rejectedDate": null,
+                    "planModificationDateTime": null,
+                    "tourPlanSubMarketGeoFenceInfos": [
+                        {
+                            "subMarketId": "9ffa6764-99c5-4a7c-b754-1618b5f73846",
+                            "subMarketName": "ALLARDARGA",
+                            "subMarketCode": "M2520301",
+                            "subMarketHeadType": "Pair",
+                            "geoFenceId": "fdcc827a-7d4e-4f40-958e-9dbcfa765208",
+                            "geoFenceCode": "G-0000002",
+                            "recordDate": "2024-07-15T00:00:00",
+                            "entryTime": "2024-07-15T17:00:00",
+                            "entryLocation": "23.7473546,90.3923474",
+                            "exitTime": "2024-07-15T18:00:00",
+                            "exitLocation": "23.7473546,90.3923474",
+                            "dwellDurationInMinute": 60,
+                            "hasSentEntryNotification": true,
+                            "hasSentExitNotification": true,
+                            "hasTouchedGeoFencePoint": true
+                        },
+                        {
+                            "subMarketId": "9aba4bfe-3ecb-4fdb-95ce-0718cb524baf",
+                            "subMarketName": "VAGJAT BA",
+                            "subMarketCode": "M6061709",
+                            "subMarketHeadType": "Own",
+                            "geoFenceId": "5bd281ce-38de-498c-b78b-b5a103b993b1",
+                            "geoFenceCode": "G-0000001",
+                            "recordDate": "2024-07-14T00:00:00",
+                            "entryTime": "2024-07-14T10:05:00",
+                            "entryLocation": "23.7473546,90.3923474",
+                            "exitTime": "2024-07-14T11:05:00",
+                            "exitLocation": "23.7473546,90.3923474",
+                            "dwellDurationInMinute": 60,
+                            "hasSentEntryNotification": true,
+                            "hasSentExitNotification": true,
+                            "hasTouchedGeoFencePoint": true
+                        }
+                    ],
+                    "planEntryByName": "Md. Saidur Rahman",
+                    "approvedByName": null,
+                    "rejectedByName": null,
+                    "planModifiedByName": null
+                }
+            ],
+            "statusCode": 200,
+            "statusMessage": "Tour plan details gets successfully"
+        }
+      '''
+    }
+  }
+}

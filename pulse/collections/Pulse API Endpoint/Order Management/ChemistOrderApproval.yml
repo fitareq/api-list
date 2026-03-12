@@ -1,0 +1,67 @@
+info:
+  name: ChemistOrderApproval
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: "{{pulse_api}}/Chemist/ChemistOrderApproval"
+  body:
+    type: json
+    data: "{\r
+
+      \  \"ChemistOrderId\": \"cccd09bc-99c3-49cd-bc3a-b4db843013c4\",\r
+
+      \  \"UserId\": \"00836\",\r
+
+      \  \"Comment\": \"\",\r
+
+      \  \"Flag\": \"approve\" //approve, //reject\r
+
+      }\r\n"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: ChemistOrderApproval_Example
+    request:
+      url: "{{pulse_api}}/Chemist/ChemistOrderApproval"
+      method: POST
+      body:
+        type: json
+        data: "{\r
+
+          \  \"ChemistOrderId\": \"cccd09bc-99c3-49cd-bc3a-b4db843013c4\",\r
+
+          \  \"UserId\": \"\",\r
+
+          \  \"Comment\": \"\",\r
+
+          \  \"Flag\": \"approve\" //approve, //reject\r
+
+          }\r\n"
+    response:
+      statusText: "200"
+      headers:
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Server
+          value: Microsoft-IIS/10.0
+        - name: X-Powered-By
+          value: ASP.NET
+        - name: Date
+          value: Tue, 16 Jul 2024 04:05:15 GMT
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 404,
+              "statusMessage": "User ID, Chemist Order ID, Flag required, please try again"
+          }

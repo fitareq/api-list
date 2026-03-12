@@ -1,0 +1,81 @@
+info:
+  name: GetAnnouncementDetails
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{pulse_api}}/Announcement/GetAnnouncementDetails"
+  body:
+    type: json
+    data: "{\r\n    \"UserId\": \"17801\"\r\n}"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: GetAnnouncementDetails_Example
+    request:
+      url: "{{pulse_api}}/Announcement/GetAnnouncementDetails"
+      method: POST
+      body:
+        type: json
+        data: "{\r\n    \"UserId\": \"17802\"\r\n}"
+    response:
+      statusText: "200"
+      headers:
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Server
+          value: Microsoft-IIS/10.0
+        - name: X-Powered-By
+          value: ASP.NET
+        - name: Date
+          value: Tue, 16 Jul 2024 05:11:11 GMT
+      body:
+        type: json
+        data: |-
+          {
+              "data": [
+                  {
+                      "id": "a854426a-b4c3-4bf6-bd5a-90c44a7ef2f0",
+                      "code": "A00003",
+                      "announcementCategoryId": "3e116ea7-c131-467b-85ee-1f3f950c398a",
+                      "announcementCategory": "Holiday ",
+                      "title": "Holiday on account of Muharram (Ashura)",
+                      "details": "Dear All Members of Healthcare Family,\r\nPlease be informed that, as per management decision; Corporate Head Office will remain closed on July 17, 2024; Wednesday on account of Muharram (Ashura).\r\nThe Office will resume on July 18, 2024, Thursday after the vacation. We request all the Department Heads to communicate this to their team members. Sales, Manufacturing Plant and Healthcare Distribution will follow their own schedule.\r\n",
+                      "bannerImagePath": "http://103.111.126.11/BannerImage%5Ca854426a-b4c3-4bf6-bd5a-90c44a7ef2f0_Holiday%20on%20account%20of%20Muharram%20%28Ashura%29_20240714_151521.png",
+                      "attachmentPath": null,
+                      "externalLink": null,
+                      "remarks": "Holiday ",
+                      "comment": "test live",
+                      "isExpired": false,
+                      "expireEffectDate": "2024-07-25T15:26:00",
+                      "creationDate": "2024-07-14T15:15:21.897"
+                  },
+                  {
+                      "id": "f30ec6a8-935f-47d1-b795-9854e8c90e9b",
+                      "code": "A00002",
+                      "announcementCategoryId": "118de262-778b-4ef7-bb75-4e749941c4f2",
+                      "announcementCategory": "Generel Notice",
+                      "title": "Test Title for API",
+                      "details": "?? Ready to Accelerate Your Career to CEO? \r\n\r\nOur Agile Leadership Development Program is designed to fast-track talented individuals from officer roles to CEO positions in just ? years!\r\n\r\nCurious to know the magic number? Stay tuned and find out today at 8:30 PM! ???\r\n\r\nDon’t miss out on this game-changing opportunity to leapfrog your career and become the next leader at Akij Resource.",
+                      "bannerImagePath": "http://103.111.126.11/BannerImage%5Cf30ec6a8-935f-47d1-b795-9854e8c90e9b_Test%20Title%20for%20API_20240714_144750.png",
+                      "attachmentPath": "http://103.111.126.11/Attachment%5Cf30ec6a8-935f-47d1-b795-9854e8c90e9b_Test%20Title%20for%20API_20240714_144750.pdf",
+                      "externalLink": "http://192.168.8.139/SalesPulseWeb/Announcement/Create",
+                      "remarks": "Test Remarks",
+                      "comment": null,
+                      "isExpired": false,
+                      "expireEffectDate": "2024-07-20T14:46:00",
+                      "creationDate": "2024-07-14T14:47:50.497"
+                  }
+              ],
+              "statusCode": 200,
+              "statusMessage": "Announcement data get successfully!"
+          }

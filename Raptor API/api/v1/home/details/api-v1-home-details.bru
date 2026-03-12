@@ -1,0 +1,56 @@
+meta {
+  name: /api/v1/home/details
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/api/v1/home/details?UserId=c866f99f-7771-425a-8b60-a410128bc8b3&DeliveryAddressId=98C4B09A-EAA8-4CEE-9829-52946B78DAAE
+  body: json
+  auth: bearer
+}
+
+params:query {
+  UserId: c866f99f-7771-425a-8b60-a410128bc8b3
+  DeliveryAddressId: 98C4B09A-EAA8-4CEE-9829-52946B78DAAE
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjODY2Zjk5Zi03NzcxLTQyNWEtOGI2MC1hNDEwMTI4YmM4YjMiLCJtb2JpbGUiOiIwMTMxMzc4NTczOSIsImp0aSI6IjBjY2M3YWNhLTg5OTAtNDk5Mi1hZTM0LWY0ZGMyYjg3MDZmZiIsImV4cCI6MTc3NDM0MjE1OSwiaXNzIjoiSFBMLUV4cHJlc3MiLCJhdWQiOiJIUEwtRXhwcmVzcy1Vc2VycyJ9._OHqbQveCt-_3aeEIvYXYzKRWOKuvvYiWZVpOkKWSNY
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: OK
+  
+  request: {
+    url: {{baseUrl}}/api/v1/home/details?UserId=string&DeliveryAddressId=a41daf79-8670-a0fb-280a-8f8430b1676b
+    method: GET
+    mode: none
+    params:query: {
+      UserId: string
+      DeliveryAddressId: a41daf79-8670-a0fb-280a-8f8430b1676b
+    }
+  
+    headers: {
+      Authorization: Bearer <token>
+    }
+  }
+  
+  response: {
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: text
+      content: '''
+  
+      '''
+    }
+  }
+}

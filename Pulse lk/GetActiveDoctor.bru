@@ -1,0 +1,25 @@
+meta {
+  name: GetActiveDoctor
+  type: http
+  seq: 5
+}
+
+post {
+  url: http://192.168.51.220/PulseLK/api/Basic/GetActiveDoctor
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyTmFtZSI6IkguTC5TVVJBTkdBIFNBTUFSQVNJTkdIQSIsIkVtcGxveWVlQ29kZSI6IjA4OTUiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJNUiIsIkRlcGFydG1lbnRDb2RlIjoiR0VORVJBTCIsIlRlYW1Db2RlIjoiR0VORVJBTCIsIlR5cGUiOiJvZmZpY2VyIiwiZXhwIjoxNzY1MjgwNDM2LCJpc3MiOiJTYWxlc1B1bHNlQVBJIiwiYXVkIjoiSFBMLU1JUyJ9.YmkYhCkGWtBUCLTEXeWYsyvKLaIjZbXLnS8nwiJ3olg
+}
+
+body:json {
+  {
+      "UserId": "0895"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

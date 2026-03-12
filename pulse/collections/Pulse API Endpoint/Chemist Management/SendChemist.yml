@@ -1,0 +1,165 @@
+info:
+  name: SendChemist
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{pulse_api}}/Chemist/SendChemistList"
+  body:
+    type: multipart-form
+    data:
+      - name: chemistDataList[0].Id
+        type: text
+        value: ""
+      - name: chemistDataList[0].ImageUri
+        type: file
+        value:
+          - postman-cloud:///1ef31d41-27ac-4c00-a245-81438d4dd9cf
+      - name: chemistDataList[0].Name
+        type: text
+        value: Dada Medical Hall
+      - name: chemistDataList[0].DepotCode
+        type: text
+        value: "04"
+      - name: chemistDataList[0].CreatedBy
+        type: text
+        value: "31422"
+      - name: chemistDataList[0].creationDate
+        type: text
+        value: 2024-09-05 10:25:25
+      - name: chemistDataList[0].DepotId
+        type: text
+        value: df19b90c-fb39-4682-831e-5a14a9f79b25
+      - name: chemistDataList[0].SubMarketId
+        type: text
+        value: 6368c082-68b5-4880-ae5e-a239f77e536d
+      - name: chemistDataList[0].ThanaCode
+        type: text
+        value: "219"
+      - name: chemistDataList[0].DistrictCode
+        type: text
+        value: "26"
+      - name: chemistDataList[0].DivisionCode
+        type: text
+        value: "10"
+        disabled: true
+      - name: chemistDataList[0].Lat
+        type: text
+        value: "23.746496"
+      - name: chemistDataList[0].Lon
+        type: text
+        value: "90.39216"
+      - name: chemistDataList[0].Remarks
+        type: text
+        value: test
+        disabled: true
+      - name: chemistDataList[0].Mobile
+        type: text
+        value: "01780228535"
+      - name: chemistDataList[0].Email
+        type: text
+        value: ""
+      - name: chemistDataList[0].Address
+        type: text
+        value: Bypass road, Laksham
+      - name: chemistDataList[0].DrugLicenceNumber
+        type: text
+        value: ""
+      - name: chemistDataList[0].ChemistStatus
+        type: text
+        value: "0"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: SendChemist_Example
+    request:
+      url: "{{pulse_api}}/Chemist/SendChemistList"
+      method: POST
+      body:
+        type: multipart-form
+        data:
+          - name: chemistDataList[0].Id
+            type: text
+            value: ""
+          - name: chemistDataList[0].ImageUri
+            type: file
+            value:
+              - postman-cloud:///1ef31d41-27ac-4c00-a245-81438d4dd9cf
+          - name: chemistDataList[0].Name
+            type: text
+            value: 23 June test
+          - name: chemistDataList[0].DepotCode
+            type: text
+            value: "22"
+          - name: chemistDataList[0].CreatedBy
+            type: text
+            value: "17802"
+          - name: chemistDataList[0].creationDate
+            type: text
+            value: 23/06/2024
+          - name: chemistDataList[0].DepotId
+            type: text
+            value: "12345"
+          - name: chemistDataList[0].SubMarketId
+            type: text
+            value: 2031ee3b-c9f5-4d05-9643-4be568b5ece1
+          - name: chemistDataList[0].ThanaCode
+            type: text
+            value: "56"
+          - name: chemistDataList[0].DistrictCode
+            type: text
+            value: "46"
+          - name: chemistDataList[0].DivisionCode
+            type: text
+            value: "10"
+          - name: chemistDataList[0].Lat
+            type: text
+            value: "10"
+          - name: chemistDataList[0].Lon
+            type: text
+            value: "20"
+          - name: chemistDataList[0].Remarks
+            type: text
+            value: test
+          - name: chemistDataList[0].Mobile
+            type: text
+            value: "012"
+          - name: chemistDataList[0].Email
+            type: text
+            value: niloy
+          - name: chemistDataList[0].Address
+            type: text
+            value: test
+          - name: chemistDataList[0].DrugLicenceNumber
+            type: text
+            value: "12345"
+          - name: chemistDataList[0].ChemistStatus
+            type: text
+            value: "0"
+    response:
+      statusText: "200"
+      headers:
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Server
+          value: Microsoft-IIS/10.0
+        - name: X-Powered-By
+          value: ASP.NET
+        - name: Date
+          value: Tue, 16 Jul 2024 03:52:23 GMT
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 404,
+              "statusMessage": "Unrecognized Guid format.System.Private.CoreLib   at System.Guid.GuidResult.SetFailure(ParseFailure failureKind)\r\n   at System.Guid.TryParseGuid(ReadOnlySpan`1 guidString, GuidResult& result)\r\n   at System.Guid.Parse(ReadOnlySpan`1 input)\r\n   at SalesPulse.API.Controllers.ChemistController.SendChemistList(List`1 chemistDataList) in D:\\HPL-GIT\\Sales Pulse Project Work-2024\\SalesPulse_API\\SalesPulse\\SalesPulse.API\\Controllers\\ChemistController.cs:line 226"
+          }

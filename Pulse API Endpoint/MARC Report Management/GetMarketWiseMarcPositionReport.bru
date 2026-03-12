@@ -1,0 +1,21 @@
+meta {
+  name: GetMarketWiseMarcPositionReport
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{pulse_api}}/Report/GetMarketWiseMarcPositionReport?marketCode=M40104&year=2025&month=09
+  body: none
+  auth: none
+}
+
+params:query {
+  marketCode: M40104
+  year: 2025
+  month: 09
+}
+
+settings {
+  encodeUrl: true
+}

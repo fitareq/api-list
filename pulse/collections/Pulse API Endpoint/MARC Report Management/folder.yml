@@ -1,0 +1,7 @@
+info:
+  name: MARC Report Management
+  type: folder
+  seq: 9
+
+request:
+  auth: inherit

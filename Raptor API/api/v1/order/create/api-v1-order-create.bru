@@ -1,0 +1,83 @@
+meta {
+  name: /api/v1/order/create
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/api/v1/order/create
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "userId": "string",
+    "depotId": "string",
+    "deliveryAddressId": "string",
+    "deliveryDate": "string",
+    "deliveryShift": "string",
+    "deliveryInstruction": "string",
+    "paymentMode": "string",
+    "lat": 9899.556688607123,
+    "lon": 2424.1191113323234,
+    "voucherId": "string",
+    "voucherAmount": 3026.92211063186,
+    "prescriptionImageOneBase64": "string",
+    "prescriptionImageTwoBase64": "string"
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: OK
+  
+  request: {
+    url: {{baseUrl}}/api/v1/order/create
+    method: POST
+    mode: json
+    headers: {
+      Content-Type: application/json
+      Authorization: Bearer <token>
+    }
+  
+    body:json: {
+      {
+        "userId": "string",
+        "depotId": "string",
+        "deliveryAddressId": "string",
+        "deliveryDate": "string",
+        "deliveryShift": "string",
+        "deliveryInstruction": "string",
+        "paymentMode": "string",
+        "lat": 9899.556688607123,
+        "lon": 2424.1191113323234,
+        "voucherId": "string",
+        "voucherAmount": 3026.92211063186,
+        "prescriptionImageOneBase64": "string",
+        "prescriptionImageTwoBase64": "string"
+      }
+    }
+  }
+  
+  response: {
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: text
+      content: '''
+  
+      '''
+    }
+  }
+}

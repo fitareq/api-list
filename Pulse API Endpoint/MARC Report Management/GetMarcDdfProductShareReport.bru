@@ -1,0 +1,166 @@
+meta {
+  name: GetMarcDdfProductShareReport
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{pulse_api}}/Report/GetMarcDdfProductShareReport?marketCode=M70420&year=2024&fromMonth=04&toMonth=06&limit=10&offSet=0&queryParam=M00043213
+  body: none
+  auth: bearer
+}
+
+params:query {
+  marketCode: M70420
+  year: 2024
+  fromMonth: 04
+  toMonth: 06
+  limit: 10
+  offSet: 0
+  queryParam: M00043213
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyTmFtZSI6Ik1haGVkaSBOaWxveSIsIkVtcGxveWVlQ29kZSI6IjE3ODAxIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiTUlPIiwiRGVwYXJ0bWVudENvZGUiOiJSWCIsIlRlYW1Db2RlIjoiQVZJQVRPUiIsIlR5cGUiOiJvZmZpY2VyIiwiZXhwIjoxNzM3Nzc5Mjk2LCJpc3MiOiJTYWxlc1B1bHNlQVBJIiwiYXVkIjoiSFBMLU1JUyJ9.2kj75VDgiCjjFxhQhNR8W4NlttP8khbrwuzwS8gSXsk
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: SendChemistSalesOrder_Example
+  
+  request: {
+    url: {{pulse_api}}/Chemist/SendChemistSalesOrder
+    method: POST
+    mode: json
+    body:json: {
+      [
+          {
+              "chemistCode": "2709578",
+              "chemistId": "05d2cf6b-d504-45f2-b8fd-3c8883fb868c",
+              "chemistName": "SHAWON PHARMACY ",
+              "comment": "test",
+              "deliveryDate": "2024-02-14",
+              "deliveryShift": "Morning",
+              "depotId": "0ae95bfc-a048-45e7-a21d-a7bcd0c24c4d",
+              "depotName": "Kushtia",
+              "discountAmount": "0",
+              "id": 0,
+              "localStatus": "save",
+              "localStatusTime": 1707818162674,
+              "location": "23.746487,90.3921065",
+              "netTotal": "554.44",
+              "orderDate": "2024-02-13",
+              "orderEntryBy": "",
+              "orderNumber": "",
+              "orderStatus": "",
+              "paymentMode": "Credit",
+              "productList": [
+                  {
+                      "ItemDiscountAmount": "0",
+                      "ProductCode": "71101",
+                      "ProductId": "e99e3b06-adb9-4c50-a3c2-0072a802e64b",
+                      "ProductName": "ZOVENTA 90MG/5ML PFS",
+                      "Quantity": " 1",
+                      "totalPrice": "422.43",
+                      "tradePrice": "359.82",
+                      "vat": "62.61"
+                  },
+                  {
+                      "ItemDiscountAmount": "0",
+                      "ProductCode": "12503",
+                      "ProductId": "4b464f62-4099-4048-ae09-00b7b8f9e371",
+                      "ProductName": "ANDEP 25 MG TAB",
+                      "Quantity": " 1",
+                      "totalPrice": "422.43",
+                      "tradePrice": "359.82",
+                      "vat": "62.61"
+                  }
+              ],
+              "subMarketCode": "M6061707",
+              "subMarketId": "34daf42a-cf65-4a7c-a14f-b36b75fd9dad",
+              "subMarketName": "PHILLHNAGAR",
+              "totalQty": "2",
+              "tpTotal": "472.26",
+              "vatTotal": "82.18"
+          },
+          {
+              "chemistCode": "2709578",
+              "chemistId": "05d2cf6b-d504-45f2-b8fd-3c8883fb868c",
+              "chemistName": "SHAWON PHARMACY ",
+              "comment": "test",
+              "deliveryDate": "2024-02-14",
+              "deliveryShift": "Morning",
+              "depotId": "0ae95bfc-a048-45e7-a21d-a7bcd0c24c4d",
+              "depotName": "Kushtia",
+              "discountAmount": "0",
+              "id": 0,
+              "localStatus": "save",
+              "localStatusTime": 1707818162674,
+              "location": "23.746487,90.3921065",
+              "netTotal": "554.44",
+              "orderDate": "2024-02-13",
+              "orderEntryBy": "2a53a317-1328-498f-8272-7307c1eb0159",
+              "orderNumber": "",
+              "orderStatus": "",
+              "paymentMode": "Credit",
+              "productList": [
+                  {
+                      "ItemDiscountAmount": "0",
+                      "ProductCode": "71101",
+                      "ProductId": "e99e3b06-adb9-4c50-a3c2-0072a802e64b",
+                      "ProductName": "ZOVENTA 90MG/5ML PFS",
+                      "Quantity": " 1",
+                      "totalPrice": "422.43",
+                      "tradePrice": "359.82",
+                      "vat": "62.61"
+                  },
+                  {
+                      "ItemDiscountAmount": "0",
+                      "ProductCode": "12503",
+                      "ProductId": "4b464f62-4099-4048-ae09-00b7b8f9e371",
+                      "ProductName": "ANDEP 25 MG TAB",
+                      "Quantity": " 1",
+                      "totalPrice": "422.43",
+                      "tradePrice": "359.82",
+                      "vat": "62.61"
+                  }
+              ],
+              "subMarketCode": "M6061707",
+              "subMarketId": "34daf42a-cf65-4a7c-a14f-b36b75fd9dad",
+              "subMarketName": "PHILLHNAGAR",
+              "totalQty": "2",
+              "tpTotal": "472.26",
+              "vatTotal": "82.18"
+          }
+      ]
+    }
+  }
+  
+  response: {
+    headers: {
+      Transfer-Encoding: chunked
+      Content-Type: application/json; charset=utf-8
+      Server: Microsoft-IIS/10.0
+      X-Powered-By: ASP.NET
+      Date: Tue, 16 Jul 2024 04:03:26 GMT
+    }
+  
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "statusCode": 404,
+            "statusMessage": "Unrecognized Guid format."
+        }
+      '''
+    }
+  }
+}

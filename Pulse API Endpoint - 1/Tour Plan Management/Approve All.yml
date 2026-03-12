@@ -1,0 +1,18 @@
+info:
+  name: Approve All
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: "{{pulse_api}}/TourPlan/AllTourPlanApproval"
+  body:
+    type: json
+    data: "{\r\n    \"UserId\": \"13025\"\r\n}"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

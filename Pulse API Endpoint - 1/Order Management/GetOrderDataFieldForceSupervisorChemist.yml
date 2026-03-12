@@ -1,0 +1,26 @@
+info:
+  name: GetOrderDataFieldForceSupervisorChemist
+  type: http
+  seq: 7
+
+http:
+  method: POST
+  url: "{{pulse_api}}/Chemist/GetSupervisorMarketWiseOrderSummary"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"UserCode\":\"00708\",\r
+
+      \    \"DateFrom\":\"22/08/2024\",\r
+
+      \    \"DateTo\":\"22/08/2024\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

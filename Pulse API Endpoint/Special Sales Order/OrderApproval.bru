@@ -1,0 +1,24 @@
+meta {
+  name: OrderApproval
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{pulse_api}}/SpecialSales/OrderApproval
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "specialSalesOrderId": "cccd09bc-99c3-49cd-bc3a-b4db843013c4",
+      "UserId": "00836",
+      "Comment": "",
+      "Flag": "approve" //approve, //reject
+  }
+}
+
+settings {
+  encodeUrl: true
+}

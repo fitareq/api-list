@@ -1,0 +1,343 @@
+meta {
+  name: GetZonalHeadDashBoard
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{pulse_api}}/DashBoard/GetZonalHeadDashBoard
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyTmFtZSI6IlVsZmF0dWwgQWxhbSIsIkVtcGxveWVlQ29kZSI6IjAwNzAyIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiWk0iLCJEZXBhcnRtZW50Q29kZSI6IlNBRkZST04iLCJUZWFtQ29kZSI6IlNBRkZST04iLCJUeXBlIjoibWFuYWdlciIsImV4cCI6MTc2MDg0NjA3MiwiaXNzIjoiU2FsZXNQdWxzZUFQSSIsImF1ZCI6IkhQTC1NSVMifQ.CoosGs04lb4j1oEw1iYCflHb9mkfSUW-vhaM9jvL3hY
+}
+
+body:json {
+  {
+      "Date": "24/07/2025",
+      "ZoneName": "Jessore"
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: New Request
+  
+  request: {
+    url: {{pulse_api}}/DashBoard/GetZonalHeadDashBoard
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "Date": "22/06/2025",
+          "ZoneName": "Dhaka - A"
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Content-Type: application/json; charset=utf-8
+      Date: Wed, 09 Jul 2025 03:21:24 GMT
+      Server: Kestrel
+      Transfer-Encoding: chunked
+    }
+  
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "data": [
+                {
+                    "zoneName": "Dhaka - A",
+                    "regionName": "DHK-DMCH - A",
+                    "totalValidation": 0,
+                    "todayOrderNumber": 27,
+                    "preday_OrderNumber": 24,
+                    "todayInvoiceNumber": 27,
+                    "preday_InvoiceNumber": 24,
+                    "orderAmount": 81802.67,
+                    "preday_OrderAmount": 87401.42,
+                    "avgOrderAmount": 73854.077619,
+                    "top3Region": "DHK-IBCH, DHK-NIENT, DHK-KHILGAON",
+                    "todayDCRCount": 77,
+                    "preday_DCRCount": 70,
+                    "avgdcrCount": 42,
+                    "activeDoctor": 1209,
+                    "doctorLogged": 350,
+                    "top5BrandDCR": "SERGEL, NEOPENEM, DENVAR, REEF-D, FUROTIL PLUS",
+                    "top3RegionDCR": "DHK-DMCH - A, DHK-DMCH - C, DHK-NIENT",
+                    "tourPlanTotal": 0,
+                    "todayTourPlan": 0,
+                    "approvedTourPlan": 0,
+                    "rejectedTourPlan": 0,
+                    "pendingTourPlan": 0
+                },
+                {
+                    "zoneName": "Dhaka - A",
+                    "regionName": "DHK-DMCH - C",
+                    "totalValidation": 0,
+                    "todayOrderNumber": 17,
+                    "preday_OrderNumber": 11,
+                    "todayInvoiceNumber": 17,
+                    "preday_InvoiceNumber": 11,
+                    "orderAmount": 28367.06,
+                    "preday_OrderAmount": 18718.26,
+                    "avgOrderAmount": 43297.392857,
+                    "top3Region": "DHK-IBCH, DHK-NIENT, DHK-KHILGAON",
+                    "todayDCRCount": 51,
+                    "preday_DCRCount": 54,
+                    "avgdcrCount": 39,
+                    "activeDoctor": 651,
+                    "doctorLogged": 272,
+                    "top5BrandDCR": "SERGEL, AERON, DENVAR, CLACIDO, ABICON",
+                    "top3RegionDCR": "DHK-DMCH - A, DHK-DMCH - C, DHK-NIENT",
+                    "tourPlanTotal": 0,
+                    "todayTourPlan": 0,
+                    "approvedTourPlan": 0,
+                    "rejectedTourPlan": 0,
+                    "pendingTourPlan": 0
+                },
+                {
+                    "zoneName": "Dhaka - A",
+                    "regionName": "DHK-DMCH-B",
+                    "totalValidation": 0,
+                    "todayOrderNumber": 13,
+                    "preday_OrderNumber": 13,
+                    "todayInvoiceNumber": 13,
+                    "preday_InvoiceNumber": 12,
+                    "orderAmount": 61482.17,
+                    "preday_OrderAmount": 72145.56,
+                    "avgOrderAmount": 61713.800476,
+                    "top3Region": "DHK-IBCH, DHK-NIENT, DHK-KHILGAON",
+                    "todayDCRCount": 54,
+                    "preday_DCRCount": 58,
+                    "avgdcrCount": 38,
+                    "activeDoctor": 558,
+                    "doctorLogged": 253,
+                    "top5BrandDCR": "SERGEL, NEOPENEM, DENVAR, LYRIC, FUROTIL PLUS",
+                    "top3RegionDCR": "DHK-DMCH - A, DHK-DMCH - C, DHK-NIENT",
+                    "tourPlanTotal": 0,
+                    "todayTourPlan": 0,
+                    "approvedTourPlan": 0,
+                    "rejectedTourPlan": 0,
+                    "pendingTourPlan": 0
+                },
+                {
+                    "zoneName": "Dhaka - A",
+                    "regionName": "DHK-IBCH",
+                    "totalValidation": 0,
+                    "todayOrderNumber": 38,
+                    "preday_OrderNumber": 36,
+                    "todayInvoiceNumber": 37,
+                    "preday_InvoiceNumber": 36,
+                    "orderAmount": 483810.58,
+                    "preday_OrderAmount": 201060.48,
+                    "avgOrderAmount": 214789.897142,
+                    "top3Region": "DHK-IBCH, DHK-NIENT, DHK-KHILGAON",
+                    "todayDCRCount": 49,
+                    "preday_DCRCount": 42,
+                    "avgdcrCount": 28,
+                    "activeDoctor": 605,
+                    "doctorLogged": 221,
+                    "top5BrandDCR": "SERGEL, DENVAR, NEOPENEM, REEF-D, FUROTIL PLUS",
+                    "top3RegionDCR": "DHK-DMCH - A, DHK-DMCH - C, DHK-NIENT",
+                    "tourPlanTotal": 0,
+                    "todayTourPlan": 0,
+                    "approvedTourPlan": 0,
+                    "rejectedTourPlan": 0,
+                    "pendingTourPlan": 0
+                },
+                {
+                    "zoneName": "Dhaka - A",
+                    "regionName": "DHK-IBH",
+                    "totalValidation": 0,
+                    "todayOrderNumber": 59,
+                    "preday_OrderNumber": 57,
+                    "todayInvoiceNumber": 57,
+                    "preday_InvoiceNumber": 56,
+                    "orderAmount": 95102.06,
+                    "preday_OrderAmount": 150379.91,
+                    "avgOrderAmount": 116977.825714,
+                    "top3Region": "DHK-IBCH, DHK-NIENT, DHK-KHILGAON",
+                    "todayDCRCount": 96,
+                    "preday_DCRCount": 29,
+                    "avgdcrCount": 23,
+                    "activeDoctor": 653,
+                    "doctorLogged": 141,
+                    "top5BrandDCR": "SERGEL, DENVAR, REEF-D, FUROTIL PLUS, ORICEF",
+                    "top3RegionDCR": "DHK-DMCH - A, DHK-DMCH - C, DHK-NIENT",
+                    "tourPlanTotal": 1,
+                    "todayTourPlan": 0,
+                    "approvedTourPlan": 0,
+                    "rejectedTourPlan": 0,
+                    "pendingTourPlan": 1
+                },
+                {
+                    "zoneName": "Dhaka - A",
+                    "regionName": "DHK-KHILGAON",
+                    "totalValidation": 0,
+                    "todayOrderNumber": 70,
+                    "preday_OrderNumber": 69,
+                    "todayInvoiceNumber": 61,
+                    "preday_InvoiceNumber": 65,
+                    "orderAmount": 502717.8,
+                    "preday_OrderAmount": 140443.87,
+                    "avgOrderAmount": 193854.668095,
+                    "top3Region": "DHK-IBCH, DHK-NIENT, DHK-KHILGAON",
+                    "todayDCRCount": 39,
+                    "preday_DCRCount": 44,
+                    "avgdcrCount": 23,
+                    "activeDoctor": 298,
+                    "doctorLogged": 148,
+                    "top5BrandDCR": "SERGEL, DENVAR, AERON, REEF-D, RENOVIT",
+                    "top3RegionDCR": "DHK-DMCH - A, DHK-DMCH - C, DHK-NIENT",
+                    "tourPlanTotal": 0,
+                    "todayTourPlan": 0,
+                    "approvedTourPlan": 0,
+                    "rejectedTourPlan": 0,
+                    "pendingTourPlan": 0
+                },
+                {
+                    "zoneName": "Dhaka - A",
+                    "regionName": "DHK-NIDCH",
+                    "totalValidation": 0,
+                    "todayOrderNumber": 47,
+                    "preday_OrderNumber": 46,
+                    "todayInvoiceNumber": 44,
+                    "preday_InvoiceNumber": 42,
+                    "orderAmount": 168810.01,
+                    "preday_OrderAmount": 144994.24,
+                    "avgOrderAmount": 125749.251428,
+                    "top3Region": "DHK-IBCH, DHK-NIENT, DHK-KHILGAON",
+                    "todayDCRCount": 49,
+                    "preday_DCRCount": 45,
+                    "avgdcrCount": 29,
+                    "activeDoctor": 663,
+                    "doctorLogged": 207,
+                    "top5BrandDCR": "SERGEL, FUROTIL PLUS, AERON, DENVAR, ROZITH",
+                    "top3RegionDCR": "DHK-DMCH - A, DHK-DMCH - C, DHK-NIENT",
+                    "tourPlanTotal": 0,
+                    "todayTourPlan": 0,
+                    "approvedTourPlan": 0,
+                    "rejectedTourPlan": 0,
+                    "pendingTourPlan": 0
+                },
+                {
+                    "zoneName": "Dhaka - A",
+                    "regionName": "DHK-NIENT",
+                    "totalValidation": 0,
+                    "todayOrderNumber": 59,
+                    "preday_OrderNumber": 51,
+                    "todayInvoiceNumber": 57,
+                    "preday_InvoiceNumber": 47,
+                    "orderAmount": 1423535.71,
+                    "preday_OrderAmount": 159686.96,
+                    "avgOrderAmount": 195020.369047,
+                    "top3Region": "DHK-IBCH, DHK-NIENT, DHK-KHILGAON",
+                    "todayDCRCount": 60,
+                    "preday_DCRCount": 58,
+                    "avgdcrCount": 38,
+                    "activeDoctor": 736,
+                    "doctorLogged": 267,
+                    "top5BrandDCR": "SERGEL, DENVAR, FUROTIL PLUS, AERON, RENOVIT",
+                    "top3RegionDCR": "DHK-DMCH - A, DHK-DMCH - C, DHK-NIENT",
+                    "tourPlanTotal": 0,
+                    "todayTourPlan": 0,
+                    "approvedTourPlan": 0,
+                    "rejectedTourPlan": 0,
+                    "pendingTourPlan": 0
+                },
+                {
+                    "zoneName": "Dhaka - A",
+                    "regionName": "DHK-SHANTINAGAR",
+                    "totalValidation": 0,
+                    "todayOrderNumber": 46,
+                    "preday_OrderNumber": 42,
+                    "todayInvoiceNumber": 42,
+                    "preday_InvoiceNumber": 40,
+                    "orderAmount": 114538.8,
+                    "preday_OrderAmount": 108864.94,
+                    "avgOrderAmount": 149407.752857,
+                    "top3Region": "DHK-IBCH, DHK-NIENT, DHK-KHILGAON",
+                    "todayDCRCount": 42,
+                    "preday_DCRCount": 44,
+                    "avgdcrCount": 28,
+                    "activeDoctor": 312,
+                    "doctorLogged": 193,
+                    "top5BrandDCR": "SERGEL, DENVAR, FUROTIL PLUS, ORICEF, REEF-D",
+                    "top3RegionDCR": "DHK-DMCH - A, DHK-DMCH - C, DHK-NIENT",
+                    "tourPlanTotal": 0,
+                    "todayTourPlan": 0,
+                    "approvedTourPlan": 0,
+                    "rejectedTourPlan": 0,
+                    "pendingTourPlan": 0
+                },
+                {
+                    "zoneName": "Dhaka - A",
+                    "regionName": "DHK-SRNGIH",
+                    "totalValidation": 0,
+                    "todayOrderNumber": 54,
+                    "preday_OrderNumber": 40,
+                    "todayInvoiceNumber": 50,
+                    "preday_InvoiceNumber": 39,
+                    "orderAmount": 128445.62,
+                    "preday_OrderAmount": 126121.77,
+                    "avgOrderAmount": 121017.485714,
+                    "top3Region": "DHK-IBCH, DHK-NIENT, DHK-KHILGAON",
+                    "todayDCRCount": 35,
+                    "preday_DCRCount": 48,
+                    "avgdcrCount": 27,
+                    "activeDoctor": 1059,
+                    "doctorLogged": 225,
+                    "top5BrandDCR": "SERGEL, DENVAR, FUROTIL PLUS, ABICON, CLONATRIL",
+                    "top3RegionDCR": "DHK-DMCH - A, DHK-DMCH - C, DHK-NIENT",
+                    "tourPlanTotal": 0,
+                    "todayTourPlan": 0,
+                    "approvedTourPlan": 0,
+                    "rejectedTourPlan": 0,
+                    "pendingTourPlan": 0
+                },
+                {
+                    "zoneName": "Dhaka - A",
+                    "regionName": "SOUTH BANASREE",
+                    "totalValidation": 0,
+                    "todayOrderNumber": 55,
+                    "preday_OrderNumber": 57,
+                    "todayInvoiceNumber": 54,
+                    "preday_InvoiceNumber": 57,
+                    "orderAmount": 159710.87,
+                    "preday_OrderAmount": 133125.37,
+                    "avgOrderAmount": 150048.133809,
+                    "top3Region": "DHK-IBCH, DHK-NIENT, DHK-KHILGAON",
+                    "todayDCRCount": 8,
+                    "preday_DCRCount": 3,
+                    "avgdcrCount": 3,
+                    "activeDoctor": 499,
+                    "doctorLogged": 51,
+                    "top5BrandDCR": "SERGEL, FUROTIL PLUS, CLACIDO, ZEROPAIN, DENVAR",
+                    "top3RegionDCR": "DHK-DMCH - A, DHK-DMCH - C, DHK-NIENT",
+                    "tourPlanTotal": 0,
+                    "todayTourPlan": 0,
+                    "approvedTourPlan": 0,
+                    "rejectedTourPlan": 0,
+                    "pendingTourPlan": 0
+                }
+            ],
+            "statusCode": 200,
+            "statusMessage": "Zonal Head Dashboard data retrieved successfully."
+        }
+      '''
+    }
+  }
+}

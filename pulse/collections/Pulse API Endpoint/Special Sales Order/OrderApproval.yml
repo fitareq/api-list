@@ -1,0 +1,28 @@
+info:
+  name: OrderApproval
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{pulse_api}}/SpecialSales/OrderApproval"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"specialSalesOrderId\": \"cccd09bc-99c3-49cd-bc3a-b4db843013c4\",\r
+
+      \    \"UserId\": \"00836\",\r
+
+      \    \"Comment\": \"\",\r
+
+      \    \"Flag\": \"approve\" //approve, //reject\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

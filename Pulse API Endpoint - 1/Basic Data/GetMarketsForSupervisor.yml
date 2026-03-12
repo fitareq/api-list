@@ -1,0 +1,198 @@
+info:
+  name: GetMarketsForSupervisor
+  type: http
+  seq: 9
+
+http:
+  method: POST
+  url: "{{pulse_api}}/Basic/GetMarketsForSupervisor"
+  body:
+    type: json
+    data: "{\r\n    \"UserId\": \"05801\"\r\n}"
+  auth:
+    type: bearer
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyTmFtZSI6Ik1kLiBBdGlxdXp6YW1hbiIsIkVtcGxveWVlQ29kZSI6IjA1ODAxIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQU0iLCJEZXBhcnRtZW50Q29kZSI6IlJYIiwiVGVhbUNvZGUiOiJMVU1JTklPVVMiLCJUeXBlIjoic3VwZXJ2aXNvciIsImV4cCI6MTc2MTcyNzE3NCwiaXNzIjoiU2FsZXNQdWxzZUFQSSIsImF1ZCI6IkhQTC1NSVMifQ.H_qf_dPcSc3g-rhpC_bUIWYpZ3fH7wz-UzGJh5W0hK0
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: GetMarketsForSupervisor_Example
+    request:
+      url: "{{pulse_api}}/Basic/GetMarketsForSupervisor"
+      method: POST
+      body:
+        type: json
+        data: "{\r\n    \"UserId\": \"04533\"\r\n}"
+    response:
+      statusText: "200"
+      headers:
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Server
+          value: Microsoft-IIS/10.0
+        - name: X-Powered-By
+          value: ASP.NET
+        - name: Date
+          value: Tue, 16 Jul 2024 03:47:29 GMT
+      body:
+        type: json
+        data: |-
+          {
+              "data": [
+                  {
+                      "fieldForceCode": "10306",
+                      "fieldForceName": "Md. Moshiur Rahman",
+                      "departmentCodeMarketWise": "RX",
+                      "departmentNameMarketWise": "Rx General",
+                      "teamCodeMarketWise": "Venture",
+                      "teamNameMarketWise": "Venture",
+                      "pairMarketCode": "M70411",
+                      "departmentCodeFfWise": "RX",
+                      "departmentNameFfWise": "Rx General",
+                      "teamCodeFfWise": "Venture",
+                      "teamNameFfWise": "Venture",
+                      "lat": 0,
+                      "lon": 0,
+                      "marketCode": "M14305",
+                      "marketName": "Dakshinkhan",
+                      "regionCode": "R725",
+                      "regionName": "UTTARA - E",
+                      "zoneCode": "Z14",
+                      "zoneName": "Uttara"
+                  },
+                  {
+                      "fieldForceCode": "14923",
+                      "fieldForceName": "Md. Azgar Ali",
+                      "departmentCodeMarketWise": "RX",
+                      "departmentNameMarketWise": "Rx General",
+                      "teamCodeMarketWise": "Luminious",
+                      "teamNameMarketWise": "Luminious",
+                      "pairMarketCode": null,
+                      "departmentCodeFfWise": "RX",
+                      "departmentNameFfWise": "Rx General",
+                      "teamCodeFfWise": "Luminious",
+                      "teamNameFfWise": "Luminious",
+                      "lat": 0,
+                      "lon": 0,
+                      "marketCode": "M72503",
+                      "marketName": "Kc Hospital-1",
+                      "regionCode": "R725",
+                      "regionName": "UTTARA - E",
+                      "zoneCode": "Z14",
+                      "zoneName": "Uttara"
+                  },
+                  {
+                      "fieldForceCode": "16721",
+                      "fieldForceName": "Md. Habibor Rahman",
+                      "departmentCodeMarketWise": "RX",
+                      "departmentNameMarketWise": "Rx General",
+                      "teamCodeMarketWise": "Aviator",
+                      "teamNameMarketWise": "Aviator",
+                      "pairMarketCode": "M70414",
+                      "departmentCodeFfWise": "RX",
+                      "departmentNameFfWise": "Rx General",
+                      "teamCodeFfWise": "Aviator",
+                      "teamNameFfWise": "Aviator",
+                      "lat": 0,
+                      "lon": 0,
+                      "marketCode": "M72502",
+                      "marketName": "KBFGH-1",
+                      "regionCode": "R725",
+                      "regionName": "UTTARA - E",
+                      "zoneCode": "Z14",
+                      "zoneName": "Uttara"
+                  },
+                  {
+                      "fieldForceCode": "13204",
+                      "fieldForceName": "Ishtiaq Ahmed Chowdhury",
+                      "departmentCodeMarketWise": "RX",
+                      "departmentNameMarketWise": "Rx General",
+                      "teamCodeMarketWise": "Aviator",
+                      "teamNameMarketWise": "Aviator",
+                      "pairMarketCode": "M14305",
+                      "departmentCodeFfWise": "RX",
+                      "departmentNameFfWise": "Rx General",
+                      "teamCodeFfWise": "Aviator",
+                      "teamNameFfWise": "Aviator",
+                      "lat": 0,
+                      "lon": 0,
+                      "marketCode": "M70411",
+                      "marketName": "Uttara-7",
+                      "regionCode": "R725",
+                      "regionName": "UTTARA - E",
+                      "zoneCode": "Z14",
+                      "zoneName": "Uttara"
+                  },
+                  {
+                      "fieldForceCode": "07807",
+                      "fieldForceName": "Wali Ullah",
+                      "departmentCodeMarketWise": "RX",
+                      "departmentNameMarketWise": "Rx General",
+                      "teamCodeMarketWise": "Venture",
+                      "teamNameMarketWise": "Venture",
+                      "pairMarketCode": "M72501",
+                      "departmentCodeFfWise": "RX",
+                      "departmentNameFfWise": "Rx General",
+                      "teamCodeFfWise": "Venture",
+                      "teamNameFfWise": "Venture",
+                      "lat": 0,
+                      "lon": 0,
+                      "marketCode": "M14303",
+                      "marketName": "Uttara-11",
+                      "regionCode": "R725",
+                      "regionName": "UTTARA - E",
+                      "zoneCode": "Z14",
+                      "zoneName": "Uttara"
+                  },
+                  {
+                      "fieldForceCode": "13606",
+                      "fieldForceName": "Md. Saidul Islam",
+                      "departmentCodeMarketWise": "RX",
+                      "departmentNameMarketWise": "Rx General",
+                      "teamCodeMarketWise": "Venture",
+                      "teamNameMarketWise": "Venture",
+                      "pairMarketCode": "M72502",
+                      "departmentCodeFfWise": "RX",
+                      "departmentNameFfWise": "Rx General",
+                      "teamCodeFfWise": "Venture",
+                      "teamNameFfWise": "Venture",
+                      "lat": 0,
+                      "lon": 0,
+                      "marketCode": "M70414",
+                      "marketName": "Uttara-LABAID-1",
+                      "regionCode": "R725",
+                      "regionName": "UTTARA - E",
+                      "zoneCode": "Z14",
+                      "zoneName": "Uttara"
+                  },
+                  {
+                      "fieldForceCode": "17802",
+                      "fieldForceName": "Md. Eilius Hosen",
+                      "departmentCodeMarketWise": "RX",
+                      "departmentNameMarketWise": "Rx General",
+                      "teamCodeMarketWise": "Aviator",
+                      "teamNameMarketWise": "Aviator",
+                      "pairMarketCode": "M14303",
+                      "departmentCodeFfWise": "RX",
+                      "departmentNameFfWise": "Rx General",
+                      "teamCodeFfWise": "Aviator",
+                      "teamNameFfWise": "Aviator",
+                      "lat": 0,
+                      "lon": 0,
+                      "marketCode": "M72501",
+                      "marketName": "KBFGH-2",
+                      "regionCode": "R725",
+                      "regionName": "UTTARA - E",
+                      "zoneCode": "Z14",
+                      "zoneName": "Uttara"
+                  }
+              ],
+              "statusCode": 200,
+              "statusMessage": "Markets for supervisor fetched successfully"
+          }

@@ -1,0 +1,83 @@
+meta {
+  name: GetCurrentDayNotifications
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{pulse_api}}/Notification/GetCurrentDayNotifications
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "UserCode": "13141"
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: GetCurrentDayNotifications_Example
+  
+  request: {
+    url: {{pulse_api}}/Notification/GetCurrentDayNotifications
+    method: POST
+    mode: json
+    body:json: {
+      {
+          "UserCode": "17802"
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Transfer-Encoding: chunked
+      Content-Type: application/json; charset=utf-8
+      Server: Microsoft-IIS/10.0
+      X-Powered-By: ASP.NET
+      Date: Tue, 16 Jul 2024 05:09:55 GMT
+    }
+  
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "data": [
+                {
+                    "id": "4a7376a2-3ee5-459d-9538-4d10cd023e6d",
+                    "title": "SubMarket",
+                    "body": "Your supervisor created new Sub market [M7250104-test sub market 1, test] for marketM72501, please download basic data to get updated Sub market information in your app.",
+                    "receiverId": "15f76642-0139-4b3a-a3ec-d8392b4fcf8f",
+                    "fieldForceGroupId": null,
+                    "typeIdentifyId": "M7250104",
+                    "type": "SubMarket",
+                    "remarks": null,
+                    "hasAttachment": false,
+                    "attachmentType": null,
+                    "attachmentPath": null,
+                    "imagePath": null,
+                    "externalLink": null,
+                    "createdBy": "FCM",
+                    "creationDate": "2024-07-16T09:42:40.267",
+                    "isFlagged": true,
+                    "markAsRead": false,
+                    "markReadDatetime": null
+                }
+            ],
+            "statusCode": 200,
+            "statusMessage": "Notification Data Send Successfully!"
+        }
+      '''
+    }
+  }
+}

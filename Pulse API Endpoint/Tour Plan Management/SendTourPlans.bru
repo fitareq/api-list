@@ -1,0 +1,128 @@
+meta {
+  name: SendTourPlans
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{pulse_api}}/TourPlan/SendTourPlan
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyTmFtZSI6Ik1kLiBTaGFmaXF1bCBJc2xhbSIsIkVtcGxveWVlQ29kZSI6IjAzMTExIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiU01JTyIsIkRlcGFydG1lbnRDb2RlIjoiUlgiLCJUZWFtQ29kZSI6IlZFTlRVUkUiLCJUeXBlIjoib2ZmaWNlciIsImV4cCI6MTc3OTU5NDQ2NSwiaXNzIjoiU2FsZXNQdWxzZUFQSSIsImF1ZCI6IkhQTC1NSVMifQ.5KSk_G4zomdM0eG5eHhGKlSfUuXQ1uTNq7loe6H-UWc
+}
+
+body:json {
+  [
+      {
+          "ID": "",
+          "localId": 0,
+          "planDay": "24",
+          "planEntryBy": "03111",
+          "planEntryByCode": "03111",
+          "planEntryByName": "",
+          "planEntryDate": "2026-02-24",
+          "planEntryLocation": "23.7463893,90.3921049",
+          "planLocation": "Head Quarter",
+          "planModificationDateTime": "2026-02-24",
+          "planMonth": "3",
+          "planNote": "",
+          "planSession": "Afternoon",
+          "planStatus": 0,
+          "planYear": "2026",
+          "reason": "",
+          "subMarketList": [
+              {
+                  "geoFenceId": "9b29df76-1e95-47bc-b8c4-a6449bee1d70",
+                  "headType": "PairMarket",
+                  "subMarketCode": "M3780101",
+                  "subMarketId": "bbe863e8-d0f7-43ed-9571-baefb149b808",
+                  "subMarketName": "BIHS Surgery-A"
+              },
+              {
+                  "geoFenceId": "36363dde-0c22-40e0-8822-89a2296cd36d",
+                  "headType": "PairMarket",
+                  "subMarketCode": "M3780102",
+                  "subMarketId": "d804a780-070c-4505-8f95-bc4bafa2247e",
+                  "subMarketName": "MEDINET-A"
+              }
+          ]
+      }
+  ]
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: SendTourPlans_Example
+  
+  request: {
+    url: {{pulse_api}}/TourPlan/SendTourPlan
+    method: POST
+    mode: json
+    body:json: {
+      [
+          {
+              "ID": "", // ID empty means new entry
+              "planEntryBy": "17801",
+              "planEntryDate": "2024-07-14",
+              "planModificationDateTime": "", // emptry for first time entry
+              "planYear": "2024",
+              "planMonth": "7",
+              "planDay": "14",
+              "planLocation": "Head-Quarter",
+              "planSession": "Morning",
+              "planNote": "Note",
+              "planEntryLocation": "",
+              "planStatus": 0, // 0 for new entry, 2 for edit request
+              "subMarketList": [
+                  {
+                      "subMarketId": "id1",
+                      "headType": "Own",
+                      "geoFenceId": "id1"
+                  },
+                  {
+                      "subMarketId": "id2",
+                      "headType": "Own",
+                      "geoFenceId": "id1"
+                  },
+                  {
+                      "subMarketId": "id3",
+                      "headType": "Pair",
+                      "geoFenceId": "id1"
+                  }
+              ]
+          }
+      ]
+    }
+  }
+  
+  response: {
+    headers: {
+      Transfer-Encoding: chunked
+      Content-Type: application/json; charset=utf-8
+      Server: Microsoft-IIS/10.0
+      X-Powered-By: ASP.NET
+      Date: Wed, 17 Jul 2024 13:07:05 GMT
+    }
+  
+    status: {
+      code: OK
+      text: 200
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "statusCode": 404,
+            "statusMessage": "An unexpected error occured while Tour plan entry"
+        }
+      '''
+    }
+  }
+}

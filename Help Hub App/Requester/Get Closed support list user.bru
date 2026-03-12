@@ -1,0 +1,22 @@
+meta {
+  name: Get Closed support list user
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{base_url}}/UserClosedList
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "empid": "12345"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
